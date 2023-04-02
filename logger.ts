@@ -1,6 +1,5 @@
 import * as log4js from 'log4js';
 import { SyncRedactor } from 'redact-pii';
-import {Level} from "log4js";
 
 const redactor = new SyncRedactor();
 
@@ -16,15 +15,16 @@ log4js.configure({
 
 const logger = log4js.getLogger();
 
-function redactAndLog(level: log4js.Level, message: string): void {
+function redactAndLog(level: string, message: string): void {
     const filterMessage = redactor.redact(message);
-    logger["info"](filterMessage);
+    logger.info(filterMessage);
+    // logger[level](filterMessage);
 }
 
 const piiLogger = {
-    info: (message: string) => redactAndLog(log4js.levels.INFO, message),
-    warn: (message: string) => redactAndLog(log4js.levels.WARN, message),
-    error: (message: string) => redactAndLog(log4js.levels.ERROR, message),
+    info: (message: string) => redactAndLog('info', message),
+    warn: (message: string) => redactAndLog('warm', message),
+    error: (message: string) => redactAndLog('error', message),
 };
 
 export default piiLogger;
