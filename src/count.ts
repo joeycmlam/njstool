@@ -1,8 +1,8 @@
 class Counter {
 
 
-    public countToTen(): void {
-        for (let i = 1; i <= 10; i++) {
+    public countToTen(n: number): void {
+        for (let i = 1; i <= n; i++) {
             console.log(i);
         }
     }
@@ -10,4 +10,4 @@ class Counter {
 
 
 const counter = new Counter();
-counter.countToTen();
+counter.countToTen(5);
