@@ -7,7 +7,7 @@ const data = [
 
 function processData() {
     data.forEach((item) => {
-       logger.info(`Processing user ${item.id}: ${item.name} with email ${item.email}`);
+        logger.info(`Processing user ${item.id}: ${item.name} with email ${item.email}`);
     });
 
     logger.info('password abc$1234 bank  3123-5930-977 testing')

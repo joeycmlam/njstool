@@ -1,24 +1,32 @@
-import winston from 'winston';
+import * as log4js from 'log4js';
+import { SyncRedactor } from 'redact-pii';
 
-const { SyncRedactor } = require('redact-pii');
 const redactor = new SyncRedactor();
 
-
-const piiFilterFormatter = winston.format.printf(({ level, message, ...metadata}) => {
-    const piiPattern = /b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/g;
-
-    // const piiPattern = /.com\b/g;
-
-   // const filteredMessage = message.replace(message, '****.');
-
-    const filteredMessage = redactor.redact(message);
-   return `${level}: ${filteredMessage}`;
+log4js.configure({
+    appenders: {
+        console: { type: 'console' },
+        file: { type: 'file', filename: 'app.log' },
+    },
+    categories: {
+        default: { appenders: ['console', 'file'], level: 'info'},
+    },
 });
 
-const logger = winston.createLogger({
-    level: 'info',
-    format: winston.format.combine(winston.format.colorize(), piiFilterFormatter),
-    transports: [new winston.transports.Console()],
-});
+const logger = log4js.getLogger();
 
-export default logger;
+function redactAntLog(level: string, message: string): void {
+    const filterMessage = redactor.redact(message);
+    logger[level](filterMessage);
+}
+
+const piiLogger = {
+    info: (message: string) => redactAntLog('info', message),
+    warn: (message: string) => redactAntLog('warn', message),
+    error: (message: string) => redactAntLog('error', message),
+};
+
+export default piiLogger;
+
+
+
