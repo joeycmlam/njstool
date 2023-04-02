@@ -14,4 +14,7 @@ function processData() {
     logger.info('Batch processing completed.');
 }
 
+logger.info('this info - start');
+logger.warn('this is warning')
+
 processData();
