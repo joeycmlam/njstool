@@ -1,8 +1,8 @@
 import logger from './loglog4js';
 
 const data = [
-    {id: 1, name: 'J. Lam', email: 'joey.lam@exmple.com'},
-    {id: 2, name: "Peter. Chan", email: 'peter.chan@example.com'}
+    {id: 1, name: 'J. Lam', email: 'jlam@test.com'},
+    {id: 2, name: "Peter. Chan", email: 'chan@test.com'}
 ];
 
 function processData() {

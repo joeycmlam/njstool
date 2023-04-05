@@ -1,5 +1,6 @@
-import {Before, When, Given, Then} from '@cucumber/cucumber'
+import {Before, Given, Then, When} from '@cucumber/cucumber'
 import * as assert from "assert";
+
 
 let inputData: string;
 let actualResult: string;
@@ -23,12 +24,19 @@ Then('show test {string}', function (expectedResult: string) {
     assert.equal(actualResult, expectedResult);
 });
 
-When('input the data "{string}"', function (input: string) {
+
+Given(/^input the data (.*)$/, function (input: string) {
     inputData = input;
+
 });
 
-
-Then('valudate the output "{string}"', function (expectedResult: string) {
+When(/^convert$/, function () {
     actualResult = inputData;
+});
+
+Then(/^validate the output (.*)$/, function (expectedResult: string) {
+
     assert.equal(actualResult, expectedResult);
 });
+
+
