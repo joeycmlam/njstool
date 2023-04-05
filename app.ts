@@ -1,4 +1,4 @@
-import logger from './logger';
+import logger from './loglog4js';
 
 const data = [
     {id: 1, name: 'J. Lam', email: 'joey.lam@exmple.com'},

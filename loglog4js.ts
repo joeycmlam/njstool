@@ -15,16 +15,15 @@ log4js.configure({
 
 const logger = log4js.getLogger();
 
-function redactAndLog(level: string, message: string): void {
-    const filterMessage = redactor.redact(message);
-    logger.info(filterMessage);
-    // logger[level](filterMessage);
+function datamask(message: string): string {
+    const maskedMessage = redactor.redact(message);
+    return maskedMessage;
 }
 
 const piiLogger = {
-    info: (message: string) => redactAndLog('info', message),
-    warn: (message: string) => redactAndLog('warm', message),
-    error: (message: string) => redactAndLog('error', message),
+    info: (message: string) => logger.info(datamask(message)),
+    warn: (message: string) => logger.warn(datamask(message)),
+    error: (message: string) => logger.error(datamask(message))
 };
 
 export default piiLogger;
