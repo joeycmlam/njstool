@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js",
-    "test-datamask": "cucumber-js ",
+    "test": "cucumber-js -r features/step_definitions --publish",
+    "test-datamask": "cucumber-js features/dataMask.feature",
     "start": "ts-node src/app.ts"
   },
   "keywords": [],
@@ -15,6 +15,7 @@
     "@cucumber/cucumber": "^9.1.0",
     "@types/cucumber": "^7.0.0",
     "@types/log4js": "^2.3.5",
+    "@types/node": "^18.15.11",
     "@types/winston": "^2.4.4",
     "log4js": "^6.9.1",
     "redact-pii": "^3.4.0",
