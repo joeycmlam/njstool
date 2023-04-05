@@ -1,6 +1,6 @@
 import {Before, Given, Then, When} from '@cucumber/cucumber'
 import * as assert from "assert";
-import { DataMasker} from "../../dataMasker";
+import { DataMasker} from "../../src/dataMasker";
 
 let inputData: string
 let actualResult: string;

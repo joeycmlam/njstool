@@ -2,21 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/webResources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dataMasker.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/dataMask.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/step_definitions/dataMask.steps.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/step_definitions/test.steps.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/test.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/njstool.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/njstool.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/count.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/count.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loglog4js.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/loglog4js.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logwinston.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/logwinston.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cucumber.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cucumber.js" beforeDir="false" afterPath="$PROJECT_DIR$/cucumber.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/dataMask.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/dataMask.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/step_definitions/dataMask.steps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/features/step_definitions/dataMask.steps.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/step_definitions/test.steps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/features/step_definitions/test.steps.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/test.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/test.feature" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,29 +30,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cucumber.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="1" column="113" selection-start-line="1" selection-start-column="113" selection-end-line="1" selection-end-column="113" />
+              <caret line="1" column="95" selection-start-line="1" selection-start-column="95" selection-end-line="1" selection-end-column="95" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/features/test.feature">
+        <entry file="file://$PROJECT_DIR$/features/test.feature">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+              <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/features/step_definitions/test.steps.ts">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/features/step_definitions/test.steps.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+            <state relative-caret-position="141">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="e#0#47#0" expanded="true" />
               </folding>
@@ -69,7 +61,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/features/dataMask.feature">
+        <entry file="file://$PROJECT_DIR$/features/dataMask.feature">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
               <caret line="2" selection-start-line="2" selection-end-line="10" selection-end-column="39" />
@@ -78,7 +70,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/features/step_definitions/dataMask.steps.ts">
+        <entry file="file://$PROJECT_DIR$/features/step_definitions/dataMask.steps.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
               <caret line="7" selection-start-line="7" selection-end-line="10" selection-end-column="3" />
@@ -130,9 +122,9 @@
         <option value="$PROJECT_DIR$/src/features/step_definitions/dataMask.step.ts" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/features/dataMask.feature" />
-        <option value="$PROJECT_DIR$/cucumber.js" />
         <option value="$PROJECT_DIR$/src/features/test.feature" />
         <option value="$PROJECT_DIR$/src/features/step_definitions/test.steps.ts" />
+        <option value="$PROJECT_DIR$/cucumber.js" />
       </list>
     </option>
   </component>
@@ -160,19 +152,6 @@
               <item name="njstool" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="njstool" type="b2602c69:ProjectViewProjectNode" />
-              <item name="njstool" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="features" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="njstool" type="b2602c69:ProjectViewProjectNode" />
-              <item name="njstool" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="features" type="462c0819:PsiDirectoryNode" />
-              <item name="step_definitions" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -199,8 +178,9 @@
       <recent name="$PROJECT_DIR$/src/features" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/logs" />
+      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -280,7 +260,7 @@
       <updated>1680346279981</updated>
       <workItem from="1680346281952" duration="12076000" />
       <workItem from="1680425323144" duration="6629000" />
-      <workItem from="1680664472843" duration="15484000" />
+      <workItem from="1680664472843" duration="15605000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1680363932879</created>
@@ -345,23 +325,30 @@
       <option name="project" value="LOCAL" />
       <updated>1680664391189</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add cucumber test">
+      <created>1680687883630</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1680687883631</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34755000" />
+    <option name="totallyTimeSpent" value="34876000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="-515" width="2048" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15198019" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15198019" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.59950495" visible="true" weight="0.48290598" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.59950495" visible="true" weight="0.48290598" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49929178" weight="0.39879155" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -390,7 +377,8 @@
     <MESSAGE value="use log4j" />
     <MESSAGE value="fix log4js" />
     <MESSAGE value="refactor log4js" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor log4js" />
+    <MESSAGE value="add cucumber test" />
+    <option name="LAST_COMMIT_MESSAGE" value="add cucumber test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -416,7 +404,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/logHelper.ts" />
-    <entry file="file://$PROJECT_DIR$/app.log">
+    <entry file="file://$PROJECT_DIR$/logs/app.log">
       <provider selected="true" editor-type-id="LogFileEditorProvider" />
       <provider editor-type-id="text-editor" />
     </entry>
@@ -483,14 +471,14 @@
     <entry file="file://$PROJECT_DIR$/node_modules/.bin/cucumber-js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/step_definitions/test.steps.ts">
+    <entry file="file://$PROJECT_DIR$/features/step_definitions/test.steps.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/step_definitions/dataMask.steps.ts">
+    <entry file="file://$PROJECT_DIR$/features/step_definitions/dataMask.steps.ts">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/features/step_definitions/dataMask.steps.js">
@@ -514,21 +502,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/dataMask.feature">
+    <entry file="file://$PROJECT_DIR$/features/dataMask.feature">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" selection-start-line="2" selection-end-line="10" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cucumber.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="113" selection-start-line="1" selection-start-column="113" selection-end-line="1" selection-end-column="113" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/step_definitions/dataMask.steps.ts">
+    <entry file="file://$PROJECT_DIR$/features/step_definitions/dataMask.steps.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" selection-start-line="7" selection-end-line="10" selection-end-column="3" />
@@ -538,20 +519,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/test.feature">
+    <entry file="file://$PROJECT_DIR$/features/test.feature">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/features/step_definitions/test.steps.ts">
+    <entry file="file://$PROJECT_DIR$/features/step_definitions/test.steps.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+        <state relative-caret-position="141">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="e#0#47#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cucumber.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="95" selection-start-line="1" selection-start-column="95" selection-end-line="1" selection-end-column="95" />
         </state>
       </provider>
     </entry>
