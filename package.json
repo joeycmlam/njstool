@@ -4,18 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node app.ts"
+    "test": "cucumber-js",
+    "test-datamask": "cucumber-js ",
+    "start": "ts-node src/app.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@cucumber/cucumber": "^9.1.0",
+    "@types/cucumber": "^7.0.0",
     "@types/log4js": "^2.3.5",
     "@types/winston": "^2.4.4",
     "log4js": "^6.9.1",
     "redact-pii": "^3.4.0",
     "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.0.3",
     "winston": "^3.8.2"
   }
