@@ -3,6 +3,7 @@ import * as assert from "assert";
 import {DataMasker} from "../../src/dataMasker";
 import * as fs from 'fs';
 
+
 let inputData: any;
 let actualResult: any;
 
@@ -33,10 +34,13 @@ function readFileAsJson(fileName: string): any {
     return JSON.parse(fileContent);
 }
 
+When(/^convert msg from file$/, function () {
+    actualResult = DataMasker.datamask(readFileAsJson(inputData));
+});
+
 Then(/^validate the out "([^"]*)"$/, function (expectedFile: string) {
-    actualResult = JSON.stringify(readFileAsJson(inputData));
-    const expectedResult = JSON.stringify(readFileAsJson(expectedFile));
-    assert.equal(actualResult, expectedResult);
+    const expectedValue = JSON.stringify(readFileAsJson(expectedFile));
+    assert.equal(actualResult, expectedValue);
 
 
 });

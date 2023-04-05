@@ -13,8 +13,8 @@ Feature: Mask PII data
 
   Scenario Outline: mark data in json format
     Given provide json file "<inputFile>"
-    When I mask the data
+    When convert msg from file
     Then validate the out "<expectedData>"
     Examples:
-      | inputFile                     | expectedData                         |
-      | features/test_data/test1.json | features/test_data/test1_result.json |
+      | inputFile                     | expectedData                                  |
+      | features/test_data/test1.json | features/test_data/test1_expected_result.json |

@@ -1,9 +1,19 @@
-import { SyncRedactor } from 'redact-pii';
+import {SyncRedactor} from 'redact-pii';
+
 const redactor = new SyncRedactor();
 
 export class DataMasker {
-    static datamask(message: any): any {
-        const maskedMessage = redactor.redact(message);
+    static datamask(message: any): String {
+
+        let msg: string;
+        if (typeof message === 'string') {
+            msg = message;
+
+        } else {
+            msg = JSON.stringify(message);
+        }
+
+        const maskedMessage = redactor.redact(msg);
         return maskedMessage;
     }
 }
