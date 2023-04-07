@@ -2,7 +2,7 @@ import Logger from './logwinston';
 import config from './config';
 
 
-const logger = Logger(config.logLevel);
+const logger = new Logger(config.logLevel);
 
 const data = [
     {id: 1, name: 'J. Lam', email: 'jlam@test.com'},
