@@ -1,4 +1,9 @@
-import logger from './logwinston';
+import createLogger from './logwinston';
+import config from './config';
+
+
+
+const logger = createLogger(config.logLevel);
 
 const data = [
     {id: 1, name: 'J. Lam', email: 'jlam@test.com'},
@@ -18,7 +23,7 @@ function processData() {
     try {
         logger.warn('start..')
         data.forEach((item) => {
-            logger.info(JSON.stringify(item));
+            logger.debug(JSON.stringify(item));
         });
 
         logger.info('password abc$1234 bank  3123-5930-977 testing')

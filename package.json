@@ -17,6 +17,7 @@
     "@types/node": "^18.15.11",
     "@types/winston": "^2.4.4",
     "cucumber-html-reporter": "^6.0.0",
+    "js-yaml": "^4.1.0",
     "log4js": "^6.9.1",
     "redact-pii": "^3.4.0",
     "ts-node": "^10.9.1",
@@ -25,6 +26,7 @@
     "winston": "^3.8.2"
   },
   "devDependencies": {
-    "@cucumber/cucumber": "^9.1.0"
+    "@cucumber/cucumber": "^9.1.0",
+    "@types/js-yaml": "^4.0.5"
   }
 }
