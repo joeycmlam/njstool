@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logwinston.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/logwinston.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -19,8 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+            <state relative-caret-position="34">
+              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -28,8 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/features/dataMask.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+            <state relative-caret-position="357">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -37,8 +38,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="288">
+              <caret line="17" column="2" lean-forward="true" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
               </folding>
@@ -58,8 +59,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/logwinston.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="534">
-              <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
+            <state relative-caret-position="172">
+              <caret line="46" column="34" lean-forward="true" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
               <folding>
                 <element signature="e#0#57#0" expanded="true" />
               </folding>
@@ -70,8 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/data-mask.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="187">
+              <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -125,18 +126,18 @@
         <option value="$PROJECT_DIR$/cucumber.js" />
         <option value="$PROJECT_DIR$/report-generator.ts" />
         <option value="$PROJECT_DIR$/features/test_data/test1_expected_result.json" />
-        <option value="$PROJECT_DIR$/features/dataMask.feature" />
         <option value="$PROJECT_DIR$/src/loglog4js.ts" />
         <option value="$PROJECT_DIR$/src/dataMasker.ts" />
         <option value="$PROJECT_DIR$/src/data-masking.ts" />
         <option value="$PROJECT_DIR$/src/data-mask.ts" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/features/step_definitions/dataMask.steps.ts" />
         <option value="$PROJECT_DIR$/features/test_data/test2.json" />
         <option value="$PROJECT_DIR$/features/test_data/test2_expected_result.json" />
         <option value="$PROJECT_DIR$/src/config.ts" />
         <option value="$PROJECT_DIR$/src/app.ts" />
         <option value="$PROJECT_DIR$/config.yaml" />
+        <option value="$PROJECT_DIR$/features/dataMask.feature" />
+        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/logwinston.ts" />
       </list>
     </option>
@@ -260,7 +261,7 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="test" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
@@ -280,7 +281,6 @@
       <list>
         <item itemvalue="npm.start" />
         <item itemvalue="npm.generate-report" />
-        <item itemvalue="npm.test" />
         <item itemvalue="Cucumber.js.dataMask.feature" />
       </list>
     </recent_temporary>
@@ -299,7 +299,7 @@
       <workItem from="1680425323144" duration="6629000" />
       <workItem from="1680664472843" duration="25023000" />
       <workItem from="1680855036971" duration="8714000" />
-      <workItem from="1680876241351" duration="6623000" />
+      <workItem from="1680876241351" duration="8833000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1680363932879</created>
@@ -462,11 +462,25 @@
       <option name="project" value="LOCAL" />
       <updated>1680882634087</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="enhance the log to capture the line of code.">
+      <created>1680883217339</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1680883217340</updated>
+    </task>
+    <task id="LOCAL-00025" summary="reflector the logging">
+      <created>1680885383152</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1680885383152</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59631000" />
+    <option name="totallyTimeSpent" value="61841000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="-515" width="2048" height="1055" extended-state="6" />
@@ -478,8 +492,8 @@
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.5856436" visible="true" weight="0.23076923" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49851486" weight="0.3985043" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.5841584" weight="0.23076923" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.6282178" weight="0.3985043" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -487,8 +501,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="GraphQL" order="9" />
       <window_info anchor="bottom" id="TypeScript" order="10" sideWeight="0.49716714" weight="0.32735425" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.41435644" side_tool="true" visible="true" weight="0.23076923" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.47574258" weight="0.2681624" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5252475" side_tool="true" visible="true" weight="0.2681624" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.4747525" visible="true" weight="0.2681624" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -519,7 +533,9 @@
     <MESSAGE value="code reflector" />
     <MESSAGE value="config reflector to oo design" />
     <MESSAGE value="include datetime in the log file" />
-    <option name="LAST_COMMIT_MESSAGE" value="include datetime in the log file" />
+    <MESSAGE value="enhance the log to capture the line of code." />
+    <MESSAGE value="reflector the logging" />
+    <option name="LAST_COMMIT_MESSAGE" value="reflector the logging" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main.js" />
@@ -662,34 +678,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/features/dataMask.feature">
+    <entry file="file://$PROJECT_DIR$/src/data-mask.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="50" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+        <state relative-caret-position="187">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+        <state relative-caret-position="34">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/dataMask.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="288">
+          <caret line="17" column="2" lean-forward="true" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data-mask.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
@@ -702,8 +718,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/logwinston.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="534">
-          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
+        <state relative-caret-position="172">
+          <caret line="46" column="34" lean-forward="true" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="34" />
           <folding>
             <element signature="e#0#57#0" expanded="true" />
           </folding>

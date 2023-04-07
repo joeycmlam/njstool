@@ -23,27 +23,27 @@ class Logger {
     }
 
     public info(message: string): void {
-        const location = this.getCallerLocation();
+        const location = Logger.getCallerLocation();
         this.logger.info({message, location});
     }
 
     public warn(message: string): void {
-        const location = this.getCallerLocation();
+        const location = Logger.getCallerLocation();
         this.logger.warn({message, location});
     }
 
     public error(message: string): void {
-        const location = this.getCallerLocation();
+        const location = Logger.getCallerLocation();
         this.logger.error({message, location});
     }
 
     public debug(message: string): void {
-        const location = this.getCallerLocation();
+        const location = Logger.getCallerLocation();
         this.logger.debug({message, location});
     }
 
 
-    private getCallerLocation(): string {
+    private static getCallerLocation(): string {
         let location: string = '';
 
         try {
