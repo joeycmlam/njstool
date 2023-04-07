@@ -1,10 +1,10 @@
 import winston from 'winston';
-import {DataMasker} from "./dataMasker";
+import {dataMask} from "./data-mask";
 
 
 const piiFilterFormatter = winston.format.printf(({ level, message, ...metadata}) => {
 
-    const filteredMessage = DataMasker.mask(message);
+    const filteredMessage = dataMask.mask(message);
    return `${level}: ${filteredMessage}`;
 });
 

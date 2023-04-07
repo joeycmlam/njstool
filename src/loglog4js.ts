@@ -1,5 +1,5 @@
 import * as log4js from 'log4js';
-import { DataMasker} from "./dataMasker";
+import { dataMask} from "./data-mask";
 
 
 log4js.configure({
@@ -17,9 +17,9 @@ const logger = log4js.getLogger();
 
 
 const piiLogger = {
-    info: (message: string) => logger.info(DataMasker.mask(message)),
-    warn: (message: string) => logger.warn(DataMasker.mask(message)),
-    error: (message: string) => logger.error(DataMasker.mask(message))
+    info: (message: string) => logger.info(dataMask.mask(message)),
+    warn: (message: string) => logger.warn(dataMask.mask(message)),
+    error: (message: string) => logger.error(dataMask.mask(message))
 };
 
 export default piiLogger;
