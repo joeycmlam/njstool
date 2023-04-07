@@ -3,7 +3,7 @@ import {SyncRedactor} from 'redact-pii';
 const redactor = new SyncRedactor();
 
 export class DataMasker {
-    static datamask(message: any): String {
+    static mask(message: any): String {
 
         let msg: string;
         if (typeof message === 'string') {

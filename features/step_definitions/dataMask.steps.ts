@@ -17,7 +17,7 @@ Given(/^provide the a string "([^"]*)"$/, function (input: string) {
 });
 
 When(/^I mask the data$/, function () {
-    actualResult = DataMasker.datamask(inputData);
+    actualResult = DataMasker.mask(inputData);
 });
 
 Then(/^output is "([^"]*)"$/, function (expectedResult: string) {
@@ -35,7 +35,7 @@ function readFileAsJson(fileName: string): any {
 }
 
 When(/^convert msg from file$/, function () {
-    actualResult = DataMasker.datamask(readFileAsJson(inputData));
+    actualResult = DataMasker.mask(readFileAsJson(inputData));
 });
 
 Then(/^validate the out "([^"]*)"$/, function (expectedFile: string) {

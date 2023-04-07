@@ -17,9 +17,9 @@ const logger = log4js.getLogger();
 
 
 const piiLogger = {
-    info: (message: string) => logger.info(DataMasker.datamask(message)),
-    warn: (message: string) => logger.warn(DataMasker.datamask(message)),
-    error: (message: string) => logger.error(DataMasker.datamask(message))
+    info: (message: string) => logger.info(DataMasker.mask(message)),
+    warn: (message: string) => logger.warn(DataMasker.mask(message)),
+    error: (message: string) => logger.error(DataMasker.mask(message))
 };
 
 export default piiLogger;

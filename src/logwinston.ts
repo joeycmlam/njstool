@@ -1,14 +1,10 @@
 import winston from 'winston';
-
-const { SyncRedactor } = require('redact-pii');
-const redactor = new SyncRedactor();
+import {DataMasker} from "./dataMasker";
 
 
 const piiFilterFormatter = winston.format.printf(({ level, message, ...metadata}) => {
 
-   // const filteredMessage = message.replace(message, '****.');
-
-    const filteredMessage = redactor.redact(message);
+    const filteredMessage = DataMasker.mask(message);
    return `${level}: ${filteredMessage}`;
 });
 
@@ -18,4 +14,5 @@ const logger = winston.createLogger({
     transports: [new winston.transports.Console()],
 });
 
-// export default logger;
+
+export default logger;

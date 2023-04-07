@@ -1,4 +1,4 @@
-import logger from './loglog4js';
+import logger from './logwinston';
 
 const data = [
     {id: 1, name: 'J. Lam', email: 'jlam@test.com'},
@@ -8,6 +8,7 @@ const data = [
 function processData() {
 
     try {
+        logger.warn('start..')
         data.forEach((item) => {
             logger.info(`Processing user ${item.id}: ${item.name} with email ${item.email}`);
         });
@@ -19,8 +20,5 @@ function processData() {
     }
 
 }
-
-logger.info('this info - start');
-logger.warn('this is warning');
 
 processData();
