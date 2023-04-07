@@ -8,7 +8,8 @@ class Logger {
     constructor(logLevel: string = 'info') {
         const piiFilterFormatter = winston.format.printf(({ level, message, timestamp, ...metadata }) => {
             const filteredMessage = dataMask.mask(message);
-            return `${timestamp} ${level}: ${filteredMessage}`;
+            const location = this.getCallerLocation();
+            return `${timestamp} ${level} [${location}]: ${filteredMessage}`;
         });
 
         this.logger = winston.createLogger({
@@ -36,6 +37,31 @@ class Logger {
 
     public debug(message: string): void {
         this.logger.debug(message);
+    }
+
+
+    private getCallerLocation(): string {
+        let location : string = '';
+
+        try {
+            const error = new Error();
+            const stackLines = error.stack?.split('\n') || [];
+            const callerLine = stackLines[4]; // Adjust the index if needed
+
+            if (!callerLine) {
+                return 'unknown';
+            }
+
+            location = callerLine
+                .trim()
+                .replace(/^at\s+/, '')
+                .replace(/^.+\((.+)\)$/, '$1');
+        } catch (err) {
+            //ignore
+        } finally {
+            return location;
+        }
+
     }
 }
 
