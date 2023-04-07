@@ -1,3 +1,12 @@
+const tsNode = require("ts-node");
+
+tsNode.register({
+    transpileOnly: true,
+    project: "tsconfig.json",
+});
+
 module.exports = {
-    default: '--require-module ts-node/register --require features/step_definitions/*.steps.ts ',
+    default: '--format json:cucumber_report.json --publish-quiet --require-module ts-node/register/transpile-only --require features/step_definitions/*.steps.ts ',
+
 };
+
