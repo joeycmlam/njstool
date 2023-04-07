@@ -1,9 +1,8 @@
-import createLogger from './logwinston';
+import Logger from './logwinston';
 import config from './config';
 
 
-
-const logger = createLogger(config.logLevel);
+const logger = Logger(config.logLevel);
 
 const data = [
     {id: 1, name: 'J. Lam', email: 'jlam@test.com'},

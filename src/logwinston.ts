@@ -1,12 +1,13 @@
-import winston from 'winston';
+import winston, {Logger as WinstonLogger} from 'winston';
 import {dataMask} from './data-mask';
 
 
-const piiFilterFormatter = winston.format.printf(({ level, message, ...metadata}) => {
 
+const piiFilterFormatter = winston.format.printf(({level, message, ...metadata}) => {
     const filteredMessage = dataMask.mask(message);
-   return `${level}: ${filteredMessage}`;
+    return `${level}: ${filteredMessage}`;
 });
+
 
 function createLogger(logLevel: string = 'info') {
     return winston.createLogger({
@@ -15,6 +16,7 @@ function createLogger(logLevel: string = 'info') {
         transports: [new winston.transports.Console()],
     })
 };
+
 
 
 export default createLogger;
