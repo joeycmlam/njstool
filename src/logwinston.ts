@@ -1,18 +1,23 @@
 import winston, {Logger as WinstonLogger} from 'winston';
+import dayjs from 'dayjs';
 import {dataMask} from './data-mask';
 
 class Logger {
     private logger: WinstonLogger;
 
     constructor(logLevel: string = 'info') {
-        const piiFilterFormatter = winston.format.printf(({level, message, ...metadata}) => {
+        const piiFilterFormatter = winston.format.printf(({ level, message, timestamp, ...metadata }) => {
             const filteredMessage = dataMask.mask(message);
-            return `${level}: ${filteredMessage}`;
+            return `${timestamp} ${level}: ${filteredMessage}`;
         });
 
         this.logger = winston.createLogger({
             level: logLevel,
-            format: winston.format.combine(winston.format.colorize(), piiFilterFormatter),
+            format: winston.format.combine(
+                winston.format.timestamp({ format: () => dayjs().format('YYYY-MM-DD HH:mm:ss') }),
+                winston.format.colorize(),
+                piiFilterFormatter
+            ),
             transports: [new winston.transports.Console()],
         });
     }
