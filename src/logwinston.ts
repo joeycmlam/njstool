@@ -6,10 +6,9 @@ class Logger {
     private logger: WinstonLogger;
 
     constructor(logLevel: string = 'info') {
-        const piiFilterFormatter = winston.format.printf(({ level, message, timestamp, ...metadata }) => {
+        const piiFilterFormatter = winston.format.printf(({ level, message, timestamp, location, ...metadata }) => {
             const filteredMessage = dataMask.mask(message);
-            const location = this.getCallerLocation();
-            return `${timestamp} ${level} [${location}]: ${filteredMessage}`;
+            return `[${location}] ${timestamp} ${level} : ${filteredMessage}`;
         });
 
         this.logger = winston.createLogger({
@@ -24,29 +23,33 @@ class Logger {
     }
 
     public info(message: string): void {
-        this.logger.info(message);
+        const location = this.getCallerLocation();
+        this.logger.info({message, location});
     }
 
     public warn(message: string): void {
-        this.logger.warn(message);
+        const location = this.getCallerLocation();
+        this.logger.warn({message, location});
     }
 
     public error(message: string): void {
-        this.logger.error(message);
+        const location = this.getCallerLocation();
+        this.logger.error({message, location});
     }
 
     public debug(message: string): void {
-        this.logger.debug(message);
+        const location = this.getCallerLocation();
+        this.logger.debug({message, location});
     }
 
 
     private getCallerLocation(): string {
-        let location : string = '';
+        let location: string = '';
 
         try {
             const error = new Error();
             const stackLines = error.stack?.split('\n') || [];
-            const callerLine = stackLines[4]; // Adjust the index if needed
+            const callerLine = stackLines[3]; // Adjust the index if needed
 
             if (!callerLine) {
                 return 'unknown';
@@ -61,8 +64,8 @@ class Logger {
         } finally {
             return location;
         }
-
     }
+
 }
 
 export default Logger;

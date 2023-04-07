@@ -1,8 +1,8 @@
 {
-  "name": "njstool",
+  "name": "jl-logger",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/logwinston.ts",
   "scripts": {
     "test": "cucumber-js features/*.feature",
     "generate-report": "ts-node report-generator.ts",
