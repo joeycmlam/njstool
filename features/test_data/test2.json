@@ -1,7 +1,14 @@
 {
   "lastname":"Chan",
   "firstname":"KK",
-  "address": {
-    "key4":"lam@gmail.com"
-  }
+  "contract": [
+    "address": {
+      "key4":"lam@gmail.com"
+    }
+  ],
+  "phone": [
+    {"home": "1234-5678"},
+    {"mobile":  "+61 4321-0987"},
+    {"office":  "2111-0987"}
+  ]
 }

@@ -1,7 +1,14 @@
 {
   "lastname":"PERSON_NAME",
   "firstname":"KK",
-  "address": {
-    "key4":"EMAIL_ADDRESS"
-  }
+  "contract": [
+    "address": {
+      "key4":"EMAIL_ADDRESS"
+    }
+  ],
+  "phone": [
+    {"home": "DIGITS-DIGITS"},
+    {"mobile":  "+61 DIGITS-DIGITS"},
+    {"office":  "DIGITS-DIGITS"}
+  ]
 }
