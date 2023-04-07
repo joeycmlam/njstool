@@ -1,4 +1,4 @@
-import winston, {Logger as WinstonLogger} from 'winston';
+import winston from 'winston';
 import {dataMask} from './data-mask';
 
 
