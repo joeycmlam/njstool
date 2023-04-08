@@ -60,7 +60,8 @@ class Logger {
                 .replace(/^at\s+/, '')
                 .replace(/^.+\((.+)\)$/, '$1');
         } catch (err) {
-            //ignore
+            //write the error in console but continue as don't want to fail the process if it is logger issue
+            console.error(err.message);
         } finally {
             return location;
         }

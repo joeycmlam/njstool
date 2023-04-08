@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/custom-regexp-patterns.ts" afterDir="false" />
+    <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="reflector to include customoize pattern">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/dataMask.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/dataMask.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data-mask.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-mask.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logwinston.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/logwinston.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -48,11 +46,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/logwinston.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="55" selection-start-column="48" selection-end-column="55" />
+            <state relative-caret-position="528">
+              <caret line="62" column="109" selection-start-line="62" selection-start-column="109" selection-end-line="62" selection-end-column="109" />
+              <folding>
+                <element signature="e#0#57#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -69,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/custom-regexp-patterns.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="6" selection-start-column="6" selection-end-column="6" />
+            <state relative-caret-position="17">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -143,13 +144,13 @@
         <option value="$PROJECT_DIR$/src/app.ts" />
         <option value="$PROJECT_DIR$/config.yaml" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/logwinston.ts" />
         <option value="$PROJECT_DIR$/features/test_data/test1_expected_result.json" />
         <option value="$PROJECT_DIR$/features/test_data/test2_expected_result.json" />
         <option value="$PROJECT_DIR$/features/test_data/test2.json" />
         <option value="$PROJECT_DIR$/features/dataMask.feature" />
         <option value="$PROJECT_DIR$/src/data-mask.ts" />
         <option value="$PROJECT_DIR$/src/custom-regexp-patterns.ts" />
+        <option value="$PROJECT_DIR$/src/logwinston.ts" />
       </list>
     </option>
   </component>
@@ -311,7 +312,7 @@
       <workItem from="1680664472843" duration="25023000" />
       <workItem from="1680855036971" duration="8714000" />
       <workItem from="1680876241351" duration="9297000" />
-      <workItem from="1680924004184" duration="3777000" />
+      <workItem from="1680924004184" duration="4065000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1680363932879</created>
@@ -502,11 +503,18 @@
       <option name="project" value="LOCAL" />
       <updated>1680925331963</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="reflector to include customoize pattern">
+      <created>1680948693460</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1680948693460</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66082000" />
+    <option name="totallyTimeSpent" value="66370000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="-515" width="2048" height="1055" extended-state="6" />
@@ -538,7 +546,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="init" />
     <MESSAGE value="change to typescript" />
     <MESSAGE value="revised version" />
     <MESSAGE value="with pass in parameter" />
@@ -563,7 +570,8 @@
     <MESSAGE value="reflector the logging" />
     <MESSAGE value="make static" />
     <MESSAGE value="reflect to change the masking format" />
-    <option name="LAST_COMMIT_MESSAGE" value="reflect to change the masking format" />
+    <MESSAGE value="reflector to include customoize pattern" />
+    <option name="LAST_COMMIT_MESSAGE" value="reflector to include customoize pattern" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main.js" />
@@ -702,13 +710,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/logwinston.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="55" selection-start-column="48" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/features/test_data/test2_expected_result.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -744,6 +745,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/custom-regexp-patterns.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/data-mask.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -754,10 +762,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/custom-regexp-patterns.ts">
+    <entry file="file://$PROJECT_DIR$/src/logwinston.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="6" selection-start-column="6" selection-end-column="6" />
+        <state relative-caret-position="528">
+          <caret line="62" column="109" selection-start-line="62" selection-start-column="109" selection-end-line="62" selection-end-column="109" />
+          <folding>
+            <element signature="e#0#57#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
