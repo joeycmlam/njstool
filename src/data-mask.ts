@@ -1,6 +1,17 @@
 import {SyncRedactor} from 'redact-pii';
+import * as cp from './custom-regexp-patterns';
 
-const redactor = new SyncRedactor({globalReplaceWith: '******'});
+const redactor = new SyncRedactor({
+    globalReplaceWith: '******',
+    customRedactors: {
+    before: [
+        {
+            // regexpPattern:  /(pass(word|phrase)?|secret) \S+/gi,
+            regexpPattern: cp.password_a1,
+            replaceWith: '******'
+        }
+    ]
+    }});
 
 
 

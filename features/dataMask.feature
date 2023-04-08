@@ -20,6 +20,16 @@ Feature: Mask PII data
       | 1234-4567-7899-0012 | ******       |
       | 2345 0987 2987 1111 | ******       |
 
+  Scenario Outline: mark password text
+    Given provide the a string "<inputData>"
+    When I mask the data
+    Then output is "<expectedData>"
+
+    Examples:
+      | inputData              | expectedData |
+      | password: abcd123$ibye | ******       |
+      | pass: abcd123$ibye     | ******       |
+      | password abcd123$ibye  | ******       |
 
   Scenario Outline: mark data in json format
     Given provide json file "<inputFile>"
