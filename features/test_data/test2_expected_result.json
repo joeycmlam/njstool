@@ -1,14 +1,14 @@
 {
-  "lastname":"PERSON_NAME",
+  "lastname":"******",
   "firstname":"KK",
   "contract": [
     "address": {
-      "key4":"EMAIL_ADDRESS"
+      "key4":"******"
     }
   ],
   "phone": [
-    {"home": "DIGITS-DIGITS"},
-    {"mobile":  "+61 DIGITS-DIGITS"},
-    {"office":  "DIGITS-DIGITS"}
+    {"home": "******-******"},
+    {"mobile":  "+61 ******-******"},
+    {"office":  "******-******"}
   ]
 }

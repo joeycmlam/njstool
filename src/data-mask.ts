@@ -1,8 +1,12 @@
 import {SyncRedactor} from 'redact-pii';
 
-const redactor = new SyncRedactor();
+const redactor = new SyncRedactor({globalReplaceWith: '******'});
+
+
 
 export class dataMask {
+
+
     static mask(data: any): any {
 
         if (typeof data === 'object') {
