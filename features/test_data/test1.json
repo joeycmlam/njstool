@@ -1,7 +1,8 @@
 {
-  "lastname":"Chan",
-  "firstname":"KK",
+  "full name": "Doris Tillman",
   "address": {
-    "key4":"lam@gmail.com"
-  }
+    "street": "4152 Doyle Inlet",
+    "city": "Ramnagar"
+  },
+  "email": "Doris.Tillman@hotmail.com"
 }

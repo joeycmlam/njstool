@@ -1,0 +1,17 @@
+{
+  "login_request" : {
+    "client": {
+      "name": "J. ******",
+      "email": "******",
+      "phone": "+64 ******-******",
+      "identityNumber": "******",
+      "passport": "******"
+    },
+    "login": {
+      "password": "******",
+      "passphrase": "******",
+      "secret": "******",
+      "accessToken": "******"
+    }
+  }
+}

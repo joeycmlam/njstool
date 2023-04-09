@@ -1,13 +1,16 @@
 import winston, {Logger as WinstonLogger} from 'winston';
 import dayjs from 'dayjs';
-import {dataMask} from './data-mask';
+import { DataMask } from "./data-mask";
+
+
 
 class Logger {
     private logger: WinstonLogger;
+    private dataMask = DataMask.getInstance();
 
     constructor(logLevel: string = 'info') {
         const piiFilterFormatter = winston.format.printf(({ level, message, timestamp, location, ...metadata }) => {
-            const filteredMessage = dataMask.mask(message);
+            const filteredMessage = this.dataMask.mask(message);
             return `[${location}] ${timestamp} ${level} : ${filteredMessage}`;
         });
 
@@ -60,8 +63,7 @@ class Logger {
                 .replace(/^at\s+/, '')
                 .replace(/^.+\((.+)\)$/, '$1');
         } catch (err) {
-            //write the error in console but continue as don't want to fail the process if it is logger issue
-            console.error(err.message);
+            //ignore
         } finally {
             return location;
         }

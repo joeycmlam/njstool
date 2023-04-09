@@ -1,14 +1,26 @@
-{
-  "lastname":"******",
-  "firstname":"KK",
-  "contract": [
+[
+  {
+    "full name": "*****",
     "address": {
-      "key4":"******"
-    }
-  ],
-  "phone": [
-    {"home": "******-******"},
-    {"mobile":  "+61 ******-******"},
-    {"office":  "******-******"}
-  ]
-}
+      "street": "*****",
+      "city": "*****"
+    },
+    "email": "*****"
+  },
+  {
+    "full name": "*****",
+    "address": {
+      "street": "*****",
+      "city": "*****"
+    },
+    "email": "*****"
+  },
+  {
+    "full name": "*****",
+    "address": {
+      "street": "*****",
+      "city": "*****"
+    },
+    "email": "*****"
+  }
+]

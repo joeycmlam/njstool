@@ -1,14 +1,26 @@
-{
-  "lastname":"Chan",
-  "firstname":"KK",
-  "contract": [
+[
+  {
+    "full name": "Doris Tillman",
     "address": {
-      "key4":"lam@gmail.com"
-    }
-  ],
-  "phone": [
-    {"home": "1234-5678"},
-    {"mobile":  "+61 4321-0987"},
-    {"office":  "2111-0987"}
-  ]
-}
+      "street": "4152 Doyle Inlet",
+      "city": "Ramnagar"
+    },
+    "email": "Doris.Tillman@hotmail.com"
+  },
+  {
+    "full name": "Miriam Quitzon",
+    "address": {
+      "street": "528 Esta Key",
+      "city": "Lambayeque"
+    },
+    "email": "Miriam30@hotmail.com"
+  },
+  {
+    "full name": "Rosalie Johnson",
+    "address": {
+      "street": "91042 August Trafficway",
+      "city": "Cockburn Town"
+    },
+    "email": "Rosalie95@yahoo.com"
+  }
+]

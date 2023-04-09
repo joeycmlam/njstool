@@ -1,7 +1,8 @@
 {
-  "lastname":"******",
-  "firstname":"KK",
+  "full name": "*****",
   "address": {
-    "key4":"******"
-  }
+    "street": "*****",
+    "city": "*****"
+  },
+  "email": "*****"
 }

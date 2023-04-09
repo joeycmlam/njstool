@@ -1,6 +1,6 @@
 {
   "name": "jl-logger",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "src/logwinston.ts",
   "scripts": {
@@ -20,7 +20,6 @@
     "dayjs": "^1.11.7",
     "js-yaml": "^4.1.0",
     "log4js": "^6.9.1",
-    "redact-pii": "^3.4.0",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.0.3",
@@ -28,6 +27,7 @@
   },
   "devDependencies": {
     "@cucumber/cucumber": "^9.1.0",
-    "@types/js-yaml": "^4.0.5"
+    "@types/js-yaml": "^4.0.5",
+    "redact-pii": "^3.4.0"
   }
 }
