@@ -38,9 +38,11 @@ function testProcess() {
 
     const msg = dataMask.mask(inputData);
 
+    logger.info('start');
+    logger.warn('test');
     // console.debug(msg);
     logger.debug(JSON.stringify(msg));
-
+    logger.info('end');
 }
 
 testProcess();
