@@ -2,6 +2,7 @@
   {
     "full name": "Doris Tillman",
     "address": {
+      "bank_account": "4716099551299521",
       "street": "4152 Doyle Inlet",
       "city": "Ramnagar"
     },
@@ -10,6 +11,7 @@
   {
     "full name": "Miriam Quitzon",
     "address": {
+      "bank_account": "4716099551299521",
       "street": "528 Esta Key",
       "city": "Lambayeque"
     },

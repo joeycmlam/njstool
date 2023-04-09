@@ -5,7 +5,8 @@
       "email": "j.chan@test.net",
       "phone": "+64 1234-5678",
       "identityNumber": "S12344567890",
-      "passport": "K999102345"
+      "passport": "K999102345",
+      "bank_account": "4716099551299521"
     },
     "login": {
       "password": "my-x112345",

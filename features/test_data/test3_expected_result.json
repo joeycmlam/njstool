@@ -5,7 +5,8 @@
       "email": "*****",
       "phone": "*****",
       "identityNumber": "*****",
-      "passport": "*****"
+      "passport": "*****",
+      "bank_account": "*****"
     },
     "login": {
       "password": "*****",

@@ -23,35 +23,36 @@ const data = [
 function testObject() {
     const inputData = [
             {
-                "full name": "Doris Tillman",
+                "full name": "Grant Wilderman",
                 "address": {
-                    "street": "4152 Doyle Inlet",
-                    "city": "Ramnagar"
+                    "street": "08958 Lolita Overpass",
+                    "city": "São Caetano de Odivelas"
                 },
-                "email": "Doris.Tillman@hotmail.com"
-            },
-            {
-                "full name": "Miriam Quitzon",
-                "address": {
-                    "street": "528 Esta Key",
-                    "city": "Lambayeque"
-                },
-                "email": "Miriam30@hotmail.com"
-            },
-            {
-                "full name": "Rosalie Johnson",
-                "address": {
-                    "street": "91042 August Trafficway",
-                    "city": "Cockburn Town"
-                },
-                "email": "Rosalie95@yahoo.com"
+                "email": "Grant25@gmail.com",
+                "holding": [
+                    [
+                        {
+                            "fund_id": "ABKFDKK1",
+                            "units": 474131956.8843,
+                            "bank_account": "5359920713611049"
+                        }
+                    ],
+                    [
+                        {
+                            "fund_id": "BEACTDND220",
+                            "units": 360940134.4492,
+                            "bank_account": "4716099551299521"
+                        }
+                    ]
+                ]
             }
         ]
+
     ;
 
     const msg = dataMask.mask(inputData);
+    console.log(msg);
 
-    logger.debug(JSON.stringify(msg));
 }
 
 function processData() {

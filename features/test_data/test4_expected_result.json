@@ -1,0 +1,26 @@
+[
+  {
+    "full name": "Grant Wilderman",
+    "address": {
+      "street": "08958 Lolita Overpass",
+      "city": "São Caetano de Odivelas"
+    },
+    "email": "*****",
+    "holding": [
+      [
+        {
+          "fund_id": "ABKFDKK1",
+          "units": 474131956.8843,
+          "bank_account": "*****"
+        }
+      ],
+      [
+        {
+          "fund_id": "BEACTDND220",
+          "units": 360940134.4492,
+          "bank_account": "*****"
+        }
+      ]
+    ]
+  }
+]
