@@ -1,7 +1,7 @@
 import * as log4js from 'log4js';
 import { DataMask} from "./data-mask";
 
-const dataMask = DataMask.getInstance();
+const dataMask = new DataMask();
 
 log4js.configure({
     appenders: {

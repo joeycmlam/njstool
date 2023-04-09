@@ -6,13 +6,16 @@ import { DataMask } from "./data-mask";
 
 class Logger {
     private logger: WinstonLogger;
-    private dataMask = DataMask.getInstance();
+    private dataMask = new DataMask();
 
     constructor(logLevel: string = 'info') {
-        const piiFilterFormatter = winston.format.printf(({ level, message, timestamp, location, ...metadata }) => {
-            const filteredMessage = this.dataMask.mask(message);
-            return `[${location}] ${timestamp} ${level} : ${filteredMessage}`;
-        });
+        const piiFilterFormatter = winston.format.printf(
+            ({ level, message, timestamp, location}) => {
+                const filteredMessage =
+                    level !== 'debug' ? this.dataMask.mask(message) : message;
+                return `[${location}] ${timestamp} ${level} : ${filteredMessage}`;
+            }
+        );
 
         this.logger = winston.createLogger({
             level: logLevel,
@@ -42,7 +45,7 @@ class Logger {
 
     public debug(message: string): void {
         const location = Logger.getCallerLocation();
-        this.logger.debug({message, location});
+        this.logger.debug({ message, location});
     }
 
 
@@ -63,7 +66,7 @@ class Logger {
                 .replace(/^at\s+/, '')
                 .replace(/^.+\((.+)\)$/, '$1');
         } catch (err) {
-            //ignore
+            //TODO: visit the error handling
         } finally {
             return location;
         }

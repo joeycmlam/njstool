@@ -7,7 +7,7 @@ import * as fs from 'fs';
 let inputData: any;
 let actualResult: any;
 let expectedResult: any;
-const dataMask = DataMask.getInstance();
+const dataMask = new DataMask;
 
 Before(() => {
     inputData = '';

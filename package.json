@@ -4,8 +4,8 @@
   "description": "",
   "main": "src/logwinston.ts",
   "scripts": {
-    "test": "cucumber-js features/*.feature",
-    "generate-report": "ts-node report-generator.ts",
+    "test": "nyc --reporter=html --reporter=text-summary cucumber-js features/*.feature",
+    "posttest": "ts-node report-generator.ts",
     "start": "ts-node src/app.ts"
   },
   "keywords": [],
@@ -18,8 +18,10 @@
     "@types/winston": "^2.4.4",
     "cucumber-html-reporter": "^6.0.0",
     "dayjs": "^1.11.7",
+    "istanbul": "^0.4.5",
     "js-yaml": "^4.1.0",
     "log4js": "^6.9.1",
+    "nyc": "^15.1.0",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.0.3",

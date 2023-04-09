@@ -3,11 +3,10 @@ import * as cp from './custom-regexp-patterns';
 type Maskable = string | number | boolean;
 
 export class DataMask {
-    private static instance: DataMask;
 
     private redactor: SyncRedactor;
 
-    private constructor() {
+     constructor() {
         this.redactor = new SyncRedactor({
             globalReplaceWith: '******',
             customRedactors: {
@@ -21,15 +20,9 @@ export class DataMask {
         });
     }
 
-    public static getInstance(): DataMask {
-        if (!DataMask.instance) {
-            DataMask.instance = new DataMask();
-        }
-        return DataMask.instance;
-    }
 
     private isObject(value: any): value is Record<string, unknown> {
-        return typeof value === 'object' && value !== null && !Array.isArray(value);
+        return value !== null && (typeof value === 'object' || Array.isArray(value))
     }
 
     private isMaskable(value: any): value is Maskable {
@@ -45,8 +38,10 @@ export class DataMask {
 
         for (const key in maskedData) {
             if (maskedData.hasOwnProperty(key)) {
-                if (this.isMaskable(maskedData[key]) && cp.sensitiveKeyPattern.test(key)) {
-                    maskedData[key] = `*****`;
+                if (this.isMaskable(maskedData[key])) {
+                    if  (cp.sensitiveKeyPattern.test(key)) {
+                        maskedData[key] = '*****';
+                    }
                 } else if (this.isObject(maskedData[key])) {
                     maskedData[key] = this.maskObject(maskedData[key]);
                 }
