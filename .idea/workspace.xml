@@ -6,13 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nycrc" beforeDir="false" afterPath="$PROJECT_DIR$/.nycrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/step_definitions/dataMask.steps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/features/step_definitions/dataMask.steps.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/custom-regexp-patterns.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/custom-regexp.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data-mask.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-mask.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logwinston.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/logwinston.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/custom-regexp.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/custom-regexp.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -250,7 +244,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber.js.Scenario: mark data in json file for ... (1)">
+  <component name="RunManager" selected="npm.test">
     <configuration name="Scenario Outline: mark Visa Card text" type="cucumber.js" factoryName="Cucumber.js" temporary="true">
       <option name="myFilePath" value="$PROJECT_DIR$/features/dataMask.feature" />
       <option name="myNameFilter" value="^mark Visa Card text$" />
@@ -338,7 +332,7 @@
       <workItem from="1680876241351" duration="9297000" />
       <workItem from="1680924004184" duration="4567000" />
       <workItem from="1680966425769" duration="40000" />
-      <workItem from="1680966793876" duration="32150000" />
+      <workItem from="1680966793876" duration="32343000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1680363932879</created>
@@ -599,7 +593,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681057649125</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="reflector loginwston.ts">
+      <created>1681059012719</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1681059012719</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -635,7 +636,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix the cucumber test - scenario outline issue" />
     <MESSAGE value="add the testing feature to read the test data and expected data in a file with json format." />
     <MESSAGE value="support json message on data mask" />
     <MESSAGE value="generate the cucumber report and add some test cases" />
@@ -660,7 +660,8 @@
     <MESSAGE value="remove unncessary coding" />
     <MESSAGE value="fix the logger issue.  when debug, it won't mask the data." />
     <MESSAGE value="fix the logger" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix the logger" />
+    <MESSAGE value="reflector loginwston.ts" />
+    <option name="LAST_COMMIT_MESSAGE" value="reflector loginwston.ts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
