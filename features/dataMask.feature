@@ -41,6 +41,16 @@ Feature: Mask PII data
       | pass: abcd123$ibye     | ******          |
       | password abcd123$ibye  | password ****** |
 
+  Scenario: mark data as object format
+    Given provide object
+    When convert object
+    Then the data should be masked
+
+  Scenario: mark data as array of object format
+    Given provide array of object
+    When convert object
+    Then the data should be masked
+
   Scenario Outline: mark data in json file
     Given provide json file "<inputFile>"
     When convert msg from file
@@ -49,14 +59,6 @@ Feature: Mask PII data
       | inputFile                     | expectedData                                  |
       | features/test_data/test1.json | features/test_data/test1_expected_result.json |
       | features/test_data/test2.json | features/test_data/test2_expected_result.json |
-
-  Scenario: mark data as object format
-    Given provide object
-    When convert object
-    Then the data should be masked
+      | features/test_data/test3.json | features/test_data/test3_expected_result.json |
 
 
-  Scenario: mark data as array of object format
-    Given provide array of object
-    When convert object
-    Then the data should be masked

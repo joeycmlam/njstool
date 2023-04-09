@@ -86,18 +86,18 @@ Given(/^provide array of object$/, function () {
         }];
     expectedResult = [
         {
-            "full name": "*****",
+            "full name": "Doris Tillman",
             "address": {
-                "street": "*****",
-                "city": "*****"
+                "street": "4152 Doyle Inlet",
+                "city": "Ramnagar"
             },
             "email": "*****"
         },
         {
-            "full name": "*****",
+            "full name": "Miriam Quitzon",
             "address": {
-                "street": "*****",
-                "city": "*****"
+                "street": "528 Esta Key",
+                "city": "Lambayeque"
             },
             "email": "*****"
         }];

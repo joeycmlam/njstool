@@ -1,4 +1,5 @@
 import {SyncRedactor} from 'redact-pii';
+import * as cp from './custom-regexp-patterns';
 type Maskable = string | number | boolean;
 
 export class DataMask {
@@ -44,7 +45,7 @@ export class DataMask {
 
         for (const key in maskedData) {
             if (maskedData.hasOwnProperty(key)) {
-                if (this.isMaskable(maskedData[key])) {
+                if (this.isMaskable(maskedData[key]) && cp.sensitiveKeyPattern.test(key)) {
                     maskedData[key] = `*****`;
                 } else if (this.isObject(maskedData[key])) {
                     maskedData[key] = this.maskObject(maskedData[key]);
