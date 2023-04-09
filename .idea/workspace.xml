@@ -4,23 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="ref">
-      <change afterPath="$PROJECT_DIR$/features/test_data/test3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/features/test_data/test3_expected_result.json" afterDir="false" />
+    <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/features/dataMask.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/dataMask.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/features/step_definitions/dataMask.steps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/features/step_definitions/dataMask.steps.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/test_data/test1.json" beforeDir="false" afterPath="$PROJECT_DIR$/features/test_data/test1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/test_data/test1_expected_result.json" beforeDir="false" afterPath="$PROJECT_DIR$/features/test_data/test1_expected_result.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/test_data/test2.json" beforeDir="false" afterPath="$PROJECT_DIR$/features/test_data/test2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/test_data/test2_expected_result.json" beforeDir="false" afterPath="$PROJECT_DIR$/features/test_data/test2_expected_result.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/custom-regexp-patterns.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/custom-regexp-patterns.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data-mask.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-mask.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/loglog4js.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/loglog4js.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logwinston.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/logwinston.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -311,8 +298,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start" />
         <item itemvalue="npm.generate-report" />
+        <item itemvalue="npm.start" />
         <item itemvalue="Cucumber.js.Scenario Outline: mark data in json file" />
         <item itemvalue="Cucumber.js.Scenario: mark data as object format" />
       </list>
@@ -336,7 +323,7 @@
       <workItem from="1680876241351" duration="9297000" />
       <workItem from="1680924004184" duration="4567000" />
       <workItem from="1680966425769" duration="40000" />
-      <workItem from="1680966793876" duration="15429000" />
+      <workItem from="1680966793876" duration="15960000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1680363932879</created>
@@ -541,7 +528,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680948892871</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="code reflector to support array of object and change to singleston">
+      <created>1681029050266</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1681029050266</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -577,7 +571,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="revised version" />
     <MESSAGE value="with pass in parameter" />
     <MESSAGE value="use winston for logging" />
     <MESSAGE value="use redact-pii to reduce the chance writting some PII data in the log file" />
@@ -602,7 +595,8 @@
     <MESSAGE value="reflect to change the masking format" />
     <MESSAGE value="reflector to include customoize pattern" />
     <MESSAGE value="put the additon comment" />
-    <option name="LAST_COMMIT_MESSAGE" value="put the additon comment" />
+    <MESSAGE value="code reflector to support array of object and change to singleston" />
+    <option name="LAST_COMMIT_MESSAGE" value="code reflector to support array of object and change to singleston" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

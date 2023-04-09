@@ -54,3 +54,9 @@ Feature: Mask PII data
     Given provide object
     When convert object
     Then the data should be masked
+
+
+  Scenario: mark data as array of object format
+    Given provide array of object
+    When convert object
+    Then the data should be masked

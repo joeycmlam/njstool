@@ -6,6 +6,7 @@ import * as fs from 'fs';
 
 let inputData: any;
 let actualResult: any;
+let expectedResult: any;
 const dataMask = DataMask.getInstance();
 
 Before(() => {
@@ -51,17 +52,53 @@ Given(/^provide object$/, function () {
         "secret": "2ahUKEwjL_rLSypr-AhUyrlYBHViSCZ0Qpyp6BAgFEAA",
         "accessToken": "/setprefs?hl=en&prev=https://www.google.com/search?q%3Dtoken%2Bpattern%2Band%2Blexeme%26rlz%3D1C5GCEA_enHK854HK854%26oq%3Dtoken%2Bpattern%26aqs%3Dchrome.0.0i512j69i57j0i512j0i22i30l2j0i15i22i30l2j0i22i30l3.11177j0j7%26sourceid%3Dchrome%26ie%3DUTF-8%26pccc%3D1&sig=0_u6eICvortHxmZq8O90XESUmYPd8%3D&cs=1"
     }
-});
-When(/^convert object$/, function () {
-    actualResult = dataMask.mask(inputData);
-});
-Then(/^the data should be masked$/, function () {
-    const expectedValue = {
+    expectedResult = {
         "password": "*****",
         "passphrase": "*****",
         "secret": "*****",
         "accessToken": "*****"
     };
+});
+When(/^convert object$/, function () {
+    actualResult = dataMask.mask(inputData);
+});
+Then(/^the data should be masked$/, function () {
 
-    assert.deepStrictEqual(actualResult, expectedValue);
+    assert.deepStrictEqual(actualResult, expectedResult);
+});
+Given(/^provide array of object$/, function () {
+    inputData = [
+        {
+            "full name": "Doris Tillman",
+            "address": {
+                "street": "4152 Doyle Inlet",
+                "city": "Ramnagar"
+            },
+            "email": "Doris.Tillman@hotmail.com"
+        },
+        {
+            "full name": "Miriam Quitzon",
+            "address": {
+                "street": "528 Esta Key",
+                "city": "Lambayeque"
+            },
+            "email": "Miriam30@hotmail.com"
+        }];
+    expectedResult = [
+        {
+            "full name": "*****",
+            "address": {
+                "street": "*****",
+                "city": "*****"
+            },
+            "email": "*****"
+        },
+        {
+            "full name": "*****",
+            "address": {
+                "street": "*****",
+                "city": "*****"
+            },
+            "email": "*****"
+        }];
 });
