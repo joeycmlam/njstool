@@ -7,9 +7,7 @@
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/features/dataMask.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/dataMask.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/step_definitions/dataMask.steps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/features/step_definitions/dataMask.steps.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data-mask.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-mask.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logwinston.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/logwinston.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -335,7 +333,7 @@
       <workItem from="1680876241351" duration="9297000" />
       <workItem from="1680924004184" duration="4567000" />
       <workItem from="1680966425769" duration="40000" />
-      <workItem from="1680966793876" duration="33393000" />
+      <workItem from="1680966793876" duration="33591000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1680363932879</created>
@@ -610,7 +608,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681059199119</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="add new case for integer">
+      <created>1681060261245</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1681060261245</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -646,7 +651,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="support json message on data mask" />
     <MESSAGE value="generate the cucumber report and add some test cases" />
     <MESSAGE value="change some test cases" />
     <MESSAGE value="add config for log level" />
@@ -671,7 +675,8 @@
     <MESSAGE value="fix the logger" />
     <MESSAGE value="reflector loginwston.ts" />
     <MESSAGE value="fix the test framework" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix the test framework" />
+    <MESSAGE value="add new case for integer" />
+    <option name="LAST_COMMIT_MESSAGE" value="add new case for integer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

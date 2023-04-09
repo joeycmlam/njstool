@@ -48,7 +48,7 @@ Feature: Mask PII data
     When convert object
     Then the data should be masked
 
-  Scenario: mark data as array of object format
+  Scenario: mark data as ARRAY of object format
     Given provide array of object
     When convert object
     Then the data should be masked
@@ -77,3 +77,4 @@ Feature: Mask PII data
     Examples:
       | inputData | expectedData |
       | 123       | 123          |
+

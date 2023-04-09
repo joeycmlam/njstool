@@ -1,6 +1,6 @@
 import {SyncRedactor} from 'redact-pii';
 import * as cp from './custom-regexp';
-type Maskable = string | number ;
+type Maskable = string | number | boolean;
 
 export class DataMask {
 
