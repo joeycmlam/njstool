@@ -2,8 +2,6 @@ import winston, {Logger as WinstonLogger} from 'winston';
 import dayjs from 'dayjs';
 import { DataMask } from "./data-mask";
 
-
-
 class Logger {
     private logger: WinstonLogger;
     private dataMask = new DataMask();
@@ -12,7 +10,7 @@ class Logger {
         const piiFilterFormatter = winston.format.printf(
             ({ level, message, timestamp, location}) => {
                 const filteredMessage =
-                    level !== 'debug' ? this.dataMask.mask(message) : message;
+                    this.logger.level === 'debug' ?  message : this.dataMask.mask(message);
                 return `[${location}] ${timestamp} ${level} : ${filteredMessage}`;
             }
         );
@@ -45,7 +43,7 @@ class Logger {
 
     public debug(message: string): void {
         const location = Logger.getCallerLocation();
-        this.logger.debug({ message, location});
+        this.logger.debug({message, location});
     }
 
 

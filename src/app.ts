@@ -34,8 +34,12 @@ function testProcess() {
         }
     ];
 
+    const stringmsg : string = 'my bank account number is 43231-0998-1923'
+
     const msg = dataMask.mask(inputData);
-    console.debug(JSON.stringify(msg));
+
+    // console.debug(msg);
+    logger.debug(JSON.stringify(msg));
 
 }
 

@@ -26,9 +26,10 @@ Feature: Mask PII data
     Then output is "<expectedData>"
 
     Examples:
-      | inputData           | expectedData |
-      | 1234-4567-7899-0012 | ******       |
-      | 2345 0987 2987 1111 | ******       |
+      | inputData                                 | expectedData                            |
+      | 1234-4567-7899-0012                       | ******                                  |
+      | 2345 0987 2987 1111                       | ******                                  |
+      | my bank account number is 43231-0998-1923 | my bank account number is ******-****** |
 
   Scenario Outline: mark password text
     Given provide the a string "<inputData>"

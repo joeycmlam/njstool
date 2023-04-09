@@ -3,7 +3,7 @@
     ".ts"
   ],
   "include": [
-    "src/**/*.ts"
+    "src/data-mask.ts"
   ],
   "exclude": [
     "**/*.d.ts"

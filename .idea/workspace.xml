@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="reflector to handle nested object array.">
-      <change afterPath="$PROJECT_DIR$/.nycrc" afterDir="false" />
+    <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/njstool.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/njstool.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.nycrc" beforeDir="false" afterPath="$PROJECT_DIR$/.nycrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/dataMask.feature" beforeDir="false" afterPath="$PROJECT_DIR$/features/dataMask.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/features/step_definitions/dataMask.steps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/features/step_definitions/dataMask.steps.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/custom-regexp-patterns.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/custom-regexp-patterns.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data-mask.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-mask.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/loglog4js.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/loglog4js.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/logwinston.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/logwinston.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -251,17 +249,17 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber.js.Scenario Outline: mark password text">
-    <configuration name="Scenario Outline: mark data in json file" type="cucumber.js" factoryName="Cucumber.js" temporary="true">
+  <component name="RunManager" selected="Cucumber.js.Scenario: mark data in json file for ... (1)">
+    <configuration name="Scenario Outline: mark Visa Card text" type="cucumber.js" factoryName="Cucumber.js" temporary="true">
       <option name="myFilePath" value="$PROJECT_DIR$/features/dataMask.feature" />
-      <option name="myNameFilter" value="^mark data in json file$" />
+      <option name="myNameFilter" value="^mark Visa Card text$" />
       <option name="cucumberJsArguments" value="" />
       <option name="workingDirectory" value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="Scenario Outline: mark password text" type="cucumber.js" factoryName="Cucumber.js" temporary="true">
+    <configuration name="Scenario: mark data in json file for ... (1)" type="cucumber.js" factoryName="Cucumber.js" temporary="true">
       <option name="myFilePath" value="$PROJECT_DIR$/features/dataMask.feature" />
-      <option name="myNameFilter" value="^mark password text$" />
+      <option name="myNameFilter" value="^mark data in json file for nested of array$" />
       <option name="cucumberJsArguments" value="" />
       <option name="workingDirectory" value="$PROJECT_DIR$" />
       <method v="2" />
@@ -304,9 +302,9 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Cucumber.js.Scenario Outline: mark password text" />
+      <item itemvalue="Cucumber.js.Scenario Outline: mark Visa Card text" />
       <item itemvalue="Cucumber.js.Scenario: mark data in json file for ..." />
-      <item itemvalue="Cucumber.js.Scenario Outline: mark data in json file" />
+      <item itemvalue="Cucumber.js.Scenario: mark data in json file for ... (1)" />
       <item itemvalue="npm.test" />
       <item itemvalue="npm.generate-report" />
       <item itemvalue="npm.start" />
@@ -314,10 +312,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.start" />
+        <item itemvalue="Cucumber.js.Scenario: mark data in json file for ... (1)" />
+        <item itemvalue="Cucumber.js.Scenario Outline: mark Visa Card text" />
         <item itemvalue="npm.generate-report" />
         <item itemvalue="Cucumber.js.Scenario: mark data in json file for ..." />
-        <item itemvalue="Cucumber.js.Scenario Outline: mark password text" />
-        <item itemvalue="Cucumber.js.Scenario Outline: mark data in json file" />
       </list>
     </recent_temporary>
   </component>
@@ -339,7 +337,7 @@
       <workItem from="1680876241351" duration="9297000" />
       <workItem from="1680924004184" duration="4567000" />
       <workItem from="1680966425769" duration="40000" />
-      <workItem from="1680966793876" duration="26117000" />
+      <workItem from="1680966793876" duration="28132000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1680363932879</created>
@@ -579,7 +577,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681033858901</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="remove unncessary coding">
+      <created>1681052977965</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1681052977965</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -615,7 +620,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactor log4js" />
     <MESSAGE value="add cucumber test" />
     <MESSAGE value="cucumber test reflector the folder structure" />
     <MESSAGE value="fix the cucumber test - scenario outline issue" />
@@ -640,7 +644,8 @@
     <MESSAGE value="reflector for string pattern" />
     <MESSAGE value="add test case for nested array object" />
     <MESSAGE value="reflector to handle nested object array." />
-    <option name="LAST_COMMIT_MESSAGE" value="reflector to handle nested object array." />
+    <MESSAGE value="remove unncessary coding" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove unncessary coding" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -652,28 +657,16 @@
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/data-mask.ts</url>
-          <line>60</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/data-mask.ts</url>
-          <line>49</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/logwinston.ts</url>
-          <line>47</line>
+          <line>45</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/data-mask.ts</url>
-          <line>40</line>
+          <line>60</line>
           <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="19" />
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

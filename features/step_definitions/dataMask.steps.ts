@@ -5,6 +5,7 @@ import * as fs from 'fs';
 
 
 let inputData: any;
+let inputString: string;
 let actualResult: any;
 let expectedResult: any;
 const dataMask = new DataMask;
@@ -15,11 +16,11 @@ Before(() => {
 });
 
 Given(/^provide the a string "([^"]*)"$/, function (input: string) {
-    inputData = input;
+    inputString = input;
 });
 
 When(/^I mask the data$/, function () {
-    actualResult = dataMask.mask(inputData);
+    actualResult = dataMask.mask(inputString);
 });
 
 Then(/^output is "([^"]*)"$/, function (expectedResult: string) {
@@ -28,7 +29,7 @@ Then(/^output is "([^"]*)"$/, function (expectedResult: string) {
 
 
 Given(/^provide json file "([^"]*)"$/, function (input: string) {
-    inputData = input;
+    inputString = input;
 });
 
 function readFileAsJson(fileName: string): any {
@@ -37,7 +38,7 @@ function readFileAsJson(fileName: string): any {
 }
 
 When(/^convert msg from file$/, function () {
-    const inputOjbect = JSON.parse(readFileAsJson(inputData));
+    const inputOjbect = JSON.parse(readFileAsJson(inputString));
     actualResult = dataMask.mask(inputOjbect);
 });
 
