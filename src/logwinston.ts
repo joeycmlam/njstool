@@ -1,6 +1,6 @@
 import winston, {Logger as WinstonLogger} from 'winston';
 import dayjs from 'dayjs';
-import { DataMask } from "./data-mask";
+import {DataMask} from "./data-mask";
 
 export default class Logger {
     private dataMask = new DataMask();
@@ -9,9 +9,9 @@ export default class Logger {
     constructor(logLevel: string = 'info') {
 
         const piiFilterFormatter = winston.format.printf(
-            ({ level, message, timestamp, location}) => {
+            ({level, message, timestamp, location}) => {
                 const filteredMessage =
-                    this.logger.level === 'debug' ?  message : this.dataMask.mask(message);
+                    this.logger.level === 'debug' ? message : this.dataMask.mask(message);
                 return `[${location}] ${timestamp} ${level} : ${filteredMessage}`;
             }
         );
@@ -19,7 +19,7 @@ export default class Logger {
         this.logger = winston.createLogger({
             level: logLevel,
             format: winston.format.combine(
-                winston.format.timestamp({ format: () => dayjs().format('YYYY-MM-DD HH:mm:ss') }),
+                winston.format.timestamp({format: () => dayjs().format('YYYY-MM-DD HH:mm:ss')}),
                 winston.format.colorize(),
                 piiFilterFormatter
             ),
@@ -29,22 +29,22 @@ export default class Logger {
 
     public info(message: string): void {
         const location = Logger.getCallerLocation();
-        this.logger.info({ message, location });
+        this.logger.info({message, location});
     }
 
     public warn(message: string): void {
         const location = Logger.getCallerLocation();
-        this.logger.warn({ message, location });
+        this.logger.warn({message, location});
     }
 
     public error(message: string): void {
         const location = Logger.getCallerLocation();
-        this.logger.error({ message, location });
+        this.logger.error({message, location});
     }
 
     public debug(message: string): void {
         const location = Logger.getCallerLocation();
-        this.logger.debug({ message, location });
+        this.logger.debug({message, location});
     }
 
     private static getCallerLocation(): string {

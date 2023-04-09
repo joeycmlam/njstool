@@ -103,3 +103,10 @@ Given(/^provide array of object$/, function () {
             "email": "*****"
         }];
 });
+Given(/^provide integer "([^"]*)"$/, function (input: number) {
+    inputData = input;
+});
+Then(/^integer output is "([^"]*)"$/, function (expectedResult: number) {
+    assert.equal(actualResult, expectedResult)
+});
+

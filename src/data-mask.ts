@@ -1,6 +1,6 @@
 import {SyncRedactor} from 'redact-pii';
 import * as cp from './custom-regexp';
-type Maskable = string | number | boolean;
+type Maskable = string | number ;
 
 export class DataMask {
 
@@ -24,7 +24,7 @@ export class DataMask {
         return value !== null && (typeof value === 'object' || Array.isArray(value))
     }
 
-    private isMaskable(value: any): boolean {
+    protected static isMaskable(value: any): boolean {
         return (
             typeof value === 'string' ||
             typeof value === 'number' ||
@@ -37,7 +37,7 @@ export class DataMask {
 
         for (const key in maskedData) {
             if (maskedData.hasOwnProperty(key)) {
-                if (this.isMaskable(maskedData[key])) {
+                if (DataMask.isMaskable(maskedData[key])) {
                     if  (cp.sensitiveKeyPattern.test(key)) {
                         maskedData[key] = '*****';
                     }
@@ -52,7 +52,7 @@ export class DataMask {
     public mask(data: any): any {
         let maskedData: any;
 
-        if (this.isMaskable(data)) {
+        if (DataMask.isMaskable(data)) {
             maskedData = this.redactor.redact(data.toString());
         } else {
             maskedData = this.maskObject(data);

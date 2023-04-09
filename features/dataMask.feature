@@ -67,3 +67,13 @@ Feature: Mask PII data
     Given provide json file "features/test_data/test4.json"
     When convert msg from file
     Then validate the out "features/test_data/test4_expected_result.json"
+
+
+  Scenario Outline: number case
+    Given provide integer "<inputData>"
+    When convert object
+    Then integer output is "<expectedData>"
+
+    Examples:
+      | inputData | expectedData |
+      | 123       | 123          |
