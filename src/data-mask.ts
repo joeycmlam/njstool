@@ -13,8 +13,8 @@ export class DataMask {
             customRedactors: {
                 before: [
                     {
-                        regexpPattern: /password \s*(\S+)/,
-                        replaceWith: 'password ******',
+                        regexpPattern: cp.sensitivePattern,
+                        replaceWith: '******',
                     },
                 ],
             },

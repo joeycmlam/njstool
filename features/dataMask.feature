@@ -36,10 +36,11 @@ Feature: Mask PII data
     Then output is "<expectedData>"
 
     Examples:
-      | inputData              | expectedData    |
-      | password: abcd123$ibye | ******          |
-      | pass: abcd123$ibye     | ******          |
-      | password abcd123$ibye  | password ****** |
+      | inputData              | expectedData |
+      | password: abcd123$ibye | ******       |
+      | pass: abcd123$ibye     | ******       |
+      | password abcd123$ibye  | ******       |
+      | token abcd123$ibye     | ******       |
 
   Scenario: mark data as object format
     Given provide object
