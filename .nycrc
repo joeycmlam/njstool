@@ -1,6 +1,7 @@
 {
   "extension": [
-    ".ts"
+    ".ts",
+    ".tsx"
   ],
   "include": [
     "src/data-mask.ts"

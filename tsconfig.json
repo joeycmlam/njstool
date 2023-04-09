@@ -4,7 +4,10 @@
     "target": "es6",
     "sourceMap": true,
     "strict": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "inlineSourceMap": false,
+    "inlineSources": true,
+    "declaration": true
   },
   "include": ["./src/**/*.ts"],
   "exclude": [

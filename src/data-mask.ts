@@ -1,5 +1,5 @@
 import {SyncRedactor} from 'redact-pii';
-import * as cp from './custom-regexp-patterns';
+import * as cp from './custom-regexp';
 type Maskable = string | number | boolean;
 
 export class DataMask {
@@ -20,12 +20,11 @@ export class DataMask {
         });
     }
 
-
-    private isObject(value: any): value is Record<string, unknown> {
+    private isObject(value: any): boolean {
         return value !== null && (typeof value === 'object' || Array.isArray(value))
     }
 
-    private isMaskable(value: any): value is Maskable {
+    private isMaskable(value: any): boolean {
         return (
             typeof value === 'string' ||
             typeof value === 'number' ||

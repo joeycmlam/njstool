@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/logwinston.ts",
   "scripts": {
-    "test": "nyc --reporter=html --reporter=text-summary cucumber-js features/*.feature",
+    "test": "nyc --reporter=html --reporter=text-summary cucumber-js features/*.feature  ",
     "posttest": "ts-node report-generator.ts",
     "start": "ts-node src/app.ts"
   },
