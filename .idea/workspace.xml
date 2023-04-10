@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/features/step_definitions/logger.steps.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +214,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs.jest.jest_package": "/Users/joeylam/repo/njs/njstool/node_modules/jest",
     "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "/Users/joeylam/repo/njs/njstool/node_modules/typescript/lib",
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -244,23 +245,6 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="dataMask.feature" type="cucumber.js" factoryName="Cucumber.js" temporary="true">
-      <option name="myFilePath" value="$PROJECT_DIR$/features/dataMask.feature" />
-      <option name="myNameFilter" value="" />
-      <option name="cucumberJsArguments" value="" />
-      <option name="workingDirectory" value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="generate-report" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="generate-report" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <configuration name="junit" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -271,11 +255,11 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="posttest" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="start" />
+        <script value="posttest" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -291,21 +275,41 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="test:cucumber" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test:cucumber" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="test:jest" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test:jest" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Cucumber.js.dataMask.feature" />
       <item itemvalue="Jest.MaskedLogger.should log debug message" />
       <item itemvalue="npm.test" />
+      <item itemvalue="npm.posttest" />
+      <item itemvalue="npm.test:cucumber" />
+      <item itemvalue="npm.test:jest" />
       <item itemvalue="npm.junit" />
-      <item itemvalue="npm.start" />
-      <item itemvalue="npm.generate-report" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.posttest" />
+        <item itemvalue="npm.test:cucumber" />
+        <item itemvalue="npm.test:jest" />
         <item itemvalue="npm.junit" />
         <item itemvalue="Jest.MaskedLogger.should log debug message" />
-        <item itemvalue="npm.generate-report" />
-        <item itemvalue="npm.start" />
-        <item itemvalue="Cucumber.js.dataMask.feature" />
       </list>
     </recent_temporary>
   </component>

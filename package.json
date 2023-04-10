@@ -4,8 +4,9 @@
   "description": "",
   "main": "src/logwinston.ts",
   "scripts": {
-    "junit": "jest",
-    "test": "nyc cucumber-js features/*.feature  ",
+    "test": "npm run test:jest && npm run test:cucumber",
+    "test:jest": "nyc jest --coverage",
+    "test:cucumber": "nyc cucumber-js features/*.feature  ",
     "posttest": "ts-node report-generator.ts",
     "start": "ts-node src/app.ts"
   },
