@@ -1,12 +1,12 @@
 {
   "login_request" : {
     "client": {
-      "name": "J. Chan",
+      "name": "J. ******",
       "email": "*****",
       "phone": "*****",
       "identityNumber": "*****",
       "passport": "*****",
-      "bank_account": "*****"
+      "bank_account": "******"
     },
     "login": {
       "password": "*****",

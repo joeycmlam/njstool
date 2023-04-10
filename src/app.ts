@@ -11,12 +11,6 @@ function testProcess() {
     const inputData = [
         {
             fullname: "Rodolfo Powlowski",
-            address: {
-                credit_card: "4916677121340731",
-                street: "464 Carlee Island",
-                city: "Kara-Bak"
-            },
-            email: "Rodolfo_Powlowski@hotmail.com",
             holding: [
                 [
                     {
