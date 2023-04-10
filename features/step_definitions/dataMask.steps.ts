@@ -8,7 +8,7 @@ let inputData: any;
 let inputString: string;
 let actualResult: any;
 let expectedResult: any;
-const dataMask = new DataMask();
+const dataMask= new DataMask();
 
 Before(() => {
     inputData = '';

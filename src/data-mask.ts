@@ -25,7 +25,7 @@ export class DataMask {
 
     private isMaskable(value: any): boolean {
         return (
-            typeof value === 'string'
+            value !== null && typeof value === 'string'
         );
     }
 
@@ -61,8 +61,6 @@ export class DataMask {
             maskedData = this.redactor.redact(data.toString());
         } if (this.isObject(data)) {
             maskedData = this.maskObject(data);
-        } else {
-            //do nothing
         }
         return maskedData;
     }
