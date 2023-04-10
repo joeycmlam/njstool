@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/features/step_definitions/logger.steps.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jest.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jtest/logger.test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jl-log4js.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/loglog4js.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/loglog4js.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jtest/logger.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/jtest/logger.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jl-log4js.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/jl-log4js.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,29 +28,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/features/dataMask.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
+            <state relative-caret-position="714">
+              <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="4" selection-end-column="43" />
-              <folding>
-                <element signature="e#0#34#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/logwinston.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="49" column="38" selection-start-line="49" selection-start-column="38" selection-end-line="49" selection-end-column="38" />
+            <state relative-caret-position="867">
+              <caret line="53" column="38" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
               <folding>
                 <element signature="e#0#57#0" expanded="true" />
               </folding>
@@ -78,8 +66,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/data-mask.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+            <state relative-caret-position="51">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -88,19 +76,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/custom-regexp-patterns.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/features/test_data/test2.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+            <state relative-caret-position="340">
+              <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -176,10 +155,10 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="180" />
-    <option name="y" value="123" />
-    <option name="width" value="1080" />
-    <option name="height" value="592" />
+    <option name="x" value="1738" />
+    <option name="y" value="-338" />
+    <option name="width" value="1084" />
+    <option name="height" value="594" />
   </component>
   <component name="ProjectId" id="2O9JJSz0MbxM4ZyE5FKHIzrqlzR" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -230,12 +209,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "last_opened_file_path": "/Users/joeylam/repo/njs/njstool/features/test_data",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs.cucumber.cucumber_node_package_dir": "/Users/joeylam/repo/njs/njstool/node_modules/@cucumber/cucumber",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "nodejs.jest.jest_package": "/Users/joeylam/repo/njs/njstool/node_modules/jest",
-    "settings.editor.selected.configurable": "terminal",
-    "ts.external.directory.path": "/Users/joeylam/repo/njs/njstool/node_modules/typescript/lib"
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/Users/joeylam/repo/njs/njstool/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -265,43 +245,21 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="MaskedLogger.should log redacted error message" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/jtest/logger.test.ts" />
-      <test-names>
-        <test-name value="MaskedLogger" />
-        <test-name value="should log redacted error message" />
-      </test-names>
+    <configuration name="dataMask.feature" type="cucumber.js" factoryName="Cucumber.js" temporary="true">
+      <option name="myFilePath" value="$PROJECT_DIR$/features/dataMask.feature" />
+      <option name="myNameFilter" value="" />
+      <option name="cucumberJsArguments" value="" />
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="MaskedLogger.should log redacted info message" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="generate-report" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="generate-report" />
+      </scripts>
       <node-interpreter value="project" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
       <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/jtest/logger.test.ts" />
-      <test-names>
-        <test-name value="MaskedLogger" />
-        <test-name value="should log redacted info message" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="MaskedLogger.should log redacted warn message" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/jtest/logger.test.ts" />
-      <test-names>
-        <test-name value="MaskedLogger" />
-        <test-name value="should log redacted warn message" />
-      </test-names>
       <method v="2" />
     </configuration>
     <configuration name="junit" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -309,6 +267,16 @@
       <command value="run" />
       <scripts>
         <script value="junit" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -325,20 +293,20 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Cucumber.js.dataMask.feature" />
       <item itemvalue="Jest.MaskedLogger.should log debug message" />
-      <item itemvalue="Jest.MaskedLogger.should log redacted error message" />
-      <item itemvalue="Jest.MaskedLogger.should log redacted info message" />
-      <item itemvalue="Jest.MaskedLogger.should log redacted warn message" />
       <item itemvalue="npm.test" />
       <item itemvalue="npm.junit" />
+      <item itemvalue="npm.start" />
+      <item itemvalue="npm.generate-report" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.MaskedLogger.should log debug message" />
-        <item itemvalue="Jest.MaskedLogger.should log redacted warn message" />
-        <item itemvalue="Jest.MaskedLogger.should log redacted error message" />
-        <item itemvalue="Jest.MaskedLogger.should log redacted info message" />
         <item itemvalue="npm.junit" />
+        <item itemvalue="Jest.MaskedLogger.should log debug message" />
+        <item itemvalue="npm.generate-report" />
+        <item itemvalue="npm.start" />
+        <item itemvalue="Cucumber.js.dataMask.feature" />
       </list>
     </recent_temporary>
   </component>
@@ -360,7 +328,9 @@
       <workItem from="1680876241351" duration="9297000" />
       <workItem from="1680924004184" duration="4567000" />
       <workItem from="1680966425769" duration="40000" />
-      <workItem from="1680966793876" duration="45840000" />
+      <workItem from="1680966793876" duration="876000" />
+      <workItem from="1680968116183" duration="451000" />
+      <workItem from="1681132999786" duration="4000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1680363932879</created>
@@ -565,115 +535,16 @@
       <option name="project" value="LOCAL" />
       <updated>1680948892871</updated>
     </task>
-    <task id="LOCAL-00030" summary="code reflector to support array of object and change to singleston">
-      <created>1681029050266</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1681029050266</updated>
-    </task>
-    <task id="LOCAL-00031" summary="add more test case.">
-      <created>1681029470646</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1681029470646</updated>
-    </task>
-    <task id="LOCAL-00032" summary="for object, put filtering.">
-      <created>1681031182767</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1681031182767</updated>
-    </task>
-    <task id="LOCAL-00033" summary="reflector for string pattern">
-      <created>1681031791984</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1681031791984</updated>
-    </task>
-    <task id="LOCAL-00034" summary="add test case for nested array object">
-      <created>1681033858901</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1681033858901</updated>
-    </task>
-    <task id="LOCAL-00035" summary="remove unncessary coding">
-      <created>1681052977965</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1681052977965</updated>
-    </task>
-    <task id="LOCAL-00036" summary="fix the logger issue.  when debug, it won't mask the data.">
-      <created>1681054973977</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1681054973977</updated>
-    </task>
-    <task id="LOCAL-00037" summary="fix the logger">
-      <created>1681057649125</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1681057649125</updated>
-    </task>
-    <task id="LOCAL-00038" summary="reflector loginwston.ts">
-      <created>1681059012719</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1681059012719</updated>
-    </task>
-    <task id="LOCAL-00039" summary="fix the test framework">
-      <created>1681059199119</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1681059199119</updated>
-    </task>
-    <task id="LOCAL-00040" summary="add new case for integer">
-      <created>1681060261245</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1681060261245</updated>
-    </task>
-    <task id="LOCAL-00041" summary="rename scneario">
-      <created>1681060450081</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1681060450081</updated>
-    </task>
-    <task id="LOCAL-00042" summary="in isMaskable() function, remove number and boolean as it is not necessary to mask.">
-      <created>1681098462439</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1681098462439</updated>
-    </task>
-    <task id="LOCAL-00043" summary="prettify the format">
-      <created>1681098913696</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1681098913696</updated>
-    </task>
-    <option name="localTasksCounter" value="44" />
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66912000" />
+    <option name="totallyTimeSpent" value="67367000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1440" height="788" extended-state="6" />
-    <editor active="true" />
+    <frame x="1440" y="-515" width="2048" height="1055" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989775" visible="true" weight="0.18413597" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989775" visible="true" weight="0.18366337" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" sideWeight="0.5010225" side_tool="true" weight="0.2174221" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -687,8 +558,8 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="GraphQL" order="9" />
-      <window_info anchor="bottom" id="TypeScript" order="10" sideWeight="0.4957507" visible="true" weight="0.3258595" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5042493" side_tool="true" visible="true" weight="0.3258595" />
+      <window_info active="true" anchor="bottom" id="TypeScript" order="10" sideWeight="0.49455446" visible="true" weight="0.3258547" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50544554" side_tool="true" visible="true" weight="0.3258547" />
       <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.47308782" weight="0.26756352" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -699,6 +570,21 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="revised version" />
+    <MESSAGE value="with pass in parameter" />
+    <MESSAGE value="use winston for logging" />
+    <MESSAGE value="use redact-pii to reduce the chance writting some PII data in the log file" />
+    <MESSAGE value="use log4j" />
+    <MESSAGE value="fix log4js" />
+    <MESSAGE value="refactor log4js" />
+    <MESSAGE value="add cucumber test" />
+    <MESSAGE value="cucumber test reflector the folder structure" />
+    <MESSAGE value="fix the cucumber test - scenario outline issue" />
+    <MESSAGE value="add the testing feature to read the test data and expected data in a file with json format." />
+    <MESSAGE value="support json message on data mask" />
+    <MESSAGE value="generate the cucumber report and add some test cases" />
+    <MESSAGE value="change some test cases" />
+    <MESSAGE value="add config for log level" />
     <MESSAGE value="code reflector to add yaml file" />
     <MESSAGE value="code reflector" />
     <MESSAGE value="config reflector to oo design" />
@@ -709,55 +595,16 @@
     <MESSAGE value="reflect to change the masking format" />
     <MESSAGE value="reflector to include customoize pattern" />
     <MESSAGE value="put the additon comment" />
-    <MESSAGE value="code reflector to support array of object and change to singleston" />
-    <MESSAGE value="add more test case." />
-    <MESSAGE value="for object, put filtering." />
-    <MESSAGE value="reflector for string pattern" />
-    <MESSAGE value="add test case for nested array object" />
-    <MESSAGE value="reflector to handle nested object array." />
-    <MESSAGE value="remove unncessary coding" />
-    <MESSAGE value="fix the logger issue.  when debug, it won't mask the data." />
-    <MESSAGE value="fix the logger" />
-    <MESSAGE value="reflector loginwston.ts" />
-    <MESSAGE value="fix the test framework" />
-    <MESSAGE value="add new case for integer" />
-    <MESSAGE value="rename scneario" />
-    <MESSAGE value="in isMaskable() function, remove number and boolean as it is not necessary to mask." />
-    <MESSAGE value="prettify the format" />
-    <option name="LAST_COMMIT_MESSAGE" value="prettify the format" />
+    <option name="LAST_COMMIT_MESSAGE" value="put the additon comment" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>mock://file:///Users/joeylam/repo/njs/njstool/src/data-mask.ts</url>
-          <line>18</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/logwinston.ts</url>
-          <line>55</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/features/step_definitions/dataMask.steps.ts</url>
-          <line>109</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/features/step_definitions/dataMask.steps.ts</url>
-          <line>63</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/jl-log4js.ts</url>
-          <line>36</line>
+          <line>35</line>
           <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="31" />
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -904,15 +751,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/features/dataMask.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="33" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
+        <state relative-caret-position="714">
+          <caret line="42" column="33" selection-start-line="42" selection-start-column="33" selection-end-line="42" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/logwinston.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="49" column="38" selection-start-line="49" selection-start-column="38" selection-end-line="49" selection-end-column="38" />
+        <state relative-caret-position="867">
+          <caret line="53" column="38" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
           <folding>
             <element signature="e#0#57#0" expanded="true" />
           </folding>
@@ -931,8 +778,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/data-mask.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        <state relative-caret-position="51">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
@@ -942,26 +789,19 @@
     <entry file="file://$PROJECT_DIR$/src/custom-regexp-patterns.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/features/test_data/test2.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+        <state relative-caret-position="340">
+          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="4" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

@@ -33,8 +33,8 @@ export default class MaskedLogger {
     }
 
     public debug(...args: any[]): void {
-        // const redactedArgs = args.map((arg) => this.redactMessage(arg));
-        this.logger.debug(args);
+        const redactedArgs = args.map((arg) => arg.toString());
+        this.logger.debug(redactedArgs.join(' '));
     }
 
     public warn(...args: any[]): void {

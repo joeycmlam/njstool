@@ -42,15 +42,15 @@ describe('MaskedLogger', () => {
     });
 
     it('should log redacted info message', () => {
-        maskedLogger.info('This is a test info message with sensitive data: secret123');
+        maskedLogger.info('This is a test info message with sensitive data: myemail@xxx.com');
         expect(loggerMock.info).toHaveBeenCalledWith(
-            'This is a test info message with sensitive data: secret123'
+            'This is a test info message with sensitive data: ******'
         );
     });
 
     it('should log debug message', () => {
-        maskedLogger.debug('This is a test debug message');
-        expect(loggerMock.debug).toHaveBeenCalledWith('"This is a test debug message"');
+        maskedLogger.debug('This is a test info message with sensitive data: myemail@xxx.com');
+        expect(loggerMock.debug).toHaveBeenCalledWith('This is a test info message with sensitive data: myemail@xxx.com');
     });
 
     it('should log redacted warn message', () => {
