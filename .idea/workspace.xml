@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jtest/logger.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/jtest/logger.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jl-log4js.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/jl-log4js.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/step_definitions/logger.steps.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,6 +210,7 @@
     "WebServerToolWindowFactoryState": "false",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs.jest.jest_package": "/Users/joeylam/repo/njs/njstool/node_modules/jest",
     "nodejs_package_manager_path": "npm",
     "ts.external.directory.path": "/Users/joeylam/repo/njs/njstool/node_modules/typescript/lib",
@@ -231,7 +230,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.MaskedLogger.should log debug message">
+  <component name="RunManager" selected="npm.test">
     <configuration name="MaskedLogger.should log debug message" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
