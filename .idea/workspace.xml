@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/features/step_definitions/logger.steps.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jest.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jtest/logger.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jl-log4js.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features/step_definitions/dataMask.steps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/features/step_definitions/dataMask.steps.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data-mask.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data-mask.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/loglog4js.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/loglog4js.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,6 +233,7 @@
     "last_opened_file_path": "/Users/joeylam/repo/njs/njstool/features/test_data",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs.cucumber.cucumber_node_package_dir": "/Users/joeylam/repo/njs/njstool/node_modules/@cucumber/cucumber",
+    "nodejs.jest.jest_package": "/Users/joeylam/repo/njs/njstool/node_modules/jest",
     "settings.editor.selected.configurable": "terminal",
     "ts.external.directory.path": "/Users/joeylam/repo/njs/njstool/node_modules/typescript/lib"
   }
@@ -245,43 +251,64 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber.js.Scenario Outline: number case">
-    <configuration name="Scenario Outline: mark Visa Card text" type="cucumber.js" factoryName="Cucumber.js" temporary="true">
-      <option name="myFilePath" value="$PROJECT_DIR$/features/dataMask.feature" />
-      <option name="myNameFilter" value="^mark Visa Card text$" />
-      <option name="cucumberJsArguments" value="" />
-      <option name="workingDirectory" value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Scenario Outline: number case" type="cucumber.js" factoryName="Cucumber.js" temporary="true">
-      <option name="myFilePath" value="$PROJECT_DIR$/features/dataMask.feature" />
-      <option name="myNameFilter" value="^number case$" />
-      <option name="cucumberJsArguments" value="" />
-      <option name="workingDirectory" value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Scenario: mark data in json file for ... (1)" type="cucumber.js" factoryName="Cucumber.js" temporary="true">
-      <option name="myFilePath" value="$PROJECT_DIR$/features/dataMask.feature" />
-      <option name="myNameFilter" value="^mark data in json file for nested of array$" />
-      <option name="cucumberJsArguments" value="" />
-      <option name="workingDirectory" value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="posttest" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="posttest" />
-      </scripts>
+  <component name="RunManager" selected="Jest.MaskedLogger.should log debug message">
+    <configuration name="MaskedLogger.should log debug message" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
       <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/jtest/logger.test.ts" />
+      <test-names>
+        <test-name value="MaskedLogger" />
+        <test-name value="should log debug message" />
+      </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="MaskedLogger.should log redacted error message" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/jtest/logger.test.ts" />
+      <test-names>
+        <test-name value="MaskedLogger" />
+        <test-name value="should log redacted error message" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="MaskedLogger.should log redacted info message" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/jtest/logger.test.ts" />
+      <test-names>
+        <test-name value="MaskedLogger" />
+        <test-name value="should log redacted info message" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="MaskedLogger.should log redacted warn message" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/jtest/logger.test.ts" />
+      <test-names>
+        <test-name value="MaskedLogger" />
+        <test-name value="should log redacted warn message" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="junit" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="start" />
+        <script value="junit" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -298,20 +325,20 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Cucumber.js.Scenario Outline: mark Visa Card text" />
-      <item itemvalue="Cucumber.js.Scenario Outline: number case" />
-      <item itemvalue="Cucumber.js.Scenario: mark data in json file for ... (1)" />
+      <item itemvalue="Jest.MaskedLogger.should log debug message" />
+      <item itemvalue="Jest.MaskedLogger.should log redacted error message" />
+      <item itemvalue="Jest.MaskedLogger.should log redacted info message" />
+      <item itemvalue="Jest.MaskedLogger.should log redacted warn message" />
       <item itemvalue="npm.test" />
-      <item itemvalue="npm.posttest" />
-      <item itemvalue="npm.start" />
+      <item itemvalue="npm.junit" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.posttest" />
-        <item itemvalue="npm.start" />
-        <item itemvalue="Cucumber.js.Scenario Outline: number case" />
-        <item itemvalue="Cucumber.js.Scenario: mark data in json file for ... (1)" />
-        <item itemvalue="Cucumber.js.Scenario Outline: mark Visa Card text" />
+        <item itemvalue="Jest.MaskedLogger.should log debug message" />
+        <item itemvalue="Jest.MaskedLogger.should log redacted warn message" />
+        <item itemvalue="Jest.MaskedLogger.should log redacted error message" />
+        <item itemvalue="Jest.MaskedLogger.should log redacted info message" />
+        <item itemvalue="npm.junit" />
       </list>
     </recent_temporary>
   </component>
@@ -333,7 +360,7 @@
       <workItem from="1680876241351" duration="9297000" />
       <workItem from="1680924004184" duration="4567000" />
       <workItem from="1680966425769" duration="40000" />
-      <workItem from="1680966793876" duration="38827000" />
+      <workItem from="1680966793876" duration="45840000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1680363932879</created>
@@ -629,7 +656,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681098462439</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="prettify the format">
+      <created>1681098913696</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1681098913696</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -665,7 +699,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add config for log level" />
     <MESSAGE value="code reflector to add yaml file" />
     <MESSAGE value="code reflector" />
     <MESSAGE value="config reflector to oo design" />
@@ -690,7 +723,8 @@
     <MESSAGE value="add new case for integer" />
     <MESSAGE value="rename scneario" />
     <MESSAGE value="in isMaskable() function, remove number and boolean as it is not necessary to mask." />
-    <option name="LAST_COMMIT_MESSAGE" value="in isMaskable() function, remove number and boolean as it is not necessary to mask." />
+    <MESSAGE value="prettify the format" />
+    <option name="LAST_COMMIT_MESSAGE" value="prettify the format" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -700,12 +734,6 @@
           <line>18</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/data-mask.ts</url>
-          <line>64</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/logwinston.ts</url>
@@ -726,10 +754,10 @@
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/data-mask.ts</url>
-          <line>59</line>
+          <url>file://$PROJECT_DIR$/src/jl-log4js.ts</url>
+          <line>36</line>
           <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="28" />
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

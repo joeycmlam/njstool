@@ -6,10 +6,18 @@ const dataMask = new DataMask();
 log4js.configure({
     appenders: {
         console: { type: 'console' },
-        file: { type: 'file', filename: 'app.log' },
+        file: {
+            type: 'file',
+            filename: 'logs/app.log',
+            pattern: '-yyyy-MM-dd',
+            layout: {
+                type: 'pattern',
+                pattern: '%d{yyyy-MM-dd hh:mm:ss} %p %f:%l %m%n',
+            },
+        },
     },
     categories: {
-        default: { appenders: ['console', 'file'], level: 'info'},
+        default: { appenders: ['console', 'file'], level: 'debug' },
     },
 });
 

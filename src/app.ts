@@ -1,9 +1,10 @@
-import Logger from './logwinston';
+// import Logger from './logwinston';
+import MaskedLogger from './jl-log4js';
 import config from './config';
 import {DataMask} from "./data-mask";
 
 
-const logger = new Logger(config.logLevel);
+const logger = new MaskedLogger(config.logLevel);
 const dataMask = new DataMask();
 
 
@@ -30,12 +31,12 @@ function testProcess() {
 
     const stringmsg : string = 'my bank account number is 43231-0998-1923'
 
-    const msg = dataMask.mask(inputData);
+    // const msg = dataMask.mask(inputData);
 
     logger.info('start');
     logger.warn('test');
-    // console.debug(msg);
-    logger.debug(JSON.stringify(msg));
+
+    logger.debug(JSON.stringify(inputData));
     logger.info('end');
 }
 
