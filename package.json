@@ -4,11 +4,12 @@
   "description": "",
   "main": "src/app/app-mask/logwinston.ts",
   "scripts": {
+    "start:app-mask": "ts-node src/app/app-mask/app.ts",
+    "start:app-map": "ts-node src/app/app-map/app.ts",
     "test": "npm run test:cucumber && npm run test:jest",
     "test:jest": "nyc jest --coverage",
     "test:cucumber": "nyc cucumber-js test/features/*.feature  ",
-    "posttest": "ts-node report-generator.ts",
-    "start": "ts-node src/app/app-mask/app.ts"
+    "posttest": "ts-node report-generator.ts"
   },
   "keywords": [],
   "author": "",
