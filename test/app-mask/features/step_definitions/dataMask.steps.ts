@@ -1,6 +1,6 @@
 import {Before, Given, Then, When} from '@cucumber/cucumber'
 import * as assert from "assert";
-import {DataMask} from "../../../src/app/app-mask/data-mask";
+import {DataMask} from "../../../../src/app/app-mask/data-mask";
 import * as fs from 'fs';
 
 
@@ -8,7 +8,7 @@ let inputData: any;
 let inputString: string;
 let actualResult: any;
 let expectedResult: any;
-const rootPath: string = 'test/'
+const rootPath: string = 'test/app-mask/features/test_data/'
 const dataMask= new DataMask();
 
 Before(() => {
@@ -30,12 +30,13 @@ Then(/^output is "([^"]*)"$/, function (expectedResult: string) {
 
 
 Given(/^provide json file "([^"]*)"$/, function (input: string) {
-    inputString = rootPath + input;
+    inputString = input;
 });
 
 function readFileAsJson(fileName: string): any {
 
-    return fs.readFileSync(fileName, 'utf8');
+    const fullFileName: string = rootPath + fileName;
+    return fs.readFileSync(fullFileName, 'utf8');
 }
 
 When(/^convert msg from file$/, function () {

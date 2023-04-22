@@ -8,11 +8,6 @@ const data = [
     {name: 'name-2', date: '2023-01-02', rate: 1}
 ];
 
-export interface commitCounter {
-    name: string,
-    date: string,
-    rate: number
-}
 
 export default class Converter {
     private counters: Map<string, number>;
