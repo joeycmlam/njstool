@@ -49,7 +49,7 @@ export default class Converter {
             { header: "Commit Count", key: "commitCount", width: 15 },
         ];
 
-        for (let [key, value] of this.commits) {
+        for (let value of this.commits.values()) {
             worksheet.addRow({date: value.date, author: value.name, commitCount: value.rate });
         }
 
