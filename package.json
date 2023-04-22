@@ -2,13 +2,13 @@
   "name": "jl-logger",
   "version": "1.0.3",
   "description": "",
-  "main": "src/logwinston.ts",
+  "main": "src/app/app-mask/logwinston.ts",
   "scripts": {
-    "test": "npm run test:jest && npm run test:cucumber",
+    "test": "npm run test:cucumber && npm run test:jest",
     "test:jest": "nyc jest --coverage",
-    "test:cucumber": "nyc cucumber-js features/*.feature  ",
+    "test:cucumber": "nyc cucumber-js test/features/*.feature  ",
     "posttest": "ts-node report-generator.ts",
-    "start": "ts-node src/app.ts"
+    "start": "ts-node src/app/app-mask/app.ts"
   },
   "keywords": [],
   "author": "",

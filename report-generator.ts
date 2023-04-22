@@ -1,4 +1,4 @@
-import reporter from "cucumber-html-reporter";
+// import { reporter } from "cucumber-html-reporter";
 
 const options = {
     theme: "bootstrap",
@@ -9,4 +9,4 @@ const options = {
     launchReport: true
 };
 
-reporter.generate(options as any);
+// reporter.generate(options as any);

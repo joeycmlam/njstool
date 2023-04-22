@@ -6,7 +6,7 @@ tsNode.register({
 });
 
 module.exports = {
-    default: '--format json:cucumber_report.json --publish-quiet --require-module ts-node/register/transpile-only --require features/step_definitions/*.steps.ts ',
+    default: '--format json:cucumber_report.json --publish-quiet --require-module ts-node/register/transpile-only --require test/features/step_definitions/*.steps.ts ',
 
 };
 

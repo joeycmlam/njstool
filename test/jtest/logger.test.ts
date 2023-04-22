@@ -1,5 +1,5 @@
 import * as log4js from 'log4js';
-import MaskedLogger from '../src/jl-log4js';
+import MaskedLogger from '../../src/app/app-mask/jl-log4js';
 
 jest.mock('log4js');
 

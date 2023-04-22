@@ -4,7 +4,7 @@
     ".tsx"
   ],
   "include": [
-    "src/data-mask.ts"
+    "src/app/app-mask/data-mask.ts"
   ],
   "exclude": [
     "**/*.d.ts"

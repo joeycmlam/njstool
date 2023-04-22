@@ -59,14 +59,14 @@ Feature: Mask PII data
     Then validate the out "<expectedData>"
     Examples:
       | inputFile                     | expectedData                                  |
-      | features/test_data/test1.json | features/test_data/test1_expected_result.json |
-      | features/test_data/test2.json | features/test_data/test2_expected_result.json |
-      | features/test_data/test3.json | features/test_data/test3_expected_result.json |
+      | features/test_data/test1.json | test/features/test_data/test1_expected_result.json |
+      | features/test_data/test2.json | test/features/test_data/test2_expected_result.json |
+      | features/test_data/test3.json | test/features/test_data/test3_expected_result.json |
 
   Scenario: mark data in json file for nested of array
     Given provide json file "features/test_data/test4.json"
     When convert msg from file
-    Then validate the out "features/test_data/test4_expected_result.json"
+    Then validate the out "test/features/test_data/test4_expected_result.json"
 
 
   Scenario Outline: number case
