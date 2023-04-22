@@ -23,6 +23,7 @@
     "@types/winston": "^2.4.4",
     "cucumber-html-reporter": "^6.0.0",
     "dayjs": "^1.11.7",
+    "exceljs": "^4.3.0",
     "istanbul": "^0.4.5",
     "jest": "^29.5.0",
     "js-yaml": "^4.1.0",

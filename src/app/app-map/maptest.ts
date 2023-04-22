@@ -1,26 +1,20 @@
-import {commitCounter} from "./iCommit";
-import {mkdtemp} from "fs";
-
-const data = [
-    {name: 'name-1', repo: 'repo-1', date: '2023-01-01', rate: 2},
-    {name: 'name-1', repo: 'repo-1', date: '2023-01-02', rate: 3},
-    {name: 'name-2', repo: 'repo-1', date: '2023-01-01', rate: 2},
-    {name: 'name-2', repo: 'repo-1', date: '2023-01-02', rate: 3},
-    {name: 'name-2', repo: 'repo-2', date: '2023-01-02', rate: 1}
-];
+import { commitCounter } from "./iCommit";
+import { Workbook } from "exceljs";
 
 
 export default class Converter {
     private counters: Map<string, number>;
     private commits: Map<string, commitCounter>;
+    private data;
 
-    constructor() {
+    constructor(_data: any) {
         this.counters = new Map();
         this.commits = new Map();
+        this.data = _data;
     }
 
     public async convert() {
-        for (const aRecord of data) {
+        for (const aRecord of this.data) {
             if (this.counters.has(aRecord.name)) {
                 this.counters.set(aRecord.name, this.counters.get(aRecord.name)! + aRecord.rate);
             } else {
@@ -28,14 +22,10 @@ export default class Converter {
             }
         }
 
-        for (let [key, value] of this.counters) {
-            console.log(`name: [${key}] rate: [${value}]`)
-        }
     }
 
-
     public async getStatistic(): Promise<void> {
-        for (const aRecord of data) {
+        for (const aRecord of this.data) {
             const key = aRecord.name + '-' + aRecord.date;
             let tmpRecord: commitCounter;
             if (this.commits.has(key)) {
@@ -47,8 +37,23 @@ export default class Converter {
             this.commits.set(key, tmpRecord);
         }
 
-        for (let [key, value] of this.commits) {
-            console.log (`name: [${value.name}] date: [${value.date}] rate: [${value.rate}]`);
-        }
     }
+
+    public async write2Excelfile(fileName: string) {
+        const workbook = new Workbook();
+        const worksheet = workbook.addWorksheet("Commit Stats");
+
+        worksheet.columns = [
+            { header: "Date", key: "date", width: 15 },
+            { header: "Author", key: "author", width: 30 },
+            { header: "Commit Count", key: "commitCount", width: 15 },
+        ];
+
+        for (let [key, value] of this.commits) {
+            worksheet.addRow({date: value.date, author: value.name, commitCount: value.rate });
+        }
+
+        await workbook.xlsx.writeFile(fileName);
+    }
+
 }

@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/app-map/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/lib/Config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-mask/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-map/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-map/app.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-map/maptest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-map/maptest.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,8 +94,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="tsconfig.json" />
-        <option value="JavaScript File" />
         <option value="package.json" />
+        <option value="JavaScript File" />
         <option value="TypeScript File" />
       </list>
     </option>
@@ -226,10 +231,10 @@
       <recent name="$PROJECT_DIR$/src/features" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/app-mask" />
+      <recent name="$PROJECT_DIR$/src/app/lib" />
       <recent name="$PROJECT_DIR$/test/app-mask" />
       <recent name="$PROJECT_DIR$/test" />
-      <recent name="$PROJECT_DIR$/src/app/lib" />
-      <recent name="$PROJECT_DIR$/src/app/app-mask" />
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
@@ -334,7 +339,7 @@
       <workItem from="1680968116183" duration="451000" />
       <workItem from="1681132999786" duration="4000" />
       <workItem from="1681545466354" duration="1539000" />
-      <workItem from="1682131744111" duration="9084000" />
+      <workItem from="1682131744111" duration="12915000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1680363932879</created>
@@ -567,7 +572,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682147200430</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="add new function on map">
+      <created>1682150493475</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1682150493475</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -602,7 +614,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="use log4j" />
     <MESSAGE value="fix log4js" />
     <MESSAGE value="refactor log4js" />
     <MESSAGE value="add cucumber test" />
@@ -627,7 +638,8 @@
     <MESSAGE value="folder restructure" />
     <MESSAGE value="map testing" />
     <MESSAGE value="fix the cucumber test path" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix the cucumber test path" />
+    <MESSAGE value="add new function on map" />
+    <option name="LAST_COMMIT_MESSAGE" value="add new function on map" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -642,6 +654,18 @@
           <line>32</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/app-map/app.ts</url>
+          <line>19</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/lib/Config.ts</url>
+          <line>13</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
