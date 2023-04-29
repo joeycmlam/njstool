@@ -38,8 +38,9 @@
     "winston": "^3.8.2"
   },
   "devDependencies": {
-    "@cucumber/cucumber": "^9.1.0",
+    "@cucumber/cucumber": "^9.0.0",
     "@types/js-yaml": "^4.0.5",
-    "redact-pii": "^3.4.0"
+    "redact-pii": "^3.4.0",
+    "source-map-support": "^0.5.21"
   }
 }

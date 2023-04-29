@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/test/test-mask/features/step_definitions/dataMask.steps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-mask/features/step_definitions/dataMask.steps.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test-json/features/test_data/json-1level.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-json/app-json.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-json/app-json.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/cucumber.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/cucumber.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/support/world.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/support/world.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test-json/features/json-1-level.feature" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/json-1-level.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test-json/features/step_definitions/json.steps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/step_definitions/json.steps.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test-json/features/test_data/json.xlsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +217,7 @@
   "keyToString": {
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/joeylam/repo/njs/njstool/test",
+    "last_opened_file_path": "/Users/joeylam/repo/njs/njstool/test/test-json/features/test_data",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -222,8 +230,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/test" />
       <recent name="$PROJECT_DIR$/test/test-json/features/test_data" />
+      <recent name="$PROJECT_DIR$/test" />
       <recent name="$PROJECT_DIR$/features/test_data" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/features/step_definitions" />
@@ -236,7 +244,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.test:cucumber:mask">
+  <component name="RunManager" selected="npm.test:cucumber:json">
     <configuration name="start:app-map" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -307,9 +315,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start:json" />
         <item itemvalue="npm.test:cucumber:json" />
         <item itemvalue="npm.test:cucumber:mask" />
-        <item itemvalue="npm.start:json" />
         <item itemvalue="npm.start:app-map" />
         <item itemvalue="npm.test:cucumber:app-mask" />
       </list>
@@ -339,7 +347,7 @@
       <workItem from="1681545466354" duration="1539000" />
       <workItem from="1682131744111" duration="14445000" />
       <workItem from="1682180289830" duration="1091000" />
-      <workItem from="1682694993348" duration="14043000" />
+      <workItem from="1682694993348" duration="18314000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1680363932879</created>
@@ -628,7 +636,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682754997098</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="fix some test cases">
+      <created>1682755175226</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1682755175226</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -663,7 +678,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="generate the cucumber report and add some test cases" />
     <MESSAGE value="change some test cases" />
     <MESSAGE value="add config for log level" />
     <MESSAGE value="code reflector to add yaml file" />
@@ -688,7 +702,8 @@
     <MESSAGE value="support the nested json and write to excel." />
     <MESSAGE value="fix the format." />
     <MESSAGE value="enhanced the cucumber test" />
-    <option name="LAST_COMMIT_MESSAGE" value="enhanced the cucumber test" />
+    <MESSAGE value="fix some test cases" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix some test cases" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

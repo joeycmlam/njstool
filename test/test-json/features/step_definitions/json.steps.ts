@@ -6,20 +6,22 @@ import * as assert from 'assert';
 import JsonHelper from "../../../../src/app/app-json/jsonHelper";
 
 
-Given('I have a JSON file at {string}', function (this: CustomWorld, filePath: string) {
-    this.rootPath = path.dirname(filePath);
-    this.jsonFile = filePath;
+Given('I have a JSON file at {string}', function (this: CustomWorld,  fileName: string) {
+    this.jsonFile = path.dirname(fileName);
 });
 
-When('I generate the Excel file from the JSON file', async function (this: CustomWorld) {
+When('I generate the Excel file {string}', async function (this: CustomWorld, actualFile: string) {
+
+    this.actualFile = actualFile;
     const a = new JsonHelper();
     await a.processJsonfile(this.jsonFile);
-    await a.write2excel(this.generatedExcelFile, 'sheet1');
+    await a.write2excel(this.actualFile , 'sheet1');
 });
 
 Then('the generated Excel file should match the expected file {string}', function (this: CustomWorld, expectedFile: string) {
-    this.expectedFile = path.join(this.rootPath, expectedFile);
-    const generatedContent = fs.readFileSync(this.generatedExcelFile);
+    this.expectedFile = expectedFile;
+
+    const generatedContent = fs.readFileSync(this.actualFile);
     const expectedContent = fs.readFileSync(this.expectedFile);
     assert.deepStrictEqual(generatedContent, expectedContent, 'Generated Excel file does not match the expected file');
 });
