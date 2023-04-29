@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-json/app-json.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-json/app-json.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test-json/features/json-1-level.feature" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/json-1-level.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test-json/features/step_definitions/json.steps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/step_definitions/json.steps.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,6 +239,16 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.test:cucumber:json">
+    <configuration name="posttest" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="posttest" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="start:app-map" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -269,16 +279,6 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="test:cucumber:app-mask" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="test:cucumber:app-mask" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <configuration name="test:cucumber:json" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -301,19 +301,19 @@
     </configuration>
     <list>
       <item itemvalue="npm.test" />
+      <item itemvalue="npm.posttest" />
       <item itemvalue="npm.start:json" />
       <item itemvalue="npm.test:cucumber:json" />
       <item itemvalue="npm.test:cucumber:mask" />
       <item itemvalue="npm.start:app-map" />
-      <item itemvalue="npm.test:cucumber:app-mask" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start:json" />
+        <item itemvalue="npm.posttest" />
         <item itemvalue="npm.test:cucumber:json" />
+        <item itemvalue="npm.start:json" />
         <item itemvalue="npm.test:cucumber:mask" />
         <item itemvalue="npm.start:app-map" />
-        <item itemvalue="npm.test:cucumber:app-mask" />
       </list>
     </recent_temporary>
   </component>
@@ -341,7 +341,7 @@
       <workItem from="1681545466354" duration="1539000" />
       <workItem from="1682131744111" duration="14445000" />
       <workItem from="1682180289830" duration="1091000" />
-      <workItem from="1682694993348" duration="23136000" />
+      <workItem from="1682694993348" duration="23961000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1680363932879</created>
@@ -658,7 +658,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682766237779</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="enhance the file name handling">
+      <created>1682766715018</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1682766715018</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -693,7 +700,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="code reflector" />
     <MESSAGE value="config reflector to oo design" />
     <MESSAGE value="include datetime in the log file" />
     <MESSAGE value="enhance the log to capture the line of code." />
@@ -718,7 +724,8 @@
     <MESSAGE value="json cucumber test case" />
     <MESSAGE value="add excelHelper and fix cucumber test issue." />
     <MESSAGE value="add new test case" />
-    <option name="LAST_COMMIT_MESSAGE" value="add new test case" />
+    <MESSAGE value="enhance the file name handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="enhance the file name handling" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

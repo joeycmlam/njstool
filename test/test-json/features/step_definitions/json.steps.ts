@@ -7,21 +7,20 @@ import excelHelper from "../../../../src/app/lib/excelHelper";
 
 
 Given('I have a JSON file at {string} {string}', function (this: CustomWorld, datapath: string, fileName: string) {
-    this.path = path.dirname(datapath);
-    this.jsonFile = fileName;
+    this.path = datapath;
+    this.jsonFile = path.join(this.path, fileName);
 });
 
 When('I generate the Excel file {string}', async function (this: CustomWorld, actualFile: string) {
 
-    this.actualFile = actualFile;
-    const a = new JsonHelper();
+    this.actualFile = path.join(this.path, actualFile);
+    const a: JsonHelper = new JsonHelper();
     await a.processJsonfile(this.jsonFile);
     await a.write2excel(this.actualFile, 'sheet1');
 });
 
 Then('the generated Excel file should match the expected file {string}', async function (this: CustomWorld, expectedFile: string) {
-    this.expectedFile = expectedFile;
-
+    this.expectedFile = path.join(this.path, expectedFile);
     const expectedContent = await excelHelper.readWorkbookContent(this.expectedFile);
     const generatedContent = await excelHelper.readWorkbookContent(this.actualFile);
 
