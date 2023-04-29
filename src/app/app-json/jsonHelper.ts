@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import {Workbook, Worksheet} from "exceljs";
-
+import {typeHelpder} from "../lib/typeHelper";
 
 
 export default class JsonHelper {
@@ -24,11 +24,14 @@ export default class JsonHelper {
         await this.readJson();
     }
     private async readJson(): Promise<void> {
-        this._data = await JSON.parse(fs.readFileSync(this._fileName, 'utf8'));
+        const context = fs.readFileSync(this._fileName, 'utf8');
+        this._data = await JSON.parse(context);
     }
 
 
     private async writeContext(worksheet: Worksheet): Promise<void> {
+        if (typeHelpder.isNull(this.data)) { return; }
+
         for (let record of this._data) {
             worksheet.addRow(record);
         }
