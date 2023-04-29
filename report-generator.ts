@@ -2,8 +2,8 @@ import * as reporter from "cucumber-html-reporter";
 
 const options = {
     theme: "bootstrap",
-    jsonFile: "test/cucumber_report.json",
-    output: "test/cucumber_report.html",
+    jsonFile: "coverage-cucumber/cucumber-report.json",
+    output: "coverage-cucumber/cucumber-coverage-report.html",
     reportSuiteAsScenarios: true,
     scenarioTimestamp: true,
     launchReport: true
