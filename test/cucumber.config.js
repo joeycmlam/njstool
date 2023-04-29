@@ -6,7 +6,7 @@ tsNode.register({
 });
 
 const config = [
-    '--format json:cucumber_report.json',
+    '--format json:test/cucumber_report.json',
     '--require-module ts-node/register/transpile-only',
     '--require source-map-support/register',
     '--require test/**/features/step_definitions/*.steps.ts '
