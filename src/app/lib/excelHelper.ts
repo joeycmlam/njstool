@@ -1,11 +1,11 @@
 
 import {Workbook} from "exceljs";
 export default class excelHelper {
-    public  static async readWorkbookContent(filePath: string): Promise<string[][]> {
+    public  static async readWorkbookContent(filePath: string, worksheetName: string): Promise<string[][]> {
         const workbook = new Workbook();
         await workbook.xlsx.readFile(filePath);
 
-        const worksheet = workbook.getWorksheet(1);
+        const worksheet = workbook.getWorksheet(worksheetName);
         const content: string[][] = [];
 
         worksheet.eachRow((row, rowIndex) => {

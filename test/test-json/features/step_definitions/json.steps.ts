@@ -21,8 +21,8 @@ When('I generate the Excel file {string}', async function (this: CustomWorld, ac
 
 Then('the generated Excel file should match the expected file {string}', async function (this: CustomWorld, expectedFile: string) {
     this.expectedFile = path.join(this.path, expectedFile);
-    const expectedContent = await excelHelper.readWorkbookContent(this.expectedFile);
-    const generatedContent = await excelHelper.readWorkbookContent(this.actualFile);
+    const expectedContent = await excelHelper.readWorkbookContent(this.expectedFile, 'sheet1');
+    const generatedContent = await excelHelper.readWorkbookContent(this.actualFile, 'sheet1');
 
     assert.deepStrictEqual(generatedContent, expectedContent, 'Generated Excel file does not match the expected file');
 });
