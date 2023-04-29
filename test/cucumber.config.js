@@ -8,7 +8,7 @@ tsNode.register({
 const config = [
     '--format json:cucumber_report.json',
     '--publish-quiet --require-module ts-node/register/transpile-only',
-    '--require test/app-mask/features/step_definitions/*.steps.ts '
+    '--require test/**/features/step_definitions/*.steps.ts '
 ].join(' ');
 
 module.exports = {
