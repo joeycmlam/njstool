@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-json/app-json.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-json/app-json.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-json/jsonHelper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-json/jsonHelper.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -338,7 +336,7 @@
       <workItem from="1681545466354" duration="1539000" />
       <workItem from="1682131744111" duration="14445000" />
       <workItem from="1682180289830" duration="1091000" />
-      <workItem from="1682694993348" duration="11442000" />
+      <workItem from="1682694993348" duration="11522000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1680363932879</created>
@@ -606,7 +604,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682738633764</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="support the nested json and write to excel.">
+      <created>1682752612396</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1682752612396</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -641,7 +646,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix the cucumber test - scenario outline issue" />
     <MESSAGE value="add the testing feature to read the test data and expected data in a file with json format." />
     <MESSAGE value="support json message on data mask" />
     <MESSAGE value="generate the cucumber report and add some test cases" />
@@ -666,7 +670,8 @@
     <MESSAGE value="remove the unused variable." />
     <MESSAGE value="add json converter feature" />
     <MESSAGE value="fix the bug on reading json file" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix the bug on reading json file" />
+    <MESSAGE value="support the nested json and write to excel." />
+    <option name="LAST_COMMIT_MESSAGE" value="support the nested json and write to excel." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

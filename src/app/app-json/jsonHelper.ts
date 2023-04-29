@@ -24,8 +24,6 @@ export default class JsonHelper {
         console.log(`row count: [${this.data.length}]`)
     }
 
-
-
     private flatten(obj: any, prefix: string = '', result: any = {}): any {
         return Object.entries(obj).reduce((accumulator, [key, value]) => {
             const newKey = prefix ? `${prefix}.${key}` : key;
