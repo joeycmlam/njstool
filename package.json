@@ -4,9 +4,10 @@
   "description": "",
   "main": "src/app/app-mask/logwinston.ts",
   "scripts": {
-    "start:app-mask": "ts-node src/app/app-mask/app.ts",
-    "start:app-map": "ts-node src/app/app-map/app.ts",
-    "test:cucumber:app-mask": "nyc cucumber-js --config test/app-mask/cucumber.app-mask.config.js test/app-mask/features/*.feature",
+    "start:json": "ts-node src/app/app-json/app-json.ts",
+    "start:mask": "ts-node src/app/app-mask/app.ts",
+    "start:map": "ts-node src/app/app-map/app.ts",
+    "test:cucumber:mask": "nyc cucumber-js --config test/app-mask/cucumber.app-mask.config.js test/app-mask/features/*.feature",
     "test": "npm run test:cucumber && npm run test:jest",
     "test:jest": "nyc jest --coverage",
     "test:cucumber": "nyc cucumber-js test/**/features/*.feature  ",

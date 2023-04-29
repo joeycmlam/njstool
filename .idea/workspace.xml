@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/data/test.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-json/app-json.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-json/jsonHelper.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/njstool.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/njstool.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-map/maptest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-map/maptest.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,6 +213,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -234,21 +239,21 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.test:cucumber:app-mask">
-    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <configuration name="start:app-map" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
         <script value="start:app-map" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start:json" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start:json" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -296,19 +301,19 @@
     </configuration>
     <list>
       <item itemvalue="npm.test" />
-      <item itemvalue="npm.start" />
+      <item itemvalue="npm.start:json" />
       <item itemvalue="npm.start:app-map" />
-      <item itemvalue="npm.test:cucumber:app-mask" />
       <item itemvalue="npm.test:cucumber" />
+      <item itemvalue="npm.test:cucumber:app-mask" />
       <item itemvalue="npm.test:jest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start:json" />
         <item itemvalue="npm.start:app-map" />
         <item itemvalue="npm.test:cucumber:app-mask" />
         <item itemvalue="npm.test:cucumber" />
         <item itemvalue="npm.test:jest" />
-        <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
   </component>
@@ -334,7 +339,9 @@
       <workItem from="1680968116183" duration="451000" />
       <workItem from="1681132999786" duration="4000" />
       <workItem from="1681545466354" duration="1539000" />
-      <workItem from="1682131744111" duration="13060000" />
+      <workItem from="1682131744111" duration="14445000" />
+      <workItem from="1682180289830" duration="1091000" />
+      <workItem from="1682694993348" duration="5566000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1680363932879</created>
@@ -581,7 +588,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682154351846</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="remove the unused variable.">
+      <created>1682154480626</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1682154480626</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -616,7 +630,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactor log4js" />
     <MESSAGE value="add cucumber test" />
     <MESSAGE value="cucumber test reflector the folder structure" />
     <MESSAGE value="fix the cucumber test - scenario outline issue" />
@@ -641,7 +654,8 @@
     <MESSAGE value="fix the cucumber test path" />
     <MESSAGE value="add new function on map" />
     <MESSAGE value="read the config from yaml file" />
-    <option name="LAST_COMMIT_MESSAGE" value="read the config from yaml file" />
+    <MESSAGE value="remove the unused variable." />
+    <option name="LAST_COMMIT_MESSAGE" value="remove the unused variable." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -654,20 +668,35 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/test/app-mask/features/step_definitions/dataMask.steps.ts</url>
           <line>32</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/app-map/app.ts</url>
           <line>19</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/lib/Config.ts</url>
           <line>13</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/app-json/app-json.ts</url>
+          <line>6</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/app-json/jsonHelper.ts</url>
+          <line>31</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/app-json/jsonHelper.ts</url>
+          <line>26</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
