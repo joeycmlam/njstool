@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/test-json/features/test_data/json-1level.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/lib/excelHelper.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-json/app-json.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-json/app-json.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-json/jsonHelper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-json/jsonHelper.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/cucumber.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/cucumber.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/support/world.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/support/world.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test-json/features/json-1-level.feature" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/json-1-level.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test-json/features/step_definitions/json.steps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/step_definitions/json.steps.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test-json/features/test_data/json.xlsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -315,8 +314,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start:json" />
         <item itemvalue="npm.test:cucumber:json" />
+        <item itemvalue="npm.start:json" />
         <item itemvalue="npm.test:cucumber:mask" />
         <item itemvalue="npm.start:app-map" />
         <item itemvalue="npm.test:cucumber:app-mask" />
@@ -347,7 +346,7 @@
       <workItem from="1681545466354" duration="1539000" />
       <workItem from="1682131744111" duration="14445000" />
       <workItem from="1682180289830" duration="1091000" />
-      <workItem from="1682694993348" duration="18314000" />
+      <workItem from="1682694993348" duration="22723000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1680363932879</created>
@@ -643,7 +642,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682755175226</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="json cucumber test case">
+      <created>1682759531598</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1682759531598</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -678,7 +684,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change some test cases" />
     <MESSAGE value="add config for log level" />
     <MESSAGE value="code reflector to add yaml file" />
     <MESSAGE value="code reflector" />
@@ -703,7 +708,8 @@
     <MESSAGE value="fix the format." />
     <MESSAGE value="enhanced the cucumber test" />
     <MESSAGE value="fix some test cases" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix some test cases" />
+    <MESSAGE value="json cucumber test case" />
+    <option name="LAST_COMMIT_MESSAGE" value="json cucumber test case" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -727,6 +733,42 @@
           <url>file://$PROJECT_DIR$/src/app/lib/Config.ts</url>
           <line>13</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/app-json/jsonHelper.ts</url>
+          <line>17</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>mock://file:///Users/joeylam/repo/njs/njstool/src/app/app-json/jsonHelper.ts</url>
+          <line>60</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>mock://file:///Users/joeylam/repo/njs/njstool/src/app/app-json/jsonHelper.ts</url>
+          <line>106</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>mock://file:///Users/joeylam/repo/njs/njstool/src/app/app-json/jsonHelper.ts</url>
+          <line>107</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>mock://file:///Users/joeylam/repo/njs/njstool/test/test-json/features/step_definitions/json.steps.ts</url>
+          <line>71</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/app-json/app-json.ts</url>
+          <line>9</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

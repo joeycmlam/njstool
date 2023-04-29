@@ -1,4 +1,4 @@
-import * as fs from 'fs';
+import * as fs from 'fs/promises';
 import {Workbook, Worksheet} from "exceljs";
 
 
@@ -19,7 +19,7 @@ export default class JsonHelper {
         await this.readJson();
     }
     private async readJson(): Promise<void> {
-        const context = fs.readFileSync(this.inFileName, 'utf8');
+        const context = await fs.readFile(this.inFileName, 'utf8');
         this.data = await JSON.parse(context);
         console.log(`row count: [${this.data.length}]`)
     }
@@ -51,7 +51,6 @@ export default class JsonHelper {
 
     private async writeContext(worksheet: Worksheet): Promise<void> {
 
-
         await this.writeHeader(worksheet);
         for (const item of this.data) {
             const flattenedItem = this.flatten(item)
@@ -63,6 +62,19 @@ export default class JsonHelper {
     public async write2excel(outputFile: string, sheetName: string): Promise<void> {
         const worksheet= this.workbook.addWorksheet(sheetName);
         this.outFileName = outputFile;
+
+        try {
+            // Check if the file exists, and if it does, delete it
+            await fs.access(this.outFileName);
+            await fs.unlink(this.outFileName);
+            console.log(`Output file - ${this.outFileName} exists, deleting...`);
+        } catch (error: any) {
+            // Do nothing if the file doesn't exist
+            if (error.code !== 'ENOENT') {
+                console.error(`Error while checking or deleting the output file: ${error.message}`);
+                throw error;
+            }
+        }
         await this.writeContext(worksheet);
     }
 
