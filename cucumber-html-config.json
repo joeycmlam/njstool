@@ -1,0 +1,15 @@
+{
+  "theme": "bootstrap",
+  "jsonFile": "coverage-cucumber/cucumber-report.json",
+  "output": "cucumber-html-report/index.html",
+  "reportSuiteAsScenarios": true,
+  "launchReport": true,
+  "metadata": {
+    "App Version": "0.0.1",
+    "Test Environment": "Development",
+    "Browser": "Chrome",
+    "Platform": "macOS",
+    "Parallel": "Scenarios",
+    "Executed": "Local"
+  }
+}
