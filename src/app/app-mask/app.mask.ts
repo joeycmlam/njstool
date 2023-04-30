@@ -1,10 +1,27 @@
 // import Logger from './logwinston';
 import MaskedLogger from './jl-log4js';
-import config from './config';
 import {DataMask} from "./data-mask";
+import { Config, ConfigHelper } from '../lib/configHelper';
 
+const file: string = 'src/app/app-mask/config.yaml';
+const configHelper = new ConfigHelper(file);
 
-const logger = new MaskedLogger(config.logLevel);
+(async () => {
+    await configHelper.load();
+
+})();
+
+const config: Config | null = configHelper.getConfig();
+
+if (config) {
+    console.log('Log level:', config.logLevel);
+} else {
+    console.error('Failed to load config.');
+}
+
+const logLevel = config ? config.logLevel : 'info';
+
+const logger = new MaskedLogger(logLevel);
 const dataMask = new DataMask();
 
 

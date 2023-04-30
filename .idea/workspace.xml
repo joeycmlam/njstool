@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/script/app.json.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/lib/configHelper.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-map/app.map.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-map/app.map.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/lib/Config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lib/Config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-mask/app.mask.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-mask/app.mask.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-mask/config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/lib/Config.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,25 +210,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ToolWindowCommit.ShowToolbar": "false",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "javascript.nodejs.core.library.configured.version": "16.10.0",
-    "javascript.nodejs.core.library.typings.version": "16.10.0",
-    "last_opened_file_path": "/Users/joeylam/repo/njs/njstool/test/test-json/features/test_data",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs.cucumber.cucumber_node_package_dir": "/Users/joeylam/repo/njs/njstool/node_modules/@cucumber/cucumber",
-    "nodejs.jest.jest_package": "/Users/joeylam/repo/njs/njstool/node_modules/jest",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "/Users/joeylam/repo/njs/njstool/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ToolWindowCommit.ShowToolbar&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.10.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.10.0&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/joeylam/repo/njs/njstool/test/test-json/features/test_data&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs.cucumber.cucumber_node_package_dir&quot;: &quot;/Users/joeylam/repo/njs/njstool/node_modules/@cucumber/cucumber&quot;,
+    &quot;nodejs.jest.jest_package&quot;: &quot;/Users/joeylam/repo/njs/njstool/node_modules/jest&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/joeylam/repo/njs/njstool/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/test/test-json/features/test_data" />
@@ -245,7 +245,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.generate-cucumber-html">
+  <component name="RunManager" selected="npm.test">
     <configuration name="generate-cucumber-html" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -266,11 +266,21 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="start:json" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="start:map" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="start:json" />
+        <script value="start:map" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start:mask" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start:mask" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -296,31 +306,21 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="test:jest" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="test:jest" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="npm.test" />
+      <item itemvalue="npm.start:map" />
+      <item itemvalue="npm.start:mask" />
       <item itemvalue="npm.generate-cucumber-html" />
       <item itemvalue="npm.merge-reports" />
-      <item itemvalue="npm.start:json" />
       <item itemvalue="npm.test:cucumber" />
-      <item itemvalue="npm.test:jest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start:json" />
+        <item itemvalue="npm.start:mask" />
+        <item itemvalue="npm.start:map" />
         <item itemvalue="npm.generate-cucumber-html" />
-        <item itemvalue="npm.test:cucumber" />
         <item itemvalue="npm.merge-reports" />
-        <item itemvalue="npm.test:jest" />
+        <item itemvalue="npm.test:cucumber" />
       </list>
     </recent_temporary>
   </component>
@@ -738,9 +738,6 @@
         <option value="$PROJECT_DIR$/src/app/lib/excelHelper.d.ts" />
         <option value="$PROJECT_DIR$/src/app/lib/date-helper.js.map" />
         <option value="$PROJECT_DIR$/src/app/lib/date-helper.d.ts" />
-        <option value="$PROJECT_DIR$/src/app/lib/Config.js" />
-        <option value="$PROJECT_DIR$/src/app/lib/Config.js.map" />
-        <option value="$PROJECT_DIR$/src/app/lib/Config.d.ts" />
         <option value="$PROJECT_DIR$/src/app/lib/excelHelper.js.map" />
         <option value="$PROJECT_DIR$/src/app/lib/typeHelper.js" />
         <option value="$PROJECT_DIR$/src/app/lib/typeHelper.js.map" />
@@ -756,16 +753,13 @@
         <option value="$PROJECT_DIR$/src/app/app-mask/data-mask.js.map" />
         <option value="$PROJECT_DIR$/src/app/app-mask/loglog4js.d.ts" />
         <option value="$PROJECT_DIR$/src/app/app-mask/jl-log4js.d.ts" />
-        <option value="$PROJECT_DIR$/src/app/app-mask/config.d.ts" />
         <option value="$PROJECT_DIR$/src/app/app-mask/constant.js" />
         <option value="$PROJECT_DIR$/src/app/app-mask/logwinston.js" />
         <option value="$PROJECT_DIR$/src/app/app-mask/data-mask.d.ts" />
         <option value="$PROJECT_DIR$/src/app/app-mask/constant.js.map" />
-        <option value="$PROJECT_DIR$/src/app/app-mask/config.js.map" />
         <option value="$PROJECT_DIR$/src/app/app-mask/app.mask.d.ts" />
         <option value="$PROJECT_DIR$/src/app/app-mask/logwinston.js.map" />
         <option value="$PROJECT_DIR$/src/app/app-mask/logwinston.d.ts" />
-        <option value="$PROJECT_DIR$/src/app/app-mask/config.js" />
         <option value="$PROJECT_DIR$/src/app/app-mask/app.mask.js" />
         <option value="$PROJECT_DIR$/src/app/app-map/maptest.js" />
         <option value="$PROJECT_DIR$/src/app/app-map/maptest.js.map" />
@@ -824,50 +818,40 @@
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/app-map/app.map.ts</url>
-          <line>19</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/lib/Config.ts</url>
-          <line>12</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/app-json/jsonHelper.ts</url>
           <line>17</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>mock://file:///Users/joeylam/repo/njs/njstool/src/app/app-json/jsonHelper.ts</url>
           <line>60</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>mock://file:///Users/joeylam/repo/njs/njstool/src/app/app-json/jsonHelper.ts</url>
           <line>106</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>mock://file:///Users/joeylam/repo/njs/njstool/src/app/app-json/jsonHelper.ts</url>
           <line>107</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>mock://file:///Users/joeylam/repo/njs/njstool/test/test-json/features/step_definitions/json.steps.ts</url>
           <line>71</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/app-json/app.json.ts</url>
           <line>14</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/app-mask/app.mask.ts</url>
+          <line>23</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
