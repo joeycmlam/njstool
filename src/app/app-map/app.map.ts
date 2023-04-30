@@ -16,10 +16,15 @@ async function main()  {
     console.log ('start');
 
     const process = new Converter(data);
-    process.getStatistic();
+    await process.getStatistic();
     const fileName: string = config.get('output_excel');
-    process.write2Excelfile(fileName);
+    await process.write2Excelfile(fileName);
     console.log ('done');
 }
 
-main();
+(async () => {
+    console.log('x-start');
+    await main();
+    console.log('x-end');
+})();
+

@@ -1,5 +1,5 @@
-import fs from 'fs';
-import yaml from 'js-yaml';
+import fs from 'fs/promises';
+import * as yaml from 'js-yaml';
 
 export default class Config {
     private config: Map<string, any>;
@@ -9,10 +9,10 @@ export default class Config {
         this.load(configPath);
     }
 
-    private load(configPath: string): void {
+    private async load(configPath: string): Promise<void> {
         try {
-            const fileContents = fs.readFileSync(configPath, 'utf-8');
-            const yamlConfig = yaml.load(fileContents) as Record<string, any>;
+            const fileContents = await fs.readFile(configPath, 'utf-8');
+            const yamlConfig = await yaml.load(fileContents) as Record<string, any>;
 
             if (typeof yamlConfig === 'object' && yamlConfig !== null) {
                 for (const key in yamlConfig) {
