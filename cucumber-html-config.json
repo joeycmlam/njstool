@@ -1,7 +1,7 @@
 {
   "theme": "bootstrap",
   "jsonFile": "coverage-cucumber/cucumber-report.json",
-  "output": "cucumber-html-report/index.html",
+  "output": "coverage-cucumber/cucumber.html",
   "reportSuiteAsScenarios": true,
   "launchReport": true,
   "metadata": {
