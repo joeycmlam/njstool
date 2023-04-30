@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/merge-coverage.js" beforeDir="false" afterPath="$PROJECT_DIR$/merge-coverage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,9 +210,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ToolWindowCommit.ShowToolbar": "false",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
+    "javascript.nodejs.core.library.configured.version": "16.10.0",
+    "javascript.nodejs.core.library.typings.version": "16.10.0",
     "last_opened_file_path": "/Users/joeylam/repo/njs/njstool/test/test-json/features/test_data",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -341,14 +346,7 @@
       <workItem from="1681545466354" duration="1539000" />
       <workItem from="1682131744111" duration="14445000" />
       <workItem from="1682180289830" duration="1091000" />
-      <workItem from="1682694993348" duration="45112000" />
-    </task>
-    <task id="LOCAL-00008" summary="fix log4js">
-      <created>1680445117811</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1680445117811</updated>
+      <workItem from="1682694993348" duration="45733000" />
     </task>
     <task id="LOCAL-00009" summary="refactor log4js">
       <created>1680664391189</created>
@@ -686,7 +684,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682864729918</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="update README information.">
+      <created>1682864976515</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1682864976516</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -721,7 +726,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="folder restructure" />
     <MESSAGE value="map testing" />
     <MESSAGE value="fix the cucumber test path" />
     <MESSAGE value="add new function on map" />
@@ -746,7 +750,8 @@
     <MESSAGE value="try to fix jest testing framework." />
     <MESSAGE value="try to test coverage" />
     <MESSAGE value="fix the testing reports" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix the testing reports" />
+    <MESSAGE value="update README information." />
+    <option name="LAST_COMMIT_MESSAGE" value="update README information." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

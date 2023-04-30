@@ -1,3 +1,4 @@
+
 const fs = require('fs');
 const path = require('path');
 const { createCoverageMap } = require('istanbul-lib-coverage');
@@ -10,8 +11,7 @@ const coverageMap = createCoverageMap();
 
 const loadCoverageData = (coverageDir) => {
     const coverageFile = path.join(coverageDir, 'coverage-final.json');
-    const coverageData = JSON.parse(fs.readFileSync(coverageFile, 'utf8'));
-    return coverageData;
+    return JSON.parse(fs.readFileSync(coverageFile, 'utf8'));
 };
 
 const mergeCoverageData = (coverageData) => {
