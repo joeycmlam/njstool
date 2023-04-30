@@ -10,7 +10,7 @@
     "test:cucumber:json": "nyc cucumber-js --config test/cucumber.config.js test/test-json/features/*.feature",
     "test:cucumber:mask": "nyc cucumber-js --config test/cucumber.config.js test/test-mask/features/*.feature",
     "test:jest": "jest --coverage --coverageDirectory=coverage-jest",
-    "test:cucumber": "nyc --report-dir=coverage-cucumber --reporter=html --reporter=json --reporter=text-summary cucumber-js --config test/cucumber.config.js test/**/features/*.feature",
+    "test:cucumber": "nyc --report-dir=coverage-cucumber cucumber-js --config test/cucumber.config.js test/**/features/*.feature",
     "merge-reports": "node merge-coverage.js && open coverage/index.html",
     "generate-cucumber-html": "node generate-cucumber-html.js "
   },
