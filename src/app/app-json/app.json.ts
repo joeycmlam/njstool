@@ -18,6 +18,12 @@ class app {
     }
 }
 
-app.process();
+
+(async () => {
+    console.log('x-start');
+    await app.process();
+    console.log('x-end');
+})();
+
 
 

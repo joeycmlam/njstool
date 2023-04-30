@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/app-rest/app-rest.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cucumber-html-config.json" beforeDir="false" afterPath="$PROJECT_DIR$/cucumber-html-config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-json/app.json.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-json/app.json.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,8 +91,8 @@
       <list>
         <option value="tsconfig.json" />
         <option value="package.json" />
-        <option value="TypeScript File" />
         <option value="JavaScript File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -262,21 +263,21 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="js.build_tools.npm" nameIsGenerated="true">
+    <configuration name="start:json" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="test" />
+        <script value="start:json" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="test:coverage" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="test" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="test:coverage" />
+        <script value="test" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -306,17 +307,17 @@
       <item itemvalue="npm.test" />
       <item itemvalue="npm.generate-cucumber-html" />
       <item itemvalue="npm.merge-reports" />
-      <item itemvalue="npm.test:coverage" />
+      <item itemvalue="npm.start:json" />
       <item itemvalue="npm.test:cucumber" />
       <item itemvalue="npm.test:jest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start:json" />
         <item itemvalue="npm.generate-cucumber-html" />
         <item itemvalue="npm.test:cucumber" />
         <item itemvalue="npm.merge-reports" />
         <item itemvalue="npm.test:jest" />
-        <item itemvalue="npm.test:coverage" />
       </list>
     </recent_temporary>
   </component>
@@ -344,14 +345,7 @@
       <workItem from="1681545466354" duration="1539000" />
       <workItem from="1682131744111" duration="14445000" />
       <workItem from="1682180289830" duration="1091000" />
-      <workItem from="1682694993348" duration="47211000" />
-    </task>
-    <task id="LOCAL-00012" summary="fix the cucumber test - scenario outline issue">
-      <created>1680690954772</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1680690954772</updated>
+      <workItem from="1682694993348" duration="48782000" />
     </task>
     <task id="LOCAL-00013" summary="add the testing feature to read the test data and expected data in a file with json format.">
       <created>1680695626515</created>
@@ -689,7 +683,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682866797862</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="re-structure the report folder">
+      <created>1682867079199</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1682867079199</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -724,7 +725,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add new function on map" />
     <MESSAGE value="read the config from yaml file" />
     <MESSAGE value="remove the unused variable." />
     <MESSAGE value="add json converter feature" />
@@ -749,7 +749,8 @@
     <MESSAGE value="update README information." />
     <MESSAGE value="minor update on the testing framework" />
     <MESSAGE value="move the config into .nycrc file from package.json file" />
-    <option name="LAST_COMMIT_MESSAGE" value="move the config into .nycrc file from package.json file" />
+    <MESSAGE value="re-structure the report folder" />
+    <option name="LAST_COMMIT_MESSAGE" value="re-structure the report folder" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
