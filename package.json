@@ -9,8 +9,8 @@
     "start:map": "ts-node src/app/app-map/app.map.ts",
     "test:cucumber:json": "nyc cucumber-js --config test/cucumber.config.js test/test-json/features/*.feature",
     "test:cucumber:mask": "nyc cucumber-js --config test/cucumber.config.js test/test-mask/features/*.feature",
-    "test:cucumber": "nyc cucumber-js --config test/cucumber.config.js test/**/features/*.feature && ts-node report-generator.ts",
-    "test:jest": "nyc jest --coverage",
+    "test:cucumber": "nyc cucumber-js --config test/cucumber.config.js test/**/features/*.feature && ts-node report-generator.ts && open coverage/index.html",
+    "test:jest": "nyc jest --coverage && open coverage/index.html",
     "posttest": "ts-node report-generator.ts && open coverage/index.html",
     "test:coverage": "nyc --reporter=json --report-dir=coverage-cucumber cucumber-js --config test/cucumber.config.js test/**/features/*.feature && jest --coverage && istanbul-merge --out coverage/coverage-final.json coverage-cucumber/coverage-final.json coverage-jest/coverage-final.json && nyc --reporter=html --reporter=text-summary --report-dir=coverage report  && open coverage/index.html"
   },

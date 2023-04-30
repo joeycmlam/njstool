@@ -9,6 +9,8 @@
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/coverage" />
       <excludeFolder url="file://$MODULE_DIR$/output" />
+      <excludeFolder url="file://$MODULE_DIR$/coverage-cucumber" />
+      <excludeFolder url="file://$MODULE_DIR$/coverage-jest" />
       <excludeFolder url="file://$MODULE_DIR$/test/coverage" />
     </content>
     <orderEntry type="inheritedJdk" />
