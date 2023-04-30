@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cucumber-html-config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/generate-cucumber-html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/merge-coverage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jest.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/jest.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test-json/jest/jsonHelper.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/jest/jsonHelper.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report-generator.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,7 +240,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.test:coverage">
+  <component name="RunManager" selected="npm.generate-cucumber-html">
     <configuration name="generate-cucumber-html" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -313,11 +311,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.test:coverage" />
         <item itemvalue="npm.generate-cucumber-html" />
         <item itemvalue="npm.merge-reports" />
         <item itemvalue="npm.test:cucumber" />
         <item itemvalue="npm.test:jest" />
+        <item itemvalue="npm.test:coverage" />
       </list>
     </recent_temporary>
   </component>
@@ -345,14 +343,7 @@
       <workItem from="1681545466354" duration="1539000" />
       <workItem from="1682131744111" duration="14445000" />
       <workItem from="1682180289830" duration="1091000" />
-      <workItem from="1682694993348" duration="43740000" />
-    </task>
-    <task id="LOCAL-00006" summary="use redact-pii to reduce the chance writting some PII data in the log file">
-      <created>1680428559604</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1680428559604</updated>
+      <workItem from="1682694993348" duration="44854000" />
     </task>
     <task id="LOCAL-00007" summary="use log4j">
       <created>1680430596343</created>
@@ -690,7 +681,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682823671674</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="try to test coverage">
+      <created>1682848058339</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1682848058339</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -725,7 +723,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="put the additon comment" />
     <MESSAGE value="update packagee.json" />
     <MESSAGE value="folder restructure" />
     <MESSAGE value="map testing" />
@@ -750,7 +747,8 @@
     <MESSAGE value="add back the command to launch the test coverage reports" />
     <MESSAGE value="combine the reports" />
     <MESSAGE value="try to fix jest testing framework." />
-    <option name="LAST_COMMIT_MESSAGE" value="try to fix jest testing framework." />
+    <MESSAGE value="try to test coverage" />
+    <option name="LAST_COMMIT_MESSAGE" value="try to test coverage" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
