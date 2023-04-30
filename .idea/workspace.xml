@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/merge-coverage.js" beforeDir="false" afterPath="$PROJECT_DIR$/merge-coverage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -315,8 +313,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.generate-cucumber-html" />
-        <item itemvalue="npm.merge-reports" />
         <item itemvalue="npm.test:cucumber" />
+        <item itemvalue="npm.merge-reports" />
         <item itemvalue="npm.test:jest" />
         <item itemvalue="npm.test:coverage" />
       </list>
@@ -346,14 +344,7 @@
       <workItem from="1681545466354" duration="1539000" />
       <workItem from="1682131744111" duration="14445000" />
       <workItem from="1682180289830" duration="1091000" />
-      <workItem from="1682694993348" duration="45733000" />
-    </task>
-    <task id="LOCAL-00009" summary="refactor log4js">
-      <created>1680664391189</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1680664391189</updated>
+      <workItem from="1682694993348" duration="46619000" />
     </task>
     <task id="LOCAL-00010" summary="add cucumber test">
       <created>1680687883630</created>
@@ -691,7 +682,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682864976516</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="minor update on the testing framework">
+      <created>1682865789636</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1682865789636</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -726,7 +724,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="map testing" />
     <MESSAGE value="fix the cucumber test path" />
     <MESSAGE value="add new function on map" />
     <MESSAGE value="read the config from yaml file" />
@@ -751,7 +748,8 @@
     <MESSAGE value="try to test coverage" />
     <MESSAGE value="fix the testing reports" />
     <MESSAGE value="update README information." />
-    <option name="LAST_COMMIT_MESSAGE" value="update README information." />
+    <MESSAGE value="minor update on the testing framework" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor update on the testing framework" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
