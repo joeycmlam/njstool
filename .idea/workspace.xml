@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/app-rest/controllers/healthCheckController.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-mask/app.mask.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-mask/app.mask.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-rest/app-rest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-rest/app-rest.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/lib/configHelper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lib/configHelper.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-rest/app-rest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-rest/app.rest.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,25 +207,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ToolWindowCommit.ShowToolbar&quot;: &quot;false&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.10.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.10.0&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/joeylam/repo/njs/njstool/test/test-json/features/test_data&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs.cucumber.cucumber_node_package_dir&quot;: &quot;/Users/joeylam/repo/njs/njstool/node_modules/@cucumber/cucumber&quot;,
-    &quot;nodejs.jest.jest_package&quot;: &quot;/Users/joeylam/repo/njs/njstool/node_modules/jest&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/joeylam/repo/njs/njstool/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ToolWindowCommit.ShowToolbar": "false",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "javascript.nodejs.core.library.configured.version": "16.10.0",
+    "javascript.nodejs.core.library.typings.version": "16.10.0",
+    "last_opened_file_path": "/Users/joeylam/repo/njs/njstool/test/test-json/features/test_data",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs.cucumber.cucumber_node_package_dir": "/Users/joeylam/repo/njs/njstool/node_modules/@cucumber/cucumber",
+    "nodejs.jest.jest_package": "/Users/joeylam/repo/njs/njstool/node_modules/jest",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/Users/joeylam/repo/njs/njstool/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/test/test-json/features/test_data" />
@@ -286,6 +283,16 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="start:rest" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start:rest" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="test" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -296,31 +303,21 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="test:cucumber" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="test:cucumber" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="npm.test" />
+      <item itemvalue="npm.start:rest" />
       <item itemvalue="npm.start:map" />
       <item itemvalue="npm.start:mask" />
       <item itemvalue="npm.generate-cucumber-html" />
       <item itemvalue="npm.merge-reports" />
-      <item itemvalue="npm.test:cucumber" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start:rest" />
         <item itemvalue="npm.start:mask" />
         <item itemvalue="npm.start:map" />
         <item itemvalue="npm.generate-cucumber-html" />
         <item itemvalue="npm.merge-reports" />
-        <item itemvalue="npm.test:cucumber" />
       </list>
     </recent_temporary>
   </component>
@@ -771,9 +768,6 @@
         <option value="$PROJECT_DIR$/src/app/app-map/app.map.js.map" />
         <option value="$PROJECT_DIR$/src/app/app-map/app.map.js" />
         <option value="$PROJECT_DIR$/src/app/app-map/iCommit.d.ts" />
-        <option value="$PROJECT_DIR$/src/app/app-rest/app-rest.d.ts" />
-        <option value="$PROJECT_DIR$/src/app/app-rest/app-rest.js.map" />
-        <option value="$PROJECT_DIR$/src/app/app-rest/app-rest.js" />
       </list>
     </option>
   </component>
