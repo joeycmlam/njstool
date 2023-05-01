@@ -30,12 +30,12 @@ describe('JsonHelper', () => {
         expect(fs.readFile).toHaveBeenCalledWith(mockFileName, 'utf8');
     });
 
-    it('should write JSON data to an Excel file', async () => {
+    it('empty json', async () => {
         const mockSheetName = 'Sheet1';
         const mockOutputFile = 'output.xlsx';
 
         // Set up the JsonHelper instance with data
-        jsonHelper['data'] = [{ key: 'value' }];
+        jsonHelper['data'] = [];
 
         // Mock Workbook methods and Xlsx.writeFile
         const mockWorkbook = new Workbook();
