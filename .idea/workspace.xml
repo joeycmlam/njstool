@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/lib/fileHelper.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test-rest/features/test_data/test.expected.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test-rest/features/test_data/test2level.expected.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.c8rc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-json/jsonHelper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-json/jsonHelper.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-rest/app.rest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-rest/app.rest.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-rest/controllers/FilesController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-rest/controllers/FilesController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test-rest/features/rest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-rest/features/rest.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test-rest/features/step_definitions/rest.steps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-rest/features/step_definitions/rest.steps.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.nycrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,7 +223,7 @@
     "nodejs.cucumber.cucumber_node_package_dir": "/Users/joeylam/repo/njs/njstool/node_modules/@cucumber/cucumber",
     "nodejs.jest.jest_package": "/Users/joeylam/repo/njs/njstool/node_modules/jest",
     "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "/Users/joeylam/repo/njs/njstool/node_modules/typescript/lib",
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -248,21 +243,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber.js.Scenario Outline: Test get json file (1)">
-    <configuration name="Scenario Outline: Test get json file (1)" type="cucumber.js" factoryName="Cucumber.js" temporary="true">
-      <option name="myFilePath" value="$PROJECT_DIR$/test/test-rest/features/rest.feature" />
-      <option name="myNameFilter" value="^Test get json file$" />
-      <option name="cucumberJsArguments" value="" />
-      <option name="workingDirectory" value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Scenario Outline: Test get json file" type="cucumber.js" factoryName="Cucumber.js" temporary="true">
-      <option name="myFilePath" value="$PROJECT_DIR$/test/test-rest/features/rest.feature" />
-      <option name="myNameFilter" value="^Test get json file$" />
-      <option name="cucumberJsArguments" value="" />
-      <option name="workingDirectory" value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="npm.test">
     <configuration name="generate-cucumber-html" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -273,11 +254,21 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="start:rest" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="merge-reports" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="start:rest" />
+        <script value="merge-reports" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start:json" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start:json" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -293,31 +284,41 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="test:cucumber:rest" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="test:cucumber" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="test:cucumber:rest" />
+        <script value="test:cucumber" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="test:jest" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test:jest" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Cucumber.js.Scenario Outline: Test get json file" />
-      <item itemvalue="Cucumber.js.Scenario Outline: Test get json file (1)" />
       <item itemvalue="npm.test" />
-      <item itemvalue="npm.start:rest" />
-      <item itemvalue="npm.test:cucumber:rest" />
+      <item itemvalue="npm.start:json" />
+      <item itemvalue="npm.test:jest" />
       <item itemvalue="npm.generate-cucumber-html" />
+      <item itemvalue="npm.merge-reports" />
+      <item itemvalue="npm.test:cucumber" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.test:cucumber:rest" />
-        <item itemvalue="Cucumber.js.Scenario Outline: Test get json file (1)" />
-        <item itemvalue="Cucumber.js.Scenario Outline: Test get json file" />
         <item itemvalue="npm.generate-cucumber-html" />
-        <item itemvalue="npm.start:rest" />
+        <item itemvalue="npm.merge-reports" />
+        <item itemvalue="npm.test:cucumber" />
+        <item itemvalue="npm.test:jest" />
+        <item itemvalue="npm.start:json" />
       </list>
     </recent_temporary>
   </component>
@@ -347,13 +348,6 @@
       <workItem from="1682180289830" duration="1091000" />
       <workItem from="1682694993348" duration="52150000" />
       <workItem from="1682908619281" duration="1876000" />
-    </task>
-    <task id="LOCAL-00020" summary="code reflector to add yaml file">
-      <created>1680881865794</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1680881865794</updated>
     </task>
     <task id="LOCAL-00021" summary="code reflector">
       <created>1680881902665</created>
@@ -691,7 +685,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682933938435</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="add the test scnearion for rest api">
+      <created>1682937193709</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1682937193709</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -726,7 +727,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix some test cases" />
     <MESSAGE value="json cucumber test case" />
     <MESSAGE value="add excelHelper and fix cucumber test issue." />
     <MESSAGE value="add new test case" />
@@ -751,7 +751,8 @@
     <MESSAGE value="fix the multi-run issue." />
     <MESSAGE value="code reflector with dependency injection" />
     <MESSAGE value="add another api" />
-    <option name="LAST_COMMIT_MESSAGE" value="add another api" />
+    <MESSAGE value="add the test scnearion for rest api" />
+    <option name="LAST_COMMIT_MESSAGE" value="add the test scnearion for rest api" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

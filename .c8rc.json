@@ -1,0 +1,10 @@
+{
+"include": ["src/**/*.ts"],
+"exclude": ["test/**", "src/app/**/app.*.ts"],
+"reporter": ["text-summary", "json", "html"],
+"all": true,
+"skipEmpty": true,
+"extension": [".js", ".ts"],
+"sourceMap": true,
+"instrument": true
+}
