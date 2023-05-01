@@ -8,9 +8,9 @@ class restApp {
     public app: Express;
     private healthCheckController: HealthCheckController;
 
-    constructor() {
+    constructor(healthCheckController: HealthCheckController) {
         this.app = express();
-        this.healthCheckController = new HealthCheckController();
+        this.healthCheckController = healthCheckController;
         this.initializeMiddleware();
         this.initializeControllers();
     }
@@ -31,9 +31,9 @@ class restApp {
 }
 
 const PORT = 3000;
-const instance = new restApp();
+const healthCheckController = new HealthCheckController();
+const instance = new restApp(healthCheckController);
 if (require.main === module) {
     instance.listen(PORT);
 }
-
 export { instance };
