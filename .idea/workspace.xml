@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/app-rest/controllers/FilesController.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/lib/fileHelper.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test-rest/features/test_data/test.expected.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test-rest/features/test_data/test2level.expected.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-json/jsonHelper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-json/jsonHelper.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-rest/app.rest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-rest/app.rest.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-rest/controllers/FilesController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-rest/controllers/FilesController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test-rest/features/rest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-rest/features/rest.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test-rest/features/step_definitions/rest.steps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-rest/features/step_definitions/rest.steps.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +221,7 @@
     "git-widget-placeholder": "main",
     "javascript.nodejs.core.library.configured.version": "16.10.0",
     "javascript.nodejs.core.library.typings.version": "16.10.0",
-    "last_opened_file_path": "/Users/joeylam/repo/njs/njstool/test/test-json/features/test_data",
+    "last_opened_file_path": "/Users/joeylam/repo/njs/njstool/test/test-rest/features/test_data",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -228,11 +234,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test/test-rest/features/test_data" />
       <recent name="$PROJECT_DIR$/test/test-json/features/test_data" />
       <recent name="$PROJECT_DIR$/test" />
       <recent name="$PROJECT_DIR$/features/test_data" />
       <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/features/step_definitions" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/app/app-mask" />
@@ -242,32 +248,26 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.test:cucumber:rest">
+  <component name="RunManager" selected="Cucumber.js.Scenario Outline: Test get json file (1)">
+    <configuration name="Scenario Outline: Test get json file (1)" type="cucumber.js" factoryName="Cucumber.js" temporary="true">
+      <option name="myFilePath" value="$PROJECT_DIR$/test/test-rest/features/rest.feature" />
+      <option name="myNameFilter" value="^Test get json file$" />
+      <option name="cucumberJsArguments" value="" />
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Scenario Outline: Test get json file" type="cucumber.js" factoryName="Cucumber.js" temporary="true">
+      <option name="myFilePath" value="$PROJECT_DIR$/test/test-rest/features/rest.feature" />
+      <option name="myNameFilter" value="^Test get json file$" />
+      <option name="cucumberJsArguments" value="" />
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
     <configuration name="generate-cucumber-html" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
         <script value="generate-cucumber-html" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="start:map" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start:map" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="start:mask" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start:mask" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -304,20 +304,20 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Cucumber.js.Scenario Outline: Test get json file" />
+      <item itemvalue="Cucumber.js.Scenario Outline: Test get json file (1)" />
       <item itemvalue="npm.test" />
       <item itemvalue="npm.start:rest" />
       <item itemvalue="npm.test:cucumber:rest" />
-      <item itemvalue="npm.start:map" />
-      <item itemvalue="npm.start:mask" />
       <item itemvalue="npm.generate-cucumber-html" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start:rest" />
         <item itemvalue="npm.test:cucumber:rest" />
+        <item itemvalue="Cucumber.js.Scenario Outline: Test get json file (1)" />
+        <item itemvalue="Cucumber.js.Scenario Outline: Test get json file" />
         <item itemvalue="npm.generate-cucumber-html" />
-        <item itemvalue="npm.start:mask" />
-        <item itemvalue="npm.start:map" />
+        <item itemvalue="npm.start:rest" />
       </list>
     </recent_temporary>
   </component>
@@ -347,13 +347,6 @@
       <workItem from="1682180289830" duration="1091000" />
       <workItem from="1682694993348" duration="52150000" />
       <workItem from="1682908619281" duration="1876000" />
-    </task>
-    <task id="LOCAL-00019" summary="add config for log level">
-      <created>1680881035380</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1680881035380</updated>
     </task>
     <task id="LOCAL-00020" summary="code reflector to add yaml file">
       <created>1680881865794</created>
@@ -691,7 +684,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682933209026</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="add another api">
+      <created>1682933938435</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1682933938435</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -724,55 +724,8 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-    <option name="exactExcludedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/src/app/app-json/app.json.js.map" />
-        <option value="$PROJECT_DIR$/src/app/app-json/app.json.js" />
-        <option value="$PROJECT_DIR$/src/app/app-json/jsonHelper.d.ts" />
-        <option value="$PROJECT_DIR$/src/app/app-json/jsonHelper.js.map" />
-        <option value="$PROJECT_DIR$/src/app/app-json/app.json.d.ts" />
-        <option value="$PROJECT_DIR$/src/app/app-json/jsonHelper.js" />
-        <option value="$PROJECT_DIR$/src/app/lib/typeHelper.d.ts" />
-        <option value="$PROJECT_DIR$/src/app/lib/excelHelper.d.ts" />
-        <option value="$PROJECT_DIR$/src/app/lib/date-helper.js.map" />
-        <option value="$PROJECT_DIR$/src/app/lib/date-helper.d.ts" />
-        <option value="$PROJECT_DIR$/src/app/lib/excelHelper.js.map" />
-        <option value="$PROJECT_DIR$/src/app/lib/typeHelper.js" />
-        <option value="$PROJECT_DIR$/src/app/lib/typeHelper.js.map" />
-        <option value="$PROJECT_DIR$/src/app/lib/date-helper.js" />
-        <option value="$PROJECT_DIR$/src/app/lib/excelHelper.js" />
-        <option value="$PROJECT_DIR$/src/app/app-mask/data-mask.js" />
-        <option value="$PROJECT_DIR$/src/app/app-mask/loglog4js.js.map" />
-        <option value="$PROJECT_DIR$/src/app/app-mask/app.mask.js.map" />
-        <option value="$PROJECT_DIR$/src/app/app-mask/loglog4js.js" />
-        <option value="$PROJECT_DIR$/src/app/app-mask/constant.d.ts" />
-        <option value="$PROJECT_DIR$/src/app/app-mask/jl-log4js.js" />
-        <option value="$PROJECT_DIR$/src/app/app-mask/jl-log4js.js.map" />
-        <option value="$PROJECT_DIR$/src/app/app-mask/data-mask.js.map" />
-        <option value="$PROJECT_DIR$/src/app/app-mask/loglog4js.d.ts" />
-        <option value="$PROJECT_DIR$/src/app/app-mask/jl-log4js.d.ts" />
-        <option value="$PROJECT_DIR$/src/app/app-mask/constant.js" />
-        <option value="$PROJECT_DIR$/src/app/app-mask/logwinston.js" />
-        <option value="$PROJECT_DIR$/src/app/app-mask/data-mask.d.ts" />
-        <option value="$PROJECT_DIR$/src/app/app-mask/constant.js.map" />
-        <option value="$PROJECT_DIR$/src/app/app-mask/app.mask.d.ts" />
-        <option value="$PROJECT_DIR$/src/app/app-mask/logwinston.js.map" />
-        <option value="$PROJECT_DIR$/src/app/app-mask/logwinston.d.ts" />
-        <option value="$PROJECT_DIR$/src/app/app-mask/app.mask.js" />
-        <option value="$PROJECT_DIR$/src/app/app-map/maptest.js" />
-        <option value="$PROJECT_DIR$/src/app/app-map/maptest.js.map" />
-        <option value="$PROJECT_DIR$/src/app/app-map/maptest.d.ts" />
-        <option value="$PROJECT_DIR$/src/app/app-map/app.map.d.ts" />
-        <option value="$PROJECT_DIR$/src/app/app-map/iCommit.js.map" />
-        <option value="$PROJECT_DIR$/src/app/app-map/iCommit.js" />
-        <option value="$PROJECT_DIR$/src/app/app-map/app.map.js.map" />
-        <option value="$PROJECT_DIR$/src/app/app-map/app.map.js" />
-        <option value="$PROJECT_DIR$/src/app/app-map/iCommit.d.ts" />
-      </list>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="enhanced the cucumber test" />
     <MESSAGE value="fix some test cases" />
     <MESSAGE value="json cucumber test case" />
     <MESSAGE value="add excelHelper and fix cucumber test issue." />
@@ -797,7 +750,8 @@
     <MESSAGE value="add test case." />
     <MESSAGE value="fix the multi-run issue." />
     <MESSAGE value="code reflector with dependency injection" />
-    <option name="LAST_COMMIT_MESSAGE" value="code reflector with dependency injection" />
+    <MESSAGE value="add another api" />
+    <option name="LAST_COMMIT_MESSAGE" value="add another api" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -814,7 +768,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/app-json/jsonHelper.ts</url>
-          <line>17</line>
+          <line>16</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">

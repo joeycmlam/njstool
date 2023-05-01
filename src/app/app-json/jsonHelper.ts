@@ -4,7 +4,6 @@ import {Workbook, Worksheet} from "exceljs";
 
 export default class JsonHelper {
 
-
     private workbook = new Workbook();
     private data: any[] = [];
     private inFileName: string = '';
@@ -16,8 +15,24 @@ export default class JsonHelper {
 
     public async processJsonfile(fileName: string) {
         this.inFileName = fileName;
+        try {
+            // Check if the file exists
+            await fs.access(this.inFileName);
+        } catch (error: any) {
+            if (error.code === 'ENOENT') {
+                throw new Error(`File not found: ${this.inFileName}`);
+            } else {
+                throw error;
+            }
+        }
+
         await this.readJson();
     }
+
+    public getData(): any[] {
+        return this.data;
+    }
+
     private async readJson(): Promise<void> {
         const context = await fs.readFile(this.inFileName, 'utf8');
         this.data = await JSON.parse(context);
@@ -36,7 +51,6 @@ export default class JsonHelper {
             }
         }, result);
     }
-
 
     private async writeHeader(worksheet: Worksheet): Promise<void> {
         if (this.data.length === 0) { return; }

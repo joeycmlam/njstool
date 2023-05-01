@@ -1,0 +1,494 @@
+[
+  {
+    "ISIN": "CCTCNCN1",
+    "fund": {
+      "short_name": "Sleek Concrete Shoes",
+      "long_name": "Vandervort - Braun",
+      "phone": {
+        "mobile": "726-556-2246",
+        "office": "689-302-1630",
+        "home": "186-048-0271"
+      }
+    }
+  },
+  {
+    "ISIN": "FARMZAJ1",
+    "fund": {
+      "short_name": "Tasty Granite Tuna",
+      "long_name": "Stokes - Jones",
+      "phone": {
+        "mobile": "012-400-6253",
+        "office": "868-408-8943",
+        "home": "338-897-4957"
+      }
+    }
+  },
+  {
+    "ISIN": "BOHIPW21",
+    "fund": {
+      "short_name": "Incredible Cotton Sausages",
+      "long_name": "Weber - Homenick",
+      "phone": {
+        "mobile": "169-540-4465",
+        "office": "143-670-8285",
+        "home": "761-864-3681"
+      }
+    }
+  },
+  {
+    "ISIN": "BCAOMLBA",
+    "fund": {
+      "short_name": "Unbranded Rubber Chips",
+      "long_name": "Ledner, Welch and Schaden",
+      "phone": {
+        "mobile": "627-494-5695",
+        "office": "178-399-6721",
+        "home": "738-295-8822"
+      }
+    }
+  },
+  {
+    "ISIN": "AGRIRERXSNL",
+    "fund": {
+      "short_name": "Handmade Steel Cheese",
+      "long_name": "Halvorson LLC",
+      "phone": {
+        "mobile": "721-347-8204",
+        "office": "027-064-8462",
+        "home": "146-540-0870"
+      }
+    }
+  },
+  {
+    "ISIN": "BRBKKPP1",
+    "fund": {
+      "short_name": "Tasty Cotton Mouse",
+      "long_name": "Kuphal LLC",
+      "phone": {
+        "mobile": "592-010-3712",
+        "office": "971-396-2955",
+        "home": "399-256-0035"
+      }
+    }
+  },
+  {
+    "ISIN": "TUROUZ21KHZ",
+    "fund": {
+      "short_name": "Generic Rubber Chair",
+      "long_name": "Kunde - Monahan",
+      "phone": {
+        "mobile": "621-593-3285",
+        "office": "259-389-6543",
+        "home": "848-949-3704"
+      }
+    }
+  },
+  {
+    "ISIN": "BFCCBHBM",
+    "fund": {
+      "short_name": "Handmade Concrete Tuna",
+      "long_name": "O'Connell Inc",
+      "phone": {
+        "mobile": "603-899-1624",
+        "office": "730-991-0535",
+        "home": "385-961-5679"
+      }
+    }
+  },
+  {
+    "ISIN": "OBKLAT2LFON",
+    "fund": {
+      "short_name": "Licensed Metal Shoes",
+      "long_name": "Gulgowski, Cassin and Kulas",
+      "phone": {
+        "mobile": "909-005-3375",
+        "office": "120-350-2679",
+        "home": "666-095-2442"
+      }
+    }
+  },
+  {
+    "ISIN": "USALALTRKOR",
+    "fund": {
+      "short_name": "Gorgeous Metal Car",
+      "long_name": "Kertzmann - Kozey",
+      "phone": {
+        "mobile": "745-710-0950",
+        "office": "877-896-0022",
+        "home": "596-430-9356"
+      }
+    }
+  },
+  {
+    "ISIN": "HAABHR22",
+    "fund": {
+      "short_name": "Practical Concrete Shirt",
+      "long_name": "Vandervort - Wehner",
+      "phone": {
+        "mobile": "164-390-8125",
+        "office": "944-535-1076",
+        "home": "068-144-6277"
+      }
+    }
+  },
+  {
+    "ISIN": "MIDLPAPACLN",
+    "fund": {
+      "short_name": "Licensed Granite Chicken",
+      "long_name": "Will - Koss",
+      "phone": {
+        "mobile": "824-754-4047",
+        "office": "575-701-9600",
+        "home": "421-402-1706"
+      }
+    }
+  },
+  {
+    "ISIN": "ABCMGUG1",
+    "fund": {
+      "short_name": "Intelligent Wooden Cheese",
+      "long_name": "Graham, Schowalter and Williamson",
+      "phone": {
+        "mobile": "683-187-6080",
+        "office": "542-572-4644",
+        "home": "253-981-6349"
+      }
+    }
+  },
+  {
+    "ISIN": "CSSMSMS1013",
+    "fund": {
+      "short_name": "Ergonomic Frozen Bacon",
+      "long_name": "Bogisich Group",
+      "phone": {
+        "mobile": "727-445-6922",
+        "office": "440-333-9783",
+        "home": "433-710-7526"
+      }
+    }
+  },
+  {
+    "ISIN": "BFCOYTYT",
+    "fund": {
+      "short_name": "Handmade Granite Keyboard",
+      "long_name": "Halvorson, Bergnaum and Hettinger",
+      "phone": {
+        "mobile": "528-539-0588",
+        "office": "870-210-5279",
+        "home": "325-299-1240"
+      }
+    }
+  },
+  {
+    "ISIN": "MAMSKNS1",
+    "fund": {
+      "short_name": "Fantastic Soft Salad",
+      "long_name": "Powlowski - Morar",
+      "phone": {
+        "mobile": "254-988-1898",
+        "office": "206-234-8000",
+        "home": "208-872-6371"
+      }
+    }
+  },
+  {
+    "ISIN": "INOISTST",
+    "fund": {
+      "short_name": "Practical Cotton Gloves",
+      "long_name": "O'Keefe, Beahan and Pagac",
+      "phone": {
+        "mobile": "330-023-0036",
+        "office": "380-637-8075",
+        "home": "397-369-1587"
+      }
+    }
+  },
+  {
+    "ISIN": "KADRSI21",
+    "fund": {
+      "short_name": "Sleek Frozen Table",
+      "long_name": "Schiller Group",
+      "phone": {
+        "mobile": "615-183-4802",
+        "office": "759-470-2297",
+        "home": "154-013-4456"
+      }
+    }
+  },
+  {
+    "ISIN": "CMTBMD2X",
+    "fund": {
+      "short_name": "Generic Cotton Towels",
+      "long_name": "Schuppe Group",
+      "phone": {
+        "mobile": "082-468-7039",
+        "office": "776-145-8477",
+        "home": "092-081-5332"
+      }
+    }
+  },
+  {
+    "ISIN": "BOPACZ21",
+    "fund": {
+      "short_name": "Gorgeous Cotton Bike",
+      "long_name": "Rogahn, Wolf and Veum",
+      "phone": {
+        "mobile": "116-771-9140",
+        "office": "477-958-1430",
+        "home": "908-981-3198"
+      }
+    }
+  },
+  {
+    "ISIN": "BPRENIM1",
+    "fund": {
+      "short_name": "Small Concrete Shirt",
+      "long_name": "Johnson - Dooley",
+      "phone": {
+        "mobile": "686-375-5174",
+        "office": "596-117-5812",
+        "home": "196-578-5899"
+      }
+    }
+  },
+  {
+    "ISIN": "DASUTZTZ",
+    "fund": {
+      "short_name": "Intelligent Concrete Chair",
+      "long_name": "Bashirian Inc",
+      "phone": {
+        "mobile": "468-437-5038",
+        "office": "568-919-4575",
+        "home": "439-692-4470"
+      }
+    }
+  },
+  {
+    "ISIN": "SCBLFKFK",
+    "fund": {
+      "short_name": "Intelligent Rubber Keyboard",
+      "long_name": "Tremblay Inc",
+      "phone": {
+        "mobile": "741-013-9767",
+        "office": "792-956-9013",
+        "home": "538-434-1991"
+      }
+    }
+  },
+  {
+    "ISIN": "HEMMLCL2",
+    "fund": {
+      "short_name": "Ergonomic Wooden Soap",
+      "long_name": "Hartmann - Hayes",
+      "phone": {
+        "mobile": "755-298-3955",
+        "office": "466-879-9056",
+        "home": "903-753-7804"
+      }
+    }
+  },
+  {
+    "ISIN": "ZUMADMDM",
+    "fund": {
+      "short_name": "Incredible Concrete Sausages",
+      "long_name": "Toy Group",
+      "phone": {
+        "mobile": "175-062-6518",
+        "office": "970-408-5504",
+        "home": "422-894-1037"
+      }
+    }
+  },
+  {
+    "ISIN": "NLCBTZTXFIN",
+    "fund": {
+      "short_name": "Handcrafted Plastic Chair",
+      "long_name": "Reichel and Sons",
+      "phone": {
+        "mobile": "573-631-8379",
+        "office": "748-786-8484",
+        "home": "579-319-2942"
+      }
+    }
+  },
+  {
+    "ISIN": "INVATM2X",
+    "fund": {
+      "short_name": "Rustic Rubber Towels",
+      "long_name": "Bartell, Corkery and Nolan",
+      "phone": {
+        "mobile": "791-775-1655",
+        "office": "899-905-7938",
+        "home": "083-810-3492"
+      }
+    }
+  },
+  {
+    "ISIN": "FBCOAOLU",
+    "fund": {
+      "short_name": "Refined Steel Gloves",
+      "long_name": "Conroy Inc",
+      "phone": {
+        "mobile": "805-857-3956",
+        "office": "198-391-5078",
+        "home": "218-045-7187"
+      }
+    }
+  },
+  {
+    "ISIN": "BCABIT21045",
+    "fund": {
+      "short_name": "Handmade Rubber Mouse",
+      "long_name": "Vandervort and Sons",
+      "phone": {
+        "mobile": "584-627-9331",
+        "office": "491-907-6539",
+        "home": "051-229-6304"
+      }
+    }
+  },
+  {
+    "ISIN": "SABMZMZ1HSL",
+    "fund": {
+      "short_name": "Ergonomic Fresh Towels",
+      "long_name": "Sauer, Terry and Howe",
+      "phone": {
+        "mobile": "434-156-1522",
+        "office": "639-529-0462",
+        "home": "844-838-5278"
+      }
+    }
+  },
+  {
+    "ISIN": "ADEVTTP1027",
+    "fund": {
+      "short_name": "Incredible Plastic Hat",
+      "long_name": "Wilkinson - Barton",
+      "phone": {
+        "mobile": "869-552-6897",
+        "office": "365-763-7102",
+        "home": "098-598-6966"
+      }
+    }
+  },
+  {
+    "ISIN": "ASSPLKL1",
+    "fund": {
+      "short_name": "Licensed Concrete Bacon",
+      "long_name": "Rippin Group",
+      "phone": {
+        "mobile": "510-259-7584",
+        "office": "201-591-2590",
+        "home": "534-756-7327"
+      }
+    }
+  },
+  {
+    "ISIN": "FCIBAIAI",
+    "fund": {
+      "short_name": "Practical Soft Chips",
+      "long_name": "Paucek LLC",
+      "phone": {
+        "mobile": "417-317-7505",
+        "office": "782-121-5215",
+        "home": "765-877-7717"
+      }
+    }
+  },
+  {
+    "ISIN": "ICICBHBMCOP",
+    "fund": {
+      "short_name": "Generic Fresh Shirt",
+      "long_name": "Howell Group",
+      "phone": {
+        "mobile": "079-705-9824",
+        "office": "952-817-1733",
+        "home": "300-082-7905"
+      }
+    }
+  },
+  {
+    "ISIN": "CCEIGNGN",
+    "fund": {
+      "short_name": "Licensed Rubber Tuna",
+      "long_name": "Little - Medhurst",
+      "phone": {
+        "mobile": "337-435-5429",
+        "office": "620-215-9158",
+        "home": "782-266-3121"
+      }
+    }
+  },
+  {
+    "ISIN": "CITIPTPXSEC",
+    "fund": {
+      "short_name": "Rustic Concrete Chips",
+      "long_name": "Ratke, Kshlerin and Stracke",
+      "phone": {
+        "mobile": "673-355-4750",
+        "office": "251-942-3758",
+        "home": "912-449-5123"
+      }
+    }
+  },
+  {
+    "ISIN": "TBCBGE22888",
+    "fund": {
+      "short_name": "Awesome Plastic Soap",
+      "long_name": "Predovic - Moen",
+      "phone": {
+        "mobile": "632-540-2465",
+        "office": "648-396-4676",
+        "home": "822-376-3140"
+      }
+    }
+  },
+  {
+    "ISIN": "TEBKXKPR031",
+    "fund": {
+      "short_name": "Unbranded Frozen Pizza",
+      "long_name": "McLaughlin Inc",
+      "phone": {
+        "mobile": "264-970-9461",
+        "office": "309-839-3654",
+        "home": "893-283-7077"
+      }
+    }
+  },
+  {
+    "ISIN": "BPUNPKKA014",
+    "fund": {
+      "short_name": "Incredible Frozen Keyboard",
+      "long_name": "Jacobson - Considine",
+      "phone": {
+        "mobile": "822-091-2851",
+        "office": "502-895-7067",
+        "home": "162-812-4310"
+      }
+    }
+  },
+  {
+    "ISIN": "FTBDKPP1",
+    "fund": {
+      "short_name": "Licensed Cotton Chips",
+      "long_name": "Jerde and Sons",
+      "phone": {
+        "mobile": "913-129-9633",
+        "office": "948-080-7890",
+        "home": "334-154-1403"
+      }
+    }
+  },
+  {
+    "ISIN": "BIDVVNVX760",
+    "fund": {
+      "short_name": "Awesome Concrete Towels",
+      "long_name": "Reynolds Group",
+      "phone": {
+        "mobile": "851-410-7430",
+        "office": "609-227-9328",
+        "home": "151-234-1477"
+      }
+    }
+  }
+]

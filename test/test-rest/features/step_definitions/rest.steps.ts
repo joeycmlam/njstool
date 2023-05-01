@@ -1,16 +1,20 @@
 // tests/steps.ts
 
-import { Given, When, Then, BeforeAll, AfterAll } from '@cucumber/cucumber';
-import axios, { AxiosResponse } from 'axios';
+import {Given, When, Then, BeforeAll, AfterAll} from '@cucumber/cucumber';
+import axios, {AxiosResponse} from 'axios';
 import * as assert from 'assert';
-import { Server } from 'http';
-import  { instance } from '../../../../src/app/app-rest/app.rest';
+import {Server} from 'http';
+import {instance} from '../../../../src/app/app-rest/app.rest';
+import FileHelper from "../../../../src/app/lib/fileHelper";
+import * as path from "path";
 
+let datapath: string;
 let server: Server;
 let appUrl: string;
 let response: AxiosResponse;
 
 BeforeAll(async () => {
+    datapath = 'test/test-rest/features/test_data';
     const port = process.env.PORT || 3000;
     server = instance.app.listen(port);
     console.log(`Server started on port ${port}`);
@@ -25,8 +29,8 @@ Given('the application is running at {string}', async (url: string) => {
     appUrl = url;
 });
 
-When('I make a GET request to {string}', async (path: string) => {
-    response = await axios.get(`${appUrl}${path}`);
+When('I make a GET request to {string}', async (uri: string) => {
+    response = await axios.get(`${appUrl}${uri}`);
 });
 
 Then('the response status code is {string}', (statusCode: string) => {
@@ -35,4 +39,13 @@ Then('the response status code is {string}', (statusCode: string) => {
 
 Then('the response version is {string}', (version: string) => {
     assert.equal(response.data.version, version);
+});
+When('I make a GET request to {string} {string}', async (uri: string, filename: string) => {
+    response = await axios.get(`${appUrl}${uri}/${filename}`);
+});
+
+Then('the response body is {string}', async (outputFilename: string) => {
+    const fullfilename: string = path.join (datapath, outputFilename);
+    const expectedOutput = await FileHelper.readFile(fullfilename);
+    assert.deepEqual(response.data.body, expectedOutput);
 });

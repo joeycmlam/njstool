@@ -26,7 +26,7 @@ class restApp {
 
     private initializeControllers(): void {
         this.app.get('/health', this.healthCheckController.getHealthCheck);
-        this.app.get('/files/:fileName', this.filesController.getFileName); // Add new route
+        this.app.get('/files/:fileName', this.filesController.getFile); // Add new route
     }
 
     public listen(port: number): void {
