@@ -1,7 +1,7 @@
 // import Logger from './logwinston';
 import MaskedLogger from './jl-log4js';
 import {DataMask} from "./data-mask";
-import { Config, ConfigHelper } from '../lib/configHelper';
+import { BaseConfig, ConfigHelper } from '../lib/configHelper';
 
 const file: string = 'src/app/app-mask/config.yaml';
 const configHelper = new ConfigHelper(file);
@@ -11,7 +11,7 @@ const configHelper = new ConfigHelper(file);
 
 })();
 
-const config: Config | null = configHelper.getConfig();
+const config: BaseConfig | null = configHelper.getConfig();
 
 if (config) {
     console.log('Log level:', config.logLevel);

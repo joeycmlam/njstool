@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/lib/configHelper.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-rest/controllers/healthCheckController.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-map/app.map.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-map/app.map.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-mask/app.mask.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-mask/app.mask.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-mask/config.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/lib/Config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-rest/app-rest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-rest/app-rest.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/lib/configHelper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lib/configHelper.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -349,13 +349,7 @@
       <workItem from="1682131744111" duration="14445000" />
       <workItem from="1682180289830" duration="1091000" />
       <workItem from="1682694993348" duration="52150000" />
-    </task>
-    <task id="LOCAL-00014" summary="support json message on data mask">
-      <created>1680705243674</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1680705243674</updated>
+      <workItem from="1682908619281" duration="1876000" />
     </task>
     <task id="LOCAL-00015" summary="generate the cucumber report and add some test cases">
       <created>1680863189839</created>
@@ -693,7 +687,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682869642335</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="fix the config issue.">
+      <created>1682877631131</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1682877631132</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -777,7 +778,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="remove the unused variable." />
     <MESSAGE value="add json converter feature" />
     <MESSAGE value="fix the bug on reading json file" />
     <MESSAGE value="support the nested json and write to excel." />
@@ -802,7 +802,8 @@
     <MESSAGE value="move the config into .nycrc file from package.json file" />
     <MESSAGE value="re-structure the report folder" />
     <MESSAGE value="change the batch job mode" />
-    <option name="LAST_COMMIT_MESSAGE" value="change the batch job mode" />
+    <MESSAGE value="fix the config issue." />
+    <option name="LAST_COMMIT_MESSAGE" value="fix the config issue." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -850,7 +851,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/app-mask/app.mask.ts</url>
           <line>23</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
