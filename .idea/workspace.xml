@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/test-rest/features/rest.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test-rest/features/step_definitions/rest.steps.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-rest/app-rest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-rest/app.rest.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,22 +243,12 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.test">
+  <component name="RunManager" selected="npm.test:cucumber:rest">
     <configuration name="generate-cucumber-html" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
         <script value="generate-cucumber-html" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="merge-reports" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="merge-reports" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -303,21 +294,31 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="test:cucumber:rest" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test:cucumber:rest" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="npm.test" />
       <item itemvalue="npm.start:rest" />
+      <item itemvalue="npm.test:cucumber:rest" />
       <item itemvalue="npm.start:map" />
       <item itemvalue="npm.start:mask" />
       <item itemvalue="npm.generate-cucumber-html" />
-      <item itemvalue="npm.merge-reports" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.generate-cucumber-html" />
+        <item itemvalue="npm.test:cucumber:rest" />
         <item itemvalue="npm.start:rest" />
         <item itemvalue="npm.start:mask" />
         <item itemvalue="npm.start:map" />
-        <item itemvalue="npm.generate-cucumber-html" />
-        <item itemvalue="npm.merge-reports" />
       </list>
     </recent_temporary>
   </component>
@@ -347,13 +348,6 @@
       <workItem from="1682180289830" duration="1091000" />
       <workItem from="1682694993348" duration="52150000" />
       <workItem from="1682908619281" duration="1876000" />
-    </task>
-    <task id="LOCAL-00015" summary="generate the cucumber report and add some test cases">
-      <created>1680863189839</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1680863189839</updated>
     </task>
     <task id="LOCAL-00016" summary="code reflector">
       <created>1680864179737</created>
@@ -691,7 +685,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682877631132</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="rest api">
+      <created>1682922641065</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1682922641065</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -772,7 +773,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add json converter feature" />
     <MESSAGE value="fix the bug on reading json file" />
     <MESSAGE value="support the nested json and write to excel." />
     <MESSAGE value="fix the format." />
@@ -797,7 +797,8 @@
     <MESSAGE value="re-structure the report folder" />
     <MESSAGE value="change the batch job mode" />
     <MESSAGE value="fix the config issue." />
-    <option name="LAST_COMMIT_MESSAGE" value="fix the config issue." />
+    <MESSAGE value="rest api" />
+    <option name="LAST_COMMIT_MESSAGE" value="rest api" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -846,6 +847,12 @@
           <url>file://$PROJECT_DIR$/src/app/app-mask/app.mask.ts</url>
           <line>23</line>
           <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/test/test-rest/features/step_definitions/rest.steps.ts</url>
+          <line>17</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
