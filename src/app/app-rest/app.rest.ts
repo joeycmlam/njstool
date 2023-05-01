@@ -1,10 +1,10 @@
 // src/index.ts
 
-import express, { Express, Request, Response } from 'express';
+import express, { Express} from 'express';
 import bodyParser from 'body-parser';
 import HealthCheckController from "./controllers/healthCheckController";
 
-class App {
+class restApp {
     public app: Express;
     private healthCheckController: HealthCheckController;
 
@@ -31,5 +31,9 @@ class App {
 }
 
 const PORT = 3000;
-const server = new App();
-server.listen(PORT);
+const instance = new restApp();
+if (require.main === module) {
+    instance.listen(PORT);
+}
+
+export { instance };
