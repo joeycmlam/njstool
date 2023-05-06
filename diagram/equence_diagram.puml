@@ -1,0 +1,63 @@
+' Sequence Diagram
+@startuml sequence_diagram
+actor User
+participant "Server A" as A
+participant "Server B" as B
+
+User -> A: Request data
+A -> B: Get data
+B --> A: Data
+A --> User: Response data
+@enduml
+
+' Class Diagram
+@startuml class_diagram
+class Car {
+    +start(): void
+    +stop(): void
+}
+
+class ElectricCar {
+    +chargeBattery(): void
+}
+ElectricCar --|> Car
+@enduml
+
+' Activity Diagram
+@startuml activity_diagram
+start
+:Initialize system;
+:Load data;
+if (Data valid?) then (yes)
+    :Process data;
+else (no)
+    :Log error;
+endif
+:Save results;
+stop
+@enduml
+
+' State Diagram
+@startuml state_diagram
+[*] --> Idle
+Idle --> Running: Start
+Running --> Paused: Pause
+Paused --> Running: Resume
+Running --> Finished: Stop
+@enduml
+
+' Component Diagram
+@startuml component_diagram
+package "Client App" {
+    [User Interface]
+    [Business Logic]
+}
+
+database "Database" {
+    [Data Access Layer]
+}
+
+[User Interface] --> [Business Logic]
+[Business Logic] --> [Data Access Layer]
+[Data Access Layer] --> "Database"
+@enduml

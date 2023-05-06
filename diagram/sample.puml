@@ -1,0 +1,26 @@
+@startuml Subscription flow
+actor customer
+participant "Website" as I
+actor operation
+participant "Workflow" as W
+participant "Backend" as B
+participant "Vendor" as K
+
+customer -> I: place the subscription order
+I -> W:  the unapproved order is in workflow system
+operation -> W: approve it if having sufficient money in the acc
+W -> B: save a record in backend system
+W -> K: send the request to "Vendor"
+K -> W: send back the ack'ed msg
+W -> B: save the ack'ed number to backend order
+W -> W: mark the order is completed
+customer -> I: can see the confirmed order.
+@enduml
+
+@startuml Order State
+[*] --> Raised
+Raised --> Pending
+Pending --> Approved
+Pending --> Reject
+Approved --> Allocated
+@enduml

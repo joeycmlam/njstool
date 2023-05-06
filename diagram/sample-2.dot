@@ -1,0 +1,13 @@
+digraph G {
+    // Node attributes
+    A [label = "Node A", shape = ellipse, color = blue, fontcolor = white];
+    B [label = "Node B", shape = box, color = red];
+    C [label = "Node C", shape = diamond, color = green];
+    D [label = "Node D", shape = octagon, color = yellow];
+
+// Edge attributes
+    A -> B [label = "Edge A-B", fontcolor = blue];
+    B -> C [label = "Edge B-C", fontcolor = red];
+    C -> D [label = "Edge C-D", fontcolor = green];
+    D -> A [label = "Edge D-A", fontcolor = yellow];
+}
