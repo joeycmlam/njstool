@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-chatbot/app.main.chat.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-chatbot/chatEngine.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-chatbot/poeChatEngine.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,7 +217,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.10.0&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.10.0&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/joeylam/repo/njs/njstool/test/test-rest/features/test_data&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/joeylam/repo/njs/njstool/diagram&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
@@ -223,15 +226,20 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Users/joeylam/repo/njs/njstool/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;TEXT&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/diagram" />
       <recent name="$PROJECT_DIR$/test/test-rest/features/test_data" />
       <recent name="$PROJECT_DIR$/test/test-json/features/test_data" />
       <recent name="$PROJECT_DIR$/test" />
       <recent name="$PROJECT_DIR$/features/test_data" />
-      <recent name="$PROJECT_DIR$/src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/app/app-mask" />
@@ -241,7 +249,15 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.test">
+  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name="merge-reports" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -303,6 +319,7 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       <item itemvalue="npm.test" />
       <item itemvalue="npm.start:rest" />
       <item itemvalue="npm.test:cucumber:json" />
@@ -348,13 +365,10 @@
       <workItem from="1682908619281" duration="1876000" />
       <workItem from="1683345322269" duration="9112000" />
       <workItem from="1683363925693" duration="599000" />
-    </task>
-    <task id="LOCAL-00024" summary="enhance the log to capture the line of code.">
-      <created>1680883217339</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1680883217340</updated>
+      <workItem from="1683377776997" duration="4534000" />
+      <workItem from="1683443486838" duration="1849000" />
+      <workItem from="1683449466596" duration="206000" />
+      <workItem from="1683993096777" duration="845000" />
     </task>
     <task id="LOCAL-00025" summary="reflector the logging">
       <created>1680885383152</created>
@@ -692,7 +706,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682940402299</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="add diagram samples">
+      <created>1683377833328</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1683377833328</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -727,7 +748,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="enhance the file name handling" />
     <MESSAGE value="fix the cucumber test" />
     <MESSAGE value="reflector excelHelper.ts" />
     <MESSAGE value="fix cucumber report generator issue" />
@@ -752,7 +772,8 @@
     <MESSAGE value="use c8 instead of nyc as no new update for nyc for 3 years." />
     <MESSAGE value="delete unused file" />
     <MESSAGE value="minor changes." />
-    <option name="LAST_COMMIT_MESSAGE" value="minor changes." />
+    <MESSAGE value="add diagram samples" />
+    <option name="LAST_COMMIT_MESSAGE" value="add diagram samples" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

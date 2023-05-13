@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  pgadmin:
+    container_name: pgadmin4_container
+    image: dpage/pgadmin3
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: joey.cm.lam@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: root
+    ports:
+      - "5050:80"Joeys-MBP:postgresql
+
+  db:
+    container_name: my_postgres
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: test_db
+    ports:
+      - "54320:5432"
+    volumes:
+      - pgdata:/Users/joeylam/dev/postgresql/data
+
+volumes:
+  pgdata:
+
