@@ -1,2 +1,14 @@
-app-etl:
-  logLevel: debug
+# config.etl.yaml
+version: "1.0"
+logger:
+  logLevel: "debug"
+  logFile: "log/app.etl.log"
+database:
+  host: 'localhost'
+  port: 5432
+  user: 'postgres'
+  password: 'dbadmin1234'
+  database: 'postgres'
+dataFilePath:
+    accountFile: 'test/test-etl/test-data/account-data.xlsx'
+    holdingFile: 'test/test-etl/test-data/holding-data.xlsx'

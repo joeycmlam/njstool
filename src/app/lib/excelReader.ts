@@ -2,13 +2,13 @@ import {readFile} from "fs/promises";
 import { read, utils } from 'xlsx';
 
 export default class ExcelReader {
-    private filePath: string;
+    private fileFullName: string;
     constructor(filePath: string) {
-        this.filePath = filePath;
+        this.fileFullName = filePath;
     }
 
     private async _readWorkbook() {
-        const buffer = await readFile(this.filePath);
+        const buffer = await readFile(this.fileFullName);
         return read(buffer, { type: 'buffer' });
     }
 

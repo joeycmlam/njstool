@@ -2,29 +2,35 @@
 import * as log4js from 'log4js';
 import * as yaml from 'js-yaml';
 import * as fs from 'fs';
-import { injectable } from 'inversify';
 
-interface LoggerOptions {
-    appName: string;
+export interface LoggerOptions {
+    logLevel?: string;
+    logFile?: string;
 }
 
-class LoggerFactory {
-    private config: Record<string, { logLevel: string }>;
+export class LoggerFactory {
+    private static instance: LoggerFactory | null = null;
+    private config: any;
 
-    constructor(configFileName: string) {
+    private constructor(configFileName: string) {
         this.config = this.readConfig(configFileName);
     }
 
-    private readConfig(configFileName: string): Record<string, { logLevel: string }> {
-        const fileContent = fs.readFileSync(configFileName, 'utf8');
-        return yaml.load(fileContent) as Record<string, { logLevel: string }>;
+    public static getInstance(configFileName: string): LoggerFactory {
+        if (!this.instance) {
+            this.instance = new LoggerFactory(configFileName);
+        }
+        return this.instance;
     }
 
-    getLogger(options: LoggerOptions): log4js.Logger {
-        const { appName } = options;
+    private readConfig(configFileName: string): any {
+        const fileContent = fs.readFileSync(configFileName, 'utf8');
+        return yaml.load(fileContent);
+    }
 
-        const logFilename = `${appName}.log`;
-        const logLevel = this.config[appName]?.logLevel || 'info';
+    public getLogger(options: LoggerOptions = {}): log4js.Logger {
+        const logFilename = options.logFile || this.config.logger.logFile || 'application.log';
+        const logLevel = options.logLevel || this.config.logger.logLevel || 'info';
 
         log4js.configure({
             appenders: {
@@ -39,5 +45,3 @@ class LoggerFactory {
         return log4js.getLogger();
     }
 }
-
-export { LoggerFactory, LoggerOptions };

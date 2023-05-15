@@ -1,7 +1,9 @@
 import { Client } from 'pg';
 
+
 export default class PostgresUploader {
     private client: Client;
+
     constructor(connectionConfig: any) {
         this.client = new Client(connectionConfig);
     }
@@ -19,5 +21,6 @@ export default class PostgresUploader {
         for (const row of data) {
             await this.client.query(query, valueMapper(row));
         }
+
     }
 }
