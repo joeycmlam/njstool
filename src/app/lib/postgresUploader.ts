@@ -24,7 +24,7 @@ export default class PostgresUploader implements iUploader {
         this.logger.info(`uploadData:start:${query}`);
         for (const row of data) {
             await this.client.query(query, valueMapper(row));
-            this.logger.debug(`value: ${row}`);
+            this.logger.debug(`value: ${JSON.stringify(row)}`);
         }
         this.logger.info('uploadData:end');
     }
