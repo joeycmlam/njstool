@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/app-interface/iETL.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-etl/app.etl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl/app.etl.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-etl/etlProcesser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl/etlProcesser.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-interface/iUploader.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/lib/excelReader.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lib/excelReader.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/lib/postgresUploader.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lib/postgresUploader.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -374,14 +369,7 @@
       <workItem from="1683993096777" duration="1611000" />
       <workItem from="1683994991643" duration="114000" />
       <workItem from="1683995114112" duration="3783000" />
-      <workItem from="1684122265296" duration="18577000" />
-    </task>
-    <task id="LOCAL-00036" summary="remove the unused variable.">
-      <created>1682154480626</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1682154480626</updated>
+      <workItem from="1684122265296" duration="18732000" />
     </task>
     <task id="LOCAL-00037" summary="add json converter feature">
       <created>1682736262592</created>
@@ -719,7 +707,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684155750082</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="reflector to use dependency injection to allow plug into different reader">
+      <created>1684156480812</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1684156480812</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -754,7 +749,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="move the config into .nycrc file from package.json file" />
     <MESSAGE value="re-structure the report folder" />
     <MESSAGE value="change the batch job mode" />
     <MESSAGE value="fix the config issue." />
@@ -779,7 +773,8 @@
     <MESSAGE value="improvver logger" />
     <MESSAGE value="run concurrrent" />
     <MESSAGE value="reflector to allow plug into different Uploader" />
-    <option name="LAST_COMMIT_MESSAGE" value="reflector to allow plug into different Uploader" />
+    <MESSAGE value="reflector to use dependency injection to allow plug into different reader" />
+    <option name="LAST_COMMIT_MESSAGE" value="reflector to use dependency injection to allow plug into different reader" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

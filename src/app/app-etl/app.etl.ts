@@ -31,8 +31,8 @@ import ExcelReader from "../lib/excelReader";
         truncateTable: true
     };
 
-    logger.info('upload account and holding');
 
+    logger.info('initialization')
     const accountReader = new ExcelReader(accountConfig.fileName);
     const accountUploader = new PostgresUploader(config.database);
     const accountProcessor = new ETLProcesser(accountConfig, accountUploader, accountReader);
@@ -41,6 +41,7 @@ import ExcelReader from "../lib/excelReader";
     const holdingUploader = new PostgresUploader(config.database);
     const holdingProcessor = new ETLProcesser(holdingConfig, holdingUploader, holdingReader);
 
+    logger.info('start upload account and holding');
     await Promise.all([
         accountProcessor.process(),
         holdingProcessor.process()
