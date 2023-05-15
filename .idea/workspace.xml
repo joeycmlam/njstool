@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/app-etl/etlProcesser.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-etl/app.etl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl/app.etl.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-etl/config.etl.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl/config.etl.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-mask/logwinston.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-mask/logwinston.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/lib/postgresUploader.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lib/postgresUploader.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/lib/logger.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lib/logger.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -373,14 +371,7 @@
       <workItem from="1683993096777" duration="1611000" />
       <workItem from="1683994991643" duration="114000" />
       <workItem from="1683995114112" duration="3783000" />
-      <workItem from="1684122265296" duration="14824000" />
-    </task>
-    <task id="LOCAL-00031" summary="folder restructure">
-      <created>1682136373933</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1682136373933</updated>
+      <workItem from="1684122265296" duration="15783000" />
     </task>
     <task id="LOCAL-00032" summary="map testing">
       <created>1682139157778</created>
@@ -718,7 +709,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684149727787</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="reflector to have etlProcesser to handle one table.">
+      <created>1684151149330</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1684151149330</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -753,7 +751,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="try to fix jest testing framework." />
     <MESSAGE value="try to test coverage" />
     <MESSAGE value="fix the testing reports" />
     <MESSAGE value="update README information." />
@@ -778,7 +775,8 @@
     <MESSAGE value="first version of etl process to upload data into account table." />
     <MESSAGE value="reflector the logger." />
     <MESSAGE value="reflector on the upload." />
-    <option name="LAST_COMMIT_MESSAGE" value="reflector on the upload." />
+    <MESSAGE value="reflector to have etlProcesser to handle one table." />
+    <option name="LAST_COMMIT_MESSAGE" value="reflector to have etlProcesser to handle one table." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -2,7 +2,7 @@
 version: "1.0"
 logger:
   logLevel: "debug"
-  logFile: "log/app.etl.log"
+  logFile: "log/app.etl"
 database:
   host: 'localhost'
   port: 5432

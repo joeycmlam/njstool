@@ -1,4 +1,3 @@
-// logger.ts
 import * as log4js from 'log4js';
 import * as yaml from 'js-yaml';
 import * as fs from 'fs';
@@ -6,6 +5,7 @@ import * as fs from 'fs';
 export interface LoggerOptions {
     logLevel?: string;
     logFile?: string;
+    logFilePattern?: string;
 }
 
 export class LoggerFactory {
@@ -31,12 +31,14 @@ export class LoggerFactory {
     }
 
     public getLogger(options: LoggerOptions = {}): log4js.Logger {
-        const logFilename = options.logFile || this.config.logger.logFile || 'application.log';
+        const logFilePrefix = options.logFile || this.config.logger.logFile || 'application';
+        const logFilePattern = options.logFilePattern || this.config.logger.logFilePattern || 'yyyy-MM-dd.log';
+        const logFilename = `${logFilePrefix}`;
         const logLevel = options.logLevel || this.config.logger.logLevel || 'info';
 
         log4js.configure({
             appenders: {
-                fileAppender: { type: 'file', filename: logFilename },
+                fileAppender: { type: 'dateFile', filename: logFilename, pattern: logFilePattern, alwaysIncludePattern: true },
                 console: { type: 'console' },
             },
             categories: {
