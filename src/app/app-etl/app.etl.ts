@@ -3,6 +3,7 @@ import { AppEtlConfig } from "./appEtlConfig";
 import { LoggerFactory } from "../lib/logger";
 import { ETLProcesser, FileProcessorConfig } from "./etlProcesser";
 import { iAccount, iHolding } from "./iRecordType";
+import PostgresUploader from "../lib/postgresUploader";
 
 (async () => {
     const configFile = 'src/app/app-etl/config.etl.yaml';
@@ -31,8 +32,11 @@ import { iAccount, iHolding } from "./iRecordType";
 
     logger.info('upload account and holding');
 
-    const accountProcessor = new ETLProcesser(accountConfig, config.database);
-    const holdingProcessor = new ETLProcesser(holdingConfig, config.database);
+    const accountUploader = new PostgresUploader(config.database);
+    const accountProcessor = new ETLProcesser(accountConfig, accountUploader);
+
+    const holdingUploader = new PostgresUploader(config.database);
+    const holdingProcessor = new ETLProcesser(holdingConfig, holdingUploader);
 
     await Promise.all([
         accountProcessor.process(),

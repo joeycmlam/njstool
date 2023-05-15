@@ -1,8 +1,9 @@
 import {Client} from 'pg';
 import {LoggerFactory} from "./logger";
+import {iUploader} from "../app-interface/iUploader";
 
 
-export default class PostgresUploader {
+export default class PostgresUploader implements iUploader {
     private client: Client;
     private logger;
 

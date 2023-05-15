@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/app-interface/iUploader.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-etl/app.etl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl/app.etl.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-etl/etlProcesser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl/etlProcesser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/lib/postgresUploader.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lib/postgresUploader.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -369,14 +372,7 @@
       <workItem from="1683993096777" duration="1611000" />
       <workItem from="1683994991643" duration="114000" />
       <workItem from="1683995114112" duration="3783000" />
-      <workItem from="1684122265296" duration="16316000" />
-    </task>
-    <task id="LOCAL-00034" summary="add new function on map">
-      <created>1682150493475</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1682150493475</updated>
+      <workItem from="1684122265296" duration="17865000" />
     </task>
     <task id="LOCAL-00035" summary="read the config from yaml file">
       <created>1682154351846</created>
@@ -714,7 +710,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684152075146</updated>
     </task>
-    <option name="localTasksCounter" value="83" />
+    <task id="LOCAL-00083" summary="run concurrrent">
+      <created>1684152559994</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1684152559994</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -749,7 +752,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update README information." />
     <MESSAGE value="minor update on the testing framework" />
     <MESSAGE value="move the config into .nycrc file from package.json file" />
     <MESSAGE value="re-structure the report folder" />
@@ -774,7 +776,8 @@
     <MESSAGE value="reflector to have etlProcesser to handle one table." />
     <MESSAGE value="improve the log file name" />
     <MESSAGE value="improvver logger" />
-    <option name="LAST_COMMIT_MESSAGE" value="improvver logger" />
+    <MESSAGE value="run concurrrent" />
+    <option name="LAST_COMMIT_MESSAGE" value="run concurrrent" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -826,13 +829,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/app-etl/app.etl.ts</url>
-          <line>23</line>
+          <line>24</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/app-etl/app.etl.ts</url>
-          <line>12</line>
+          <line>13</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="36" />
         </line-breakpoint>
