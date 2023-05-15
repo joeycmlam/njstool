@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/app-interface/iUploader.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-interface/iETL.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-etl/app.etl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl/app.etl.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-etl/etlProcesser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl/etlProcesser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-interface/iUploader.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/lib/excelReader.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lib/excelReader.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/lib/postgresUploader.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lib/postgresUploader.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -372,14 +374,7 @@
       <workItem from="1683993096777" duration="1611000" />
       <workItem from="1683994991643" duration="114000" />
       <workItem from="1683995114112" duration="3783000" />
-      <workItem from="1684122265296" duration="17865000" />
-    </task>
-    <task id="LOCAL-00035" summary="read the config from yaml file">
-      <created>1682154351846</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1682154351846</updated>
+      <workItem from="1684122265296" duration="18577000" />
     </task>
     <task id="LOCAL-00036" summary="remove the unused variable.">
       <created>1682154480626</created>
@@ -717,7 +712,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684152559994</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="reflector to allow plug into different Uploader">
+      <created>1684155750082</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1684155750082</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -752,7 +754,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="minor update on the testing framework" />
     <MESSAGE value="move the config into .nycrc file from package.json file" />
     <MESSAGE value="re-structure the report folder" />
     <MESSAGE value="change the batch job mode" />
@@ -777,7 +778,8 @@
     <MESSAGE value="improve the log file name" />
     <MESSAGE value="improvver logger" />
     <MESSAGE value="run concurrrent" />
-    <option name="LAST_COMMIT_MESSAGE" value="run concurrrent" />
+    <MESSAGE value="reflector to allow plug into different Uploader" />
+    <option name="LAST_COMMIT_MESSAGE" value="reflector to allow plug into different Uploader" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -829,13 +831,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/app-etl/app.etl.ts</url>
-          <line>24</line>
+          <line>25</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/app-etl/app.etl.ts</url>
-          <line>13</line>
+          <line>14</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="36" />
         </line-breakpoint>

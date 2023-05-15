@@ -4,6 +4,7 @@ import { LoggerFactory } from "../lib/logger";
 import { ETLProcesser, FileProcessorConfig } from "./etlProcesser";
 import { iAccount, iHolding } from "./iRecordType";
 import PostgresUploader from "../lib/postgresUploader";
+import ExcelReader from "../lib/excelReader";
 
 (async () => {
     const configFile = 'src/app/app-etl/config.etl.yaml';
@@ -15,7 +16,7 @@ import PostgresUploader from "../lib/postgresUploader";
     const logger = loggerFactory.getLogger();
 
     const accountConfig: FileProcessorConfig = {
-        filePath: config.dataFilePath.accountFile,
+        fileName: config.dataFilePath.accountFile,
         query: 'INSERT INTO account (account_cd, account_nm) VALUES ($1, $2)',
         tableName: 'account',
         rowMapper: (row: iAccount) => [row.account_cd, row.account_nm],
@@ -23,7 +24,7 @@ import PostgresUploader from "../lib/postgresUploader";
     };
 
     const holdingConfig: FileProcessorConfig = {
-        filePath: config.dataFilePath.holdingFile,
+        fileName: config.dataFilePath.holdingFile,
         query: 'INSERT INTO holding (account_cd, stock_cd, exchange, unit, book_cost) VALUES ($1, $2, $3, $4, $5)',
         tableName: 'holding',
         rowMapper: (holdingRow: iHolding) => [holdingRow.account_cd, holdingRow.stock_cd, holdingRow.exchange, holdingRow.unit, holdingRow.book_cost],
@@ -32,11 +33,13 @@ import PostgresUploader from "../lib/postgresUploader";
 
     logger.info('upload account and holding');
 
+    const accountReader = new ExcelReader(accountConfig.fileName);
     const accountUploader = new PostgresUploader(config.database);
-    const accountProcessor = new ETLProcesser(accountConfig, accountUploader);
+    const accountProcessor = new ETLProcesser(accountConfig, accountUploader, accountReader);
 
+    const holdingReader = new ExcelReader(holdingConfig.fileName);
     const holdingUploader = new PostgresUploader(config.database);
-    const holdingProcessor = new ETLProcesser(holdingConfig, holdingUploader);
+    const holdingProcessor = new ETLProcesser(holdingConfig, holdingUploader, holdingReader);
 
     await Promise.all([
         accountProcessor.process(),

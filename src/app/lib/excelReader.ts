@@ -1,7 +1,8 @@
 import {readFile} from "fs/promises";
 import { read, utils } from 'xlsx';
+import {iDataReader} from "../app-interface/iETL";
 
-export default class ExcelReader {
+export default class ExcelReader implements iDataReader{
     private fileFullName: string;
     constructor(filePath: string) {
         this.fileFullName = filePath;

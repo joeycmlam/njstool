@@ -4,3 +4,7 @@ export interface iUploader {
     truncateTable(tableName: string): Promise<void>;
     uploadData(data: any[], query: string, rowMapper: (row: any) => any[]): Promise<void>;
 }
+
+export interface iDataReader {
+    extractData(): Promise<any[]>;
+}

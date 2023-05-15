@@ -1,6 +1,6 @@
 import {Client} from 'pg';
 import {LoggerFactory} from "./logger";
-import {iUploader} from "../app-interface/iUploader";
+import {iUploader} from "../app-interface/iETL";
 
 
 export default class PostgresUploader implements iUploader {
