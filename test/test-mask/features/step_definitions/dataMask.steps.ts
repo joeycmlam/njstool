@@ -8,7 +8,7 @@ let inputData: any;
 let inputString: string;
 let actualResult: any;
 let expectedResult: any;
-const rootPath: string = 'test/test-mask/features/test_data/'
+const rootPath: string = 'test/test-mask/test_data/'
 const dataMask= new DataMask();
 
 Before(() => {
