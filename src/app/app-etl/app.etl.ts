@@ -1,8 +1,8 @@
 import { ConfigHelper } from "../lib/configHelper";
 import { AppEtlConfig } from "./appEtlConfig";
 import { LoggerFactory } from "../lib/logger";
-import {ETLProcesser, FileProcessorConfig} from "./etlProcesser";
-import {iAccount, iHolding} from "./iRecordType";
+import { ETLProcesser, FileProcessorConfig } from "./etlProcesser";
+import { iAccount, iHolding } from "./iRecordType";
 
 (async () => {
     const configFile = 'src/app/app-etl/config.etl.yaml';
@@ -29,13 +29,15 @@ import {iAccount, iHolding} from "./iRecordType";
         truncateTable: true
     };
 
-    logger.info('upload account');
-    const accountProcessor = new ETLProcesser(accountConfig, config.database);
-    await accountProcessor.process();
+    logger.info('upload account and holding');
 
-    logger.info('upload holding');
+    const accountProcessor = new ETLProcesser(accountConfig, config.database);
     const holdingProcessor = new ETLProcesser(holdingConfig, config.database);
-    await holdingProcessor.process();
+
+    await Promise.all([
+        accountProcessor.process(),
+        holdingProcessor.process()
+    ]);
 
     logger.info('done');
 })();
