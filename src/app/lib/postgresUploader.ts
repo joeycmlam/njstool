@@ -14,7 +14,7 @@ export default class PostgresUploader {
         await this.client.end();
     }
 
-    async uploadData(data, query, valueMapper) {
+    async uploadData(data: any, query: any, valueMapper: any) {
         for (const row of data) {
             await this.client.query(query, valueMapper(row));
         }

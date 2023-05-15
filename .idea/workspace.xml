@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/app-etl/app.etl.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/lib/excelReader.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/lib/postgresUploader.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-chatbot/app.main.chat.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-chatbot/app.chat.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/lib/postgresUploader.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lib/postgresUploader.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -371,14 +367,7 @@
       <workItem from="1683449466596" duration="206000" />
       <workItem from="1683993096777" duration="1611000" />
       <workItem from="1683994991643" duration="114000" />
-      <workItem from="1683995114112" duration="2045000" />
-    </task>
-    <task id="LOCAL-00026" summary="make static">
-      <created>1680885544677</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1680885544677</updated>
+      <workItem from="1683995114112" duration="2581000" />
     </task>
     <task id="LOCAL-00027" summary="reflect to change the masking format">
       <created>1680925331963</created>
@@ -716,7 +705,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683994233418</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="ETL loader">
+      <created>1684060010681</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1684060010681</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -751,7 +747,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="reflector excelHelper.ts" />
     <MESSAGE value="fix cucumber report generator issue" />
     <MESSAGE value="combine the line coverage report for both cucumber test and jest" />
     <MESSAGE value="add back the command to launch the test coverage reports" />
@@ -776,7 +771,8 @@
     <MESSAGE value="minor changes." />
     <MESSAGE value="add diagram samples" />
     <MESSAGE value="try chatbot" />
-    <option name="LAST_COMMIT_MESSAGE" value="try chatbot" />
+    <MESSAGE value="ETL loader" />
+    <option name="LAST_COMMIT_MESSAGE" value="ETL loader" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
