@@ -10,15 +10,17 @@ export interface LoggerOptions {
 
 export class LoggerFactory {
     private static instance: LoggerFactory | null = null;
+    private configFile: string = 'application.log';
     private config: any;
 
     private constructor(configFileName: string) {
+        this.configFile = configFileName;
         this.config = this.readConfig(configFileName);
     }
 
-    public static getInstance(configFileName: string): LoggerFactory {
+    public static getInstance(configFileNme: string = 'config.yaml'): LoggerFactory {
         if (!this.instance) {
-            this.instance = new LoggerFactory(configFileName);
+            this.instance = new LoggerFactory(configFileNme);
         }
         return this.instance;
     }
