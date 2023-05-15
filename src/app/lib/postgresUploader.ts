@@ -1,4 +1,4 @@
-import { Client } from 'pg';
+import {Client} from 'pg';
 import {LoggerFactory} from "./logger";
 
 
@@ -11,15 +11,15 @@ export default class PostgresUploader {
         this.logger = LoggerFactory.getInstance().getLogger();
     }
 
-    async connect() {
+    public async connect() {
         await this.client.connect();
     }
 
-    async disconnect() {
+    public async disconnect() {
         await this.client.end();
     }
 
-    async uploadData(data: any, query: any, valueMapper: any) {
+    public async uploadData(data: any, query: any, valueMapper: any) {
         this.logger.info(`uploadData:start:${query}`);
         for (const row of data) {
             await this.client.query(query, valueMapper(row));
@@ -27,4 +27,13 @@ export default class PostgresUploader {
         }
         this.logger.info('uploadData:end');
     }
+
+    public async truncateTable(tableName: string): Promise<void> {
+        try {
+            await this.client.query(`TRUNCATE TABLE ${tableName}`);
+        } catch (error) {
+            throw new Error(`Error truncating table ${tableName}: ${error}`);
+        }
+    }
+
 }

@@ -1,7 +1,7 @@
 # config.etl.yaml
 version: "1.0"
 logger:
-  logLevel: "info"
+  logLevel: "debug"
   logFile: "log/app.etl.log"
 database:
   host: 'localhost'

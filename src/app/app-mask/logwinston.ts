@@ -2,7 +2,7 @@ import winston, {Logger as WinstonLogger} from 'winston';
 import dayjs from 'dayjs';
 import {DataMask} from "./data-mask";
 
-export default class Logger {
+export default class maskLogger {
     private dataMask = new DataMask();
     private logger: WinstonLogger;
 
@@ -28,22 +28,22 @@ export default class Logger {
     }
 
     public info(message: string): void {
-        const location = Logger.getCallerLocation();
+        const location = maskLogger.getCallerLocation();
         this.logger.info({message, location});
     }
 
     public warn(message: string): void {
-        const location = Logger.getCallerLocation();
+        const location = maskLogger.getCallerLocation();
         this.logger.warn({message, location});
     }
 
     public error(message: string): void {
-        const location = Logger.getCallerLocation();
+        const location = maskLogger.getCallerLocation();
         this.logger.error({message, location});
     }
 
     public debug(message: string): void {
-        const location = Logger.getCallerLocation();
+        const location = maskLogger.getCallerLocation();
         this.logger.debug({message, location});
     }
 
