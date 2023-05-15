@@ -32,7 +32,7 @@ export class LoggerFactory {
 
     public getLogger(options: LoggerOptions = {}): log4js.Logger {
         const logFilePrefix = options.logFile || this.config.logger.logFile || 'application';
-        const logFilePattern = options.logFilePattern || this.config.logger.logFilePattern || 'yyyy-MM-dd.log';
+        const logFilePattern = options.logFilePattern || this.config.logger.logFilePattern || 'yyyyMMdd.log';
         const logFilename = `${logFilePrefix}`;
         const logLevel = options.logLevel || this.config.logger.logLevel || 'info';
 

@@ -5,9 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-etl/config.etl.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl/config.etl.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/lib/logger.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lib/logger.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -371,14 +368,7 @@
       <workItem from="1683993096777" duration="1611000" />
       <workItem from="1683994991643" duration="114000" />
       <workItem from="1683995114112" duration="3783000" />
-      <workItem from="1684122265296" duration="15783000" />
-    </task>
-    <task id="LOCAL-00032" summary="map testing">
-      <created>1682139157778</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1682139157778</updated>
+      <workItem from="1684122265296" duration="15828000" />
     </task>
     <task id="LOCAL-00033" summary="fix the cucumber test path">
       <created>1682147200430</created>
@@ -716,7 +706,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684151149330</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="improve the log file name">
+      <created>1684152044204</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1684152044204</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -751,7 +748,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="try to test coverage" />
     <MESSAGE value="fix the testing reports" />
     <MESSAGE value="update README information." />
     <MESSAGE value="minor update on the testing framework" />
@@ -776,7 +772,8 @@
     <MESSAGE value="reflector the logger." />
     <MESSAGE value="reflector on the upload." />
     <MESSAGE value="reflector to have etlProcesser to handle one table." />
-    <option name="LAST_COMMIT_MESSAGE" value="reflector to have etlProcesser to handle one table." />
+    <MESSAGE value="improve the log file name" />
+    <option name="LAST_COMMIT_MESSAGE" value="improve the log file name" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
