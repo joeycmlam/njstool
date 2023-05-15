@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-etl/app.etl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl/app.etl.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-etl/etlProcesser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl/etlProcesser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-interface/iETL.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-interface/iETL.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/lib/postgresUploader.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lib/postgresUploader.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -369,14 +373,7 @@
       <workItem from="1683993096777" duration="1611000" />
       <workItem from="1683994991643" duration="114000" />
       <workItem from="1683995114112" duration="3783000" />
-      <workItem from="1684122265296" duration="19440000" />
-    </task>
-    <task id="LOCAL-00038" summary="fix the bug on reading json file">
-      <created>1682738633764</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1682738633764</updated>
+      <workItem from="1684122265296" duration="23277000" />
     </task>
     <task id="LOCAL-00039" summary="support the nested json and write to excel.">
       <created>1682752612396</created>
@@ -714,7 +711,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684156599403</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="fix the debug msg">
+      <created>1684157319852</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1684157319852</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -749,7 +753,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="change the batch job mode" />
     <MESSAGE value="fix the config issue." />
     <MESSAGE value="rest api" />
     <MESSAGE value="add test case." />
@@ -774,7 +777,8 @@
     <MESSAGE value="reflector to allow plug into different Uploader" />
     <MESSAGE value="reflector to use dependency injection to allow plug into different reader" />
     <MESSAGE value="add comment" />
-    <option name="LAST_COMMIT_MESSAGE" value="add comment" />
+    <MESSAGE value="fix the debug msg" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix the debug msg" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -825,16 +829,10 @@
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/app-etl/app.etl.ts</url>
-          <line>25</line>
+          <url>file://$PROJECT_DIR$/src/app/lib/postgresUploader.ts</url>
+          <line>40</line>
           <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/app-etl/app.etl.ts</url>
-          <line>14</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="36" />
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

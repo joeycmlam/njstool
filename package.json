@@ -36,6 +36,7 @@
     "log4js": "^6.9.1",
     "moment": "^2.29.4",
     "pg": "^8.10.0",
+    "pg-promise": "^11.4.3",
     "redact-pii": "^3.4.0",
     "reflect-metadata": "^0.1.13",
     "ts-node": "^10.9.1",
