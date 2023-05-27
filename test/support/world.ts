@@ -13,15 +13,14 @@ export class feeCustom{
     public dataFile: string = '';
     public feeCalculator: FeeCalculator = new FeeCalculator();
     public transactions: Transaction[] = [];
-    public order: Transaction = {
+    public order: Partial< Transaction> = {
         txnId: 0,
         acctId: '',
         txnSeq: 0,
-        txnType: '',
         tradeDate: '',
         fundId: '',
         valnDate: '',
-        txnUnit: 0,
+        unit: 0,
         processDate: '',
         unitCost: 0
     };

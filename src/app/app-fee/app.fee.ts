@@ -1,23 +1,38 @@
 // Example usage:
-import FeeCalculator, {Transaction} from "./feeCalculator";
+import FeeCalculator, {enmTxnType, Transaction} from "./feeCalculator";
 
 
 class app {
+
     static async process() {
         const fileName: string = 'test/test-fee/test-data/A0001.xlsx'
         const feeCalculator = new FeeCalculator();
         const transactions = await feeCalculator.readTransactionsFromFile(fileName);
-        console.log('Transactions:', transactions);
+
+        const order: Partial<Transaction> = {};
+        order.acctId = 'A00001';
+        order.fundId = 'F031';
+        order.txnType = enmTxnType.Sell;
+        order.tradeDate = '2017-06-01';
+        order.unit = 10000;
+
+
+        const fee: number = feeCalculator.feeCalculator(order, transactions);
+        console.log(`fee amount: [${fee}]`);
+    }
+
+    static async processSample() {
+        const feeCalculator = new FeeCalculator();
 
         const order1 : Partial<Transaction> = {};
         const order2 : Partial<Transaction>  = {};
 
         order1.tradeDate = '2017-11-01';
         order1.purchaseDate = '2017-09-01';
-        order1.txnUnit = 10000;
+        order1.unit = 10000;
         order2.tradeDate = '2017-11-01';
         order2.purchaseDate = '2017-10-01';
-        order2.txnUnit = 5000;
+        order2.unit = 5000;
 
 
         const fee1 = await feeCalculator.calculateFee(order1);

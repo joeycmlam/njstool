@@ -8,7 +8,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-fee/app.fee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee/app.fee.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/support/world.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/support/world.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test-fee/features/app.fee.feature" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-fee/features/app.fee.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test-fee/features/step_definitions/fee.steps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-fee/features/step_definitions/fee.steps.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test-fee/test-data/A0001.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-fee/test-data/A0001.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test-json/features/test_data/out-1level.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/test_data/out-1level.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test-json/features/test_data/out-2level.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/test_data/out-2level.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -341,11 +346,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.test:cucumber:fee" />
         <item itemvalue="npm.start:fee" />
-        <item itemvalue="npm.merge-reports" />
         <item itemvalue="npm.generate-cucumber-html" />
+        <item itemvalue="npm.merge-reports" />
         <item itemvalue="npm.test:cucumber" />
+        <item itemvalue="npm.test:cucumber:fee" />
       </list>
     </recent_temporary>
   </component>
@@ -387,14 +392,7 @@
       <workItem from="1684512519993" duration="6255000" />
       <workItem from="1684662331021" duration="1070000" />
       <workItem from="1685159245690" duration="10694000" />
-      <workItem from="1685190663588" duration="11032000" />
-    </task>
-    <task id="LOCAL-00053" summary="combine the reports">
-      <created>1682788351709</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1682788351709</updated>
+      <workItem from="1685190663588" duration="15473000" />
     </task>
     <task id="LOCAL-00054" summary="try to fix jest testing framework.">
       <created>1682823671674</created>
@@ -732,7 +730,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685199537962</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="reflector">
+      <created>1685203513727</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1685203513727</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
