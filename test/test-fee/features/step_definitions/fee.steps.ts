@@ -14,6 +14,7 @@ Before(()=> {
 Given('the account current position file {string} and place {string} on {string} with {int} unit on {string}', (
     inDataFile: string, tradeType: string, fundId: string, sellUnit: number, orderDate: string) => {
     // a.dataFile = path.join('test/test-fee/test-data/', inDataFile);
+    local = new feeCustom();
     local.order.fundId = fundId;
     local.order.txnType = tradeType;
     local.order.txnUnit = sellUnit;

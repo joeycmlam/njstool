@@ -374,14 +374,7 @@
       <workItem from="1684512519993" duration="6255000" />
       <workItem from="1684662331021" duration="1070000" />
       <workItem from="1685159245690" duration="10694000" />
-      <workItem from="1685190663588" duration="5751000" />
-    </task>
-    <task id="LOCAL-00047" summary="fix the cucumber test">
-      <created>1682776994840</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1682776994840</updated>
+      <workItem from="1685190663588" duration="6643000" />
     </task>
     <task id="LOCAL-00048" summary="reflector excelHelper.ts">
       <created>1682777192698</created>
@@ -719,7 +712,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685196079722</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="reflector the feature test">
+      <created>1685196465104</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1685196465104</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -835,22 +835,10 @@
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/test/test-fee/features/step_definitions/fee.steps.ts</url>
-          <line>14</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>mock://file:///Users/joeylam/repo/njs/njstool/test/test-fee/features/step_definitions/fee.steps.ts</url>
           <line>63</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/test/test-fee/features/step_definitions/fee.steps.ts</url>
-          <line>24</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts</url>
