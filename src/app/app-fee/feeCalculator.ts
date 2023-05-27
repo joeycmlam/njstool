@@ -39,15 +39,19 @@ export default class FeeCalculator {
         return 0;
     }
 
-    public feeCalculator(order: Partial<Transaction>, data: Transaction[]): number {
-        if (order.tradeDate === undefined  || order.unit === undefined) {
+    public async feeCalculator(order: Partial<Transaction>, data: Partial<Transaction>[]): Promise<number> {
+        if (order.tradeDate === undefined  || order.unit === undefined || order.acctId) {
             throw new Error('Required properties are missing from the order object');
         }
 
-        const buyTransactions = data.filter(txn => txn.acctId === order.acctId && txn.fundId === order.fundId && txn.txnType === enmTxnType.Buy);
-        buyTransactions.sort((a, b) => new Date(a.tradeDate).getTime() - new Date(b.tradeDate).getTime());
+        const buyTransactions = data.filter(txn => txn.acctId === order.acctId && txn.fundId === order.fundId );
+        buyTransactions.sort((a, b) => new Date(order.tradeDate ?? '').getTime() - new Date(order.tradeDate ?? '').getTime());
 
         for (const txn of buyTransactions) {
+            if (txn.unit === undefined || txn.processDate === undefined) {
+                throw new Error('Required properties are missing from txn object');
+            }
+
             if (txn.unit >= order.unit) {
                 const sellDate = new Date();
                 const purchaseDate = new Date(txn.processDate);
@@ -57,7 +61,7 @@ export default class FeeCalculator {
                 const feePercentage = this.getFeePercentage(yearDiff);
                 const fee = order.unit * feePercentage;
 
-                return 0;
+                return fee;
             }
         }
 
@@ -79,12 +83,27 @@ export default class FeeCalculator {
         return (order.unit  * feePercentage);
     }
 
-    public async readTransactionsFromFile(filePath: string): Promise<Transaction[]> {
+    public async readTransactionsFromFile(filePath: string): Promise< Partial<Transaction> []> {
         const workbook = XLSX.readFile(filePath);
         const sheetName = workbook.SheetNames[0];
         const worksheet = workbook.Sheets[sheetName];
 
-        return XLSX.utils.sheet_to_json(worksheet, {header: 'A'});
+        const columnHeaders = [
+            'txnId',
+            'acctId',
+            'txnSeq',
+            'txnType',
+            'tradeDate',
+            'fundId',
+            'valnDate',
+            'unit',
+            'processDate',
+            'unitCost'
+        ];
+
+        const data: Partial<Transaction>[] = XLSX.utils.sheet_to_json(worksheet, { header: columnHeaders });
+
+        return data;
     }
 }
 

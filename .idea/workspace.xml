@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
+    <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="add new feeCal function.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-fee/app.fee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee/app.fee.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/support/world.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/support/world.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test-fee/features/app.fee.feature" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-fee/features/app.fee.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test-fee/features/step_definitions/fee.steps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-fee/features/step_definitions/fee.steps.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test-fee/test-data/A0001.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-fee/test-data/A0001.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test-json/features/test_data/out-1level.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/test_data/out-1level.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test-json/features/test_data/out-2level.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/test_data/out-2level.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -392,14 +387,7 @@
       <workItem from="1684512519993" duration="6255000" />
       <workItem from="1684662331021" duration="1070000" />
       <workItem from="1685159245690" duration="10694000" />
-      <workItem from="1685190663588" duration="15473000" />
-    </task>
-    <task id="LOCAL-00054" summary="try to fix jest testing framework.">
-      <created>1682823671674</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1682823671674</updated>
+      <workItem from="1685190663588" duration="17310000" />
     </task>
     <task id="LOCAL-00055" summary="try to test coverage">
       <created>1682848058339</created>
@@ -737,7 +725,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685203513727</updated>
     </task>
-    <option name="localTasksCounter" value="103" />
+    <task id="LOCAL-00103" summary="add new feeCal function.">
+      <created>1685207948801</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1685207948801</updated>
+    </task>
+    <option name="localTasksCounter" value="104" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -772,7 +767,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="minor changes." />
     <MESSAGE value="add diagram samples" />
     <MESSAGE value="try chatbot" />
     <MESSAGE value="ETL loader" />
@@ -797,7 +791,8 @@
     <MESSAGE value="fix the synatx and run time issue" />
     <MESSAGE value="add more test cases" />
     <MESSAGE value="reflector" />
-    <option name="LAST_COMMIT_MESSAGE" value="reflector" />
+    <MESSAGE value="add new feeCal function." />
+    <option name="LAST_COMMIT_MESSAGE" value="add new feeCal function." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -857,6 +852,24 @@
           <line>63</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts</url>
+          <line>49</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts</url>
+          <line>103</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts</url>
+          <line>88</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="52" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

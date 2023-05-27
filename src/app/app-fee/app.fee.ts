@@ -6,18 +6,18 @@ class app {
 
     static async process() {
         const fileName: string = 'test/test-fee/test-data/A0001.xlsx'
-        const feeCalculator = new FeeCalculator();
-        const transactions = await feeCalculator.readTransactionsFromFile(fileName);
+        const cal = new FeeCalculator();
+        const transactions = await cal.readTransactionsFromFile(fileName);
 
         const order: Partial<Transaction> = {};
         order.acctId = 'A00001';
         order.fundId = 'F031';
         order.txnType = enmTxnType.Sell;
-        order.tradeDate = '2017-06-01';
+        order.tradeDate = '2018-06-01';
         order.unit = 10000;
 
 
-        const fee: number = feeCalculator.feeCalculator(order, transactions);
+        const fee: number = await cal.feeCalculator(order, transactions);
         console.log(`fee amount: [${fee}]`);
     }
 
@@ -45,7 +45,7 @@ class app {
 
 (async () => {
     console.log('start');
-    app.process();
+    await app.process();
     console.log('end');
 })();
 
