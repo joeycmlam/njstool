@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test-fee/features/app.fee.feature" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-fee/features/app.fee.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/support/world.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/support/world.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test-fee/features/step_definitions/fee.steps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-fee/features/step_definitions/fee.steps.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test-json/features/step_definitions/json.steps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/step_definitions/json.steps.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test-json/features/test_data/out-1level.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/test_data/out-1level.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test-json/features/test_data/out-2level.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/test_data/out-2level.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -280,16 +283,6 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="start:rest" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start:rest" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <configuration name="test" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -320,22 +313,32 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="test:cucumber:json" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test:cucumber:json" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       <item itemvalue="npm.test" />
+      <item itemvalue="npm.test:cucumber:json" />
       <item itemvalue="npm.start:fee" />
       <item itemvalue="npm.test:cucumber:fee" />
       <item itemvalue="npm.start:etl" />
-      <item itemvalue="npm.start:rest" />
       <item itemvalue="npm.test:cucumber" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="npm.test:cucumber:fee" />
+        <item itemvalue="npm.test:cucumber:json" />
         <item itemvalue="npm.start:fee" />
         <item itemvalue="npm.start:etl" />
         <item itemvalue="npm.test:cucumber" />
-        <item itemvalue="npm.start:rest" />
       </list>
     </recent_temporary>
   </component>
@@ -376,14 +379,7 @@
       <workItem from="1684122265296" duration="24053000" />
       <workItem from="1684512519993" duration="6255000" />
       <workItem from="1684662331021" duration="1070000" />
-      <workItem from="1685159245690" duration="5186000" />
-    </task>
-    <task id="LOCAL-00043" summary="json cucumber test case">
-      <created>1682759531598</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1682759531598</updated>
+      <workItem from="1685159245690" duration="6832000" />
     </task>
     <task id="LOCAL-00044" summary="add excelHelper and fix cucumber test issue.">
       <created>1682766149120</created>
@@ -721,7 +717,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684518459605</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="fix cucumber test">
+      <created>1685172515057</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1685172515058</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -756,7 +759,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix the multi-run issue." />
     <MESSAGE value="code reflector with dependency injection" />
     <MESSAGE value="add another api" />
     <MESSAGE value="add the test scnearion for rest api" />
@@ -781,7 +783,8 @@
     <MESSAGE value="reflector to support row by row and bulk" />
     <MESSAGE value="outstanding bug" />
     <MESSAGE value="fee calculator" />
-    <option name="LAST_COMMIT_MESSAGE" value="fee calculator" />
+    <MESSAGE value="fix cucumber test" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix cucumber test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
