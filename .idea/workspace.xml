@@ -6,19 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-etl/app.etl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl/app.etl.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-etl/etlProcesser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl/etlProcesser.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-fee/app.fee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee/app.fee.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-map/app.map.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-map/app.map.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/lib/postgresUploader.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lib/postgresUploader.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test-etl/test-data/holding-data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-etl/test-data/holding-data.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test-fee/features/step_definitions/fee.steps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-fee/features/step_definitions/fee.steps.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test-json/features/test_data/out-1level.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/test_data/out-1level.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test-json/features/test_data/out-2level.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/test_data/out-2level.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test-rest/features/rest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-rest/features/rest.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test-rest/features/step_definitions/rest.steps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-rest/features/step_definitions/rest.steps.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -279,6 +269,16 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="generate-cucumber-html" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="generate-cucumber-html" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="start:fee" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -323,14 +323,16 @@
       <item itemvalue="Cucumber.js.app.fee.feature" />
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       <item itemvalue="npm.test" />
+      <item itemvalue="npm.generate-cucumber-html" />
       <item itemvalue="npm.start:fee" />
       <item itemvalue="npm.test:cucumber:fee" />
       <item itemvalue="npm.test:cucumber" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.test:cucumber:fee" />
+        <item itemvalue="npm.generate-cucumber-html" />
         <item itemvalue="npm.test:cucumber" />
+        <item itemvalue="npm.test:cucumber:fee" />
         <item itemvalue="npm.start:fee" />
       </list>
     </recent_temporary>
@@ -373,14 +375,7 @@
       <workItem from="1684512519993" duration="6255000" />
       <workItem from="1684662331021" duration="1070000" />
       <workItem from="1685159245690" duration="10694000" />
-      <workItem from="1685190663588" duration="4912000" />
-    </task>
-    <task id="LOCAL-00045" summary="add new test case">
-      <created>1682766237779</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1682766237779</updated>
+      <workItem from="1685190663588" duration="5352000" />
     </task>
     <task id="LOCAL-00046" summary="enhance the file name handling">
       <created>1682766715018</created>
@@ -718,7 +713,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685174150831</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="fix the cucumber test - failed to use customize class">
+      <created>1685195858534</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1685195858534</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -753,7 +755,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="code reflector with dependency injection" />
     <MESSAGE value="add another api" />
     <MESSAGE value="add the test scnearion for rest api" />
     <MESSAGE value="use c8 instead of nyc as no new update for nyc for 3 years." />
@@ -778,7 +779,8 @@
     <MESSAGE value="outstanding bug" />
     <MESSAGE value="fee calculator" />
     <MESSAGE value="fix cucumber test" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix cucumber test" />
+    <MESSAGE value="fix the cucumber test - failed to use customize class" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix the cucumber test - failed to use customize class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -835,7 +837,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/test/test-fee/features/step_definitions/fee.steps.ts</url>
-          <line>20</line>
+          <line>17</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="38" />
         </line-breakpoint>
@@ -847,9 +849,15 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/test/test-fee/features/step_definitions/fee.steps.ts</url>
-          <line>34</line>
+          <line>31</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts</url>
+          <line>37</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="46" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
