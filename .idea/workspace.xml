@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="outstanding bug">
-      <change afterPath="$PROJECT_DIR$/src/app/app-fee/app.fee.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test-fee/features/app.fee.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test-fee/features/step_definitions/fee.steps.ts" afterDir="false" />
+    <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test-fee/features/app.fee.feature" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-fee/features/app.fee.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test-fee/features/step_definitions/fee.steps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-fee/features/step_definitions/fee.steps.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,6 +153,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1738" />
@@ -374,21 +374,9 @@
       <workItem from="1683994991643" duration="114000" />
       <workItem from="1683995114112" duration="3783000" />
       <workItem from="1684122265296" duration="24053000" />
-      <workItem from="1684512519993" duration="4235000" />
-    </task>
-    <task id="LOCAL-00041" summary="enhanced the cucumber test">
-      <created>1682754997098</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1682754997098</updated>
-    </task>
-    <task id="LOCAL-00042" summary="fix some test cases">
-      <created>1682755175226</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1682755175226</updated>
+      <workItem from="1684512519993" duration="6255000" />
+      <workItem from="1684662331021" duration="1070000" />
+      <workItem from="1685159245690" duration="5186000" />
     </task>
     <task id="LOCAL-00043" summary="json cucumber test case">
       <created>1682759531598</created>
@@ -719,7 +707,21 @@
       <option name="project" value="LOCAL" />
       <updated>1684163108216</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="fee calculator">
+      <created>1684518424167</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1684518424167</updated>
+    </task>
+    <task id="LOCAL-00091" summary="fee calculator">
+      <created>1684518459604</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1684518459605</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -754,7 +756,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add test case." />
     <MESSAGE value="fix the multi-run issue." />
     <MESSAGE value="code reflector with dependency injection" />
     <MESSAGE value="add another api" />
@@ -779,7 +780,8 @@
     <MESSAGE value="fix the debug msg" />
     <MESSAGE value="reflector to support row by row and bulk" />
     <MESSAGE value="outstanding bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="outstanding bug" />
+    <MESSAGE value="fee calculator" />
+    <option name="LAST_COMMIT_MESSAGE" value="fee calculator" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
