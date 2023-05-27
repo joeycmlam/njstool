@@ -6,11 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/support/world.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/support/world.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-etl/app.etl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl/app.etl.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-etl/etlProcesser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl/etlProcesser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-fee/app.fee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee/app.fee.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-map/app.map.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-map/app.map.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/lib/postgresUploader.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lib/postgresUploader.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test-etl/test-data/holding-data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-etl/test-data/holding-data.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test-fee/features/step_definitions/fee.steps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-fee/features/step_definitions/fee.steps.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test-json/features/step_definitions/json.steps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/step_definitions/json.steps.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test-json/features/test_data/out-1level.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/test_data/out-1level.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test-json/features/test_data/out-2level.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/test_data/out-2level.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test-rest/features/rest.feature" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-rest/features/rest.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test-rest/features/step_definitions/rest.steps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-rest/features/step_definitions/rest.steps.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +166,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1738" />
@@ -229,6 +237,7 @@
     &quot;nodejs.cucumber.cucumber_node_package_dir&quot;: &quot;/Users/joeylam/repo/njs/njstool/node_modules/@cucumber/cucumber&quot;,
     &quot;nodejs.jest.jest_package&quot;: &quot;/Users/joeylam/repo/njs/njstool/node_modules/jest&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Users/joeylam/repo/njs/njstool/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -254,23 +263,20 @@
       <recent name="$PROJECT_DIR$/src/app/lib" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.test:cucumber:fee">
+  <component name="RunManager" selected="Cucumber.js.app.fee.feature">
+    <configuration name="app.fee.feature" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="myFilePath" value="$PROJECT_DIR$/test/test-fee/features/app.fee.feature" />
+      <option name="myNameFilter" value="" />
+      <option name="cucumberJsArguments" value="--config test/cucumber.config.js " />
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
     <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="sourceFilePath" value="docker-compose.yml" />
         </settings>
       </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="start:etl" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start:etl" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
       <method v="2" />
     </configuration>
     <configuration name="start:fee" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -313,32 +319,19 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="test:cucumber:json" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="test:cucumber:json" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <list>
+      <item itemvalue="Cucumber.js.app.fee.feature" />
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       <item itemvalue="npm.test" />
-      <item itemvalue="npm.test:cucumber:json" />
       <item itemvalue="npm.start:fee" />
       <item itemvalue="npm.test:cucumber:fee" />
-      <item itemvalue="npm.start:etl" />
       <item itemvalue="npm.test:cucumber" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="npm.test:cucumber:fee" />
-        <item itemvalue="npm.test:cucumber:json" />
-        <item itemvalue="npm.start:fee" />
-        <item itemvalue="npm.start:etl" />
         <item itemvalue="npm.test:cucumber" />
+        <item itemvalue="npm.start:fee" />
       </list>
     </recent_temporary>
   </component>
@@ -379,14 +372,8 @@
       <workItem from="1684122265296" duration="24053000" />
       <workItem from="1684512519993" duration="6255000" />
       <workItem from="1684662331021" duration="1070000" />
-      <workItem from="1685159245690" duration="6832000" />
-    </task>
-    <task id="LOCAL-00044" summary="add excelHelper and fix cucumber test issue.">
-      <created>1682766149120</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1682766149120</updated>
+      <workItem from="1685159245690" duration="10694000" />
+      <workItem from="1685190663588" duration="4912000" />
     </task>
     <task id="LOCAL-00045" summary="add new test case">
       <created>1682766237779</created>
@@ -724,7 +711,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685172515058</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="fix cucumber test">
+      <created>1685174150831</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1685174150831</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -833,6 +827,29 @@
           <url>file://$PROJECT_DIR$/src/app/app-mask/app.mask.ts</url>
           <line>23</line>
           <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/lib/postgresUploader.ts</url>
+          <line>44</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/test/test-fee/features/step_definitions/fee.steps.ts</url>
+          <line>20</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>mock://file:///Users/joeylam/repo/njs/njstool/test/test-fee/features/step_definitions/fee.steps.ts</url>
+          <line>63</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/test/test-fee/features/step_definitions/fee.steps.ts</url>
+          <line>34</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="44" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

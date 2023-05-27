@@ -10,7 +10,7 @@ export interface FileProcessorConfig {
     columnNames: string[];
     rowMapper: (row: any) => any;
     truncateTable?: boolean;
-    uploadMethod: 'bulk' | 'oneByOne';
+    isBulkUpload: boolean;
 }
 
 export class ETLProcesser {
@@ -38,13 +38,11 @@ export class ETLProcesser {
                 this.logger.info(`Table [${this.config.tableName}] truncated.`);
             }
 
-            if (this.config.uploadMethod === 'bulk') {
+            if (this.config.isBulkUpload) {
                 await this.uploader.bulkUpload(data, this.config.tableName, this.config.columnNames, this.config.rowMapper);
-            } else if (this.config.uploadMethod === 'oneByOne') {
+            } else  {
                 await this.uploader.uploadData(data, this.config.query, this.config.rowMapper);
             }
-            // await this.uploader.uploadData(data, this.config.query, this.config.rowMapper);
-            // await this.uploader.bulkUpload(data, this.config.tableName, this.config.columnNames, this.config.rowMapper);
 
             this.logger.info(`Data from [${this.config.fileName}] uploaded to PostgreSQL successfully.`)
         } catch (error: any) {

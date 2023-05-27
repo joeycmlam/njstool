@@ -44,7 +44,7 @@ export default class FeeCalculator {
         return fee;
     }
 
-    public readTransactionsFromFile(filePath: string): Transaction[] {
+    public async readTransactionsFromFile(filePath: string): Promise<Transaction[]> {
         const workbook = XLSX.readFile(filePath);
         const sheetName = workbook.SheetNames[0];
         const worksheet = workbook.Sheets[sheetName];

@@ -30,7 +30,7 @@ import ExcelReader from "../lib/excelReader";
             };
         },
         truncateTable: true,
-        uploadMethod: 'oneByOne', // or 'bulk' for bulkUpload
+        isBulkUpload: false, // or 'bulk' for bulkUpload
     };
 
     const holdingConfig: FileProcessorConfig = {
@@ -51,7 +51,7 @@ import ExcelReader from "../lib/excelReader";
             };
         },
         truncateTable: true,
-        uploadMethod: 'bulk', // or 'bulk' for bulkUpload
+        isBulkUpload: false, // or 'bulk' for bulkUpload
     };
 
 

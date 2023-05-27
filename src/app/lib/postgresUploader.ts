@@ -36,13 +36,14 @@ export default class PostgresUploader implements iUploader {
         this.logger.info(`bulkUpload:start:${tableName}`);
 
         //TODO: need to fix in here...
-        const pgp = pgPromise();
-        const dataArray = data.map(valueMapper);
-        // const dataArray = data.map(row => valueMapper(row).bulkUploadRow);
-        const cs = new pgp.helpers.ColumnSet(columnNames.map(key => ({ name: key })), { table: tableName });
-        const insertQuery = pgp.helpers.insert(dataArray, cs);
 
         try {
+            const pgp = pgPromise();
+            const dataArray = data.map(valueMapper);
+            // const dataArray = data.map(row => valueMapper(row).bulkUploadRow);
+            const cs = new pgp.helpers.ColumnSet(columnNames.map(key => ({ name: key })), { table: tableName });
+            const insertQuery = pgp.helpers.insert(dataArray, cs);
+
             await this.client.query('BEGIN');
             this.logger.debug(insertQuery);
             await this.client.query(insertQuery);

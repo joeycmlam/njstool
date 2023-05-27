@@ -1,5 +1,6 @@
 import Converter from "./maptest";
-import configHelper from "../lib/configHelper";
+import {ConfigHelper}  from "../lib/configHelper";
+import {file} from "mock-fs";
 
 
 const data = [
@@ -16,10 +17,11 @@ const data = [
 async function main()  {
     console.log ('start');
 
-    const confg = new configHelper('src/app/app-mask/config.yaml');
-    await confg.load();
-    const fileName: string = confg.getString('output_excel');
+    // const confg = new ConfigHelper('src/app/app-mask/config.yaml');
+    // await confg.load();
+    // const fileName: string = confg.getString('output_excel');
 
+    const fileName: string = 'test';
     const process = new Converter(data);
     await process.getStatistic();
 

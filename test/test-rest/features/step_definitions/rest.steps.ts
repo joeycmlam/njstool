@@ -1,6 +1,4 @@
-// tests/steps.ts
-
-import {Given, When, Then, BeforeAll, AfterAll} from '@cucumber/cucumber';
+import {Given, When, Then, BeforeAll, AfterAll, After, Before} from '@cucumber/cucumber';
 import axios, {AxiosResponse} from 'axios';
 import * as assert from 'assert';
 import {Server} from 'http';
@@ -13,14 +11,14 @@ let server: Server;
 let appUrl: string;
 let response: AxiosResponse;
 
-BeforeAll(async () => {
+Before("@restFeature", async () => {
     datapath = 'test/test-rest/features/test_data';
     const port = process.env.PORT || 3000;
     server = instance.app.listen(port);
     console.log(`Server started on port ${port}`);
 });
 
-AfterAll(async () => {
+After("@restFeature", async () => {
     server.close();
     console.log('Server stopped');
 });

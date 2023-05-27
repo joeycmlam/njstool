@@ -1,3 +1,4 @@
+@restFeature
 Feature: Test REST API
 
   Scenario: Test health check API
