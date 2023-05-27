@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-fee/app.fee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee/app.fee.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test-fee/features/app.fee.feature" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-fee/features/app.fee.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test-json/features/test_data/out-1level.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/test_data/out-1level.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test-json/features/test_data/out-2level.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/test_data/out-2level.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test-fee/features/step_definitions/fee.steps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-fee/features/step_definitions/fee.steps.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -342,11 +341,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.test:cucumber:fee" />
+        <item itemvalue="npm.start:fee" />
         <item itemvalue="npm.merge-reports" />
         <item itemvalue="npm.generate-cucumber-html" />
         <item itemvalue="npm.test:cucumber" />
-        <item itemvalue="npm.test:cucumber:fee" />
-        <item itemvalue="npm.start:fee" />
       </list>
     </recent_temporary>
   </component>
@@ -388,14 +387,7 @@
       <workItem from="1684512519993" duration="6255000" />
       <workItem from="1684662331021" duration="1070000" />
       <workItem from="1685159245690" duration="10694000" />
-      <workItem from="1685190663588" duration="8826000" />
-    </task>
-    <task id="LOCAL-00052" summary="add back the command to launch the test coverage reports">
-      <created>1682786550218</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1682786550218</updated>
+      <workItem from="1685190663588" duration="11032000" />
     </task>
     <task id="LOCAL-00053" summary="combine the reports">
       <created>1682788351709</created>
@@ -733,7 +725,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685198767179</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="reflector">
+      <created>1685199537962</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1685199537962</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="TimeTrackingManager">

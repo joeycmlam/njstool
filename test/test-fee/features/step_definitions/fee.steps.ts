@@ -14,7 +14,7 @@ Given('the account current position file {string} and place {string} on {string}
     local.order.txnType = tradeType;
     local.order.txnUnit = sellUnit;
     local.order.tradeDate = orderDate;
-    local.order.processDate = purchaseDate;
+    local.order.purchaseDate = purchaseDate;
     local.dataFile = path.join('test/test-fee/test-data/', inDataFile);
 });
 
@@ -23,7 +23,7 @@ When('call the calculator', async () => {
     // a.transactions = await a.feeCalculator.readTransactionsFromFile(dataFile);
 
     if (local.order.txnType === 'SELL') {
-        local.feeAmount = local.feeCalculator.calculateFee(local.order.tradeDate, local.order.processDate, local.order.txnUnit);
+        local.feeAmount = local.feeCalculator.calculateFee(local.order);
     } else {
         throw new Error(`Unsupported trade type: ${local.order.txnType}`);
     }

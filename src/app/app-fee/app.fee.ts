@@ -1,5 +1,5 @@
 // Example usage:
-import FeeCalculator from "./feeCalculator";
+import FeeCalculator, {Transaction} from "./feeCalculator";
 
 
 class app {
@@ -9,12 +9,19 @@ class app {
         const transactions = await feeCalculator.readTransactionsFromFile(fileName);
         console.log('Transactions:', transactions);
 
-        const sellDate: string = '2017-11-01';
-        const units1: number = 10000;
-        const units2: number = 5000;
+        const order1 : Partial<Transaction> = {};
+        const order2 : Partial<Transaction>  = {};
 
-        const fee1 = await feeCalculator.calculateFee(sellDate, transactions[0].tradeDate, units1);
-        const fee2 = await feeCalculator.calculateFee(sellDate, transactions[1].tradeDate, units2);
+        order1.tradeDate = '2017-11-01';
+        order1.purchaseDate = '2017-09-01';
+        order1.txnUnit = 10000;
+        order2.tradeDate = '2017-11-01';
+        order2.purchaseDate = '2017-10-01';
+        order2.txnUnit = 5000;
+
+
+        const fee1 = await feeCalculator.calculateFee(order1);
+        const fee2 = await feeCalculator.calculateFee(order2);
 
         console.log(`Fee 1: ${fee1}`);
         console.log(`Fee 2: ${fee2}`);
