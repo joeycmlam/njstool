@@ -39,9 +39,7 @@ export default class FeeCalculator {
         const monthDifference = Math.ceil(timeDifference / (1000 * 3600 * 24 * 30));
 
         const feePercentage = this.getFeePercentage(monthDifference);
-        const fee = units * feePercentage;
-
-        return fee;
+        return units * feePercentage;
     }
 
     public async readTransactionsFromFile(filePath: string): Promise<Transaction[]> {
@@ -49,9 +47,7 @@ export default class FeeCalculator {
         const sheetName = workbook.SheetNames[0];
         const worksheet = workbook.Sheets[sheetName];
 
-        const transactions: Transaction[] = XLSX.utils.sheet_to_json(worksheet, { header: 'A' });
-
-        return transactions;
+        return XLSX.utils.sheet_to_json(worksheet, {header: 'A'});
     }
 }
 
