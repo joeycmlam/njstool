@@ -1,14 +1,10 @@
-import {Before, Given, setWorldConstructor, Then, When} from "@cucumber/cucumber";
-import FeeCalculator, {Transaction} from "../../../../src/app/app-fee/feeCalculator";
+import {Given, Then, When} from "@cucumber/cucumber";
+import FeeCalculator from "../../../../src/app/app-fee/feeCalculator";
 import {expect} from 'chai';
 import {feeCustom} from "../../../support/world";
 import * as path from "path";
 
 let local: feeCustom;
-
-Before(()=> {
-    setWorldConstructor(feeCustom);
-});
 
 
 Given('the account current position file {string} and place {string} on {string} with {int} unit on {string} with {string}', (
@@ -22,7 +18,7 @@ Given('the account current position file {string} and place {string} on {string}
     local.dataFile = path.join('test/test-fee/test-data/', inDataFile);
 });
 
-When('call the calculator',async () => {
+When('call the calculator', async () => {
     local.feeCalculator = new FeeCalculator();
     // a.transactions = await a.feeCalculator.readTransactionsFromFile(dataFile);
 
