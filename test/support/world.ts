@@ -9,7 +9,7 @@ export  class CustomWorld {
 }
 
 export class feeCustom{
-    public dataPath: string = 'test/test-fee/test-data/';
+    public dataPath: string ;
     public dataFile: string;
     public feeCalculator: FeeCalculator;
     public transactions: Transaction[];
