@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-fee/app.fee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee/app.fee.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/lib/dateHelper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lib/dateHelper.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test-fee/features/app.fee.feature" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-fee/features/app.fee.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test-json/features/test_data/out-1level.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/test_data/out-1level.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test-json/features/test_data/out-2level.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/test_data/out-2level.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -391,14 +386,7 @@
       <workItem from="1684662331021" duration="1070000" />
       <workItem from="1685159245690" duration="10694000" />
       <workItem from="1685190663588" duration="17597000" />
-      <workItem from="1685245797890" duration="21414000" />
-    </task>
-    <task id="LOCAL-00061" summary="re-structure the report folder">
-      <created>1682867079199</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1682867079199</updated>
+      <workItem from="1685245797890" duration="23887000" />
     </task>
     <task id="LOCAL-00062" summary="change the batch job mode">
       <created>1682869642335</created>
@@ -736,7 +724,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685267412687</updated>
     </task>
-    <option name="localTasksCounter" value="110" />
+    <task id="LOCAL-00110" summary="reflector for performance.">
+      <created>1685274040590</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1685274040590</updated>
+    </task>
+    <option name="localTasksCounter" value="111" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -771,7 +766,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="reflector the logger." />
     <MESSAGE value="reflector on the upload." />
     <MESSAGE value="reflector to have etlProcesser to handle one table." />
     <MESSAGE value="improve the log file name" />
@@ -796,7 +790,8 @@
     <MESSAGE value="reflector to change tradeDate from string to Date" />
     <MESSAGE value="new function" />
     <MESSAGE value="add new test cases." />
-    <option name="LAST_COMMIT_MESSAGE" value="add new test cases." />
+    <MESSAGE value="reflector for performance." />
+    <option name="LAST_COMMIT_MESSAGE" value="reflector for performance." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -858,7 +853,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts</url>
-          <line>114</line>
+          <line>119</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="59" />
         </line-breakpoint>

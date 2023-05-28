@@ -19,7 +19,6 @@ export interface Transaction {
     processDate: Date;
     unitCost: number;
     purchaseDate: Date;
-    outstandingUnit: number;
 }
 
 export default class FeeCalculator {
@@ -43,25 +42,15 @@ export default class FeeCalculator {
         return 0;
     }
 
-    public async feeCal(order: Partial<Transaction>, data: Partial<Transaction>[]): Promise<number> {
-        if (order.tradeDate === undefined || order.unit === undefined || order.acctId === undefined) {
-            console.error(JSON.stringify(order, null, 2));
-            throw new Error('feeCalculator: Required properties are missing from the order object');
-        }
-
-        const transactions = data.filter(txn => txn.acctId === order.acctId && txn.fundId === order.fundId);
-        transactions.sort((a, b) => new Date(a.tradeDate ?? '').getTime() - new Date(b.tradeDate ?? '').getTime());
-
-        const buyTransactions: Partial<Transaction>[] = [];
+    private async getHeldTransactionUnits(transactions: Partial<Transaction>[]): Promise<Partial<Transaction> []> {
+        const buyTransactions: Partial<Transaction> [] = [];
         let sellQuantity = 0;
 
-        // Process transactions to adjust buy and sell quantities
         for (const txn of transactions) {
             if (txn.unit === undefined) {
                 console.error(JSON.stringify(txn));
-                throw new Error('Required properties are missing from txn object');
+                throw new Error('getHeldTransaction:s Required properties are missing from the order object')
             }
-
             if (txn.txnType === 'SELL') {
                 sellQuantity += Math.abs(txn.unit);
             } else if (txn.txnType === 'BUY') {
@@ -72,6 +61,22 @@ export default class FeeCalculator {
                 }
             }
         }
+
+        return buyTransactions;
+    }
+
+
+    public async feeCal(order: Partial<Transaction>, data: Partial<Transaction>[]): Promise<number> {
+        if (order.tradeDate === undefined || order.unit === undefined || order.acctId === undefined) {
+            console.error(JSON.stringify(order, null, 2));
+            throw new Error('feeCalculator: Required properties are missing from the order object');
+        }
+
+        const transactions = data.filter(txn => txn.acctId === order.acctId && txn.fundId === order.fundId);
+        transactions.sort((a, b) => new Date(a.tradeDate ?? '').getTime() - new Date(b.tradeDate ?? '').getTime());
+
+
+        const buyTransactions: Partial<Transaction>[] = await this.getHeldTransactionUnits(transactions);
 
         // Calculate fees for buy transactions
         let remainingUnits = order.unit;
