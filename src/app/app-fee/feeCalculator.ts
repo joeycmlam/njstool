@@ -19,6 +19,7 @@ export interface Transaction {
     processDate: Date;
     unitCost: number;
     purchaseDate: Date;
+    outstandingUnit: number;
 }
 
 export default class FeeCalculator {
@@ -48,19 +49,42 @@ export default class FeeCalculator {
             throw new Error('feeCalculator: Required properties are missing from the order object');
         }
 
-        const buyTransactions = data.filter(txn => txn.acctId === order.acctId && txn.fundId === order.fundId);
-        buyTransactions.sort((a, b) => new Date(a.tradeDate ?? '').getTime() - new Date(b.tradeDate ?? '').getTime());
+        const transactions = data.filter(txn => txn.acctId === order.acctId && txn.fundId === order.fundId);
+        transactions.sort((a, b) => new Date(a.tradeDate ?? '').getTime() - new Date(b.tradeDate ?? '').getTime());
 
-        let remainingUnits = order.unit;
-        let totalFee = 0;
+        const buyTransactions: Partial<Transaction>[] = [];
+        let sellQuantity = 0;
 
-        for (const txn of buyTransactions) {
-            if (txn.unit === undefined || txn.processDate === undefined || txn.tradeDate === undefined) {
+        // Process transactions to adjust buy and sell quantities
+        for (const txn of transactions) {
+            if (txn.unit === undefined) {
                 console.error(JSON.stringify(txn));
                 throw new Error('Required properties are missing from txn object');
             }
 
-            const unitsToProcess = Math.min(remainingUnits, txn.unit);
+            if (txn.txnType === 'SELL') {
+                sellQuantity += Math.abs(txn.unit);
+            } else if (txn.txnType === 'BUY') {
+                const adjustedQuantity = Math.max(0, txn.unit - sellQuantity);
+                sellQuantity = Math.max(0, sellQuantity - txn.unit);
+                if (adjustedQuantity > 0) {
+                    buyTransactions.push({ ...txn, unit: adjustedQuantity });
+                }
+            }
+        }
+
+        // Calculate fees for buy transactions
+        let remainingUnits = order.unit;
+        let totalFee = 0;
+        let buyIndex = 0;
+
+        while (remainingUnits > 0 && buyIndex < buyTransactions.length) {
+            const txn = buyTransactions[buyIndex];
+            if (txn.tradeDate === undefined) {
+                console.error(JSON.stringify(txn));
+                throw new Error('Required properties are missing from buy txn object');
+            }
+            const unitsToProcess = Math.min(remainingUnits, txn.unit ?? 0);
             const monthDiff = dateHelper.monthDifference(order.tradeDate, txn.tradeDate);
 
             const feePercentage = this.getFeePercentage(monthDiff);
@@ -68,10 +92,13 @@ export default class FeeCalculator {
 
             totalFee += fee;
             remainingUnits -= unitsToProcess;
-            txn.unit -= unitsToProcess;
 
-            if (remainingUnits <= 0) {
-                break;
+            if (txn.unit !== undefined) {
+                txn.unit -= unitsToProcess;
+            }
+
+            if ((txn.unit ?? 0) <= 0) {
+                buyIndex++;
             }
         }
 

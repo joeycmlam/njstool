@@ -7,7 +7,7 @@ Feature: Fee calculator
 
     Examples:
       | in-data-file  | acctId | sell-unit | fund-id | trade-type | trade-date | fee-amt |
-      | A0001-01.xlsx | A00001 | 30000     | F031    | SELL       | 2019-01-05 | 800     |
+      | A0001-01.xlsx | A00001 | 20000     | F031    | SELL       | 2019-01-05 | 600     |
 
   Scenario Outline: first redemption within a year
     Given the account "<acctId>" position file "<in-data-file>" and place "<trade-type>" on "<fund-id>" with <sell-unit> unit on "<trade-date>"

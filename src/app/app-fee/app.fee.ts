@@ -11,7 +11,7 @@ class app {
         order.fundId = 'F031';
         order.txnType = enmTxnType.Sell;
         order.tradeDate = new Date('2019-01-05') ;
-        order.unit = 30000;
+        order.unit = 20000;
 
 
         const fileName: string = 'test/test-fee/test-data/A0001-01.xlsx'

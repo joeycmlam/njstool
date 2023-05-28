@@ -1,6 +1,6 @@
 
 export default class dateHelper {
-    public static monthDifference(date1: Date, date2: Date): number {
+    public static monthDifference(date1: Date, date2: Date ): number {
         const months1 = date1.getFullYear() * 12 + date1.getMonth();
         const months2 = date2.getFullYear() * 12 + date2.getMonth();
 
