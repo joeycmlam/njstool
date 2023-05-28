@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/lib/dateHelper.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-fee/app.fee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee/app.fee.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/support/world.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/support/world.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test-fee/features/app.fee.feature" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-fee/features/app.fee.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test-fee/features/step_definitions/fee.steps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-fee/features/step_definitions/fee.steps.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test-json/features/test_data/out-1level.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/test_data/out-1level.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test-json/features/test_data/out-2level.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/test_data/out-2level.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -279,16 +284,6 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="merge-reports" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="merge-reports" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <configuration name="start:fee" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -329,22 +324,32 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="test:cucumber:rest" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test:cucumber:rest" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Cucumber.js.app.fee.feature" />
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       <item itemvalue="npm.test" />
+      <item itemvalue="npm.test:cucumber:rest" />
       <item itemvalue="npm.generate-cucumber-html" />
-      <item itemvalue="npm.merge-reports" />
       <item itemvalue="npm.start:fee" />
       <item itemvalue="npm.test:cucumber:fee" />
       <item itemvalue="npm.test:cucumber" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.test:cucumber:fee" />
-        <item itemvalue="npm.start:fee" />
         <item itemvalue="npm.generate-cucumber-html" />
-        <item itemvalue="npm.merge-reports" />
+        <item itemvalue="npm.test:cucumber:fee" />
+        <item itemvalue="npm.test:cucumber:rest" />
+        <item itemvalue="npm.start:fee" />
         <item itemvalue="npm.test:cucumber" />
       </list>
     </recent_temporary>
@@ -388,14 +393,7 @@
       <workItem from="1684662331021" duration="1070000" />
       <workItem from="1685159245690" duration="10694000" />
       <workItem from="1685190663588" duration="17597000" />
-      <workItem from="1685245797890" duration="1856000" />
-    </task>
-    <task id="LOCAL-00057" summary="update README information.">
-      <created>1682864976515</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1682864976516</updated>
+      <workItem from="1685245797890" duration="11834000" />
     </task>
     <task id="LOCAL-00058" summary="minor update on the testing framework">
       <created>1682865789636</created>
@@ -733,7 +731,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685247358785</updated>
     </task>
-    <option name="localTasksCounter" value="106" />
+    <task id="LOCAL-00106" summary="reflector to change tradeDate from string to Date">
+      <created>1685247671177</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1685247671177</updated>
+    </task>
+    <option name="localTasksCounter" value="107" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -768,7 +773,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ETL loader" />
     <MESSAGE value="add back the data type" />
     <MESSAGE value="first version of etl process to upload data into account table." />
     <MESSAGE value="reflector the logger." />
@@ -793,7 +797,8 @@
     <MESSAGE value="add new feeCal function." />
     <MESSAGE value="fix the syntax error" />
     <MESSAGE value="fix the reading excel function" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix the reading excel function" />
+    <MESSAGE value="reflector to change tradeDate from string to Date" />
+    <option name="LAST_COMMIT_MESSAGE" value="reflector to change tradeDate from string to Date" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -855,14 +860,21 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts</url>
-          <line>50</line>
-          <option name="timeStamp" value="50" />
+          <line>33</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="57" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts</url>
-          <line>126</line>
+          <line>87</line>
           <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="55" />
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts</url>
+          <line>53</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="60" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

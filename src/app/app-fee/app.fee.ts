@@ -5,19 +5,21 @@ import FeeCalculator, {enmTxnType, Transaction} from "./feeCalculator";
 class app {
 
     static async process() {
+
+        const order: Partial<Transaction> = {};
+        order.acctId = 'A0001';
+        order.fundId = 'F031';
+        order.txnType = enmTxnType.Sell;
+        order.tradeDate = new Date('2018-10-05') ;
+        order.unit = 10000;
+
+
         const fileName: string = 'test/test-fee/test-data/A0001.xlsx'
         const cal = new FeeCalculator();
         const transactions = await cal.readTransactionsFromFile(fileName);
 
-        const order: Partial<Transaction> = {};
-        order.acctId = 'A00001';
-        order.fundId = 'F031';
-        order.txnType = enmTxnType.Sell;
-        order.tradeDate = new Date('2018-06-01') ;
-        order.unit = 10000;
 
-
-        const fee: number = await cal.feeCalculator(order, transactions);
+        const fee: number = await cal.feeCal(order, transactions);
         console.log(`fee amount: [${fee}]`);
     }
 
@@ -27,19 +29,13 @@ class app {
         const order1 : Partial<Transaction> = {};
         const order2 : Partial<Transaction>  = {};
 
-        order1.tradeDate = new Date('2017-11-01') ;
-        order1.purchaseDate = '2017-09-01';
+        order1.tradeDate = new Date('2022-10-05') ;
+        order1.purchaseDate = new Date('2015-08-01') ;
         order1.unit = 10000;
-        order2.tradeDate = new Date('2017-11-01') ;
-        order2.purchaseDate = '2017-10-01';
-        order2.unit = 5000;
-
 
         const fee1 = await feeCalculator.calculateFee(order1);
-        const fee2 = await feeCalculator.calculateFee(order2);
 
         console.log(`Fee 1: ${fee1}`);
-        console.log(`Fee 2: ${fee2}`);
     }
 }
 

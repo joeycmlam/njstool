@@ -19,15 +19,33 @@ function stringToTxnType(value: string): enmTxnType | null {
     return null;
 }
 
-Given('the account current position file {string} and place {string} on {string} with {int} unit on {string} with {string}', (
-    inDataFile: string, tradeType: string, fundId: string, sellUnit: number, orderDate: string, purchaseDate: string) => {
+Given('place {string} on {string} with {int} unit on {string} with {string}', (
+    tradeType: string, fundId: string, sellUnit: number, purchaseDate: string, orderDate: string) => {
     local = new feeCustom();
     local.order.fundId = fundId;
     local.order.txnType = stringToTxnType(tradeType);
     local.order.unit = sellUnit;
-    local.order.tradeDate = new Date(orderDate) ;
-    local.order.purchaseDate = purchaseDate;
-    local.dataFile = path.join('test/test-fee/test-data/', inDataFile);
+    local.order.tradeDate = new Date(orderDate);
+    local.order.purchaseDate = new Date(purchaseDate);
+});
+
+Given('the account {string} position file {string} and place {string} on {string} with {int} unit on {string}', (
+    acctId: string, inDataFile: string, tradeType: string, fundId: string, sellUnit: number, orderDate: string) => {
+    local = new feeCustom();
+    local.dataFile = inDataFile;
+    local.order.acctId = acctId;
+    local.order.fundId = fundId;
+    local.order.txnType = stringToTxnType(tradeType);
+    local.order.unit = sellUnit;
+    local.order.tradeDate = new Date(orderDate);
+});
+
+When('call the fee with holdings', async function () {
+    const fileName: string = path.join(local.dataPath, local.dataFile);
+    const cal = new FeeCalculator();
+    const transactions = await cal.readTransactionsFromFile(fileName);
+
+    local.feeAmount = await local.feeCalculator.feeCal(local.order, transactions);
 });
 
 When('call the calculator', async () => {
@@ -35,7 +53,7 @@ When('call the calculator', async () => {
     // a.transactions = await a.feeCalculator.readTransactionsFromFile(dataFile);
 
     if (local.order.txnType === 'SELL') {
-        local.feeAmount = local.feeCalculator.calculateFee(local.order);
+        local.feeAmount = await local.feeCalculator.calculateFee(local.order);
     } else {
         throw new Error(`Unsupported trade type: ${local.order.txnType}`);
     }
@@ -44,3 +62,4 @@ When('call the calculator', async () => {
 Then('total fee value is {int}', (expectedFeeAmount: number) => {
     expect(local.feeAmount).to.equal(expectedFeeAmount);
 });
+

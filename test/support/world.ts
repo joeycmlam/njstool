@@ -9,21 +9,11 @@ export  class CustomWorld {
 }
 
 export class feeCustom{
-    public dataPath: string = '';
+    public dataPath: string = 'test/test-fee/test-data/';
     public dataFile: string = '';
     public feeCalculator: FeeCalculator = new FeeCalculator();
     public transactions: Transaction[] = [];
-    public order: Partial< Transaction> = {
-        txnId: 0,
-        acctId: '',
-        txnSeq: 0,
-        tradeDate: '',
-        fundId: '',
-        valnDate: '',
-        unit: 0,
-        processDate: '',
-        unitCost: 0
-    };
+    public order: Partial< Transaction> = {};
     public feeAmount: number = 0;
 };
 

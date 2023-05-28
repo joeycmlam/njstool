@@ -1,4 +1,5 @@
 import * as XLSX from 'xlsx';
+import dateHelper from "../lib/dateHelper";
 
 
 export enum enmTxnType {
@@ -13,11 +14,11 @@ export interface Transaction {
     txnType: enmTxnType;
     tradeDate: Date;
     fundId: string;
-    valnDate: string;
+    valnDate: Date;
     unit: number;
-    processDate: string;
+    processDate: Date;
     unitCost: number;
-    purchaseDate: string;
+    purchaseDate: Date;
 }
 
 export default class FeeCalculator {
@@ -27,60 +28,64 @@ export default class FeeCalculator {
         this.feeSchedule = [0.03, 0.02, 0.01];
     }
 
-    private getFeePercentage(year: number): number {
-        if (year < 1) {
-            throw new Error("Month must be 1 or greater.");
+    private getFeePercentage(months: number): number {
+        const years : number = Math.floor(months / 12);
+
+        if (years < 1) {
+            return this.feeSchedule[0];
         }
 
-        if (year <= this.feeSchedule.length) {
-            return this.feeSchedule[year - 1];
+        if (years <= this.feeSchedule.length) {
+            return this.feeSchedule[years - 1];
         }
 
         return 0;
     }
 
-    public async feeCalculator(order: Partial<Transaction>, data: Partial<Transaction>[]): Promise<number> {
-        if (order.tradeDate === undefined  || order.unit === undefined || order.acctId === undefined) {
+    public async feeCal(order: Partial<Transaction>, data: Partial<Transaction>[]): Promise<number> {
+        if (order.tradeDate === undefined || order.unit === undefined || order.acctId === undefined) {
             console.error(JSON.stringify(order, null, 2));
-            throw new Error('Required properties are missing from the order object');
+            throw new Error('feeCalculator: Required properties are missing from the order object');
         }
 
-        const buyTransactions = data.filter(txn => txn.acctId === order.acctId && txn.fundId === order.fundId );
-        buyTransactions.sort((a, b) => new Date(order.tradeDate ?? '').getTime() - new Date(order.tradeDate ?? '').getTime());
+        const buyTransactions = data.filter(txn => txn.acctId === order.acctId && txn.fundId === order.fundId);
+        buyTransactions.sort((a, b) => new Date(a.tradeDate ?? '').getTime() - new Date(b.tradeDate ?? '').getTime());
+
+        let remainingUnits = order.unit;
+        let totalFee = 0;
 
         for (const txn of buyTransactions) {
-            if (txn.unit === undefined || txn.processDate === undefined) {
+            if (txn.unit === undefined || txn.processDate === undefined || txn.tradeDate === undefined) {
+                console.error(JSON.stringify(txn));
                 throw new Error('Required properties are missing from txn object');
             }
 
-            if (txn.unit >= order.unit) {
-                const sellDate = new Date();
-                const purchaseDate = new Date(txn.processDate);
-                const timeDifference = Math.abs(sellDate.getTime() - purchaseDate.getTime());
-                const yearDiff = Math.ceil(timeDifference / (1000 * 3600 * 24 * 30 * 12));
+            const unitsToProcess = Math.min(remainingUnits, txn.unit);
+            const monthDiff = dateHelper.monthDifference(order.tradeDate, txn.tradeDate);
 
-                const feePercentage = this.getFeePercentage(yearDiff);
-                const fee = order.unit * feePercentage;
+            const feePercentage = this.getFeePercentage(monthDiff);
+            const fee = unitsToProcess * feePercentage;
 
-                return fee;
+            totalFee += fee;
+            remainingUnits -= unitsToProcess;
+            txn.unit -= unitsToProcess;
+
+            if (remainingUnits <= 0) {
+                break;
             }
         }
 
-        return 0;
+        return totalFee;
     }
-
 
     public calculateFee(order: Partial<Transaction> ): number {
         if (order.tradeDate === undefined || order.purchaseDate === undefined || order.unit === undefined) {
             throw new Error('Required properties are missing from the order object');
         }
 
-        const sellDateObj = new Date(order.tradeDate);
-        const purchaseDateObj = new Date(order.purchaseDate);
-        const timeDifference = Math.abs(sellDateObj.getTime() - purchaseDateObj.getTime());
-        const yearDiff = Math.ceil(timeDifference / (1000 * 3600 * 24 * 30 * 12));
+        const monthDiff : number = dateHelper.monthDifference(order.purchaseDate, order.tradeDate);
 
-        const feePercentage = this.getFeePercentage(yearDiff);
+        const feePercentage = this.getFeePercentage(monthDiff);
         return (order.unit  * feePercentage);
     }
 
@@ -104,27 +109,16 @@ export default class FeeCalculator {
 
         const data: Partial<Transaction>[] = XLSX.utils.sheet_to_json(worksheet, { header: columnHeaders, range: 1 });
 
-        // Helper function to format date object to "yyyy-mm-dd" string
-        const formatDate = (date: Date) => {
-            const yyyy = date.getFullYear();
-            const mm = String(date.getMonth() + 1).padStart(2, '0');
-            const dd = String(date.getDate()).padStart(2, '0');
-            return `${yyyy}-${mm}-${dd}`;
-        };
-
-        // Function to convert Excel date (number of days from 1900-01-01) to JavaScript Date object
-        const excelDateToDate = (excelDate: number) => {
-            const date = new Date((excelDate - (25567 + 2)) * 86400 * 1000); // 25567 is the number of days from 1900-01-01 to 1970-01-01, and we add 2 to account for Excel incorrectly treating 1900 as a leap year
-            return date;
-        };
 
         // Map over the data array and format tradeDate property
-        // const formattedData = data.map(item => ({
-        //     ...item,
-        //     tradeDate: typeof item.tradeDate === 'number' ? formatDate(excelDateToDate(item.tradeDate)) : item.tradeDate,
-        // }));
+        const formattedData = data.map(item => ({
+            ...item,
+            tradeDate: typeof item.tradeDate === 'number' ? dateHelper.excelDateToDate(item.tradeDate) : item.tradeDate,
+            valnDate: typeof item.valnDate === 'number' ? dateHelper.excelDateToDate(item.valnDate) : item.valnDate,
+            processDate: typeof item.processDate === 'number' ? dateHelper.excelDateToDate(item.processDate) : item.processDate
+        }));
 
-        return data;
+        return formattedData;
     }
 }
 
