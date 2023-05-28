@@ -4,7 +4,7 @@ import * as XLSX from 'xlsx';
 export enum enmTxnType {
     Buy = 'BUY',
     Sell = 'SELL'
-};
+}
 
 export interface Transaction {
     txnId: number;
@@ -40,7 +40,8 @@ export default class FeeCalculator {
     }
 
     public async feeCalculator(order: Partial<Transaction>, data: Partial<Transaction>[]): Promise<number> {
-        if (order.tradeDate === undefined  || order.unit === undefined || order.acctId) {
+        if (order.tradeDate === undefined  || order.unit === undefined || order.acctId === undefined) {
+            console.error(JSON.stringify(order, null, 2));
             throw new Error('Required properties are missing from the order object');
         }
 
@@ -101,9 +102,29 @@ export default class FeeCalculator {
             'unitCost'
         ];
 
-        const data: Partial<Transaction>[] = XLSX.utils.sheet_to_json(worksheet, { header: columnHeaders });
+        const data: Partial<Transaction>[] = XLSX.utils.sheet_to_json(worksheet, { header: columnHeaders, range: 1 });
 
-        return data;
+        // Helper function to format date object to "yyyy-mm-dd" string
+        const formatDate = (date: Date) => {
+            const yyyy = date.getFullYear();
+            const mm = String(date.getMonth() + 1).padStart(2, '0');
+            const dd = String(date.getDate()).padStart(2, '0');
+            return `${yyyy}-${mm}-${dd}`;
+        };
+
+        // Function to convert Excel date (number of days from 1900-01-01) to JavaScript Date object
+        const excelDateToDate = (excelDate: number) => {
+            const date = new Date((excelDate - (25567 + 2)) * 86400 * 1000); // 25567 is the number of days from 1900-01-01 to 1970-01-01, and we add 2 to account for Excel incorrectly treating 1900 as a leap year
+            return date;
+        };
+
+        // Map over the data array and format tradeDate property
+        const formattedData = data.map(item => ({
+            ...item,
+            tradeDate: typeof item.tradeDate === 'number' ? formatDate(excelDateToDate(item.tradeDate)) : item.tradeDate,
+        }));
+
+        return formattedData;
     }
 }
 
