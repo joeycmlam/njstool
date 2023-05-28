@@ -11,7 +11,7 @@ export interface Transaction {
     acctId: string;
     txnSeq: number;
     txnType: enmTxnType;
-    tradeDate: string;
+    tradeDate: Date;
     fundId: string;
     valnDate: string;
     unit: number;
@@ -119,12 +119,12 @@ export default class FeeCalculator {
         };
 
         // Map over the data array and format tradeDate property
-        const formattedData = data.map(item => ({
-            ...item,
-            tradeDate: typeof item.tradeDate === 'number' ? formatDate(excelDateToDate(item.tradeDate)) : item.tradeDate,
-        }));
+        // const formattedData = data.map(item => ({
+        //     ...item,
+        //     tradeDate: typeof item.tradeDate === 'number' ? formatDate(excelDateToDate(item.tradeDate)) : item.tradeDate,
+        // }));
 
-        return formattedData;
+        return data;
     }
 }
 

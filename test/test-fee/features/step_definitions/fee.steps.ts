@@ -25,7 +25,7 @@ Given('the account current position file {string} and place {string} on {string}
     local.order.fundId = fundId;
     local.order.txnType = stringToTxnType(tradeType);
     local.order.unit = sellUnit;
-    local.order.tradeDate = orderDate;
+    local.order.tradeDate = new Date(orderDate) ;
     local.order.purchaseDate = purchaseDate;
     local.dataFile = path.join('test/test-fee/test-data/', inDataFile);
 });
