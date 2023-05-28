@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-fee/app.fee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee/app.fee.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test-fee/features/app.fee.feature" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-fee/features/app.fee.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test-fee/test-data/A0001.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-fee/test-data/A0001.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -341,8 +340,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.generate-cucumber-html" />
         <item itemvalue="npm.start:fee" />
+        <item itemvalue="npm.generate-cucumber-html" />
         <item itemvalue="npm.test:cucumber:fee" />
         <item itemvalue="npm.test:cucumber:rest" />
         <item itemvalue="npm.test:cucumber" />
@@ -388,14 +387,7 @@
       <workItem from="1684662331021" duration="1070000" />
       <workItem from="1685159245690" duration="10694000" />
       <workItem from="1685190663588" duration="17597000" />
-      <workItem from="1685245797890" duration="14390000" />
-    </task>
-    <task id="LOCAL-00059" summary="minor update on the testing framework">
-      <created>1682866481314</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1682866481314</updated>
+      <workItem from="1685245797890" duration="16594000" />
     </task>
     <task id="LOCAL-00060" summary="move the config into .nycrc file from package.json file">
       <created>1682866797862</created>
@@ -733,7 +725,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685261930448</updated>
     </task>
-    <option name="localTasksCounter" value="108" />
+    <task id="LOCAL-00108" summary="add new test cases.">
+      <created>1685265088932</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1685265088932</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -768,7 +767,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="first version of etl process to upload data into account table." />
     <MESSAGE value="reflector the logger." />
     <MESSAGE value="reflector on the upload." />
     <MESSAGE value="reflector to have etlProcesser to handle one table." />
@@ -793,7 +791,8 @@
     <MESSAGE value="fix the reading excel function" />
     <MESSAGE value="reflector to change tradeDate from string to Date" />
     <MESSAGE value="new function" />
-    <option name="LAST_COMMIT_MESSAGE" value="new function" />
+    <MESSAGE value="add new test cases." />
+    <option name="LAST_COMMIT_MESSAGE" value="add new test cases." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -855,12 +854,6 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts</url>
-          <line>33</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="57" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts</url>
           <line>87</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="59" />
@@ -882,6 +875,12 @@
           <line>47</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts</url>
+          <line>65</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="65" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

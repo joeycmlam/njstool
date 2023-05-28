@@ -10,11 +10,11 @@ class app {
         order.acctId = 'A00001';
         order.fundId = 'F031';
         order.txnType = enmTxnType.Sell;
-        order.tradeDate = new Date('2018-10-05') ;
-        order.unit = 1000;
+        order.tradeDate = new Date('2019-01-05') ;
+        order.unit = 30000;
 
 
-        const fileName: string = 'test/test-fee/test-data/A0001.xlsx'
+        const fileName: string = 'test/test-fee/test-data/A0001-01.xlsx'
         const cal = new FeeCalculator();
         const transactions = await cal.readTransactionsFromFile(fileName);
 

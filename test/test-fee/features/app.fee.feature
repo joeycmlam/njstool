@@ -1,5 +1,14 @@
 Feature: Fee calculator
 
+  Scenario Outline: 2nd redemption within a year
+    Given the account "<acctId>" position file "<in-data-file>" and place "<trade-type>" on "<fund-id>" with <sell-unit> unit on "<trade-date>"
+    When call the fee with holdings
+    Then total fee value is <fee-amt>
+
+    Examples:
+      | in-data-file  | acctId | sell-unit | fund-id | trade-type | trade-date | fee-amt |
+      | A0001-01.xlsx | A00001 | 30000     | F031    | SELL       | 2019-01-05 | 800     |
+
   Scenario Outline: first redemption within a year
     Given the account "<acctId>" position file "<in-data-file>" and place "<trade-type>" on "<fund-id>" with <sell-unit> unit on "<trade-date>"
     When call the fee with holdings
