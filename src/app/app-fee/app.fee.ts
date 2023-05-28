@@ -7,11 +7,11 @@ class app {
     static async process() {
 
         const order: Partial<Transaction> = {};
-        order.acctId = 'A0001';
+        order.acctId = 'A00001';
         order.fundId = 'F031';
         order.txnType = enmTxnType.Sell;
         order.tradeDate = new Date('2018-10-05') ;
-        order.unit = 10000;
+        order.unit = 1000;
 
 
         const fileName: string = 'test/test-fee/test-data/A0001.xlsx'

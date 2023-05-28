@@ -1,5 +1,14 @@
 Feature: Fee calculator
 
+  Scenario Outline: first redemption within a year
+    Given the account "<acctId>" position file "<in-data-file>" and place "<trade-type>" on "<fund-id>" with <sell-unit> unit on "<trade-date>"
+    When call the fee with holdings
+    Then total fee value is <fee-amt>
+
+    Examples:
+      | in-data-file | acctId | sell-unit | fund-id | trade-type | trade-date | fee-amt |
+      | A0001.xlsx   | A00001 | 1000      | F031    | SELL       | 2017-10-05 | 30      |
+
   Scenario Outline: first redemption
     Given the account "<acctId>" position file "<in-data-file>" and place "<trade-type>" on "<fund-id>" with <sell-unit> unit on "<trade-date>"
     When call the fee with holdings
@@ -7,10 +16,11 @@ Feature: Fee calculator
 
     Examples:
       | in-data-file | acctId | sell-unit | fund-id | trade-type | trade-date | fee-amt |
-      | A0001.xlsx   | A0001  | 1000      | F033    | SELL       | 2020-10-05 | 0       |
-      | A0001.xlsx   | A0001  | 1000      | F033    | SELL       | 2018-10-05 | 30      |
-      | A0001.xlsx   | A0001  | 1000      | F033    | SELL       | 2019-10-05 | 20      |
-      | A0001.xlsx   | A0001  | 1000      | F033    | SELL       | 2019-07-01 | 10      |
+      | A0001.xlsx   | A00001 | 1000      | F031    | SELL       | 2019-10-05 | 20      |
+      | A0001.xlsx   | A00001 | 1000      | F031    | SELL       | 2019-07-01 | 20      |
+      | A0001.xlsx   | A00001 | 1000      | F031    | SELL       | 2020-10-05 | 10      |
+      | A0001.xlsx   | A00001 | 1000      | F031    | SELL       | 2022-10-05 | 0       |
+
 
   Scenario Outline: sample case with over 4 years
     Given place "<trade-type>" on "<fund-id>" with <sell-unit> unit on "<trade-date>" with "<purchase-date>"
