@@ -1,6 +1,7 @@
 import FeeCalculator, {enmTxnType, Transaction} from "./feeCalculator";
 import {LoggerFactory} from "../lib/logger";
 import {FeeRate, RuleLoader} from "./ruleLoader";
+import TransactionLoader from "./transactionLoader";
 
 
 class app {
@@ -33,13 +34,19 @@ class app {
 
 
         const fileName: string = 'test/test-fee/test-data/A0001-01.xlsx'
-        const cal = new FeeCalculator();
-        const transactions = await cal.readTransactionsFromFile(fileName);
-
 
         // Load fee rates
-        const feeRule: RuleLoader = await RuleLoader.getInstance();
-        const feeRates: FeeRate[] = feeRule.getFeeRates();
+        const feeRuleFile: string = 'src/app/app-fee/year-fee-rules.json';
+        const rulesLoader = await RuleLoader.getInstance(feeRuleFile);
+        const feeRates: FeeRate[] = rulesLoader.getFeeRates();
+
+        const txnLoader = new TransactionLoader(fileName);
+        const transactions = await txnLoader.readTransactionsFromFile();
+
+
+        const cal = new FeeCalculator(feeRates);
+
+
 
         const fee: number = await cal.feeCal(order, transactions);
         logger.info(`fee amount: [${fee}]`);
@@ -66,7 +73,8 @@ const logger = loggerFactory.getLogger();
 (async () => {
 
     logger.info('start');
-    await app.processByaum();
+    // await app.processByaum();
+    await app.processByyear();
     logger.info('end');
 })();
 

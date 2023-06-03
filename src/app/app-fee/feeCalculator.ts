@@ -133,36 +133,6 @@ export default class FeeCalculator {
         return (order.unit  * feePercentage);
     }
 
-    public async readTransactionsFromFile(filePath: string): Promise< Partial<Transaction> []> {
-        const workbook = XLSX.readFile(filePath);
-        const sheetName = workbook.SheetNames[0];
-        const worksheet = workbook.Sheets[sheetName];
 
-        const columnHeaders = [
-            'txnId',
-            'acctId',
-            'txnSeq',
-            'txnType',
-            'tradeDate',
-            'fundId',
-            'valnDate',
-            'unit',
-            'processDate',
-            'unitCost'
-        ];
-
-        const data: Partial<Transaction>[] = XLSX.utils.sheet_to_json(worksheet, { header: columnHeaders, range: 1 });
-
-
-        // Map over the data array and format tradeDate property
-        const formattedData = data.map(item => ({
-            ...item,
-            tradeDate: typeof item.tradeDate === 'number' ? dateHelper.excelDateToDate(item.tradeDate) : item.tradeDate,
-            valnDate: typeof item.valnDate === 'number' ? dateHelper.excelDateToDate(item.valnDate) : item.valnDate,
-            processDate: typeof item.processDate === 'number' ? dateHelper.excelDateToDate(item.processDate) : item.processDate
-        }));
-
-        return formattedData;
-    }
 }
 

@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/app-fee/year-fee-rules.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-fee/transactionLoader.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-fee/app.fee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee/app.fee.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-fee/fee-rules.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee/aum-fee-rules.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -342,8 +341,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.test:cucumber:fee" />
         <item itemvalue="npm.start:fee" />
+        <item itemvalue="npm.test:cucumber:fee" />
         <item itemvalue="npm.merge-reports" />
         <item itemvalue="npm.generate-cucumber-html" />
         <item itemvalue="npm.test:cucumber" />
@@ -391,14 +390,7 @@
       <workItem from="1685190663588" duration="17597000" />
       <workItem from="1685245797890" duration="25648000" />
       <workItem from="1685721808650" duration="556000" />
-      <workItem from="1685799269019" duration="5706000" />
-    </task>
-    <task id="LOCAL-00065" summary="add test case.">
-      <created>1682930916364</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1682930916365</updated>
+      <workItem from="1685799269019" duration="6800000" />
     </task>
     <task id="LOCAL-00066" summary="fix the multi-run issue.">
       <created>1682932804333</created>
@@ -736,7 +728,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685804847360</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="reflector">
+      <created>1685805502962</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1685805502962</updated>
+    </task>
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -793,10 +792,10 @@
     <MESSAGE value="new function" />
     <MESSAGE value="add new test cases." />
     <MESSAGE value="reflector for performance." />
-    <MESSAGE value="reflector" />
     <MESSAGE value="rulesLoader.ts for defining the fee tiers." />
     <MESSAGE value="enhance to base on aum to calculate the fee" />
-    <option name="LAST_COMMIT_MESSAGE" value="enhance to base on aum to calculate the fee" />
+    <MESSAGE value="reflector" />
+    <option name="LAST_COMMIT_MESSAGE" value="reflector" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -858,7 +857,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/app-fee/app.fee.ts</url>
-          <line>43</line>
+          <line>50</line>
           <option name="timeStamp" value="62" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
