@@ -32,10 +32,8 @@ export default class FeeCalculator {
     // private feeSchema: number[] = [0.03, 0.02, 0.01];
     private feeRates: FeeRate[];
 
-    constructor(feeRates: FeeRate[]=[
-        { "lowerBound": 0, "upperBound": 1000000, "rate": 0.03 },
-        { "lowerBound": 1000000, "upperBound": 3000000, "rate": 0.02 },
-        { "lowerBound": 3000000, "upperBound": Infinity, "rate": 0.01 }
+    constructor(feeRates: FeeRate[] = [
+        {"lowerBound": 0, "upperBound": Infinity, "rate": 0}
     ]) {
         this.feeRates = feeRates;
     }
@@ -44,6 +42,7 @@ export default class FeeCalculator {
     public calcFeeByAUM(aum: number): number {
         return aum * this.getFeeRate(aum);
     }
+
     private getFeeRate(checker: number): number {
         for (const feeRate of this.feeRates) {
             if (checker >= feeRate.lowerBound && checker < feeRate.upperBound) {
@@ -68,7 +67,7 @@ export default class FeeCalculator {
                 const adjustedQuantity = Math.max(0, txn.unit - sellQuantity);
                 sellQuantity = Math.max(0, sellQuantity - txn.unit);
                 if (adjustedQuantity > 0) {
-                    buyTransactions.push({ ...txn, unit: adjustedQuantity });
+                    buyTransactions.push({...txn, unit: adjustedQuantity});
                 }
             }
         }
@@ -121,16 +120,16 @@ export default class FeeCalculator {
         return totalFee;
     }
 
-    public calculateFee(order: Partial<Transaction> ): number {
+    public calculateFee(order: Partial<Transaction>): number {
         if (order.tradeDate === undefined || order.purchaseDate === undefined || order.unit === undefined) {
             console.error(JSON.stringify(order));
             throw new Error('calculateFee: Required properties are missing from the order object');
         }
 
-        const monthDiff : number = dateHelper.monthDifference(order.purchaseDate, order.tradeDate);
+        const monthDiff: number = dateHelper.monthDifference(order.purchaseDate, order.tradeDate);
 
         const feePercentage = this.getFeeRate(Math.floor(monthDiff));
-        return (order.unit  * feePercentage);
+        return (order.unit * feePercentage);
     }
 
 
