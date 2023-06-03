@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/app-fee/config.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-fee/fee-rule.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-fee/rulesLoader.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-fee/app.fee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee/app.fee.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test-json/features/test_data/out-1level.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/test_data/out-1level.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test-json/features/test_data/out-2level.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/test_data/out-2level.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,7 +257,7 @@
       <recent name="$PROJECT_DIR$/src/app/lib" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber.js.app.fee.feature">
+  <component name="RunManager" selected="npm.generate-cucumber-html">
     <configuration name="app.fee.feature" type="cucumber.js" factoryName="Cucumber.js">
       <option name="myFilePath" value="$PROJECT_DIR$/test/test-fee/features/app.fee.feature" />
       <option name="myNameFilter" value="" />
@@ -331,19 +337,19 @@
       <item itemvalue="Cucumber.js.app.fee.feature" />
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       <item itemvalue="npm.test" />
+      <item itemvalue="npm.test:cucumber:fee" />
       <item itemvalue="npm.merge-reports" />
       <item itemvalue="npm.generate-cucumber-html" />
       <item itemvalue="npm.start:fee" />
-      <item itemvalue="npm.test:cucumber:fee" />
       <item itemvalue="npm.test:cucumber" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.generate-cucumber-html" />
+        <item itemvalue="npm.test:cucumber:fee" />
         <item itemvalue="npm.start:fee" />
         <item itemvalue="npm.merge-reports" />
-        <item itemvalue="npm.generate-cucumber-html" />
         <item itemvalue="npm.test:cucumber" />
-        <item itemvalue="npm.test:cucumber:fee" />
       </list>
     </recent_temporary>
   </component>
@@ -386,14 +392,9 @@
       <workItem from="1684662331021" duration="1070000" />
       <workItem from="1685159245690" duration="10694000" />
       <workItem from="1685190663588" duration="17597000" />
-      <workItem from="1685245797890" duration="23887000" />
-    </task>
-    <task id="LOCAL-00062" summary="change the batch job mode">
-      <created>1682869642335</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1682869642335</updated>
+      <workItem from="1685245797890" duration="25648000" />
+      <workItem from="1685721808650" duration="556000" />
+      <workItem from="1685799269019" duration="687000" />
     </task>
     <task id="LOCAL-00063" summary="fix the config issue.">
       <created>1682877631131</created>
@@ -731,7 +732,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685274040590</updated>
     </task>
-    <option name="localTasksCounter" value="111" />
+    <task id="LOCAL-00111" summary="reflector">
+      <created>1685282101325</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1685282101325</updated>
+    </task>
+    <option name="localTasksCounter" value="112" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -783,7 +791,6 @@
     <MESSAGE value="reflector the feature test" />
     <MESSAGE value="fix the synatx and run time issue" />
     <MESSAGE value="add more test cases" />
-    <MESSAGE value="reflector" />
     <MESSAGE value="add new feeCal function." />
     <MESSAGE value="fix the syntax error" />
     <MESSAGE value="fix the reading excel function" />
@@ -791,7 +798,8 @@
     <MESSAGE value="new function" />
     <MESSAGE value="add new test cases." />
     <MESSAGE value="reflector for performance." />
-    <option name="LAST_COMMIT_MESSAGE" value="reflector for performance." />
+    <MESSAGE value="reflector" />
+    <option name="LAST_COMMIT_MESSAGE" value="reflector" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -853,20 +861,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts</url>
-          <line>119</line>
-          <properties lambdaOrdinal="-1" />
+          <line>148</line>
           <option name="timeStamp" value="59" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/app-fee/app.fee.ts</url>
           <line>21</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="62" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/test/test-fee/features/step_definitions/fee.steps.ts</url>
           <line>47</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="63" />
         </line-breakpoint>
       </breakpoints>

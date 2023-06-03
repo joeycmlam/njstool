@@ -1,5 +1,5 @@
-// Example usage:
 import FeeCalculator, {enmTxnType, Transaction} from "./feeCalculator";
+import {LoggerFactory} from "../lib/logger";
 
 
 class app {
@@ -20,7 +20,7 @@ class app {
 
 
         const fee: number = await cal.feeCal(order, transactions);
-        console.log(`fee amount: [${fee}]`);
+        logger.info(`fee amount: [${fee}]`);
     }
 
     static async processSample() {
@@ -35,14 +35,17 @@ class app {
 
         const fee1 = await feeCalculator.calculateFee(order1);
 
-        console.log(`Fee 1: ${fee1}`);
+        logger.info(`Fee 1: ${fee1}`);
     }
 }
+const loggerFactory = LoggerFactory.getInstance('src/app/app-fee/config.yaml');
+const logger = loggerFactory.getLogger();
 
 (async () => {
-    console.log('start');
+
+    logger.info('start');
     await app.process();
-    console.log('end');
+    logger.info('end');
 })();
 
 

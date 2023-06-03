@@ -1,0 +1,4 @@
+version: "1.0"
+logger:
+  logLevel: "debug"
+  logFile: "log/app.fee"

@@ -1,6 +1,6 @@
 import * as XLSX from 'xlsx';
 import dateHelper from "../lib/dateHelper";
-
+import * as fs from "fs/promises";
 
 export enum enmTxnType {
     Buy = 'BUY',
@@ -21,11 +21,39 @@ export interface Transaction {
     purchaseDate: Date;
 }
 
+type FeeRate = {
+    lowerBound: number;
+    upperBound: number;
+    rate: number;
+};
+
 export default class FeeCalculator {
+    // private logger;
     private feeSchedule: number[];
 
+
     constructor() {
+        // this.logger = LoggerFactory.getInstance().getLogger();
         this.feeSchedule = [0.03, 0.02, 0.01];
+    }
+
+    private getFeeRate(aum: number, feeRates: FeeRate[]): number {
+        for (const feeRate of feeRates) {
+            if (aum >= feeRate.lowerBound && aum < feeRate.upperBound) {
+                return feeRate.rate;
+            }
+        }
+        throw new Error('No fee rate found for the specified AUM.');
+    }
+
+    private async loadFeeRates(filePath: string): Promise<FeeRate[]> {
+        const rawData = await fs.readFile(filePath, 'utf-8');
+        const jsonData = JSON.parse(rawData);
+        return jsonData.map((entry: any) => ({
+            lowerBound: entry.lowerBound,
+            upperBound: entry.upperBound === 'Infinity' ? Infinity : entry.upperBound,
+            rate: entry.rate
+        }));
     }
 
     private getFeePercentage(months: number): number {
@@ -112,7 +140,8 @@ export default class FeeCalculator {
 
     public calculateFee(order: Partial<Transaction> ): number {
         if (order.tradeDate === undefined || order.purchaseDate === undefined || order.unit === undefined) {
-            throw new Error('Required properties are missing from the order object');
+            console.error(JSON.stringify(order));
+            throw new Error('calculateFee: Required properties are missing from the order object');
         }
 
         const monthDiff : number = dateHelper.monthDifference(order.purchaseDate, order.tradeDate);
