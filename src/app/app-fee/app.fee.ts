@@ -7,6 +7,7 @@ import TransactionLoader from "./transactionLoader";
 class app {
 
 
+
     static async processByaum() {
         // Load fee rates
         const feeRuleFile: string = 'src/app/app-fee/aum-fee-rules.json';
@@ -53,13 +54,18 @@ class app {
     }
 
     static async processSample() {
-        const feeCalculator = new FeeCalculator();
+        // Load fee rates
+        const feeRuleFile: string = 'src/app/app-fee/year-fee-rules.json';
+        const rulesLoader = await RuleLoader.getInstance(feeRuleFile);
+        const feeRates: FeeRate[] = rulesLoader.getFeeRates();
+
+        const feeCalculator = new FeeCalculator(feeRates);
 
         const order1 : Partial<Transaction> = {};
         const order2 : Partial<Transaction>  = {};
 
-        order1.tradeDate = new Date('2022-10-05') ;
-        order1.purchaseDate = new Date('2015-08-01') ;
+        order1.tradeDate = new Date('2017-12-01') ;
+        order1.purchaseDate = new Date('2017-10-01') ;
         order1.unit = 10000;
 
         const fee1 = await feeCalculator.calculateFee(order1);
@@ -74,7 +80,7 @@ const logger = loggerFactory.getLogger();
 
     logger.info('start');
     // await app.processByaum();
-    await app.processByyear();
+    await app.processSample();
     logger.info('end');
 })();
 

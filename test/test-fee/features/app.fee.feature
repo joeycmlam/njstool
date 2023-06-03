@@ -27,8 +27,8 @@ Feature: Fee calculator
       | in-data-file | acctId | sell-unit | fund-id | trade-type | trade-date | fee-amt |
       | A0001.xlsx   | A00001 | 1000      | F031    | SELL       | 2019-10-05 | 10      |
       | A0001.xlsx   | A00001 | 1000      | F031    | SELL       | 2019-07-01 | 10      |
-      | A0001.xlsx   | A00001 | 1000      | F031    | SELL       | 2020-10-05 | 10      |
-      | A0001.xlsx   | A00001 | 1000      | F031    | SELL       | 2022-10-05 | 20      |
+      | A0001.xlsx   | A00001 | 1000      | F031    | SELL       | 2020-10-05 | 0       |
+      | A0001.xlsx   | A00001 | 1000      | F031    | SELL       | 2022-10-05 | 0       |
 
 
   Scenario Outline: sample case with over 4 years
@@ -38,7 +38,7 @@ Feature: Fee calculator
 
     Examples:
       | sell-unit | fund-id | trade-type | purchase-date | trade-date | fee-amt |
-      | 1000      | F033    | SELL       | 2015-08-01    | 2022-10-05 | 20      |
+      | 1000      | F033    | SELL       | 2015-08-01    | 2022-10-05 | 0       |
 
   Scenario Outline: sample case with over 2 years
     Given place "<trade-type>" on "<fund-id>" with <sell-unit> unit on "<trade-date>" with "<purchase-date>"
@@ -47,7 +47,7 @@ Feature: Fee calculator
 
     Examples:
       | sell-unit | fund-id | trade-type | purchase-date | trade-date | fee-amt |
-      | 1000      | F033    | SELL       | 2017-08-01    | 2019-10-05 | 20      |
+      | 1000      | F033    | SELL       | 2017-08-01    | 2019-10-05 | 10      |
 
 
   Scenario Outline: sample case with over 1 years
@@ -57,7 +57,7 @@ Feature: Fee calculator
 
     Examples:
       | sell-unit | fund-id | trade-type | purchase-date | trade-date | fee-amt |
-      | 1000      | F033    | SELL       | 2017-09-01    | 2018-10-05 | 30      |
+      | 1000      | F033    | SELL       | 2017-09-01    | 2018-10-05 | 20      |
 
 
   Scenario Outline: sample case within 1 year

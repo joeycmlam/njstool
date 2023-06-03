@@ -126,7 +126,7 @@ export default class FeeCalculator {
 
         const monthDiff: number = dateHelper.monthDifference(order.purchaseDate, order.tradeDate);
 
-        const feePercentage = this.getFeeRate(Math.floor(monthDiff));
+        const feePercentage = this.getFeeRate(Math.floor(monthDiff/12));
         return (order.unit * feePercentage);
     }
 

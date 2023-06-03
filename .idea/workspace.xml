@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-fee/app.fee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee/app.fee.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test-fee/features/app.fee.feature" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-fee/features/app.fee.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test-json/features/test_data/out-1level.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/test_data/out-1level.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test-json/features/test_data/out-2level.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/test_data/out-2level.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -341,8 +345,8 @@
       <list>
         <item itemvalue="npm.generate-cucumber-html" />
         <item itemvalue="npm.test:cucumber" />
-        <item itemvalue="npm.test:cucumber:fee" />
         <item itemvalue="npm.start:fee" />
+        <item itemvalue="npm.test:cucumber:fee" />
         <item itemvalue="npm.merge-reports" />
       </list>
     </recent_temporary>
@@ -388,14 +392,7 @@
       <workItem from="1685190663588" duration="17597000" />
       <workItem from="1685245797890" duration="25648000" />
       <workItem from="1685721808650" duration="556000" />
-      <workItem from="1685799269019" duration="9439000" />
-    </task>
-    <task id="LOCAL-00071" summary="delete unused file">
-      <created>1682939473124</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1682939473124</updated>
+      <workItem from="1685799269019" duration="11169000" />
     </task>
     <task id="LOCAL-00072" summary="minor changes.">
       <created>1682940402299</created>
@@ -733,7 +730,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685809154521</updated>
     </task>
-    <option name="localTasksCounter" value="120" />
+    <task id="LOCAL-00120" summary="change the default">
+      <created>1685809242103</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1685809242103</updated>
+    </task>
+    <option name="localTasksCounter" value="121" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -768,7 +772,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add comment" />
     <MESSAGE value="fix the debug msg" />
     <MESSAGE value="reflector to support row by row and bulk" />
     <MESSAGE value="outstanding bug" />
@@ -793,7 +796,8 @@
     <MESSAGE value="adjust the rate" />
     <MESSAGE value="adjust default rates" />
     <MESSAGE value="revised the error message." />
-    <option name="LAST_COMMIT_MESSAGE" value="revised the error message." />
+    <MESSAGE value="change the default" />
+    <option name="LAST_COMMIT_MESSAGE" value="change the default" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -855,13 +859,25 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/app-fee/app.fee.ts</url>
-          <line>50</line>
+          <line>51</line>
           <option name="timeStamp" value="62" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/test/test-fee/features/step_definitions/fee.steps.ts</url>
           <line>61</line>
           <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/app-fee/app.fee.ts</url>
+          <line>66</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts</url>
+          <line>126</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="65" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
