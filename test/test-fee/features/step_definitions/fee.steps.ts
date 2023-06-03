@@ -1,11 +1,20 @@
-import {Given, Then, When} from "@cucumber/cucumber";
+import {BeforeAll, Given, Then, When} from "@cucumber/cucumber";
 import FeeCalculator, {enmTxnType} from "../../../../src/app/app-fee/feeCalculator";
 import {expect} from 'chai';
 import {feeCustom} from "../../../support/world";
 import * as path from "path";
+import TransactionLoader from "../../../../src/app/app-fee/transactionLoader";
+import {FeeRate, RuleLoader} from "../../../../src/app/app-fee/ruleLoader";
 
 let local: feeCustom;
 
+
+
+async function getFeeRate() {
+    const feeRuleFile: string = 'src/app/app-fee/year-fee-rules.json';
+    const rulesLoader = await RuleLoader.getInstance(feeRuleFile);
+    return rulesLoader.getFeeRates();
+}
 
 function stringToTxnType(value: string): enmTxnType | null {
     if ('BUY' === value.toUpperCase()) {
@@ -42,15 +51,20 @@ Given('the account {string} position file {string} and place {string} on {string
 
 When('call the fee with holdings', async function () {
     const fileName: string = path.join(local.dataPath, local.dataFile);
-    const cal = new FeeCalculator();
-    const transactions = await cal.readTransactionsFromFile(fileName);
+
+    const txnLoader = new TransactionLoader(fileName);
+    const transactions = await txnLoader.readTransactionsFromFile();
+
+
+    const feeRates = await getFeeRate();
+    local.feeCalculator = new FeeCalculator(feeRates);
 
     local.feeAmount = await local.feeCalculator.feeCal(local.order, transactions);
 });
 
 When('call the calculator', async () => {
-    local.feeCalculator = new FeeCalculator();
-    // a.transactions = await a.feeCalculator.readTransactionsFromFile(dataFile);
+    const feeRates  = await getFeeRate();
+    local.feeCalculator = new FeeCalculator(feeRates);
 
     if (local.order.txnType === 'SELL') {
         local.feeAmount = await local.feeCalculator.calculateFee(local.order);

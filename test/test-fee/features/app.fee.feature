@@ -7,7 +7,7 @@ Feature: Fee calculator
 
     Examples:
       | in-data-file  | acctId | sell-unit | fund-id | trade-type | trade-date | fee-amt |
-      | A0001-01.xlsx | A00001 | 20000     | F031    | SELL       | 2019-01-05 | 600     |
+      | A0001-01.xlsx | A00001 | 20000     | F031    | SELL       | 2019-01-05 | 400     |
 
   Scenario Outline: first redemption within a year
     Given the account "<acctId>" position file "<in-data-file>" and place "<trade-type>" on "<fund-id>" with <sell-unit> unit on "<trade-date>"
@@ -25,10 +25,10 @@ Feature: Fee calculator
 
     Examples:
       | in-data-file | acctId | sell-unit | fund-id | trade-type | trade-date | fee-amt |
-      | A0001.xlsx   | A00001 | 1000      | F031    | SELL       | 2019-10-05 | 20      |
-      | A0001.xlsx   | A00001 | 1000      | F031    | SELL       | 2019-07-01 | 20      |
+      | A0001.xlsx   | A00001 | 1000      | F031    | SELL       | 2019-10-05 | 10      |
+      | A0001.xlsx   | A00001 | 1000      | F031    | SELL       | 2019-07-01 | 10      |
       | A0001.xlsx   | A00001 | 1000      | F031    | SELL       | 2020-10-05 | 10      |
-      | A0001.xlsx   | A00001 | 1000      | F031    | SELL       | 2022-10-05 | 0       |
+      | A0001.xlsx   | A00001 | 1000      | F031    | SELL       | 2022-10-05 | 20      |
 
 
   Scenario Outline: sample case with over 4 years
@@ -38,7 +38,7 @@ Feature: Fee calculator
 
     Examples:
       | sell-unit | fund-id | trade-type | purchase-date | trade-date | fee-amt |
-      | 1000      | F033    | SELL       | 2015-08-01    | 2022-10-05 | 0       |
+      | 1000      | F033    | SELL       | 2015-08-01    | 2022-10-05 | 20      |
 
   Scenario Outline: sample case with over 2 years
     Given place "<trade-type>" on "<fund-id>" with <sell-unit> unit on "<trade-date>" with "<purchase-date>"
