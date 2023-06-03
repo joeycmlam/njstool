@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -388,14 +387,7 @@
       <workItem from="1685190663588" duration="17597000" />
       <workItem from="1685245797890" duration="25648000" />
       <workItem from="1685721808650" duration="556000" />
-      <workItem from="1685799269019" duration="9268000" />
-    </task>
-    <task id="LOCAL-00069" summary="add the test scnearion for rest api">
-      <created>1682937193709</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1682937193709</updated>
+      <workItem from="1685799269019" duration="9342000" />
     </task>
     <task id="LOCAL-00070" summary="use c8 instead of nyc as no new update for nyc for 3 years.">
       <created>1682939408097</created>
@@ -733,7 +725,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685808987446</updated>
     </task>
-    <option name="localTasksCounter" value="118" />
+    <task id="LOCAL-00118" summary="adjust default rates">
+      <created>1685809075400</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1685809075400</updated>
+    </task>
+    <option name="localTasksCounter" value="119" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -768,7 +767,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="reflector to allow plug into different Uploader" />
     <MESSAGE value="reflector to use dependency injection to allow plug into different reader" />
     <MESSAGE value="add comment" />
     <MESSAGE value="fix the debug msg" />
@@ -793,7 +791,8 @@
     <MESSAGE value="reflector to create transactionLoader" />
     <MESSAGE value="fix feature test" />
     <MESSAGE value="adjust the rate" />
-    <option name="LAST_COMMIT_MESSAGE" value="adjust the rate" />
+    <MESSAGE value="adjust default rates" />
+    <option name="LAST_COMMIT_MESSAGE" value="adjust default rates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -49,7 +49,7 @@ export default class FeeCalculator {
                 return feeRate.rate;
             }
         }
-        throw new Error('No fee rate found for the specified AUM.');
+        throw new Error('No fee rate defined.');
     }
 
     private async getHeldTransactionUnits(transactions: Partial<Transaction>[]): Promise<Partial<Transaction> []> {
