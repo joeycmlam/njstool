@@ -1,8 +1,26 @@
 import FeeCalculator, {enmTxnType, Transaction} from "./feeCalculator";
 import {LoggerFactory} from "../lib/logger";
+import {FeeRate, RuleLoader} from "./ruleLoader";
 
 
 class app {
+
+
+    static async processByaum() {
+        // Load fee rates
+        const feeRuleFile: string = 'src/app/app-fee/fee-rules.json';
+        const rulesLoader = await RuleLoader.getInstance(feeRuleFile);
+        const feeRates: FeeRate[] = rulesLoader.getFeeRates();
+
+        // Create fee calculator
+        const feeCalculator = new FeeCalculator(feeRates);
+
+        // Usage example
+        const dailyAUM: number = 2_500_000;
+        const fee = feeCalculator.calcFeeByAUM(dailyAUM);
+        console.log(`The fee for a daily AUM of ${dailyAUM} is ${fee}`);
+    }
+
 
     static async process() {
 
@@ -18,6 +36,10 @@ class app {
         const cal = new FeeCalculator();
         const transactions = await cal.readTransactionsFromFile(fileName);
 
+
+        // Load fee rates
+        const feeRule: RuleLoader = await RuleLoader.getInstance();
+        const feeRates: FeeRate[] = feeRule.getFeeRates();
 
         const fee: number = await cal.feeCal(order, transactions);
         logger.info(`fee amount: [${fee}]`);
@@ -44,7 +66,7 @@ const logger = loggerFactory.getLogger();
 (async () => {
 
     logger.info('start');
-    await app.process();
+    await app.processByaum();
     logger.info('end');
 })();
 

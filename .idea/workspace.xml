@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/app-fee/config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/app-fee/fee-rule.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/app-fee/rulesLoader.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-fee/app.fee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee/app.fee.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-fee/fee-rule.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee/fee-rules.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test-json/features/test_data/out-1level.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/test_data/out-1level.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test-json/features/test_data/out-2level.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/test_data/out-2level.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-fee/rulesLoader.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee/ruleLoader.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -345,10 +342,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.generate-cucumber-html" />
-        <item itemvalue="npm.test:cucumber:fee" />
         <item itemvalue="npm.start:fee" />
         <item itemvalue="npm.merge-reports" />
+        <item itemvalue="npm.generate-cucumber-html" />
+        <item itemvalue="npm.test:cucumber:fee" />
         <item itemvalue="npm.test:cucumber" />
       </list>
     </recent_temporary>
@@ -394,14 +391,7 @@
       <workItem from="1685190663588" duration="17597000" />
       <workItem from="1685245797890" duration="25648000" />
       <workItem from="1685721808650" duration="556000" />
-      <workItem from="1685799269019" duration="687000" />
-    </task>
-    <task id="LOCAL-00063" summary="fix the config issue.">
-      <created>1682877631131</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1682877631132</updated>
+      <workItem from="1685799269019" duration="5007000" />
     </task>
     <task id="LOCAL-00064" summary="rest api">
       <created>1682922641065</created>
@@ -739,7 +729,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685282101325</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="rulesLoader.ts for defining the fee tiers.">
+      <created>1685800144271</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1685800144271</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -774,7 +771,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="reflector on the upload." />
     <MESSAGE value="reflector to have etlProcesser to handle one table." />
     <MESSAGE value="improve the log file name" />
     <MESSAGE value="improvver logger" />
@@ -799,7 +795,8 @@
     <MESSAGE value="add new test cases." />
     <MESSAGE value="reflector for performance." />
     <MESSAGE value="reflector" />
-    <option name="LAST_COMMIT_MESSAGE" value="reflector" />
+    <MESSAGE value="rulesLoader.ts for defining the fee tiers." />
+    <option name="LAST_COMMIT_MESSAGE" value="rulesLoader.ts for defining the fee tiers." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -861,12 +858,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts</url>
-          <line>148</line>
+          <line>154</line>
           <option name="timeStamp" value="59" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/app-fee/app.fee.ts</url>
-          <line>21</line>
+          <line>43</line>
           <option name="timeStamp" value="62" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">

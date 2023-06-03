@@ -29,13 +29,17 @@ type FeeRate = {
 
 export default class FeeCalculator {
     // private logger;
-    private feeSchedule: number[];
+    private feeSchema: number[] = [0.03, 0.02, 0.01];
+    private feeRates: FeeRate[];
 
-
-    constructor() {
-        // this.logger = LoggerFactory.getInstance().getLogger();
-        this.feeSchedule = [0.03, 0.02, 0.01];
+    constructor(feeRates: FeeRate[]=[
+        { "lowerBound": 0, "upperBound": 1000000, "rate": 0.03 },
+        { "lowerBound": 1000000, "upperBound": 3000000, "rate": 0.02 },
+        { "lowerBound": 3000000, "upperBound": Infinity, "rate": 0.01 }
+    ]) {
+        this.feeRates = feeRates;
     }
+
 
     private getFeeRate(aum: number, feeRates: FeeRate[]): number {
         for (const feeRate of feeRates) {
@@ -46,25 +50,27 @@ export default class FeeCalculator {
         throw new Error('No fee rate found for the specified AUM.');
     }
 
-    private async loadFeeRates(filePath: string): Promise<FeeRate[]> {
-        const rawData = await fs.readFile(filePath, 'utf-8');
-        const jsonData = JSON.parse(rawData);
-        return jsonData.map((entry: any) => ({
-            lowerBound: entry.lowerBound,
-            upperBound: entry.upperBound === 'Infinity' ? Infinity : entry.upperBound,
-            rate: entry.rate
-        }));
+    public calcFeeByAUM(aum: number): number {
+        return aum * this.getFeeRateByAum(aum);
+    }
+    private getFeeRateByAum(aum: number): number {
+        for (const feeRate of this.feeRates) {
+            if (aum >= feeRate.lowerBound && aum < feeRate.upperBound) {
+                return feeRate.rate;
+            }
+        }
+        throw new Error('No fee rate found for the specified AUM.');
     }
 
-    private getFeePercentage(months: number): number {
+    private getFeeRateByYear(months: number): number {
         const years : number = Math.floor(months / 12);
 
         if (years < 1) {
-            return this.feeSchedule[0];
+            return this.feeSchema[0];
         }
 
-        if (years <= this.feeSchedule.length) {
-            return this.feeSchedule[years - 1];
+        if (years <= this.feeSchema.length) {
+            return this.feeSchema[years - 1];
         }
 
         return 0;
@@ -120,7 +126,7 @@ export default class FeeCalculator {
             const unitsToProcess = Math.min(remainingUnits, txn.unit ?? 0);
             const monthDiff = dateHelper.monthDifference(order.tradeDate, txn.tradeDate);
 
-            const feePercentage = this.getFeePercentage(monthDiff);
+            const feePercentage = this.getFeeRateByYear(monthDiff);
             const fee = unitsToProcess * feePercentage;
 
             totalFee += fee;
@@ -146,7 +152,7 @@ export default class FeeCalculator {
 
         const monthDiff : number = dateHelper.monthDifference(order.purchaseDate, order.tradeDate);
 
-        const feePercentage = this.getFeePercentage(monthDiff);
+        const feePercentage = this.getFeeRateByYear(monthDiff);
         return (order.unit  * feePercentage);
     }
 
