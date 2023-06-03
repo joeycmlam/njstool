@@ -29,7 +29,7 @@ type FeeRate = {
 
 export default class FeeCalculator {
     // private logger;
-    private feeSchema: number[] = [0.03, 0.02, 0.01];
+    // private feeSchema: number[] = [0.03, 0.02, 0.01];
     private feeRates: FeeRate[];
 
     constructor(feeRates: FeeRate[]=[
@@ -41,39 +41,16 @@ export default class FeeCalculator {
     }
 
 
-    private getFeeRate(aum: number, feeRates: FeeRate[]): number {
-        for (const feeRate of feeRates) {
-            if (aum >= feeRate.lowerBound && aum < feeRate.upperBound) {
-                return feeRate.rate;
-            }
-        }
-        throw new Error('No fee rate found for the specified AUM.');
-    }
-
     public calcFeeByAUM(aum: number): number {
-        return aum * this.getFeeRateByAum(aum);
+        return aum * this.getFeeRate(aum);
     }
-    private getFeeRateByAum(aum: number): number {
+    private getFeeRate(checker: number): number {
         for (const feeRate of this.feeRates) {
-            if (aum >= feeRate.lowerBound && aum < feeRate.upperBound) {
+            if (checker >= feeRate.lowerBound && checker < feeRate.upperBound) {
                 return feeRate.rate;
             }
         }
         throw new Error('No fee rate found for the specified AUM.');
-    }
-
-    private getFeeRateByYear(months: number): number {
-        const years : number = Math.floor(months / 12);
-
-        if (years < 1) {
-            return this.feeSchema[0];
-        }
-
-        if (years <= this.feeSchema.length) {
-            return this.feeSchema[years - 1];
-        }
-
-        return 0;
     }
 
     private async getHeldTransactionUnits(transactions: Partial<Transaction>[]): Promise<Partial<Transaction> []> {
@@ -126,7 +103,7 @@ export default class FeeCalculator {
             const unitsToProcess = Math.min(remainingUnits, txn.unit ?? 0);
             const monthDiff = dateHelper.monthDifference(order.tradeDate, txn.tradeDate);
 
-            const feePercentage = this.getFeeRateByYear(monthDiff);
+            const feePercentage = this.getFeeRate(Math.floor(monthDiff / 12));
             const fee = unitsToProcess * feePercentage;
 
             totalFee += fee;
@@ -152,7 +129,7 @@ export default class FeeCalculator {
 
         const monthDiff : number = dateHelper.monthDifference(order.purchaseDate, order.tradeDate);
 
-        const feePercentage = this.getFeeRateByYear(monthDiff);
+        const feePercentage = this.getFeeRate(Math.floor(monthDiff));
         return (order.unit  * feePercentage);
     }
 

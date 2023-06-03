@@ -8,7 +8,7 @@ class app {
 
     static async processByaum() {
         // Load fee rates
-        const feeRuleFile: string = 'src/app/app-fee/fee-rules.json';
+        const feeRuleFile: string = 'src/app/app-fee/aum-fee-rules.json';
         const rulesLoader = await RuleLoader.getInstance(feeRuleFile);
         const feeRates: FeeRate[] = rulesLoader.getFeeRates();
 
@@ -22,7 +22,7 @@ class app {
     }
 
 
-    static async process() {
+    static async processByyear() {
 
         const order: Partial<Transaction> = {};
         order.acctId = 'A00001';

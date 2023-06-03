@@ -1,0 +1,5 @@
+[
+  { "lowerBound": 0, "upperBound": 1, "rate": 0.03 },
+  { "lowerBound": 1, "upperBound": 2, "rate": 0.02 },
+  { "lowerBound": 2, "upperBound": "Infinity", "rate": 0.01 }
+]
