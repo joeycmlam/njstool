@@ -6,10 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test-fee/features/app.fee.feature" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-fee/features/app.fee.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test-fee/features/step_definitions/fee.steps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-fee/features/step_definitions/fee.steps.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test-json/features/test_data/out-1level.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/test_data/out-1level.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test-json/features/test_data/out-2level.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/test_data/out-2level.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-fee/year-fee-rules.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee/year-fee-rules.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -342,8 +339,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.test:cucumber" />
         <item itemvalue="npm.generate-cucumber-html" />
+        <item itemvalue="npm.test:cucumber" />
         <item itemvalue="npm.test:cucumber:fee" />
         <item itemvalue="npm.start:fee" />
         <item itemvalue="npm.merge-reports" />
@@ -391,14 +388,7 @@
       <workItem from="1685190663588" duration="17597000" />
       <workItem from="1685245797890" duration="25648000" />
       <workItem from="1685721808650" duration="556000" />
-      <workItem from="1685799269019" duration="9085000" />
-    </task>
-    <task id="LOCAL-00067" summary="code reflector with dependency injection">
-      <created>1682933209026</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1682933209026</updated>
+      <workItem from="1685799269019" duration="9178000" />
     </task>
     <task id="LOCAL-00068" summary="add another api">
       <created>1682933938435</created>
@@ -736,7 +726,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685806605981</updated>
     </task>
-    <option name="localTasksCounter" value="116" />
+    <task id="LOCAL-00116" summary="fix feature test">
+      <created>1685808889187</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1685808889187</updated>
+    </task>
+    <option name="localTasksCounter" value="117" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -771,7 +768,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="improvver logger" />
     <MESSAGE value="run concurrrent" />
     <MESSAGE value="reflector to allow plug into different Uploader" />
     <MESSAGE value="reflector to use dependency injection to allow plug into different reader" />
@@ -796,7 +792,8 @@
     <MESSAGE value="enhance to base on aum to calculate the fee" />
     <MESSAGE value="reflector" />
     <MESSAGE value="reflector to create transactionLoader" />
-    <option name="LAST_COMMIT_MESSAGE" value="reflector to create transactionLoader" />
+    <MESSAGE value="fix feature test" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix feature test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
