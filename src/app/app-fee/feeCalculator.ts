@@ -32,9 +32,7 @@ export default class FeeCalculator {
     // private feeSchema: number[] = [0.03, 0.02, 0.01];
     private feeRates: FeeRate[];
 
-    constructor(feeRates: FeeRate[] = [
-        {"lowerBound": 0, "upperBound": Infinity, "rate": 0}
-    ]) {
+    constructor(feeRates: FeeRate[] = []) {
         this.feeRates = feeRates;
     }
 
