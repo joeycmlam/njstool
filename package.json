@@ -4,6 +4,8 @@
   "description": "",
   "main": "src/app/app-mask/logwinston.ts",
   "scripts": {
+    "start:fee-trailer:": "ts-node src/app/app-fee-trailer/app.fee.trailer.ts",
+    "start:fee-txn:": "ts-node src/app/app-fee-txn/app.fee.txn.ts",
     "start:fee": "ts-node src/app/app-fee/app.fee.ts",
     "start:etl": "ts-node src/app/app-etl/app.etl.ts",
     "start:rest": "ts-node src/app/app-rest/app.rest.ts",

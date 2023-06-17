@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/app-fee-trailer/app.fee.trailer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-fee-txn/app.fee.txn.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-fee/app.fee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee/app.fee.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test-fee/features/app.fee.feature" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-fee/features/app.fee.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test-json/features/test_data/out-1level.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/test_data/out-1level.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test-json/features/test_data/out-2level.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/test_data/out-2level.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,9 +91,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="tsconfig.json" />
         <option value="package.json" />
         <option value="JavaScript File" />
+        <option value="tsconfig.json" />
         <option value="TypeScript File" />
       </list>
     </option>
@@ -213,32 +212,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ToolWindowCommit.ShowToolbar&quot;: &quot;false&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.10.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.10.0&quot;,
-    &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/joeylam/repo/njs/njstool/diagram&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs.cucumber.cucumber_node_package_dir&quot;: &quot;/Users/joeylam/repo/njs/njstool/node_modules/@cucumber/cucumber&quot;,
-    &quot;nodejs.jest.jest_package&quot;: &quot;/Users/joeylam/repo/njs/njstool/node_modules/jest&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/joeylam/repo/njs/njstool/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ToolWindowCommit.ShowToolbar": "false",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "javascript.nodejs.core.library.configured.version": "16.10.0",
+    "javascript.nodejs.core.library.typings.version": "16.10.0",
+    "js.last.introduce.type": "CONST",
+    "last_opened_file_path": "/Users/joeylam/repo/njs/njstool/diagram",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs.cucumber.cucumber_node_package_dir": "/Users/joeylam/repo/njs/njstool/node_modules/@cucumber/cucumber",
+    "nodejs.jest.jest_package": "/Users/joeylam/repo/njs/njstool/node_modules/jest",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;TEXT&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "TEXT"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/diagram" />
@@ -248,14 +247,14 @@
       <recent name="$PROJECT_DIR$/features/test_data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app" />
       <recent name="$PROJECT_DIR$/test/test-fee/features" />
       <recent name="$PROJECT_DIR$/test/test-fee/test-data" />
       <recent name="$PROJECT_DIR$/test/test-mask" />
       <recent name="$PROJECT_DIR$/src/app/app-mask" />
-      <recent name="$PROJECT_DIR$/src/app/lib" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.generate-cucumber-html">
+  <component name="RunManager" selected="npm.start:fee-trailer:">
     <configuration name="app.fee.feature" type="cucumber.js" factoryName="Cucumber.js">
       <option name="myFilePath" value="$PROJECT_DIR$/test/test-fee/features/app.fee.feature" />
       <option name="myNameFilter" value="" />
@@ -281,11 +280,21 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="merge-reports" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="start:fee-trailer:" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="merge-reports" />
+        <script value="start:fee-trailer:" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start:fee-txn:" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start:fee-txn:" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -321,33 +330,23 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="test:cucumber:fee" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="test:cucumber:fee" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Cucumber.js.app.fee.feature" />
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       <item itemvalue="npm.test" />
-      <item itemvalue="npm.test:cucumber:fee" />
-      <item itemvalue="npm.merge-reports" />
+      <item itemvalue="npm.start:fee-trailer:" />
+      <item itemvalue="npm.start:fee-txn:" />
       <item itemvalue="npm.generate-cucumber-html" />
       <item itemvalue="npm.start:fee" />
       <item itemvalue="npm.test:cucumber" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start:fee-trailer:" />
+        <item itemvalue="npm.start:fee-txn:" />
         <item itemvalue="npm.generate-cucumber-html" />
         <item itemvalue="npm.test:cucumber" />
         <item itemvalue="npm.start:fee" />
-        <item itemvalue="npm.test:cucumber:fee" />
-        <item itemvalue="npm.merge-reports" />
       </list>
     </recent_temporary>
   </component>
@@ -392,14 +391,8 @@
       <workItem from="1685190663588" duration="17597000" />
       <workItem from="1685245797890" duration="25648000" />
       <workItem from="1685721808650" duration="556000" />
-      <workItem from="1685799269019" duration="11169000" />
-    </task>
-    <task id="LOCAL-00072" summary="minor changes.">
-      <created>1682940402299</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1682940402299</updated>
+      <workItem from="1685799269019" duration="13330000" />
+      <workItem from="1687008293893" duration="2384000" />
     </task>
     <task id="LOCAL-00073" summary="add diagram samples">
       <created>1683377833328</created>
@@ -737,7 +730,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685809242103</updated>
     </task>
-    <option name="localTasksCounter" value="121" />
+    <task id="LOCAL-00121" summary="fix number of year calculation and the test scenario">
+      <created>1685811081016</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1685811081016</updated>
+    </task>
+    <option name="localTasksCounter" value="122" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -772,7 +772,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix the debug msg" />
     <MESSAGE value="reflector to support row by row and bulk" />
     <MESSAGE value="outstanding bug" />
     <MESSAGE value="fee calculator" />
@@ -797,7 +796,8 @@
     <MESSAGE value="adjust default rates" />
     <MESSAGE value="revised the error message." />
     <MESSAGE value="change the default" />
-    <option name="LAST_COMMIT_MESSAGE" value="change the default" />
+    <MESSAGE value="fix number of year calculation and the test scenario" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix number of year calculation and the test scenario" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -870,13 +870,11 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/app-fee/app.fee.ts</url>
           <line>66</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="64" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts</url>
-          <line>126</line>
-          <properties lambdaOrdinal="-1" />
+          <line>122</line>
           <option name="timeStamp" value="65" />
         </line-breakpoint>
       </breakpoints>

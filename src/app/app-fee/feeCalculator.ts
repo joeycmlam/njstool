@@ -1,6 +1,4 @@
-import * as XLSX from 'xlsx';
 import dateHelper from "../lib/dateHelper";
-import * as fs from "fs/promises";
 
 export enum enmTxnType {
     Buy = 'BUY',
@@ -28,9 +26,7 @@ type FeeRate = {
 };
 
 export default class FeeCalculator {
-    // private logger;
-    // private feeSchema: number[] = [0.03, 0.02, 0.01];
-    private feeRates: FeeRate[];
+    private readonly feeRates: FeeRate[];
 
     constructor(feeRates: FeeRate[] = []) {
         this.feeRates = feeRates;
