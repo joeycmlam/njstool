@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/app-fee-trailer/app.fee.trailer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/app-fee-txn/app.fee.txn.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-fee-engine/app.fee.engine.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-fee-engine/config.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee/feeCalculator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-fee-trailer/app.fee.trailer.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +221,7 @@
     "javascript.nodejs.core.library.configured.version": "16.10.0",
     "javascript.nodejs.core.library.typings.version": "16.10.0",
     "js.last.introduce.type": "CONST",
-    "last_opened_file_path": "/Users/joeylam/repo/njs/njstool/diagram",
+    "last_opened_file_path": "/Users/joeylam/repo/njs/njstool/src/app/app-fee-engine",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -229,7 +229,7 @@
     "nodejs.jest.jest_package": "/Users/joeylam/repo/njs/njstool/node_modules/jest",
     "nodejs_package_manager_path": "npm",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
+    "ts.external.directory.path": "/Users/joeylam/repo/njs/njstool/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -240,11 +240,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/app-fee-engine" />
       <recent name="$PROJECT_DIR$/diagram" />
       <recent name="$PROJECT_DIR$/test/test-rest/features/test_data" />
       <recent name="$PROJECT_DIR$/test/test-json/features/test_data" />
       <recent name="$PROJECT_DIR$/test" />
-      <recent name="$PROJECT_DIR$/features/test_data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/app" />
@@ -254,7 +254,7 @@
       <recent name="$PROJECT_DIR$/src/app/app-mask" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start:fee-trailer:">
+  <component name="RunManager" selected="npm.start:fee-trailer">
     <configuration name="app.fee.feature" type="cucumber.js" factoryName="Cucumber.js">
       <option name="myFilePath" value="$PROJECT_DIR$/test/test-fee/features/app.fee.feature" />
       <option name="myNameFilter" value="" />
@@ -280,11 +280,11 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="start:fee-trailer:" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="start:fee-trailer" type="js.build_tools.npm" temporary="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="start:fee-trailer:" />
+        <script value="start:fee-trailer" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -334,7 +334,7 @@
       <item itemvalue="Cucumber.js.app.fee.feature" />
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       <item itemvalue="npm.test" />
-      <item itemvalue="npm.start:fee-trailer:" />
+      <item itemvalue="npm.start:fee-trailer" />
       <item itemvalue="npm.start:fee-txn:" />
       <item itemvalue="npm.generate-cucumber-html" />
       <item itemvalue="npm.start:fee" />
@@ -342,7 +342,7 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start:fee-trailer:" />
+        <item itemvalue="npm.start:fee-trailer" />
         <item itemvalue="npm.start:fee-txn:" />
         <item itemvalue="npm.generate-cucumber-html" />
         <item itemvalue="npm.test:cucumber" />
@@ -392,14 +392,10 @@
       <workItem from="1685245797890" duration="25648000" />
       <workItem from="1685721808650" duration="556000" />
       <workItem from="1685799269019" duration="13330000" />
-      <workItem from="1687008293893" duration="2384000" />
-    </task>
-    <task id="LOCAL-00073" summary="add diagram samples">
-      <created>1683377833328</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1683377833328</updated>
+      <workItem from="1687008293893" duration="2420000" />
+      <workItem from="1687406905826" duration="1199000" />
+      <workItem from="1688802939352" duration="81000" />
+      <workItem from="1688832310145" duration="907000" />
     </task>
     <task id="LOCAL-00074" summary="try chatbot">
       <created>1683994233418</created>
@@ -737,7 +733,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685811081016</updated>
     </task>
-    <option name="localTasksCounter" value="122" />
+    <task id="LOCAL-00122" summary="new features">
+      <created>1687012893666</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1687012893667</updated>
+    </task>
+    <option name="localTasksCounter" value="123" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -772,7 +775,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="reflector to support row by row and bulk" />
     <MESSAGE value="outstanding bug" />
     <MESSAGE value="fee calculator" />
     <MESSAGE value="fix cucumber test" />
@@ -797,7 +799,8 @@
     <MESSAGE value="revised the error message." />
     <MESSAGE value="change the default" />
     <MESSAGE value="fix number of year calculation and the test scenario" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix number of year calculation and the test scenario" />
+    <MESSAGE value="new features" />
+    <option name="LAST_COMMIT_MESSAGE" value="new features" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
