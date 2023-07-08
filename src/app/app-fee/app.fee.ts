@@ -1,12 +1,10 @@
 import FeeCalculator, {enmTxnType, Transaction} from "./feeCalculator";
-import {Logger} from "../lib/logger";
 import {FeeRate, RuleLoader} from "./ruleLoader";
 import TransactionLoader from "./transactionLoader";
+import LoggerFactory from "../lib/logger";
 
 
 class app {
-
-
 
     static async processByaum() {
         // Load fee rates

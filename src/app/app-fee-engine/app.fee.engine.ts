@@ -27,10 +27,10 @@ class app {
 
 
         const dscSchedule: DSCSchedule = [
-            { year: 1, percentage: 5 },
-            { year: 2, percentage: 4 },
-            { year: 3, percentage: 3 },
-            { year: 4, percentage: 1 },
+            { year: 1, percentage: .05 },
+            { year: 2, percentage: .04 },
+            { year: 3, percentage: .03 },
+            { year: 4, percentage: .01 },
         ];
 
         const dscCalculator = new DSCCalculator(dscSchedule);
