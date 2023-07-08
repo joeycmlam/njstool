@@ -1,3 +1,5 @@
+import LoggerFactory, {LoggerOptions} from "../lib/logger";
+
 export enum enumTnxType {
     SUBSCRIPTION = 'SUB',
     REDEMPTION = 'REM',
@@ -17,10 +19,16 @@ export type HoldingPeriod = {
     txnDate: Date;
     holdingPeriod: number;
     units: number;
+    soldUnits: number;
 };
 
 export default class FIFOHoldingPeriodCalculator {
-    public constructor(private transactions: InvestmentTransaction[]) {}
+
+    private logger: any;
+    public constructor(private transactions: InvestmentTransaction[]) {
+        const loggerFactory = LoggerFactory.getInstance('src/app/app-fee/config.yaml');
+        this.logger = loggerFactory.getLogger();
+    }
 
     // Calculate holding periods for each unit based on the FIFO method
     public calculateHoldingPeriods(
@@ -47,8 +55,9 @@ export default class FIFOHoldingPeriodCalculator {
                 holdingPeriods.push({
                     referenceId: transaction.referenceId,
                     txnDate: transaction.txnDate,
-                    holdingPeriod,
                     units: transaction.units,
+                    holdingPeriod,
+                    soldUnits: 0,
                 });
             } else if (transaction.transactionType === enumTnxType.REDEMPTION) {
                 remainingUnits -= transaction.units;
@@ -58,14 +67,18 @@ export default class FIFOHoldingPeriodCalculator {
                     const firstHoldingPeriod = holdingPeriods[0];
                     if (transaction.units >= firstHoldingPeriod.units) {
                         transaction.units -= firstHoldingPeriod.units;
+                        firstHoldingPeriod.soldUnits = firstHoldingPeriod.units;
                         holdingPeriods.shift();
                     } else {
                         firstHoldingPeriod.units -= transaction.units;
+                        firstHoldingPeriod.soldUnits += transaction.units;
                         transaction.units = 0;
                     }
                 }
             }
         }
+
+        this.logger.info(holdingPeriods);
 
         // Calculate holding periods for the specified number of selling units
         const sellingHoldingPeriods: HoldingPeriod[] = [];
@@ -73,11 +86,13 @@ export default class FIFOHoldingPeriodCalculator {
             const firstHoldingPeriod = holdingPeriods[0];
             if (sellingUnits >= firstHoldingPeriod.units) {
                 sellingUnits -= firstHoldingPeriod.units;
+                firstHoldingPeriod.soldUnits = firstHoldingPeriod.units;
                 sellingHoldingPeriods.push(holdingPeriods.shift() as HoldingPeriod);
             } else {
-                const partialHoldingPeriod = { ...firstHoldingPeriod, units: sellingUnits };
+                const partialHoldingPeriod = { ...firstHoldingPeriod, soldUnits: sellingUnits };
                 sellingHoldingPeriods.push(partialHoldingPeriod);
                 firstHoldingPeriod.units -= sellingUnits;
+                firstHoldingPeriod.soldUnits += sellingUnits;
                 sellingUnits = 0;
             }
         }

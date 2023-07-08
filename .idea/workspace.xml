@@ -7,7 +7,6 @@
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-fee-engine/FIFOHoldingPeriodCalculator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee-engine/FIFOHoldingPeriodCalculator.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-fee-engine/app.fee.engine.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee-engine/app.fee.engine.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -381,14 +380,7 @@
       <workItem from="1687008293893" duration="2420000" />
       <workItem from="1687406905826" duration="1199000" />
       <workItem from="1688802939352" duration="81000" />
-      <workItem from="1688832310145" duration="7096000" />
-    </task>
-    <task id="LOCAL-00076" summary="add back the data type">
-      <created>1684120118778</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1684120118778</updated>
+      <workItem from="1688832310145" duration="8535000" />
     </task>
     <task id="LOCAL-00077" summary="first version of etl process to upload data into account table.">
       <created>1684144485134</created>
@@ -726,7 +718,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688838138773</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <task id="LOCAL-00125" summary="reivse the calcuation">
+      <created>1688839679338</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1688839679338</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -761,7 +760,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix cucumber test" />
     <MESSAGE value="fix the cucumber test - failed to use customize class" />
     <MESSAGE value="reflector the feature test" />
     <MESSAGE value="fix the synatx and run time issue" />
@@ -786,7 +784,8 @@
     <MESSAGE value="new features" />
     <MESSAGE value="new feature - fee engine." />
     <MESSAGE value="add enum" />
-    <option name="LAST_COMMIT_MESSAGE" value="add enum" />
+    <MESSAGE value="reivse the calcuation" />
+    <option name="LAST_COMMIT_MESSAGE" value="reivse the calcuation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
