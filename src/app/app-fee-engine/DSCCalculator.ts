@@ -1,17 +1,20 @@
-// Define a type for the DSC schedule
-
-import {CalcuatedFeeTransaction} from "./typeFeeEngine";
+import { CalcuatedFeeTransaction } from "./typeFeeEngine";
 
 export type DSCSchedule = Array<{ year: number; percentage: number }>;
 
+export type DSCFeeTransaction = {
+    holdingPeriodTransaction: CalcuatedFeeTransaction;
+    applicableDSCPercentage: number;
+    dscAmount: number;
+};
 
 export default class DSCCalculator {
     // The constructor can be used to set default DSC schedules if needed
     constructor(private dscSchedule: DSCSchedule) {}
 
     // Calculate the DSC based on the holding periods array
-    calculateDSC(holdingPeriods: CalcuatedFeeTransaction[]): number {
-        let totalDSCAmount = 0;
+    calculateDSC(holdingPeriods: CalcuatedFeeTransaction[]): DSCFeeTransaction[] {
+        const dscFeeTransactions: DSCFeeTransaction[] = [];
 
         for (const holdingPeriod of holdingPeriods) {
             // If the holding period is over 3 years, the fee is 0
@@ -25,10 +28,15 @@ export default class DSCCalculator {
             // Calculate the DSC amount for this holding period
             const dscAmount = (holdingPeriod.deductedUnits * applicableDSCPercentage) / 100;
 
-            totalDSCAmount += dscAmount;
+            // Add the DSC fee transaction to the output array
+            dscFeeTransactions.push({
+                holdingPeriodTransaction: holdingPeriod,
+                applicableDSCPercentage,
+                dscAmount,
+            });
         }
 
-        return totalDSCAmount;
+        return dscFeeTransactions;
     }
 
     // Get the applicable DSC percentage based on the holding period

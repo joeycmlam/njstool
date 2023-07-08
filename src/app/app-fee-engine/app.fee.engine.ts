@@ -35,8 +35,8 @@ class app {
 
         const dscCalculator = new DSCCalculator(dscSchedule);
 
-        const dscAmount = dscCalculator.calculateDSC(holdingPeriods);
-        logger.info(`The Deferred Sales Charge is: $${dscAmount}`);
+        const dscTransactions = dscCalculator.calculateDSC(holdingPeriods);
+        logger.info('The Deferred Sales Charge', JSON.stringify(dscTransactions, null, 2));
 
 
         logger.info('process.end');
