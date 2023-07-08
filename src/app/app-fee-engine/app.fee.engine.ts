@@ -1,5 +1,8 @@
 import LoggerFactory from '../lib/logger';
-import FIFOHoldingPeriodCalculator, {enumTnxType, InvestmentTransaction} from "./FIFOHoldingPeriodCalculator";
+import DSCCalculator, {DSCSchedule} from "./DSCCalculator";
+import {InvestmentTransaction} from "./typeFeeEngine";
+import {enumTnxType} from "./enumFeeEngine";
+import FIFOHoldingPeriodCalculator from "./FIFOHoldingPeriodCalculator";
 
 class app {
 
@@ -19,6 +22,21 @@ class app {
         const holdingPeriods = fifoHoldingPeriodCalculator.calculateHoldingPeriods(referenceDate, 40);
 
         logger.info('Holding periods:', holdingPeriods);
+
+
+
+
+        const dscSchedule: DSCSchedule = [
+            { year: 1, percentage: 5 },
+            { year: 2, percentage: 4 },
+            { year: 3, percentage: 3 },
+            { year: 4, percentage: 1 },
+        ];
+
+        const dscCalculator = new DSCCalculator(dscSchedule);
+
+        const dscAmount = dscCalculator.calculateDSC(holdingPeriods);
+        logger.info(`The Deferred Sales Charge is: $${dscAmount}`);
 
 
         logger.info('process.end');

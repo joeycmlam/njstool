@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/app-fee-engine/enumFeeEngine.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-fee-engine/typeFeeEngine.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-fee-engine/DSCCalculator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee-engine/DSCCalculator.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-fee-engine/FIFOHoldingPeriodCalculator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee-engine/FIFOHoldingPeriodCalculator.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-fee-engine/app.fee.engine.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee-engine/app.fee.engine.ts" afterDir="false" />
     </list>
@@ -381,14 +384,7 @@
       <workItem from="1687008293893" duration="2420000" />
       <workItem from="1687406905826" duration="1199000" />
       <workItem from="1688802939352" duration="81000" />
-      <workItem from="1688832310145" duration="10124000" />
-    </task>
-    <task id="LOCAL-00078" summary="reflector the logger.">
-      <created>1684149081268</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1684149081268</updated>
+      <workItem from="1688832310145" duration="11545000" />
     </task>
     <task id="LOCAL-00079" summary="reflector on the upload.">
       <created>1684149727786</created>
@@ -726,7 +722,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688841119533</updated>
     </task>
-    <option name="localTasksCounter" value="127" />
+    <task id="LOCAL-00127" summary="add deducedUnits to show the pass-in deduction.">
+      <created>1688842725378</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1688842725378</updated>
+    </task>
+    <option name="localTasksCounter" value="128" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -761,7 +764,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="reflector the feature test" />
     <MESSAGE value="fix the synatx and run time issue" />
     <MESSAGE value="add more test cases" />
     <MESSAGE value="add new feeCal function." />
@@ -786,7 +788,8 @@
     <MESSAGE value="add enum" />
     <MESSAGE value="reivse the calcuation" />
     <MESSAGE value="add more logging" />
-    <option name="LAST_COMMIT_MESSAGE" value="add more logging" />
+    <MESSAGE value="add deducedUnits to show the pass-in deduction." />
+    <option name="LAST_COMMIT_MESSAGE" value="add deducedUnits to show the pass-in deduction." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
