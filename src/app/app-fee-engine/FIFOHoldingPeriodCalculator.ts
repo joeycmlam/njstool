@@ -1,8 +1,8 @@
-import LoggerFactory, {LoggerOptions} from "../lib/logger";
+import LoggerFactory, { LoggerOptions } from "../lib/logger";
 
 export enum enumTnxType {
-    SUBSCRIPTION = 'SUB',
-    REDEMPTION = 'REM',
+    SUBSCRIPTION = "SUB",
+    REDEMPTION = "REM",
 }
 
 // Define a type for Investment Transaction
@@ -20,13 +20,13 @@ export type HoldingPeriod = {
     holdingPeriod: number;
     units: number;
     soldUnits: number;
+    deductedUnits: number;
 };
 
 export default class FIFOHoldingPeriodCalculator {
-
     private logger: any;
     public constructor(private transactions: InvestmentTransaction[]) {
-        const loggerFactory = LoggerFactory.getInstance('src/app/app-fee/config.yaml');
+        const loggerFactory = LoggerFactory.getInstance("src/app/app-fee/config.yaml");
         this.logger = loggerFactory.getLogger();
     }
 
@@ -58,19 +58,20 @@ export default class FIFOHoldingPeriodCalculator {
                     units: transaction.units,
                     holdingPeriod,
                     soldUnits: 0,
+                    deductedUnits: 0,
                 });
             } else if (transaction.transactionType === enumTnxType.REDEMPTION) {
                 remainingUnits -= transaction.units;
 
-                // Remove units from the holding periods array (FIFO)
+                // Update soldUnits and deductedUnits in the holding periods array (FIFO)
                 while (transaction.units > 0 && holdingPeriods.length > 0) {
                     const firstHoldingPeriod = holdingPeriods[0];
-                    if (transaction.units >= firstHoldingPeriod.units) {
-                        transaction.units -= firstHoldingPeriod.units;
+                    if (transaction.units >= firstHoldingPeriod.units - firstHoldingPeriod.soldUnits) {
+                        const deducted = firstHoldingPeriod.units - firstHoldingPeriod.soldUnits;
+                        transaction.units -= deducted;
                         firstHoldingPeriod.soldUnits = firstHoldingPeriod.units;
                         holdingPeriods.shift();
                     } else {
-                        firstHoldingPeriod.units -= transaction.units;
                         firstHoldingPeriod.soldUnits += transaction.units;
                         transaction.units = 0;
                     }
@@ -84,14 +85,16 @@ export default class FIFOHoldingPeriodCalculator {
         const sellingHoldingPeriods: HoldingPeriod[] = [];
         while (sellingUnits > 0 && holdingPeriods.length > 0) {
             const firstHoldingPeriod = holdingPeriods[0];
-            if (sellingUnits >= firstHoldingPeriod.units) {
-                sellingUnits -= firstHoldingPeriod.units;
+            if (sellingUnits >= firstHoldingPeriod.units - firstHoldingPeriod.soldUnits) {
+                const deducted = firstHoldingPeriod.units - firstHoldingPeriod.soldUnits;
+                sellingUnits -= deducted;
                 firstHoldingPeriod.soldUnits = firstHoldingPeriod.units;
+                firstHoldingPeriod.deductedUnits = deducted;
                 sellingHoldingPeriods.push(holdingPeriods.shift() as HoldingPeriod);
             } else {
-                const partialHoldingPeriod = { ...firstHoldingPeriod, soldUnits: sellingUnits };
+                const partialHoldingPeriod = { ...firstHoldingPeriod, soldUnits: firstHoldingPeriod.soldUnits + sellingUnits };
+                partialHoldingPeriod.deductedUnits = sellingUnits;
                 sellingHoldingPeriods.push(partialHoldingPeriod);
-                firstHoldingPeriod.units -= sellingUnits;
                 firstHoldingPeriod.soldUnits += sellingUnits;
                 sellingUnits = 0;
             }
