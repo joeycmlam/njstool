@@ -8,9 +8,9 @@ class app {
         logger.info('process.start');
 // Example usage:
         const transactions: InvestmentTransaction[] = [
-            { txnDate: new Date('2020-01-01'), units: 100, transactionType: enumTnxType.SUBSCRIPTION },
-            { txnDate: new Date('2020-06-01'), units: 50, transactionType: enumTnxType.SUBSCRIPTION},
-            { txnDate: new Date('2021-01-01'), units: 50, transactionType: enumTnxType.SUBSCRIPTION },
+            {referenceId: 'T00001', txnDate: new Date('2020-01-01'), units: 100, transactionType: enumTnxType.SUBSCRIPTION },
+            {referenceId: 'T00002', txnDate: new Date('2020-06-01'), units: 50, transactionType: enumTnxType.SUBSCRIPTION},
+            {referenceId: 'T00003', txnDate: new Date('2021-01-01'), units: 50, transactionType: enumTnxType.REDEMPTION },
         ];
 
         const referenceDate = new Date('2023-07-08'); // The date to calculate holding periods
