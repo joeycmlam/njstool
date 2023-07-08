@@ -1,5 +1,5 @@
 import FeeCalculator, {enmTxnType, Transaction} from "./feeCalculator";
-import {LoggerFactory} from "../lib/logger";
+import {Logger} from "../lib/logger";
 import {FeeRate, RuleLoader} from "./ruleLoader";
 import TransactionLoader from "./transactionLoader";
 

@@ -8,19 +8,20 @@ export interface LoggerOptions {
     logFilePattern?: string;
 }
 
-export class LoggerFactory {
+export default class LoggerFactory {
     private static instance: LoggerFactory | null = null;
     private configFile: string = 'application.log';
     private config: any;
+    private logger: log4js.Logger | null = null;
 
     private constructor(configFileName: string) {
         this.configFile = configFileName;
         this.config = this.readConfig(configFileName);
     }
 
-    public static getInstance(configFileNme: string = 'config.yaml'): LoggerFactory {
+    public static getInstance(configFileName: string = 'config.yaml'): LoggerFactory {
         if (!this.instance) {
-            this.instance = new LoggerFactory(configFileNme);
+            this.instance = new LoggerFactory(configFileName);
         }
         return this.instance;
     }
@@ -31,6 +32,10 @@ export class LoggerFactory {
     }
 
     public getLogger(options: LoggerOptions = {}): log4js.Logger {
+        if (this.logger) {
+            return this.logger;
+        }
+
         const logFilePrefix = options.logFile || this.config.logger.logFile || 'application';
         const logFilePattern = options.logFilePattern || this.config.logger.logFilePattern || 'yyyyMMdd.log';
         const logFilename = `${logFilePrefix}`;
@@ -46,6 +51,7 @@ export class LoggerFactory {
             },
         });
 
-        return log4js.getLogger();
+        this.logger = log4js.getLogger();
+        return this.logger;
     }
 }

@@ -1,5 +1,5 @@
 import {Client} from 'pg';
-import {LoggerFactory} from "./logger";
+import {Logger} from "./logger";
 import {iUploader} from "../app-interface/iETL";
 import pgPromise from "pg-promise";
 
