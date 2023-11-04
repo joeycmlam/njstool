@@ -1,7 +1,8 @@
 import {Client} from 'pg';
-import {Logger} from "./logger";
 import {iUploader} from "../app-interface/iETL";
 import pgPromise from "pg-promise";
+import Logger from './logger';
+
 
 
 export default class PostgresUploader implements iUploader {
@@ -10,7 +11,8 @@ export default class PostgresUploader implements iUploader {
 
     constructor(connectionConfig: any) {
         this.client = new Client(connectionConfig);
-        this.logger = LoggerFactory.getInstance().getLogger();
+        this.logger = Logger.getInstance();
+        
     }
 
     public async connect() {
@@ -23,12 +25,9 @@ export default class PostgresUploader implements iUploader {
 
     public async uploadData(data: any, query: any, valueMapper: any) {
         this.logger.info(`uploadData:start:${query}`);
-
         for (const row of data) {
             await this.client.query(query, valueMapper(row).uploadDataRow);
-            this.logger.debug(`value: ${JSON.stringify(row)}`);
         }
-
         this.logger.info('uploadData:end');
     }
 
@@ -45,7 +44,6 @@ export default class PostgresUploader implements iUploader {
             const insertQuery = pgp.helpers.insert(dataArray, cs);
 
             await this.client.query('BEGIN');
-            this.logger.debug(insertQuery);
             await this.client.query(insertQuery);
             await this.client.query('COMMIT');
         } catch (error) {
