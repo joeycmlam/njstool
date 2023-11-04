@@ -37,9 +37,8 @@ export default class PostgresUploader implements iUploader {
         const pgp = pgPromise();
         const cs = new pgp.helpers.ColumnSet(columnNames.map(key => ({ name: key })), { table: tableName });
     
-        const batchSize = 100; // Define batch size
+        const batchSize = 200; // Define batch size
         
-
         // Split data into batches
         const batches = Math.ceil(data.length / batchSize);
         for (let i = 0; i < batches; i++) {
