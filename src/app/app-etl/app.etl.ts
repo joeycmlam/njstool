@@ -1,10 +1,10 @@
-import { ConfigHelper } from "../lib/configHelper";
-import { AppEtlConfig } from "./appEtlConfig";
-import { Logger } from "../lib/logger";
-import { ETLProcesser, FileProcessorConfig } from "./etlProcesser";
-import { iAccount, iHolding } from "./iRecordType";
+import {ConfigHelper} from "../lib/configHelper";
+import {AppEtlConfig} from "./appEtlConfig";
+import {ETLProcesser, FileProcessorConfig} from "./etlProcesser";
+import {iAccount, iHolding} from "./iRecordType";
 import PostgresUploader from "../lib/postgresUploader";
 import ExcelReader from "../lib/excelReader";
+import Logger from "../lib/logger";
 
 (async () => {
     const configFile = 'src/app/app-etl/config.etl.yaml';
@@ -12,8 +12,7 @@ import ExcelReader from "../lib/excelReader";
     await configHelper.load();
     const config = configHelper.getConfig() as AppEtlConfig;
 
-    const loggerFactory = LoggerFactory.getInstance(configFile);
-    const logger = loggerFactory.getLogger();
+    const logger = Logger.getInstance();
 
     const accountConfig: FileProcessorConfig = {
         fileName: config.dataFilePath.accountFile,

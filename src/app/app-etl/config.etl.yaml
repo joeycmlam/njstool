@@ -10,5 +10,5 @@ database:
   password: 'dbadmin1234'
   database: 'postgres'
 dataFilePath:
-    accountFile: 'test/test-etl/test-data/account-data.xlsx'
-    holdingFile: 'test/test-etl/test-data/holding-data.xlsx'
+  accountFile: 'test/test-etl/test-data/account-data.xlsx'
+  holdingFile: 'test/test-etl/test-data/holding-data.xlsx'

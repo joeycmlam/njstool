@@ -1,7 +1,7 @@
-import { Logger } from "../lib/logger";
-import { iUploader } from "../app-interface/iETL";
+import {iUploader} from "../app-interface/iETL";
 import ExcelReader from "../lib/excelReader";
 import {iDataReader} from "../app-interface/iETL";
+import Logger from "../lib/logger";
 
 export interface FileProcessorConfig {
     fileName: string;
@@ -23,11 +23,11 @@ export class ETLProcesser {
         this.config = config;
         this.uploader = uploader;
         this.dataReader = dataReader;
-        this.logger = LoggerFactory.getInstance().getLogger();
+        this.logger = Logger.getInstance();
     }
 
     public async process(): Promise<void> {
-        const excelReader = new ExcelReader(this.config.fileName);
+        // const excelReader = new ExcelReader(this.config.fileName);
         const data = await this.dataReader.extractData();
 
         try {
@@ -40,7 +40,7 @@ export class ETLProcesser {
 
             if (this.config.isBulkUpload) {
                 await this.uploader.bulkUpload(data, this.config.tableName, this.config.columnNames, this.config.rowMapper);
-            } else  {
+            } else {
                 await this.uploader.uploadData(data, this.config.query, this.config.rowMapper);
             }
 

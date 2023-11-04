@@ -1,4 +1,4 @@
-import { BaseConfig } from "../lib/configHelper";
+import {BaseConfig} from "../lib/configHelper";
 
 export interface AppEtlConfig extends BaseConfig {
     database: {

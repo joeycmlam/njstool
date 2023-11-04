@@ -1,4 +1,3 @@
-
 export interface iAccount {
     account_cd: string;
     account_nm: string;
