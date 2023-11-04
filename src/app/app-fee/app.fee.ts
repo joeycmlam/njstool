@@ -1,7 +1,7 @@
+import Logger from "../lib/logger";
 import FeeCalculator, {enmTxnType, Transaction} from "./feeCalculator";
 import {FeeRate, RuleLoader} from "./ruleLoader";
 import TransactionLoader from "./transactionLoader";
-import LoggerFactory from "../lib/logger";
 
 
 class app {
@@ -71,8 +71,8 @@ class app {
         logger.info(`Fee 1: ${fee1}`);
     }
 }
-const loggerFactory = LoggerFactory.getInstance('src/app/app-fee/config.yaml');
-const logger = loggerFactory.getLogger();
+
+const logger = Logger.getInstance();
 
 (async () => {
 

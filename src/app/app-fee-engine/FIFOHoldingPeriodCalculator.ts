@@ -1,4 +1,3 @@
-import LoggerFactory, { LoggerOptions } from "../lib/logger";
 import {CalcuatedFeeTransaction, InvestmentTransaction} from "./typeFeeEngine";
 import {enumTnxType} from "./enumFeeEngine";
 
@@ -7,8 +6,6 @@ import {enumTnxType} from "./enumFeeEngine";
 export default class FIFOHoldingPeriodCalculator {
     private logger: any;
     public constructor(private transactions: InvestmentTransaction[]) {
-        const loggerFactory = LoggerFactory.getInstance("src/app/app-fee/config.yaml");
-        this.logger = loggerFactory.getLogger();
     }
 
     // Calculate holding periods for each unit based on the FIFO method
@@ -58,7 +55,7 @@ export default class FIFOHoldingPeriodCalculator {
             }
         }
 
-        this.logger.debug(holdingPeriods);
+        // this.logger.debug(holdingPeriods);
 
         // Calculate holding periods for the specified number of selling units
         const sellingHoldingPeriods: CalcuatedFeeTransaction[] = [];

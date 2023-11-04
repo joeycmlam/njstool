@@ -1,8 +1,8 @@
-import LoggerFactory from '../lib/logger';
 import DSCCalculator, {DSCSchedule} from "./DSCCalculator";
 import {InvestmentTransaction} from "./typeFeeEngine";
 import {enumTnxType} from "./enumFeeEngine";
 import FIFOHoldingPeriodCalculator from "./FIFOHoldingPeriodCalculator";
+import Logger from "../lib/logger";
 
 class app {
 
@@ -21,31 +21,28 @@ class app {
         const fifoHoldingPeriodCalculator = new FIFOHoldingPeriodCalculator(transactions);
         const holdingPeriods = fifoHoldingPeriodCalculator.calculateHoldingPeriods(referenceDate, 40);
 
-        logger.info('Holding periods:', holdingPeriods);
+        logger.info(`Holding periods:{$holdingPeriods}`);
 
 
 
 
         const dscSchedule: DSCSchedule = [
-            { year: 1, percentage: .05 },
-            { year: 2, percentage: .04 },
-            { year: 3, percentage: .03 },
-            { year: 4, percentage: .01 },
+            { year: 1, percentage: 0.05 },
+            { year: 2, percentage: 0.04 },
+            { year: 3, percentage: 0.03 },
+            { year: 4, percentage: 0.01 },
         ];
 
         const dscCalculator = new DSCCalculator(dscSchedule);
 
         const dscTransactions = dscCalculator.calculateDSC(holdingPeriods);
-        logger.info('The Deferred Sales Charge', JSON.stringify(dscTransactions, null, 2));
-
+        logger.info(`The Deferred Sales Charge: JSON.stringify(dscTransactions)`);
 
         logger.info('process.end');
     }
 }
 
-
-const loggerFactory = LoggerFactory.getInstance('src/app/app-fee/config.yaml');
-const logger = loggerFactory.getLogger();
+const logger = Logger.getInstance();
 
 (async () => {
 
