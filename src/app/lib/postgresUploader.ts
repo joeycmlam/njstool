@@ -44,7 +44,7 @@ export default class PostgresUploader implements iUploader {
         const batches = Math.ceil(data.length / batchSize);
         for (let i = 0; i < batches; i++) {
             const batch = data.slice(i * batchSize, (i + 1) * batchSize);
-            const dataArray = batch.map(valueMapper); // Corrected here
+            const dataArray = batch.map(valueMapper); 
             const insertQuery = pgp.helpers.insert(dataArray, cs);
     
             await this.client.query('BEGIN');
