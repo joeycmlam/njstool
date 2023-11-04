@@ -26,7 +26,8 @@ export default class PostgresUploader implements iUploader {
     public async uploadData(data: any, query: any, valueMapper: any) {
         this.logger.info(`uploadData:start:${query}`);
         for (const row of data) {
-            await this.client.query(query, valueMapper);
+            await this.client.query(query, valueMapper(row).uploadDataRow);
+            this.logger.debug(`value: ${JSON.stringify(row)}`);
         }
         this.logger.info('uploadData:end');
     }
@@ -43,7 +44,7 @@ export default class PostgresUploader implements iUploader {
         const batches = Math.ceil(data.length / batchSize);
         for (let i = 0; i < batches; i++) {
             const batch = data.slice(i * batchSize, (i + 1) * batchSize);
-            const dataArray = batch.map(columnNames); // Corrected here
+            const dataArray = batch.map(valueMapper); // Corrected here
             const insertQuery = pgp.helpers.insert(dataArray, cs);
     
             await this.client.query('BEGIN');

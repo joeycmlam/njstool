@@ -39,6 +39,10 @@ class Logger {
     this.logger.error(message);
   }
 
+  public debug(message: string): void {
+    this.logger.debug(message);
+  }
+
   // Add other log levels as needed
 }
 

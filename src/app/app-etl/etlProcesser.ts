@@ -9,6 +9,7 @@ export interface FileProcessorConfig {
     tableName: string;
     columnNames: string[];
     rowMapper: (row: any) => any;
+    bulkMapper: (row: any) => any;
     truncateTable?: boolean;
     isBulkUpload: boolean;
 }
@@ -39,7 +40,7 @@ export class ETLProcesser {
             }
 
             if (this.config.isBulkUpload) {
-                await this.uploader.bulkUpload(data, this.config.tableName, this.config.columnNames, this.config.rowMapper);
+                await this.uploader.bulkUpload(data, this.config.tableName, this.config.columnNames, this.config.bulkMapper);
             } else {
                 await this.uploader.uploadData(data, this.config.query, this.config.rowMapper);
             }
