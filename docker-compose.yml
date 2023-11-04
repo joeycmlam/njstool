@@ -9,7 +9,7 @@ services:
       PGADMIN_DEFAULT_EMAIL: joey.cm.lam@gmail.com
       PGADMIN_DEFAULT_PASSWORD: root
     ports:
-      - "5050:80"Joeys-MBP:postgresql
+      - "5050:80"
 
   db:
     container_name: my_postgres

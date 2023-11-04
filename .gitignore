@@ -1,0 +1,16 @@
+# ignore all .log files
+log/
+*.log
+
+# ignore the node_modules directory
+node_modules/
+
+#ingore test filder
+coverage/
+coverage-cucmber/
+coverage-jest/
+data/
+output/
+
+# ignore the build directory
+dist/
