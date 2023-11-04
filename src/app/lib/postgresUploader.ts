@@ -26,32 +26,37 @@ export default class PostgresUploader implements iUploader {
     public async uploadData(data: any, query: any, valueMapper: any) {
         this.logger.info(`uploadData:start:${query}`);
         for (const row of data) {
-            await this.client.query(query, valueMapper(row).uploadDataRow);
+            await this.client.query(query, valueMapper);
         }
         this.logger.info('uploadData:end');
     }
 
     public async bulkUpload(data: any, tableName: string, columnNames: string[], valueMapper: any) {
         this.logger.info(`bulkUpload:start:${tableName}`);
+        const pgp = pgPromise();
+        const cs = new pgp.helpers.ColumnSet(columnNames.map(key => ({ name: key })), { table: tableName });
+    
+        const batchSize = 100; // Define batch size
+        
 
-        //TODO: need to fix in here...
-
-        try {
-            const pgp = pgPromise();
-            const dataArray = data.map(valueMapper);
-            // const dataArray = data.map(row => valueMapper(row).bulkUploadRow);
-            const cs = new pgp.helpers.ColumnSet(columnNames.map(key => ({ name: key })), { table: tableName });
+        // Split data into batches
+        const batches = Math.ceil(data.length / batchSize);
+        for (let i = 0; i < batches; i++) {
+            const batch = data.slice(i * batchSize, (i + 1) * batchSize);
+            const dataArray = batch.map(columnNames); // Corrected here
             const insertQuery = pgp.helpers.insert(dataArray, cs);
-
+    
             await this.client.query('BEGIN');
-            await this.client.query(insertQuery);
-            await this.client.query('COMMIT');
-        } catch (error) {
-            await this.client.query('ROLLBACK');
-            throw error;
-        } finally {
-            this.logger.info('bulkUpload:end');
+            try {
+                await this.client.query(insertQuery);
+                await this.client.query('COMMIT');
+            } catch (error) {
+                await this.client.query('ROLLBACK');
+                throw error;
+            }
         }
+    
+        this.logger.info('bulkUpload:end');
     }
 
     public async truncateTable(tableName: string): Promise<void> {

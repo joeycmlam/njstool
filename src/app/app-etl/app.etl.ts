@@ -20,16 +20,11 @@ import Logger from "../lib/logger";
         tableName: 'account',
         columnNames: ['account_cd', 'account_nm'],
         rowMapper: (row: iAccount) => {
-            return {
-                bulkUploadRow: {
-                    account_cd: row.account_cd,
-                    account_nm: row.account_nm,
-                },
-                uploadDataRow: [row.account_cd, row.account_nm],
-            };
+                row.account_cd, row.account_nm
+            ;
         },
         truncateTable: true,
-        isBulkUpload: false, // or 'bulk' for bulkUpload
+        isBulkUpload: false, 
     };
 
     const holdingConfig: FileProcessorConfig = {
@@ -38,16 +33,8 @@ import Logger from "../lib/logger";
         tableName: 'holding',
         columnNames: ['account_cd', 'stock_cd', 'exchange', 'unit', 'book_cost'],
         rowMapper: (row: iHolding) => {
-            return {
-                bulkUploadRow: {
-                    account_cd: row.account_cd,
-                    stock_cd: row.stock_cd,
-                    exchange: row.exchange,
-                    unit: row.unit,
-                    book_cost: row.book_cost
-                },
-                uploadDataRow: [row.account_cd, row.stock_cd, row.exchange, row.unit, row.book_cost]
-            };
+                row.account_cd, row.stock_cd, row.exchange, row.unit, row.book_cost
+            ;
         },
         truncateTable: true,
         isBulkUpload: false, // or 'bulk' for bulkUpload
