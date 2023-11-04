@@ -4,15 +4,89 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/test-fee-engine/featues/step_definitions/holdingPeriod.steps.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test-fee-engine/featues/test.dsc.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test-fee-engine/featues/test.holdingPeriod.feature" afterDir="false" />
+    <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="enhance ETL job">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_10_2023,_9_34_pm_[Default_Changelist]/out-1level.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_10_2023,_9_34_pm_[Default_Changelist]/out-2level.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_10_2023,_9_34_pm_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_10_2023__9_34_pm__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Default_Changelist]/out-1level.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Default_Changelist]/out-2level.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-chatbot/chatEngine.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-chatbot/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-chatbot/poeChatEngine.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-etl/appEtlConfig.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-etl/etlProcesser.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-etl/iRecordType.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-etl/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-fee-engine/DSCCalculator.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-fee-engine/FIFOHoldingPeriodCalculator.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-fee-engine/enumFeeEngine.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-fee-engine/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-fee-engine/typeFeeEngine.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-fee/feeCalculator.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-fee/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-fee/ruleLoader.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-fee/transactionLoader.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-interface/iETL.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-interface/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-json/app.json.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-json/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-json/jsonHelper.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-map/app.map.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-map/iCommit.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-map/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-map/maptest.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-mask/app.mask.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-mask/constant.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-mask/data-mask.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-mask/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-mask/jl-log4js.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-mask/loglog4js.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-mask/logwinston.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-rest/app.rest.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-rest/controllers/FilesController.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-rest/controllers/healthCheckController.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-rest/controllers/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-rest/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/block-navigation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/coverage-final.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/cucumber-report.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/cucumber.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/lib/configHelper.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/lib/date-helper.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/lib/dateHelper.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/lib/excelHelper.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/lib/excelReader.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/lib/fileHelper.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/lib/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/lib/logger.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/lib/postgresUploader.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/lib/typeHelper.ts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/prettify.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/prettify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/sort-arrow-sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/sorter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/coverage-cucumber/tmp/coverage-5807-1698573728952-0.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test-fee/test-data/A0001-01.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-fee-engine/DSCCalculator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee-engine/DSCCalculator.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-fee-engine/app.fee.engine.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee-engine/app.fee.engine.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-fee-txn/app.fee.txn.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-fee/app.fee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee/app.fee.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-etl/app.etl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl/app.etl.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-etl/appEtlConfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl/appEtlConfig.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-etl/config.etl.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl/config.etl.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-etl/etlProcesser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl/etlProcesser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-etl/iRecordType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl/iRecordType.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/lib/logger.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lib/logger.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/lib/postgresUploader.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lib/postgresUploader.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test-etl/test-data/account-data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-etl/test-data/account-data.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test-etl/test-data/holding-data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-etl/test-data/holding-data.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test-json/features/test_data/out-1level.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/test_data/out-1level.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test-json/features/test_data/out-2level.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/test_data/out-2level.xlsx" afterDir="false" />
     </list>
@@ -100,11 +174,17 @@
         <option value="JavaScript File" />
         <option value="tsconfig.json" />
         <option value="TypeScript File" />
+        <option value="UML Gantt" />
+        <option value="Swagger" />
       </list>
     </option>
   </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="origin/main" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -164,6 +244,9 @@
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1738" />
     <option name="y" value="-338" />
@@ -217,32 +300,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ToolWindowCommit.ShowToolbar": "false",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "javascript.nodejs.core.library.configured.version": "16.10.0",
-    "javascript.nodejs.core.library.typings.version": "16.10.0",
-    "js.last.introduce.type": "CONST",
-    "last_opened_file_path": "/Users/joeylam/repo/njs/njstool/src/app/app-fee-engine",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs.cucumber.cucumber_node_package_dir": "/Users/joeylam/repo/njs/njstool/node_modules/@cucumber/cucumber",
-    "nodejs.jest.jest_package": "/Users/joeylam/repo/njs/njstool/node_modules/jest",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "ts.external.directory.path": "/Users/joeylam/repo/njs/njstool/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Gantt&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ToolWindowCommit.ShowToolbar&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.10.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.10.0&quot;,
+    &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/joeylam/repo/njs/njstool/src/app/app-fee-engine&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs.cucumber.cucumber_node_package_dir&quot;: &quot;/Users/joeylam/repo/njs/njstool/node_modules/@cucumber/cucumber&quot;,
+    &quot;nodejs.jest.jest_package&quot;: &quot;/Users/joeylam/repo/njs/njstool/node_modules/jest&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/joeylam/repo/njs/njstool/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "TEXT"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;TEXT&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/app/app-fee-engine" />
@@ -259,7 +345,30 @@
       <recent name="$PROJECT_DIR$/src/app/app-mask" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start:fee-engine">
+  <component name="RunManager" selected="OpenAPI/Swagger Code Generator.swagger-fee-engine.yaml">
+    <configuration name="swagger-fee-engine.yaml" type="SwaggerCodegen" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="customTemplatesPath" value="" />
+      <option name="envs">
+        <map />
+      </option>
+      <option name="generateToPath" value="$PROJECT_DIR$/gen" />
+      <option name="generationParameters">
+        <list />
+      </option>
+      <option name="generatorType" value="OPENAPI_GENERATOR_V6" />
+      <option name="jdkPath" value="$APPLICATION_HOME_DIR$/jbr/Contents/Home/bin/java" />
+      <option name="language" value="typescript-node" />
+      <option name="passParentEnvs" value="true" />
+      <option name="programParameters" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="specificationPath" value="$PROJECT_DIR$/src/app/app-fee-engine/swagger-fee-engine.yaml" />
+      <option name="workingDirectory" value="$PROJECT_DIR$/src/app/app-fee-engine" />
+      <method v="2" />
+    </configuration>
     <configuration name="app.fee.feature" type="cucumber.js" factoryName="Cucumber.js">
       <option name="myFilePath" value="$PROJECT_DIR$/test/test-fee/features/app.fee.feature" />
       <option name="myNameFilter" value="" />
@@ -295,21 +404,21 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="start:fee-engine" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="start:etl" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="start:fee-engine" />
+        <script value="start:etl" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="start:fee" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="start:fee-engine" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="start:fee" />
+        <script value="start:fee-engine" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -325,33 +434,23 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="test:cucumber" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="test:cucumber" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Cucumber.js.app.fee.feature" />
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       <item itemvalue="npm.test" />
-      <item itemvalue="npm.merge-reports" />
+      <item itemvalue="npm.start:etl" />
       <item itemvalue="npm.start:fee-engine" />
+      <item itemvalue="npm.merge-reports" />
       <item itemvalue="npm.generate-cucumber-html" />
-      <item itemvalue="npm.start:fee" />
-      <item itemvalue="npm.test:cucumber" />
+      <item itemvalue="OpenAPI/Swagger Code Generator.swagger-fee-engine.yaml" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start:etl" />
         <item itemvalue="npm.start:fee-engine" />
-        <item itemvalue="npm.merge-reports" />
+        <item itemvalue="OpenAPI/Swagger Code Generator.swagger-fee-engine.yaml" />
         <item itemvalue="npm.generate-cucumber-html" />
-        <item itemvalue="npm.test:cucumber" />
-        <item itemvalue="npm.start:fee" />
+        <item itemvalue="npm.merge-reports" />
       </list>
     </recent_temporary>
   </component>
@@ -400,14 +499,24 @@
       <workItem from="1687008293893" duration="2420000" />
       <workItem from="1687406905826" duration="1199000" />
       <workItem from="1688802939352" duration="81000" />
-      <workItem from="1688832310145" duration="13815000" />
-    </task>
-    <task id="LOCAL-00081" summary="improve the log file name">
-      <created>1684152044204</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1684152044204</updated>
+      <workItem from="1688832310145" duration="14730000" />
+      <workItem from="1697364493980" duration="336000" />
+      <workItem from="1697364892841" duration="234000" />
+      <workItem from="1697856528324" duration="118000" />
+      <workItem from="1697856658644" duration="691000" />
+      <workItem from="1697857767728" duration="940000" />
+      <workItem from="1697870265824" duration="1100000" />
+      <workItem from="1697871376584" duration="1943000" />
+      <workItem from="1697884087658" duration="1478000" />
+      <workItem from="1697885609275" duration="1449000" />
+      <workItem from="1697888023907" duration="498000" />
+      <workItem from="1698569201809" duration="106000" />
+      <workItem from="1698569376430" duration="1297000" />
+      <workItem from="1698572738527" duration="406000" />
+      <workItem from="1698586363222" duration="1075000" />
+      <workItem from="1698587472105" duration="490000" />
+      <workItem from="1699088236509" duration="209000" />
+      <workItem from="1699094897159" duration="53000" />
     </task>
     <task id="LOCAL-00082" summary="improvver logger">
       <created>1684152075146</created>
@@ -745,7 +854,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688844856713</updated>
     </task>
-    <option name="localTasksCounter" value="130" />
+    <task id="LOCAL-00130" summary="add cucumber test">
+      <created>1688846655959</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1688846655959</updated>
+    </task>
+    <option name="localTasksCounter" value="132" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -780,9 +896,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add new feeCal function." />
-    <MESSAGE value="fix the syntax error" />
-    <MESSAGE value="fix the reading excel function" />
     <MESSAGE value="reflector to change tradeDate from string to Date" />
     <MESSAGE value="new function" />
     <MESSAGE value="add new test cases." />
@@ -805,7 +918,10 @@
     <MESSAGE value="add deducedUnits to show the pass-in deduction." />
     <MESSAGE value="code reflector to separate the type and enum to another files" />
     <MESSAGE value="code reflector to include txn details in DSCCalculator.ts" />
-    <option name="LAST_COMMIT_MESSAGE" value="code reflector to include txn details in DSCCalculator.ts" />
+    <MESSAGE value="new jest by copilot" />
+    <MESSAGE value="add cucumber test" />
+    <MESSAGE value="enhance ETL job" />
+    <option name="LAST_COMMIT_MESSAGE" value="enhance ETL job" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -857,7 +973,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/lib/postgresUploader.ts</url>
-          <line>44</line>
+          <line>43</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
