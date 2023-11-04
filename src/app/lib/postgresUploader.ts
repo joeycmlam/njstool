@@ -43,6 +43,7 @@ export default class PostgresUploader implements iUploader {
         // Split data into batches
         const batches = Math.ceil(data.length / batchSize);
         for (let i = 0; i < batches; i++) {
+            this.logger.info(`bulkUpload:${tableName}:batch:${i}`);
             const batch = data.slice(i * batchSize, (i + 1) * batchSize);
             const dataArray = batch.map(valueMapper); 
             const insertQuery = pgp.helpers.insert(dataArray, cs);
@@ -57,7 +58,7 @@ export default class PostgresUploader implements iUploader {
             }
         }
     
-        this.logger.info('bulkUpload:end');
+        this.logger.info(`bulkUpload:${tableName}:end`);
     }
 
     public async truncateTable(tableName: string): Promise<void> {
