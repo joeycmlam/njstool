@@ -16,3 +16,4 @@ output/
 dist/
 test/test-json/features/test_data/out-1level.xlsx
 test/test-json/features/test_data/out-2level.xlsx
+output.xlsx
