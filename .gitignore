@@ -7,10 +7,12 @@ node_modules/
 
 #ingore test filder
 coverage/
-coverage-cucmber/
+coverage-cucumber/
 coverage-jest/
 data/
 output/
 
 # ignore the build directory
 dist/
+test/test-json/features/test_data/out-1level.xlsx
+test/test-json/features/test_data/out-2level.xlsx
