@@ -19,12 +19,24 @@ export class ETLProcesser {
     private dataReader: iDataReader;
     private uploader: iUploader;
     private logger;
+    private status: number;
+    private totalRecord: number;
 
     constructor(config: FileProcessorConfig, uploader: iUploader, dataReader: iDataReader) {
         this.config = config;
         this.uploader = uploader;
         this.dataReader = dataReader;
         this.logger = Logger.getInstance();
+        this.status = 0;
+        this.totalRecord = 0;
+    }
+
+    public getStatus(): number {
+        return this.status;
+    }
+
+    public getTotalRecord(): number {
+        return this.totalRecord;
     }
 
     public async process(): Promise<void> {
@@ -49,8 +61,12 @@ export class ETLProcesser {
         } catch (error: any) {
             this.logger.error(`Error uploading data from [${this.config.fileName}] to PostgreSQL: ${error}`);
             this.logger.error(`Stack trace: ${error.stack}`);
+            this.status = -1;
+            this.totalRecord = 0;
         } finally {
             await this.uploader.disconnect();
+            this.status= 0;
+            this.totalRecord = data.length;
         }
     }
 }
