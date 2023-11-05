@@ -10,4 +10,4 @@ Feature: ETL Processing
 
     Examples:
       | data_file | status | total_record |
-      | test/test-etl/test-data/account-data.xlsx | 0 | 100 |
+      | test/test-etl/test-data/account-data.xlsx | 0 | 1000 |
