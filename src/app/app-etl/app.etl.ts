@@ -21,13 +21,6 @@ class EtlRunner {
     this.config = dbConfig;
   }
 
-//   async loadConfig() {
-//     const configFile = 'src/app/app-etl/config.etl.yaml';
-//     const configHelper = new ConfigHelper(configFile);
-//     await configHelper.load();
-//     this.config = configHelper.getConfig() as AppEtlConfig;
-//   }
-
   async run() {
     this.logger.info('initialization')
     const accountReader = new ExcelReader(this.accountConfig.fileName);
