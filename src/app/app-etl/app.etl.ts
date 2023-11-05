@@ -1,7 +1,6 @@
 import {ConfigHelper} from "../lib/configHelper";
 import {AppEtlConfig} from "./appEtlConfig";
 import {ETLProcesser, FileProcessorConfig} from "./etlProcesser";
-import {iAccount, iHolding} from "./iRecordType";
 import PostgresUploader from "../lib/postgresUploader";
 import ExcelReader from "../lib/excelReader";
 import Logger from "../lib/logger";
