@@ -5,67 +5,61 @@ import {iAccount, iHolding} from "./iRecordType";
 import PostgresUploader from "../lib/postgresUploader";
 import ExcelReader from "../lib/excelReader";
 import Logger from "../lib/logger";
+import { accountConfig } from "./accountConfig";
+import { holdingConfig } from "./holdingConfig";
 
-(async () => {
-    const configFile = 'src/app/app-etl/config.etl.yaml';
-    const configHelper = new ConfigHelper(configFile);
-    await configHelper.load();
-    const config = configHelper.getConfig() as AppEtlConfig;
+class EtlRunner {
+  private accountConfig: FileProcessorConfig;
+  private holdingConfig: FileProcessorConfig;
+  private config: AppEtlConfig;
+  private logger: Logger;
 
-    const logger = Logger.getInstance();
+  constructor(dbConfig: AppEtlConfig, accountConfig: FileProcessorConfig, holdingConfig: FileProcessorConfig) {
+    this.accountConfig = accountConfig;
+    this.holdingConfig = holdingConfig;
+    this.logger = Logger.getInstance();
+    this.config = dbConfig;
+  }
 
-    const accountConfig: FileProcessorConfig = {
-        fileName: config.dataFilePath.accountFile,
-        query: 'INSERT INTO account (account_cd, account_nm) VALUES ($1, $2)',
-        tableName: 'account',
-        columnNames: ['account_cd', 'account_nm'],
-        rowMapper: (row: iAccount) => {
-            return {
-                uploadDataRow: [row.account_cd, row.account_nm],
-            }},
-        bulkMapper: (row: iAccount) => ({
-            account_cd: row.account_cd,
-            account_nm: row.account_nm
-        }),
-        truncateTable: true,
-        isBulkUpload: false, 
-    };
+//   async loadConfig() {
+//     const configFile = 'src/app/app-etl/config.etl.yaml';
+//     const configHelper = new ConfigHelper(configFile);
+//     await configHelper.load();
+//     this.config = configHelper.getConfig() as AppEtlConfig;
+//   }
 
-    const holdingConfig: FileProcessorConfig = {
-        fileName: config.dataFilePath.holdingFile,
-        query: 'INSERT INTO holding (account_cd, stock_cd, exchange, unit, book_cost) VALUES ($1, $2, $3, $4, $5)',
-        tableName: 'holding',
-        columnNames: ['account_cd', 'stock_cd', 'exchange', 'unit', 'book_cost'],
-        rowMapper: (row: iHolding) => {
-            return {
-                uploadDataRow: [row.account_cd, row.stock_cd, row.exchange, row.unit, row.book_cost]
-            }},
-        bulkMapper: (row: iHolding) => ({
-            account_cd: row.account_cd,
-            stock_cd: row.stock_cd,
-            exchange: row.exchange,
-            unit: row.unit,
-            book_cost: row.book_cost
-        }),
-        truncateTable: true,
-        isBulkUpload: true
-    };
+  async run() {
+    this.logger.info('initialization')
+    const accountReader = new ExcelReader(this.accountConfig.fileName);
+    const accountUploader = new PostgresUploader(this.config.database);
+    const accountProcessor = new ETLProcesser(this.accountConfig, accountUploader, accountReader);
 
+    const holdingReader = new ExcelReader(this.holdingConfig.fileName);
+    const holdingUploader = new PostgresUploader(this.config.database);
+    const holdingProcessor = new ETLProcesser(this.holdingConfig, holdingUploader, holdingReader);
 
-    logger.info('initialization')
-    const accountReader = new ExcelReader(accountConfig.fileName);
-    const accountUploader = new PostgresUploader(config.database);
-    const accountProcessor = new ETLProcesser(accountConfig, accountUploader, accountReader);
-
-    const holdingReader = new ExcelReader(holdingConfig.fileName);
-    const holdingUploader = new PostgresUploader(config.database);
-    const holdingProcessor = new ETLProcesser(holdingConfig, holdingUploader, holdingReader);
-
-    logger.info('start upload account and holding');
+    this.logger.info('start upload account and holding');
     await Promise.all([
         accountProcessor.process(),
         holdingProcessor.process()
     ]);
 
-    logger.info('done');
+    this.logger.info('done');
+  }
+}
+
+(async () => {
+
+   const configFile = 'src/app/app-etl/config.etl.yaml';
+   const configHelper = new ConfigHelper(configFile);
+   await configHelper.load();
+   const config = configHelper.getConfig() as AppEtlConfig;
+
+   const accConfig = accountConfig;
+   accConfig.fileName = config.dataFilePath.accountFile;
+
+   const holdConfig = holdingConfig;
+   holdConfig.fileName = config.dataFilePath.holdingFile;
+  const runner = new EtlRunner(config, accountConfig, holdingConfig);
+  await runner.run();
 })();
