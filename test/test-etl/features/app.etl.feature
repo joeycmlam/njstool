@@ -8,6 +8,6 @@ Feature: ETL Processing
     When file arrive
     Then call eltProcesser.ts to load the data into database and expect the job is <status> and number of record <total_record>
 
-    Examples:
-      | data_file | status | total_record |
-      | test/test-etl/test-data/account-data.xlsx | 0 | 1000 |
+    Examples: 
+      | data_file                                 | status | total_record |
+      | test/test-etl/test-data/account-data.xlsx |      0 |         1000 |
