@@ -4,10 +4,11 @@ Feature: ETL Processing
   So that I can ensure the data is correctly loaded into the database
 
   Scenario Outline: Loading data from an interface file
-    Given the interface file "<data_file>"
+    Given the interface file "<data_file>" and "<table_name>"
     When file arrive
     Then call eltProcesser.ts to load the data into database and expect the job is <status> and number of record <total_record>
 
     Examples: 
-      | data_file                                 | status | total_record |
-      | test/test-etl/test-data/account-data.xlsx |      0 |         1000 |
+      | data_file                                 | table_name | status | total_record |
+      | test/test-etl/test-data/account-data.xlsx | account    |      0 |         1000 |
+      | test/test-etl/test-data/holding-data.xlsx | holding    |      0 |         1000 |

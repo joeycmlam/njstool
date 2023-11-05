@@ -1,17 +1,18 @@
 import { Given, When, Then } from '@cucumber/cucumber';
-import {ETLProcesser, FileProcessorConfig} from "../../../../src/app/app-etl/etlProcesser";
-import {AppEtlConfig} from "../../../../src/app/app-etl/appEtlConfig";
+import { ETLProcesser, FileProcessorConfig } from "../../../../src/app/app-etl/etlProcesser";
+import { AppEtlConfig } from "../../../../src/app/app-etl/appEtlConfig";
 import ExcelReader from "../../../../src/app/lib/excelReader";
 import assert from 'assert';
 import PostgresUploader from '../../../../src/app/lib/postgresUploader';
 import { ConfigHelper } from '../../../../src/app/lib/configHelper';
-import { iAccount } from '../../../../src/app/app-etl/iRecordType';
+import { accountConfig } from "../../../../src/app/app-etl/accountConfig";
+import { holdingConfig } from "../../../../src/app/app-etl/holdingConfig";
 
 let datProcessor: ETLProcesser;
 let actualStatus: number;
 let actualTotalRecord: number;
 
-Given('the interface file {string}', async function (dataFile: string) {
+Given('the interface file {string} and {string}', async function (dataFile: string, tableName: string) {
   const configFile = 'src/app/app-etl/config.etl.yaml';
   const configHelper = new ConfigHelper(configFile);
   await configHelper.load();
@@ -19,27 +20,24 @@ Given('the interface file {string}', async function (dataFile: string) {
 
   // Initialize EtlProcessor with the data file
 
-  const accountConfig: FileProcessorConfig = {
-    fileName: config.dataFilePath.accountFile,
-    query: 'INSERT INTO account (account_cd, account_nm) VALUES ($1, $2)',
-    tableName: 'account',
-    columnNames: ['account_cd', 'account_nm'],
-    rowMapper: (row: iAccount) => {
-        return {
-            uploadDataRow: [row.account_cd, row.account_nm],
-        }},
-    bulkMapper: (row: iAccount) => ({
-        account_cd: row.account_cd,
-        account_nm: row.account_nm
-    }),
-    truncateTable: true,
-    isBulkUpload: false, 
-};
-
-
   const dataReader = new ExcelReader(dataFile);
   const dataUploader = new PostgresUploader(config.database);
-  datProcessor = new ETLProcesser(accountConfig, dataUploader, dataReader);
+
+  let dataConfig: FileProcessorConfig;
+  switch (tableName) {
+    case 'account':
+      dataConfig = accountConfig;
+      break;
+    case 'holding':
+      dataConfig = holdingConfig;
+    // Add more cases for other table names here
+    default:
+      return;
+  }
+
+  dataConfig.fileName = dataFile;
+
+  datProcessor = new ETLProcesser(dataConfig, dataUploader, dataReader);
 
 });
 
