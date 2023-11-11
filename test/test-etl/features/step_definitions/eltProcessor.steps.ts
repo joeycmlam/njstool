@@ -30,7 +30,7 @@ Given('the interface file {string} and {string}', async function (dataFile: stri
       break;
     case 'holding':
       dataConfig = holdingConfig;
-    // Add more cases for other table names here
+      break;
     default:
       return;
   }
