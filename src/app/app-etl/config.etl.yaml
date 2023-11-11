@@ -1,11 +1,6 @@
 # config.etl.yaml
 version: "1.0"
-database:
-  host: 'localhost'
-  port: 5432
-  user: 'postgres'
-  password: 'dbadmin1234'
-  database: 'postgres'
+dbConfigfile: 'src/app/app-etl/config.db.yaml'
 dataFilePath:
   accountFile: 'test/test-etl/test-data/account-data.xlsx'
   holdingFile: 'test/test-etl/test-data/holding-data.xlsx'

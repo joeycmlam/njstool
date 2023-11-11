@@ -2,7 +2,7 @@ import DatabaseConfig from "../lib/configDatabase";
 import { ConfigHelper } from "../lib/configHelper";
 import ExcelReader from "../lib/excelReader";
 import Logger from "../lib/logger";
-import PostgresUploader from "../lib/dbConnection";
+import DBConnection from "../lib/dbConnection";
 import { accountConfig } from "./accountConfig";
 import { AppEtlConfig } from "./appEtlConfig";
 import { ETLProcesser, FileProcessorConfig } from "./etlProcesser";
@@ -11,7 +11,6 @@ import { holdingConfig } from "./holdingConfig";
 class EtlRunner {
     private accountConfig: FileProcessorConfig;
     private holdingConfig: FileProcessorConfig;
-    private config: AppEtlConfig;
     private dbConfig: DatabaseConfig
     private logger: Logger;
 
@@ -19,19 +18,18 @@ class EtlRunner {
         this.accountConfig = accountConfig;
         this.holdingConfig = holdingConfig;
         this.logger = Logger.getInstance();
-        this.config = appConfig;
         this.dbConfig = dbConfig;
     }
 
     async run() {
         this.logger.info('initialization')
         const accountReader = new ExcelReader(this.accountConfig.fileName);
-        const accountUploader = new PostgresUploader(this.config.database);
+        const accountUploader = new DBConnection(this.dbConfig);
         const accountProcessor = new ETLProcesser(this.accountConfig, accountUploader, accountReader);
-        const dbConfig = this.config.database;
+
 
         const holdingReader = new ExcelReader(this.holdingConfig.fileName);
-        const holdingUploader = new PostgresUploader(this.config.database);
+        const holdingUploader = new DBConnection(this.dbConfig);
         const holdingProcessor = new ETLProcesser(this.holdingConfig, holdingUploader, holdingReader);
 
         this.logger.info('start upload account and holding');
@@ -51,8 +49,7 @@ class EtlRunner {
     configHelper.load();
     const config = configHelper.getConfig() as AppEtlConfig;
 
-    const dbConfigFile = 'src/app/app-etl/config.database.yaml';
-    const dbConfigHelper = new ConfigHelper(dbConfigFile);
+    const dbConfigHelper = new ConfigHelper(config.dbConfigfile);
     dbConfigHelper.load();
     const dbConfig = dbConfigHelper.getConfig() as DatabaseConfig;
 
