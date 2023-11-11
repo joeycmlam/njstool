@@ -1,5 +1,5 @@
 import { FileProcessorConfig } from "./etlProcesser";
-import { iAccount } from "./iRecordType";
+import { iAccount } from "../app-interface/iRecordType";
 
 export const accountConfig: FileProcessorConfig = {
     fileName: '',

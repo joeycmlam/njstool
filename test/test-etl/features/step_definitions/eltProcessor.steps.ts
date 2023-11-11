@@ -15,7 +15,7 @@ let actualTotalRecord: number;
 
 Given('the interface file {string} and {string}', async function (dataFile: string, tableName: string) {
   const configFile = 'src/app/app-etl/config.etl.yaml';
-  const dataConfigFile = 'src/app/app-etl/config.database.yaml';
+  const dataConfigFile = 'src/app/app-etl/config.db.yaml';
   const configHelper = new ConfigHelper(configFile);
   await configHelper.load();
   const config = configHelper.getConfig() as AppEtlConfig;

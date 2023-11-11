@@ -1,5 +1,5 @@
 import { FileProcessorConfig } from "./etlProcesser";
-import { iHolding } from "./iRecordType";
+import { iHolding } from "../app-interface/iRecordType";
 
 export const holdingConfig: FileProcessorConfig = {
     fileName: '',

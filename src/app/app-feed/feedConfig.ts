@@ -1,8 +1,6 @@
-import { BaseConfig } from "../lib/configHelper";
 
-export default interface FeedConfig extends BaseConfig {
-    database: string;
+export default interface FeedConfig  {
     sql: string;
-    fileFormat: string;
-    feedFile: string;
+    fileName: string;
+    fieldDelimitor: string;
   }

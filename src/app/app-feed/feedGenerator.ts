@@ -1,39 +1,22 @@
+
+import  FeedConfig  from './feedConfig';
 import * as fs from 'fs';
-import pgPromise from 'pg-promise';
-import { Parser } from 'json2csv';
-import FeedConfig from './feedConfig'; // Define this interface according to your needs
-import { ConfigHelper } from '../lib/configHelper';
+import * as path from 'path';
+import DBConnection from '../lib/dbConnection';
+import Logger from "../lib/logger";
 
-export default class feedGenerator {
-  private config: FeedConfig;
-  private db: pgPromise.IDatabase<any>;
+export default class FeedGenerator {
 
-  constructor(configFile: string) {
-    const configHelper = new ConfigHelper(configFile);
-    this.config = configHelper.getConfig() as FeedConfig;
+  private logger: Logger = Logger.getInstance();
 
-    const pgp = pgPromise();
-    this.db = pgp(this.config.database);
-  }
+  constructor(private db: DBConnection, private config: FeedConfig) {}
 
-
-  async generateFeed() {
-    // Run the SQL query
-    const data = await this.db.any(this.config.sql);
-
-    // Convert the data to the specified file format
-    let fileData: string;
-    switch (this.config.fileFormat) {
-      case 'csv':
-        const parser = new Parser();
-        fileData = parser.parse(data);
-        break;
-      // Add more cases here for other file formats
-      default:
-        throw new Error(`Unsupported file format: ${this.config.fileFormat}`);
-    }
-
-    // Write the data to the feed file
-    fs.writeFileSync(this.config.feedFile, fileData);
+  public async extractToFile(): Promise<void> {
+    const result = await this.db.query(this.config.sql);
+    const data = result.rows.map(row => JSON.stringify(row)).join('\n');
+    const fullFilename = path.resolve(__dirname, this.config.fileName);
+    fs.writeFileSync(fullFilename, data);
+    const logger = this.logger;
+    logger.info(`Data written to ${fullFilename}`);
   }
 }

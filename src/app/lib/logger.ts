@@ -7,6 +7,9 @@ import { BaseConfig } from './configHelper';
 
 
 class Logger {
+  static getLogger() {
+    throw new Error('Method not implemented.');
+  }
   private static instance: Logger;
   private logger: log4js.Logger;
   private static config: configLogger;

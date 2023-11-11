@@ -1,7 +1,0 @@
-{
-    sql: `select * from account`;
-    fileName: "account.csv";
-    fieldDelimitor: "|";
-    header: "account_cd|account_nm"
-
-}
