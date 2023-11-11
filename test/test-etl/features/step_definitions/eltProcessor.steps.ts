@@ -3,10 +3,11 @@ import { ETLProcesser, FileProcessorConfig } from "../../../../src/app/app-etl/e
 import { AppEtlConfig } from "../../../../src/app/app-etl/appEtlConfig";
 import ExcelReader from "../../../../src/app/lib/excelReader";
 import assert from 'assert';
-import PostgresUploader from '../../../../src/app/lib/postgresUploader';
 import { ConfigHelper } from '../../../../src/app/lib/configHelper';
 import { accountConfig } from "../../../../src/app/app-etl/accountConfig";
 import { holdingConfig } from "../../../../src/app/app-etl/holdingConfig";
+import DBConnection from '../../../../src/app/lib/dbConnection';
+import DatabaseConfig from '../../../../src/app/lib/configDatabase';
 
 let datProcessor: ETLProcesser;
 let actualStatus: number;
@@ -14,14 +15,19 @@ let actualTotalRecord: number;
 
 Given('the interface file {string} and {string}', async function (dataFile: string, tableName: string) {
   const configFile = 'src/app/app-etl/config.etl.yaml';
+  const dataConfigFile = 'src/app/app-etl/config.database.yaml';
   const configHelper = new ConfigHelper(configFile);
   await configHelper.load();
   const config = configHelper.getConfig() as AppEtlConfig;
 
+  const dbConfigHelper = new ConfigHelper(dataConfigFile);
+  await dbConfigHelper.load();
+  const dbConfig = dbConfigHelper.getConfig() as DatabaseConfig;
+
   // Initialize EtlProcessor with the data file
 
   const dataReader = new ExcelReader(dataFile);
-  const dataUploader = new PostgresUploader(config.database);
+  const dataUploader = new DBConnection(dbConfig);
 
   let dataConfig: FileProcessorConfig;
   switch (tableName) {

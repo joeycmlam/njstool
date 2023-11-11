@@ -1,4 +1,4 @@
-export interface iUploader {
+export interface iDatabase {
     connect(): Promise<void>;
     disconnect(): Promise<void>;
     truncateTable(tableName: string): Promise<void>;

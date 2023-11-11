@@ -1,13 +1,8 @@
+import DatabaseConfig from "../lib/configDatabase";
 import {BaseConfig} from "../lib/configHelper";
 
 export interface AppEtlConfig extends BaseConfig {
-    database: {
-        host: string;
-        port: number;
-        user: string;
-        password: string;
-        database: string;
-    };
+    database: DatabaseConfig;
     dataFilePath: {
         accountFile: string;
         holdingFile: string;

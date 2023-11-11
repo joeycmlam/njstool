@@ -1,11 +1,11 @@
 import {Client} from 'pg';
-import {iUploader} from "../app-interface/iETL";
+import {iDatabase} from "../app-interface/iETL";
 import pgPromise from "pg-promise";
 import Logger from './logger';
 
 
 
-export default class PostgresUploader implements iUploader {
+export default class DBConnection implements iDatabase {
     private client: Client;
     private logger;
 

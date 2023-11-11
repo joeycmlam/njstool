@@ -1,4 +1,4 @@
-import {iUploader} from "../app-interface/iETL";
+import {iDatabase} from "../app-interface/iETL";
 import {iDataReader} from "../app-interface/iETL";
 import Logger from "../lib/logger";
 
@@ -16,12 +16,12 @@ export interface FileProcessorConfig {
 export class ETLProcesser {
     private config: FileProcessorConfig;
     private dataReader: iDataReader;
-    private uploader: iUploader;
+    private uploader: iDatabase;
     private logger;
     private status: number;
     private totalRecord: number;
 
-    constructor(config: FileProcessorConfig, uploader: iUploader, dataReader: iDataReader) {
+    constructor(config: FileProcessorConfig, uploader: iDatabase, dataReader: iDataReader) {
         this.config = config;
         this.uploader = uploader;
         this.dataReader = dataReader;
