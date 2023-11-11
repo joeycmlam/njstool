@@ -8,6 +8,9 @@ node_modules/
 #ingore test filder
 coverage/
 coverage-cucumber/
+coverage-cucumber/app-chatbot/ 
+coverage-cucumber/app-etl/  
+coverage-cucumber/app-fee/  
 coverage-jest/
 data/
 output/
