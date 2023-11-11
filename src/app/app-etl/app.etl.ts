@@ -1,3 +1,4 @@
+import DatabaseConfig from "../lib/configDatabase";
 import { ConfigHelper } from "../lib/configHelper";
 import ExcelReader from "../lib/excelReader";
 import Logger from "../lib/logger";

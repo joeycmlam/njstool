@@ -1,33 +1,49 @@
 import * as log4js from 'log4js';
+import path from 'path';
+import fs from 'fs';
+import yaml from 'js-yaml';
+import configLogger from './configLogger';
+import { BaseConfig } from './configHelper';
+
 
 class Logger {
   private static instance: Logger;
   private logger: log4js.Logger;
+  private static config: configLogger;
 
-  private constructor() {
 
-    const logFilePrefix = 'application';
+  static {
+    const configFile = path.resolve(require.main!.path!, './config.logger.yaml');
+    const configData = fs.readFileSync(configFile, 'utf-8');
+    const config = yaml.load(configData) as configLogger;
+    Logger.instance = new Logger(config);
+  }
+
+  private constructor(config: configLogger) {
+
     const logFilePattern = 'yyyyMMdd.log';
-    const logFilename = `${logFilePrefix}`;
-    const logLevel = 'info';
+    Logger.config = config;
+
+    const fileName = Logger.config.filename || 'app';
+    const level = Logger.config.level || 'info';
 
     log4js.configure({
-        appenders: {
-            fileAppender: { type: 'dateFile', filename: logFilename, pattern: logFilePattern, alwaysIncludePattern: true },
-            console: { type: 'console' },
-        },
-        categories: {
-            default: { appenders: ['fileAppender', 'console'], level: logLevel },
-        },
+      appenders: {
+        fileAppender: { type: 'dateFile', filename: fileName, pattern: logFilePattern, alwaysIncludePattern: true },
+        console: { type: 'console' },
+      },
+      categories: {
+        default: { appenders: ['fileAppender', 'console'], level: level },
+      },
     });
 
     this.logger = log4js.getLogger();
   }
 
   public static getInstance(): Logger {
-    if (!Logger.instance) {
-      Logger.instance = new Logger();
-    }
+    // if (!Logger.instance) {
+    //   Logger.instance = new Logger();
+    // }
     return Logger.instance;
   }
 

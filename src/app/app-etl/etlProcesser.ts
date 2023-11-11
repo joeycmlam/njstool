@@ -1,5 +1,4 @@
 import {iUploader} from "../app-interface/iETL";
-import ExcelReader from "../lib/excelReader";
 import {iDataReader} from "../app-interface/iETL";
 import Logger from "../lib/logger";
 
