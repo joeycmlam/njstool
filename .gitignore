@@ -113,3 +113,4 @@ coverage-cucumber/lib/index.html
 coverage-cucumber/lib/logger.ts.html
 coverage-cucumber/tmp/coverage-5807-1698573728952-0.json
 src/app/app-pdf/app.pdf.ts
+src/app/app-json/result/results.csv
