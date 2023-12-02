@@ -5,6 +5,8 @@ import { Logger } from '../lib/logger';
 
 export class PdfComparator {
 
+  private logger = Logger.getLogger();
+
   constructor() {
   }
 
@@ -14,14 +16,14 @@ export class PdfComparator {
     try {
       data1 = await pdf.default(fs.readFileSync(file1));
     } catch (err) {
-      Logger.getLogger().error(`Error parsing file ${file1}: ${err}`);
+      this.logger.error(`Error parsing file ${file1}: ${err}`);
       return false;
     }
 
     try {
       data2 = await pdf.default(fs.readFileSync(file2));
     } catch (err) {
-      Logger.getLogger().error(`Error parsing file ${file2}: ${err}`);
+      this.logger.error(`Error parsing file ${file2}: ${err}`);
       return false;
     }
 
@@ -39,15 +41,15 @@ export class PdfComparator {
   
         const areEqual = await this.comparePdfFiles(file1Path, file2Path);
   
-        Logger.getLogger().info(`The files ${file} are ${areEqual ? 'identical' : 'different'}.`);
+        this.logger.info(`The files ${file} are ${areEqual ? 'identical' : 'different'}.`);
       } else {
-        Logger.getLogger().info(`The file ${file} exists in ${folder1} but not in ${folder2}.`);
+        this.logger.info(`The file ${file} exists in ${folder1} but not in ${folder2}.`);
       }
     }
   
     for (const file of files2) {
       if (!files1.includes(file)) {
-        Logger.getLogger().info(`The file ${file} exists in ${folder2} but not in ${folder1}.`);
+        this.logger.info(`The file ${file} exists in ${folder2} but not in ${folder1}.`);
       }
     }
   }
