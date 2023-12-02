@@ -1,29 +1,26 @@
-import JsonHelper from "./jsonHelper";
-import path from "path";
+import { JsonComparator } from './JsonComparator';
+import { Logger } from '../lib/logger';
+import { config } from './config';
+import path from 'path';
 
-class app {
-    static async process() {
-        console.log('main - start');
-        const in_path: string = 'data/';
-        const out_path: string = 'output';
-        const infile: string = 'test.json';
-        const outfile: string = 'out-1level.xlsx';
+function main() {
+  const json1 = {
+    name: "John",
+    age: 30,
+    cars: ["Ford", "BMW", "Fiat"]
+  };
 
-        const infilename: string = path.join(in_path, infile);
-        const outfilename: string = path.join(out_path, outfile);
-        const a = new JsonHelper();
-        await a.processJsonfile(infilename);
-        await a.write2excel(outfilename, 'sheet1');
-        console.log('main - done');
-    }
+  const json2 = {
+    name: "John",
+    age: 30,
+    cars: ["Fiat", "BMW", "Ford"]
+  };
+
+  Logger.getLogger().info('Comparing json1 and json2');
+  const resultsFilePath = path.join(__dirname, config.resultsFile);
+  const comparator = new JsonComparator(resultsFilePath);
+  comparator.compare(json1, json2);
+  Logger.getLogger().info('Done');    
 }
 
-
-(async () => {
-    console.log('x-start');
-    await app.process();
-    console.log('x-end');
-})();
-
-
-
+main();
