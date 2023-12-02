@@ -6,7 +6,7 @@ import configLogger from './configLogger';
 import { BaseConfig } from './configHelper';
 
 
-class Logger {
+export class Logger {
   static getLogger() {
     throw new Error('Method not implemented.');
   }

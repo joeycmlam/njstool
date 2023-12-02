@@ -4,6 +4,7 @@
   "description": "",
   "main": "src/app/app-mask/logwinston.ts",
   "scripts": {
+    "start:pdf": "ts-node src/app/app-pdf/app.pdf.ts",
     "start:feed": "ts-node src/app/app-feed/app.feed.ts",
     "start:fee-engine": "ts-node src/app/app-fee-engine/app.fee.engine.ts",
     "start:fee-txn": "ts-node src/app/app-fee-txn/app.fee.txn.ts",
@@ -44,6 +45,7 @@
     "json2csv": "^6.0.0-alpha.2",
     "log4js": "^6.9.1",
     "moment": "^2.29.4",
+    "pdf-parse": "^1.1.1",
     "pg": "^8.10.0",
     "pg-promise": "^11.4.3",
     "redact-pii": "^3.4.0",
@@ -60,6 +62,7 @@
     "@types/express": "^4.17.17",
     "@types/jest": "^29.5.1",
     "@types/mock-fs": "^4.13.1",
+    "@types/pdf-parse": "^1.1.4",
     "@types/pg": "^8.6.6",
     "axios": "^1.4.0",
     "c8": "^7.13.0",
