@@ -1,6 +1,11 @@
 import _ from 'lodash';
 import fs from 'fs';
 
+enum ComparisonResult {
+  Match = 'Match',
+  Unmatch = 'Unmatch'
+}
+
 export class JsonComparator {
   private resultsFile: string;
 
@@ -24,7 +29,7 @@ export class JsonComparator {
         const item1 = sortedObj1[i];
         const item2 = sortedObj2[i];
         const itemIsEqual = item1 === item2;
-        fs.appendFileSync(this.resultsFile, `${fieldName}[${i+1}]|${itemIsEqual ? 'Match' : 'Unmatch'}|${JSON.stringify(item1)}|${JSON.stringify(item2)}\n`);
+        fs.appendFileSync(this.resultsFile, `${fieldName}[${i+1}]|${itemIsEqual ? ComparisonResult.Match : ComparisonResult.Unmatch}|${JSON.stringify(item1)}|${JSON.stringify(item2)}\n`);
         if (!itemIsEqual) {
           isEqual = false;
         }
@@ -41,7 +46,7 @@ export class JsonComparator {
     // Otherwise, just compare the values
     else {
       isEqual = obj1 === obj2;
-      fs.appendFileSync(this.resultsFile, `${fieldName}|${isEqual ? 'Match' : 'Unmatch'}|${JSON.stringify(obj1)}|${JSON.stringify(obj2)}\n`);
+      fs.appendFileSync(this.resultsFile, `${fieldName}|${isEqual ? ComparisonResult.Match : ComparisonResult.Unmatch}|${JSON.stringify(obj1)}|${JSON.stringify(obj2)}\n`);
     }
   
     return isEqual;
