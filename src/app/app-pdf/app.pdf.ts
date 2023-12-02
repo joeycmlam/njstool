@@ -1,3 +1,4 @@
+import path from 'path';
 import { PdfComparator } from './PdfComparator';
 import * as log4js from 'log4js';
 
@@ -9,8 +10,9 @@ log4js.configure({
 const logger = log4js.getLogger();
 
 async function main() {
-  const file1 = 'data/a/sample.pdf';
-  const file2 = 'data/b/sample.pdf';
+    const file1 = path.join(__dirname, 'data/a/sample.pdf');
+    const file2 = path.join(__dirname, 'data/b/sample.pdf');
+  
 
   const areEqual = await PdfComparator.comparePdfFiles(file1, file2);
 
