@@ -1,10 +1,16 @@
 import { PdfComparator } from './PdfComparator';
-import { Logger } from '../lib/logger';
+import * as log4js from 'log4js';
+
+log4js.configure({
+    appenders: { out: { type: 'stdout' } },
+    categories: { default: { appenders: ['out'], level: 'info' } }
+  });
+
+const logger = log4js.getLogger();
 
 async function main() {
-  const logger = Logger.getInstance();
   const file1 = 'data/a/sample.pdf';
-  const file2 = 'data/b/dummy.pdf';
+  const file2 = 'data/b/sample.pdf';
 
   const areEqual = await PdfComparator.comparePdfFiles(file1, file2);
 
@@ -15,4 +21,4 @@ async function main() {
   }
 }
 
-main().catch(err => Logger.getInstance().error(err));
+main().catch(err => logger.error(err));
