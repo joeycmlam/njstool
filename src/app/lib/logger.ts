@@ -2,28 +2,34 @@ import * as log4js from 'log4js';
 import path from 'path';
 import fs from 'fs';
 import yaml from 'js-yaml';
-import configLogger from './configLogger';
-import { BaseConfig } from './configHelper';
-
 
 export class Logger {
-  static getLogger() {
-    throw new Error('Method not implemented.');
-  }
   private static instance: Logger;
-  private logger: log4js.Logger;
-  private static config: configLogger;
+  private static config: { filename?: string, level?: string };
 
+  static getLogger(): log4js.Logger {
+    return log4js.getLogger();
+  }
 
   static {
+    let config: { filename?: string, level?: string };
     const configFile = path.resolve(require.main!.path!, './config.logger.yaml');
-    const configData = fs.readFileSync(configFile, 'utf-8');
-    const config = yaml.load(configData) as configLogger;
+
+    try {
+      const configData = fs.readFileSync(configFile, 'utf-8');
+      config = yaml.load(configData) as { filename?: string, level?: string };
+    } catch (err) {
+      // Default configuration
+      config = {
+        filename: 'app',
+        level: 'info'
+      };
+    }
+
     Logger.instance = new Logger(config);
   }
-
-  private constructor(config: configLogger) {
-
+  
+  private constructor(config: { filename?: string, level?: string }) {
     const logFilePattern = 'yyyyMMdd.log';
     Logger.config = config;
 
@@ -39,30 +45,5 @@ export class Logger {
         default: { appenders: ['fileAppender', 'console'], level: level },
       },
     });
-
-    this.logger = log4js.getLogger();
   }
-
-  public static getInstance(): Logger {
-    // if (!Logger.instance) {
-    //   Logger.instance = new Logger();
-    // }
-    return Logger.instance;
-  }
-
-  public info(message: string): void {
-    this.logger.info(message);
-  }
-
-  public error(message: string): void {
-    this.logger.error(message);
-  }
-
-  public debug(message: string): void {
-    this.logger.debug(message);
-  }
-
-  // Add other log levels as needed
 }
-
-export default Logger;

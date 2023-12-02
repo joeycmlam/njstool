@@ -1,19 +1,16 @@
 import path from 'path';
 import { PdfComparator } from './PdfComparator';
-import * as log4js from 'log4js';
-
-log4js.configure({
-  appenders: { out: { type: 'stdout' } },
-  categories: { default: { appenders: ['out'], level: 'info' } }
-});
-
-const logger = log4js.getLogger();
+import { Logger } from '../lib/logger';
 
 async function main() {
+
+  const logger = Logger.getLogger();
   const folder1 = path.join(__dirname, 'data/a');
   const folder2 = path.join(__dirname, 'data/b');
 
+  logger.info('Comparing PDF files in folders %s and %s.', folder1, folder2);
   await PdfComparator.comparePdfFolders(folder1, folder2);
+  logger.info('Done.');
 }
 
-main().catch(err => logger.error(err));
+main();
