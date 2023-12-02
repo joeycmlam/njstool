@@ -4,7 +4,11 @@ import * as pdf from 'pdf-parse';
 import { Logger } from '../lib/logger';
 
 export class PdfComparator {
-  static async comparePdfFiles(file1: string, file2: string): Promise<boolean> {
+
+  constructor() {
+  }
+
+  async comparePdfFiles(file1: string, file2: string): Promise<boolean> {
     let data1, data2;
 
     try {
@@ -24,7 +28,7 @@ export class PdfComparator {
     return data1.text === data2.text;
   }
 
-  static async comparePdfFolders(folder1: string, folder2: string): Promise<void> {
+  async comparePdfFolders(folder1: string, folder2: string): Promise<void> {
     const files1 = await fs.readdirSync(folder1);
     const files2 = await fs.readdirSync(folder2);
   
@@ -33,7 +37,7 @@ export class PdfComparator {
         const file1Path = path.join(folder1, file);
         const file2Path = path.join(folder2, file);
   
-        const areEqual = await PdfComparator.comparePdfFiles(file1Path, file2Path);
+        const areEqual = await this.comparePdfFiles(file1Path, file2Path);
   
         Logger.getLogger().info(`The files ${file} are ${areEqual ? 'identical' : 'different'}.`);
       } else {
