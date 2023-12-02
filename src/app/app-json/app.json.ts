@@ -19,7 +19,10 @@ function main() {
   Logger.getLogger().info('Comparing json1 and json2');
   const resultsFilePath = path.join(__dirname, config.resultsFile);
   const comparator = new JsonComparator(resultsFilePath);
-  comparator.compare(json1, json2);
+  // comparator.compare(json1, json2);
+  const folder1 = path.join(__dirname, config.folder1);
+  const folder2 = path.join(__dirname, config.folder2);
+  comparator.compareFolders(folder1, folder2);
   Logger.getLogger().info('Done');    
 }
 

@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import fs from 'fs';
+import path from 'path';
 
 enum ComparisonResult {
   Match = 'Match',
@@ -20,7 +21,7 @@ export class JsonComparator {
 
   compare(obj1: { [key: string]: any }, obj2: { [key: string]: any }, fieldName: string = ''): boolean {
     let isEqual = true;
-  
+
     // If both are arrays, sort them and compare each item
     if (_.isArray(obj1) && _.isArray(obj2)) {
       const sortedObj1 = [...obj1].sort();
@@ -29,7 +30,7 @@ export class JsonComparator {
         const item1 = sortedObj1[i];
         const item2 = sortedObj2[i];
         const itemIsEqual = item1 === item2;
-        fs.appendFileSync(this.resultsFile, `${fieldName}[${i+1}]|${itemIsEqual ? ComparisonResult.Match : ComparisonResult.Unmatch}|${JSON.stringify(item1)}|${JSON.stringify(item2)}\n`);
+        fs.appendFileSync(this.resultsFile, `${fieldName}[${i + 1}]|${itemIsEqual ? ComparisonResult.Match : ComparisonResult.Unmatch}|${JSON.stringify(item1)}|${JSON.stringify(item2)}\n`);
         if (!itemIsEqual) {
           isEqual = false;
         }
@@ -48,7 +49,21 @@ export class JsonComparator {
       isEqual = obj1 === obj2;
       fs.appendFileSync(this.resultsFile, `${fieldName}|${isEqual ? ComparisonResult.Match : ComparisonResult.Unmatch}|${JSON.stringify(obj1)}|${JSON.stringify(obj2)}\n`);
     }
-  
+
     return isEqual;
+  }
+
+  compareFolders(folder1: string, folder2: string): void {
+    const files1 = fs.readdirSync(folder1);
+    const files2 = fs.readdirSync(folder2);
+
+    for (const file1 of files1) {
+      const file2 = files2.find(file => path.basename(file) === path.basename(file1));
+      if (file2) {
+        const json1 = JSON.parse(fs.readFileSync(path.join(folder1, file1), 'utf-8'));
+        const json2 = JSON.parse(fs.readFileSync(path.join(folder2, file2), 'utf-8'));
+        this.compare(json1, json2, path.basename(file1, '.json'));
+      }
+    }
   }
 }
