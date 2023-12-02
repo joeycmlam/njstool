@@ -19,27 +19,33 @@ export class JsonComparator {
     }
   }
 
-  compareValues(value1: any, value2: any, fileName: string, fieldName: string): boolean {
-    const isEqual = value1 === value2;
-    this.writeResultDetails(fileName, fieldName, isEqual, value1, value2);
-    return isEqual;
+  compareValues(value1: any, value2: any, fileName: string, fieldName: string): ComparisonResult {
+    let result: ComparisonResult;
+    if ( value1 === value2) {
+      result = ComparisonResult.Match;
+    } else {
+      result = ComparisonResult.Unmatch;
+    }
+    
+    this.writeResultDetails(fileName, fieldName, result, value1, value2);
+    return result;
   }
 
-  compareObjects(obj1: { [key: string]: any }, obj2: { [key: string]: any }, fileName: string, fieldName: string): boolean {
-    let isEqual = true;
+  compareObjects(obj1: { [key: string]: any }, obj2: { [key: string]: any }, fileName: string, fieldName: string): ComparisonResult {
+    let isEqual = ComparisonResult.Match;
 
     // ...
     for (const key in obj1) {
       if (!this.compare(obj1[key], obj2[key], key, fileName)) {
-        isEqual = false;
+        isEqual = ComparisonResult.Unmatch;
       }
     }
 
     return isEqual;
   }
 
-  compareArrays(obj1: any[], obj2: any[], fileName: string, fieldName: string): boolean {
-    let isEqual = true;
+  compareArrays(obj1: any[], obj2: any[], fileName: string, fieldName: string): ComparisonResult {
+    let result: ComparisonResult = ComparisonResult.Match;
 
     // ...
     const sortedObj1 = [...obj1].sort();
@@ -47,16 +53,20 @@ export class JsonComparator {
     for (let i = 0; i < Math.max(sortedObj1.length, sortedObj2.length); i++) {
       const item1 = sortedObj1[i];
       const item2 = sortedObj2[i];
-      const itemIsEqual = item1 === item2;
-      this.writeResultDetails(fileName, `${fieldName}[${i + 1}]`, itemIsEqual, item1, item2);
-      if (!itemIsEqual) {
-        isEqual = false;
+      let itemResult: ComparisonResult;
+      if (item1 === item2) {
+        itemResult = ComparisonResult.Match;
+      } else {
+        itemResult = ComparisonResult.Unmatch;
+        result = itemResult;
       }
+      this.writeResultDetails(fileName, `${fieldName}[${i + 1}]`, itemResult, item1, item2);
     }
-    return isEqual;
+
+    return result;
   }
 
-  compare(obj1: { [key: string]: any }, obj2: { [key: string]: any },fieldName: string = '', fileName: string ): boolean {
+  compare(obj1: { [key: string]: any }, obj2: { [key: string]: any },fieldName: string = '', fileName: string ): ComparisonResult {
     if (_.isArray(obj1) && _.isArray(obj2)) {
       return this.compareArrays(obj1, obj2, fileName, fieldName);
     } else if (_.isObject(obj1) && _.isObject(obj2)) {
@@ -87,8 +97,8 @@ export class JsonComparator {
     fs.writeFileSync(this.resultsFile, 'FileName|FieldName|ComparisonResult|Value1|Value2\n');
   }
 
-  writeResultDetails(fileName: string, fieldName: string, isEqual: boolean, value1: any, value2: any): void {
-    fs.appendFileSync(this.resultsFile, `${fileName}|${fieldName}|${isEqual ? ComparisonResult.Match : ComparisonResult.Unmatch}|${JSON.stringify(value1)}|${JSON.stringify(value2)}\n`);
+  writeResultDetails(fileName: string, fieldName: string, result: ComparisonResult, value1: any, value2: any): void {
+    fs.appendFileSync(this.resultsFile, `${fileName}|${fieldName}|${result}|${JSON.stringify(value1)}|${JSON.stringify(value2)}\n`);
   }
 
 }
