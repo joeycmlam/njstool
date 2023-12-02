@@ -7,13 +7,13 @@ function main() {
   const json1 = {
     name: "John",
     age: 30,
-    cars: ["Ford", "BMW", "Fiat"]
+    cars: ["BMWV", "Ford",  "Fiat"]
   };
 
   const json2 = {
     name: "John",
-    age: 30,
-    cars: ["Fiat", "BMW", "Ford"]
+    cars: ["Fiat", "BMW", "Ford"],
+    age: 29,
   };
 
   Logger.getLogger().info('Comparing json1 and json2');
