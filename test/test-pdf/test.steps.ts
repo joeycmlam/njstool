@@ -1,6 +1,6 @@
 import { Given, When, Then } from '@cucumber/cucumber';
 import { expect } from 'chai';
-import { PdfComparator } from '../PdfComparator';
+import { PdfComparator } from '../../src/app/app-pdf/PdfComparator';
 
 
 Given('I have a PDF file at "{string}"', function (filePath) {
