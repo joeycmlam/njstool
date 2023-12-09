@@ -6,7 +6,7 @@ import { TYPES, IPdfComparator } from '../app-interface/interface';
 import { PdfComparator } from './PdfComparator'; // Make sure to import PdfComparator
 
 @injectable() // Add this line
-class Main {
+export class Main {
   private comparator: IPdfComparator;
   private logger = Logger.getLogger();
 
