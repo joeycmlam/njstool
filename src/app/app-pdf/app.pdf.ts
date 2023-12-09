@@ -1,16 +1,17 @@
 import path from 'path';
-import { PdfComparator } from './PdfComparator';
+import { Container } from 'inversify';
 import { Logger } from '../lib/logger';
 import config from './config';
+import { PdfComparator } from './PdfComparator'; // Make sure to import PdfComparator
+
 
 async function main() {
 
   const logger = Logger.getLogger();
+  const comparator = new PdfComparator();
 
   const folder1 = path.join(__dirname, config.folder1);
   const folder2 = path.join(__dirname, config.folder2);
-  const comparator = new PdfComparator();
-
   
   // Compare two folders with PDF files in folders
   logger.info('Comparing PDF files in folders %s and %s.', folder1, folder2);
@@ -24,4 +25,5 @@ async function main() {
   logger.info('Done.');
 }
 
-main();
+main()
+

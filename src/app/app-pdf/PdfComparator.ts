@@ -2,8 +2,12 @@ import * as fs from 'fs';
 import * as path from 'path';
 import * as pdf from 'pdf-parse';
 import { Logger } from '../lib/logger';
+import { injectable } from 'inversify';
+import { IPdfComparator } from '../app-interface/interface';
 
-export class PdfComparator {
+
+@injectable()
+export class PdfComparator implements IPdfComparator {
 
   private logger = Logger.getLogger();
 
