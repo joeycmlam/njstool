@@ -23,6 +23,7 @@ export class Main {
     // Compare two folders with PDF files in folders
     this.logger.info('Comparing PDF files in folders %s and %s.', folder1, folder2);
     const areEqual = await this.comparator.comparePdfFiles(config.folder1, config.folder2);
+    this.logger.info(`The folders ${folder1} and ${folder2} are ${areEqual ? 'identical' : 'different'}.`);
   
     // Compare two PDF files
     const file1 = path.join(__dirname, config.file1);
