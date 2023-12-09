@@ -4,9 +4,9 @@
   "description": "",
   "main": "src/app/app-mask/logwinston.ts",
   "scripts": {
+    "start:fee-engine": "ts-node src/app/app-fee-engine/app.fee.engine.ts",
     "start:pdf": "ts-node src/app/app-pdf/app.pdf.ts",
     "start:feed": "ts-node src/app/app-feed/app.feed.ts",
-    "start:fee-engine": "ts-node src/app/app-fee-engine/app.fee.engine.ts",
     "start:fee-txn": "ts-node src/app/app-fee-txn/app.fee.txn.ts",
     "start:fee": "ts-node src/app/app-fee/app.fee.ts",
     "start:etl": "ts-node src/app/app-etl/app.etl.ts",
