@@ -1,4 +1,4 @@
-import Logger from "../lib/logger";
+import { Logger } from "../lib/logger";
 import FeeCalculator, {enmTxnType, Transaction} from "./feeCalculator";
 import {FeeRate, RuleLoader} from "./ruleLoader";
 import TransactionLoader from "./transactionLoader";
@@ -72,16 +72,13 @@ class app {
     }
 }
 
-const logger = Logger.getInstance();
+const logger = Logger.getLogger();
 
-(async () => {
-
+async function main() {
     logger.info('start');
     // await app.processByaum();
     await app.processSample();
     logger.info('end');
-})();
+}
 
-
-
-
+main();
