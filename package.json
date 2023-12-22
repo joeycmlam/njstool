@@ -4,6 +4,7 @@
   "description": "",
   "main": "src/app/app-mask/logwinston.ts",
   "scripts": {
+    "start:ai": "ts-node src/app/app-chatbot/app.chat.ts",
     "start:fee-engine": "ts-node src/app/app-fee-engine/app.fee.engine.ts",
     "start:pdf": "ts-node src/app/app-pdf/app.pdf.ts",
     "start:feed": "ts-node src/app/app-feed/app.feed.ts",
