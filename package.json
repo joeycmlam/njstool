@@ -4,6 +4,7 @@
   "description": "",
   "main": "src/app/app-mask/logwinston.ts",
   "scripts": {
+    "start:playloader": "ts-node src/app/app-playloader/app.playloader.ts",
     "start:ai": "ts-node src/app/app-chatbot/app.chat.ts",
     "start:fee-engine": "ts-node src/app/app-fee-engine/app.fee.engine.ts",
     "start:pdf": "ts-node src/app/app-pdf/app.pdf.ts",
@@ -40,7 +41,7 @@
     "chai": "^4.3.7",
     "csv-parser": "^3.0.0",
     "dayjs": "^1.11.7",
-    "exceljs": "^4.3.0",
+    "exceljs": "^4.4.0",
     "express": "^4.18.2",
     "inversify": "^6.0.2",
     "js-yaml": "^4.1.0",

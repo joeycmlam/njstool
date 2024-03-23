@@ -5,90 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="enhance ETL job">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_10_2023,_9_34_pm_[Default_Changelist]/out-1level.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_10_2023,_9_34_pm_[Default_Changelist]/out-2level.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_10_2023,_9_34_pm_[Default_Changelist]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_10_2023__9_34_pm__Default_Changelist_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Default_Changelist]/out-1level.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Default_Changelist]/out-2level.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Default_Changelist]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-chatbot/chatEngine.ts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-chatbot/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-chatbot/poeChatEngine.ts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-etl/appEtlConfig.ts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-etl/etlProcesser.ts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-etl/iRecordType.ts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-etl/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-fee-engine/DSCCalculator.ts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-fee-engine/FIFOHoldingPeriodCalculator.ts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-fee-engine/enumFeeEngine.ts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-fee-engine/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-fee-engine/typeFeeEngine.ts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-fee/feeCalculator.ts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-fee/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-fee/ruleLoader.ts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-fee/transactionLoader.ts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-interface/iETL.ts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-interface/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-json/app.json.ts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-json/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-json/jsonHelper.ts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-map/app.map.ts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-map/iCommit.ts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-map/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-map/maptest.ts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-mask/app.mask.ts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-mask/constant.ts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-mask/data-mask.ts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-mask/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-mask/jl-log4js.ts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-mask/loglog4js.ts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-mask/logwinston.ts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-rest/app.rest.ts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-rest/controllers/FilesController.ts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-rest/controllers/healthCheckController.ts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-rest/controllers/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/app-rest/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/base.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/block-navigation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/coverage-final.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/cucumber-report.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/cucumber.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/lib/configHelper.ts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/lib/date-helper.ts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/lib/dateHelper.ts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/lib/excelHelper.ts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/lib/excelReader.ts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/lib/fileHelper.ts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/lib/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/lib/logger.ts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/lib/postgresUploader.ts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/lib/typeHelper.ts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/prettify.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/prettify.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/sort-arrow-sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/sorter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coverage-cucumber/tmp/coverage-5807-1698573728952-0.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output.xlsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test-fee/test-data/A0001-01.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_10_2023,_9_34_pm_[Default_Changelist]/out-1level.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_10_2023,_9_34_pm_[Default_Changelist]/out-2level.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_10_2023,_9_34_pm_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_10_2023__9_34_pm__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Default_Changelist]/out-1level.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Default_Changelist]/out-2level.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-etl/app.etl.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl/app.etl.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-etl/appEtlConfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl/appEtlConfig.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-etl/config.etl.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl/config.etl.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-etl/etlProcesser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl/etlProcesser.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-etl/iRecordType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl/iRecordType.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/lib/logger.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lib/logger.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/lib/postgresUploader.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/lib/postgresUploader.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test-etl/test-data/account-data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-etl/test-data/account-data.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test-etl/test-data/holding-data.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-etl/test-data/holding-data.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test-json/features/test_data/out-1level.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/test_data/out-1level.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test-json/features/test_data/out-2level.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-json/features/test_data/out-2level.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -319,7 +244,7 @@
     &quot;nodejs.jest.jest_package&quot;: &quot;/Users/joeylam/repo/njs/njstool/node_modules/jest&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Users/joeylam/repo/njs/njstool/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -517,6 +442,8 @@
       <workItem from="1698587472105" duration="490000" />
       <workItem from="1699088236509" duration="209000" />
       <workItem from="1699094897159" duration="53000" />
+      <workItem from="1703259308025" duration="31000" />
+      <workItem from="1711174085730" duration="1000" />
     </task>
     <task id="LOCAL-00082" summary="improvver logger">
       <created>1684152075146</created>
@@ -963,18 +890,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/app-json/app.json.ts</url>
-          <line>14</line>
+          <line>8</line>
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/app-mask/app.mask.ts</url>
           <line>23</line>
           <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/lib/postgresUploader.ts</url>
-          <line>43</line>
-          <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>mock://file:///Users/joeylam/repo/njs/njstool/test/test-fee/features/step_definitions/fee.steps.ts</url>
