@@ -1,0 +1,10 @@
+{"isbn": "123-456-222",  
+"ID": "87654321",
+ "author": 
+    {
+      "lastname": "Doe",
+      "firstname": "Jane"
+    },
+  "category": ["Non-Fiction", "Technology"],
+  "amount": 2123.54 
+ }
