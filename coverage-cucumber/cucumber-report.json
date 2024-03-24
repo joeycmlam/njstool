@@ -1,20 +1,20 @@
 [
   {
-    "description": "  As a developer,\n  I want to test the ETL process\n  So that I can ensure the data is correctly loaded into the database",
+    "description": "",
     "elements": [
       {
         "description": "",
-        "id": "etl-processing;loading-data-from-an-interface-file",
+        "id": "excel-to-json-conversion;validate-excel-to-json-conversion",
         "keyword": "Scenario Outline",
-        "line": 13,
-        "name": "Loading data from an interface file",
+        "line": 10,
+        "name": "Validate Excel to JSON conversion",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 272119
+              "duration": 266947
             }
           },
           {
@@ -22,46 +22,37 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 30221
+              "duration": 27046
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 7,
-            "name": "the interface file \"test/test-etl/test-data/account-data.xlsx\"",
-            "match": {
-              "location": "test/test-etl/features/step_definitions/eltProcessor.steps.ts:24"
-            },
+            "line": 4,
+            "name": "I have an Excel file \"sample.01.xlsx\"",
             "result": {
-              "status": "passed",
-              "duration": 10796769
+              "status": "undefined",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 8,
-            "name": "file arrive",
-            "match": {
-              "location": "test/test-etl/features/step_definitions/eltProcessor.steps.ts:53"
-            },
+            "line": 5,
+            "name": "I convert the Excel file to JSON",
             "result": {
-              "status": "passed",
-              "duration": 1323970858
+              "status": "undefined",
+              "duration": 0
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 9,
-            "name": "call eltProcesser.ts to load the data into database and expect the job is 0 and number of record 1000",
-            "match": {
-              "location": "test/test-etl/features/step_definitions/eltProcessor.steps.ts:59"
-            },
+            "line": 6,
+            "name": "the JSON output should match the expected JSON file \"expecte1.01.json\"",
             "result": {
-              "status": "passed",
-              "duration": 158332
+              "status": "undefined",
+              "duration": 0
             }
           }
         ],
@@ -69,11 +60,11 @@
         "type": "scenario"
       }
     ],
-    "id": "etl-processing",
+    "id": "excel-to-json-conversion",
     "line": 1,
     "keyword": "Feature",
-    "name": "ETL Processing",
+    "name": "Excel to JSON conversion",
     "tags": [],
-    "uri": "test/test-etl/features/app.etl.feature"
+    "uri": "src/app/app-playloader/test/features/playload.feature"
   }
 ]

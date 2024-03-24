@@ -1,0 +1,20 @@
+{
+    "isbn": "123-456-222",
+    "id": "87654321",
+    "author": {
+      "lastname": "Doe",
+      "firstname": "Jane"
+    },
+    "category": [
+      "Technology",
+      "Non-Fiction"
+    ],
+    "amount": 2123.54,
+    "address": {
+      "home": {
+        "line1": "Address Line 1",
+        "line2": "Address Line 2",
+        "country": "HK"
+      }
+    }
+  }

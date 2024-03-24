@@ -1,0 +1,21 @@
+{
+    "isbn": "234-456-2210",
+    "id": "12345678",
+    "issue": "US",
+    "author": {
+      "lastname": "Shawn",
+      "firstname": "Peter"
+    },
+    "category": [
+      "Non-Fiction"
+    ],
+    "amount": 1000,
+    "address": {
+      "home": {
+        "line1": "Address Line1",
+        "line2": "Address Line2",
+        "line3": "Address Line 3",
+        "country": "SG"
+      }
+    }
+  }
