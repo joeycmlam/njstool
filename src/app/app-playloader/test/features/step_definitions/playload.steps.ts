@@ -6,8 +6,7 @@ import DataTransformer from '../../../DataTransformer';
 import ExcelReader from '../../../ExcelReader';
 
 let excelFile: string;
-let actualJsonData: any;
-let actualResult: {recordName: string, jsonData: any};
+let actualResult: any;
 
 Given('I have an Excel file {string}', function (givenExcelFile: string) {
   excelFile = givenExcelFile;
@@ -20,7 +19,7 @@ When('I convert the Excel file to JSON', async function () {
   const workbook = await excelReader.read(fileName);
   const worksheet = workbook.worksheets[0];
   const dataTransformer = new DataTransformer();
-  let actualResult = await dataTransformer.transform(worksheet, 3);
+  actualResult = await dataTransformer.transform(worksheet, 3);
 });
 
 Then('the JSON output should match the expected JSON file {string}', function (expectedJsonFile:string) {

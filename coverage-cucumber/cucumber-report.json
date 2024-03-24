@@ -15,11 +15,11 @@
             "line": 4,
             "name": "I have an Excel file \"sample.01.xlsx\"",
             "match": {
-              "location": "src/app/app-playloader/test/features/step_definitions/playload.steps.ts:24"
+              "location": "src/app/app-playloader/test/features/step_definitions/playload.steps.ts:23"
             },
             "result": {
               "status": "passed",
-              "duration": 346521
+              "duration": 325521
             }
           },
           {
@@ -28,11 +28,11 @@
             "line": 5,
             "name": "I convert the Excel file to JSON",
             "match": {
-              "location": "src/app/app-playloader/test/features/step_definitions/playload.steps.ts:27"
+              "location": "src/app/app-playloader/test/features/step_definitions/playload.steps.ts:26"
             },
             "result": {
               "status": "passed",
-              "duration": 35759744
+              "duration": 35288747
             }
           },
           {
@@ -41,12 +41,11 @@
             "line": 6,
             "name": "the JSON output should match the expected JSON file \"expected.01.json\"",
             "match": {
-              "location": "src/app/app-playloader/test/features/step_definitions/playload.steps.ts:37"
+              "location": "src/app/app-playloader/test/features/step_definitions/playload.steps.ts:36"
             },
             "result": {
-              "status": "failed",
-              "duration": 772835,
-              "error_message": "TypeError: Cannot read properties of undefined (reading 'jsonData')\n    at World.<anonymous> (/Users/joeylam/repo/njs/njstool/src/app/app-playloader/test/features/step_definitions/playload.steps.ts:41:51)"
+              "status": "passed",
+              "duration": 1443427
             }
           }
         ],
