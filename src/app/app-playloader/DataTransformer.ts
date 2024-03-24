@@ -15,8 +15,6 @@ export default class DataTransformer {
       if (rowNumber === 1) {
         recordName = row.getCell(col)?.value?.toString() ?? '';
       } else {
-        // const field = row.getCell(this.COL_FIELD)?.value?.toString();
-        // const type = row.getCell(this.COL_TYPE)?.value?.toString();
         const value = row.getCell(col).value;
         if (this.isEmpty(value)) {
           return;
@@ -26,7 +24,6 @@ export default class DataTransformer {
         const splitType = row.getCell(this.COL_TYPE)?.value?.toString()?.split(this.DELIMITER);
         const type = splitType[0];
         const splitField = row.getCell(this.COL_FIELD)?.value?.toString()?.split(this.DELIMITER);
-
 
         if (splitType?.length === 1) {
           splitField?.forEach((part: any, index: Number) => {
