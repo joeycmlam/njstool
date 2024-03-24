@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="enhance ETL job">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_10_2023,_9_34_pm_[Default_Changelist]/out-1level.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_10_2023,_9_34_pm_[Default_Changelist]/out-2level.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_10_2023,_9_34_pm_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_10_2023__9_34_pm__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Default_Changelist]/out-1level.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Default_Changelist]/out-2level.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage-cucumber/cucumber-report.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage-cucumber/cucumber-report.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-playloader/test/features/playload.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-playloader/test/features/playload.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-playloader/test/features/step_definitions/playload.steps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-playloader/test/features/step_definitions/playload.steps.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,7 +265,7 @@
       <recent name="$PROJECT_DIR$/src/app/app-mask" />
     </key>
   </component>
-  <component name="RunManager" selected="OpenAPI/Swagger Code Generator.swagger-fee-engine.yaml">
+  <component name="RunManager" selected="Cucumber.js.playload.feature">
     <configuration name="swagger-fee-engine.yaml" type="SwaggerCodegen" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
       <option name="allowRunningInParallel" value="false" />
       <option name="customTemplatesPath" value="" />
@@ -294,10 +289,24 @@
       <option name="workingDirectory" value="$PROJECT_DIR$/src/app/app-fee-engine" />
       <method v="2" />
     </configuration>
+    <configuration name="Scenario Outline: Validate Excel to JSON conv..." type="cucumber.js" factoryName="Cucumber.js" temporary="true">
+      <option name="myFilePath" value="$PROJECT_DIR$/src/app/app-playloader/test/features/playload.feature" />
+      <option name="myNameFilter" value="^Validate Excel to JSON conversion$" />
+      <option name="cucumberJsArguments" value="" />
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
     <configuration name="app.fee.feature" type="cucumber.js" factoryName="Cucumber.js">
       <option name="myFilePath" value="$PROJECT_DIR$/test/test-fee/features/app.fee.feature" />
       <option name="myNameFilter" value="" />
       <option name="cucumberJsArguments" value="--config test/cucumber.config.js " />
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="playload.feature" type="cucumber.js" factoryName="Cucumber.js" temporary="true">
+      <option name="myFilePath" value="$PROJECT_DIR$/src/app/app-playloader/test/features/playload.feature" />
+      <option name="myNameFilter" />
+      <option name="cucumberJsArguments" value="" />
       <option name="workingDirectory" value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
@@ -307,26 +316,6 @@
           <option name="sourceFilePath" value="docker-compose.yml" />
         </settings>
       </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="generate-cucumber-html" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="generate-cucumber-html" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="merge-reports" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="merge-reports" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
       <method v="2" />
     </configuration>
     <configuration name="start:etl" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -361,21 +350,21 @@
     </configuration>
     <list>
       <item itemvalue="Cucumber.js.app.fee.feature" />
+      <item itemvalue="Cucumber.js.Scenario Outline: Validate Excel to JSON conv..." />
+      <item itemvalue="Cucumber.js.playload.feature" />
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       <item itemvalue="npm.test" />
       <item itemvalue="npm.start:etl" />
       <item itemvalue="npm.start:fee-engine" />
-      <item itemvalue="npm.merge-reports" />
-      <item itemvalue="npm.generate-cucumber-html" />
       <item itemvalue="OpenAPI/Swagger Code Generator.swagger-fee-engine.yaml" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber.js.playload.feature" />
+        <item itemvalue="Cucumber.js.Scenario Outline: Validate Excel to JSON conv..." />
         <item itemvalue="npm.start:etl" />
         <item itemvalue="npm.start:fee-engine" />
         <item itemvalue="OpenAPI/Swagger Code Generator.swagger-fee-engine.yaml" />
-        <item itemvalue="npm.generate-cucumber-html" />
-        <item itemvalue="npm.merge-reports" />
       </list>
     </recent_temporary>
   </component>
@@ -444,6 +433,7 @@
       <workItem from="1699094897159" duration="53000" />
       <workItem from="1703259308025" duration="31000" />
       <workItem from="1711174085730" duration="1000" />
+      <workItem from="1711288920791" duration="614000" />
     </task>
     <task id="LOCAL-00082" summary="improvver logger">
       <created>1684152075146</created>

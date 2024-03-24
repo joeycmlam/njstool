@@ -10,29 +10,16 @@
         "name": "Validate Excel to JSON conversion",
         "steps": [
           {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 266947
-            }
-          },
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 27046
-            }
-          },
-          {
             "arguments": [],
             "keyword": "Given ",
             "line": 4,
             "name": "I have an Excel file \"sample.01.xlsx\"",
+            "match": {
+              "location": "src/app/app-playloader/test/features/step_definitions/playload.steps.ts:23"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 324609
             }
           },
           {
@@ -40,19 +27,26 @@
             "keyword": "When ",
             "line": 5,
             "name": "I convert the Excel file to JSON",
+            "match": {
+              "location": "src/app/app-playloader/test/features/step_definitions/playload.steps.ts:26"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "passed",
+              "duration": 36239335
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 6,
-            "name": "the JSON output should match the expected JSON file \"expecte1.01.json\"",
+            "name": "the JSON output should match the expected JSON file \"expected.01.json\"",
+            "match": {
+              "location": "src/app/app-playloader/test/features/step_definitions/playload.steps.ts:36"
+            },
             "result": {
-              "status": "undefined",
-              "duration": 0
+              "status": "failed",
+              "duration": 8609497,
+              "error_message": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n\u001b[32m+ actual\u001b[39m \u001b[31m- expected\u001b[39m\n\n\u001b[32m+\u001b[39m undefined\n\u001b[31m-\u001b[39m {\n\u001b[31m-\u001b[39m   address: {\n\u001b[31m-\u001b[39m     home: {\n\u001b[31m-\u001b[39m       country: 'HK',\n\u001b[31m-\u001b[39m       line1: 'Address Line 1',\n\u001b[31m-\u001b[39m       line2: 'Address Line 2'\n\u001b[31m-\u001b[39m     }\n\u001b[31m-\u001b[39m   },\n\u001b[31m-\u001b[39m   amount: 2123.54,\n\u001b[31m-\u001b[39m   author: {\n\u001b[31m-\u001b[39m     firstname: 'Jane',\n\u001b[31m-\u001b[39m     lastname: 'Doe'\n\u001b[31m-\u001b[39m   },\n\u001b[31m-\u001b[39m   category: [\n\u001b[31m-\u001b[39m     'Technology',\n\u001b[31m-\u001b[39m     'Non-Fiction'\n\u001b[31m-\u001b[39m   ],\n\u001b[31m-\u001b[39m   id: '87654321',\n\u001b[31m-\u001b[39m   isbn: '123-456-222'\n\u001b[31m-\u001b[39m }\n    at World.<anonymous> (/Users/joeylam/repo/njs/njstool/src/app/app-playloader/test/features/step_definitions/playload.steps.ts:39:22)"
             }
           }
         ],

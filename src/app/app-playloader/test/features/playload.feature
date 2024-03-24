@@ -5,6 +5,6 @@ Feature: Excel to JSON conversion
     When I convert the Excel file to JSON
     Then the JSON output should match the expected JSON file "<expect_result>"
 
-    Examples: 
+    Examples:
       | excel_file     | expect_result    |
-      | sample.01.xlsx | expecte1.01.json |
+      | sample.01.xlsx | expected.01.json |
