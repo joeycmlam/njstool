@@ -1,6 +1,8 @@
 # ignore all .log files
 log/
 *.log
+cucumber-report.json
+cucumber.html
 
 # ignore the node_modules directory
 node_modules/
