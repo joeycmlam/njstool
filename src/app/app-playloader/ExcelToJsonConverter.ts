@@ -8,12 +8,14 @@ import DataTransformer from './DataTransformer';
 export default class ExcelToJsonConverter {
   constructor(private excelReader: ExcelReader, private dataTransformer: DataTransformer, private jsonFileWriter: JsonFileWriter) {}
 
-  async convert(filePath: string, outputDir: string): Promise<void> {
+  public async convert(filePath: string, outputDir: string): Promise<any> {
     const workbook = await this.excelReader.read(filePath);
     const worksheet = workbook.worksheets[0];
+    const arr: any[] = [];
 
     for (let col = 3; col <= worksheet.actualColumnCount; col++) {
       const { recordName, jsonData } = this.dataTransformer.transform(worksheet, col);
+      arr.push(jsonData);
 
       const date = new Date();
       const timestamp = `${date.getFullYear()}${(date.getMonth() + 1).toString().padStart(2, '0')}${date.getDate().toString().padStart(2, '0')}.${date.getHours().toString().padStart(2, '0')}${date.getMinutes().toString().padStart(2, '0')}${date.getSeconds().toString().padStart(2, '0')}`;
@@ -21,5 +23,7 @@ export default class ExcelToJsonConverter {
 
       this.jsonFileWriter.write(outputFileName, jsonData);
     }
+    return arr;
   }
+ 
 }

@@ -7,7 +7,7 @@ import DataTransformer from './DataTransformer';
 import * as fs from 'fs';
 ;
 
-function main() {
+async function main() {
     const logger = Logger.getLogger();
 
     logger.info('start');
@@ -21,7 +21,8 @@ function main() {
     const jsonFileWriter = new JsonFileWriter(); // Fix: Pass the required arguments to the constructor
     const dataTransformer = new DataTransformer(); // Fix: Pass the required arguments to the constructor
     const converter = new ExcelToJsonConverter(excelReader, dataTransformer, jsonFileWriter); // Fix: Pass the required arguments to the constructor
-    const jsonData = converter.convert(inFile, outFilePath);
+    const arr: any = await converter.convert(inFile, outFilePath);
+    logger.info('jsonData', JSON.stringify(arr, null, 2));
     logger.info('end');
 
 }

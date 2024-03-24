@@ -1,4 +1,4 @@
 {
-    "inputFile": "sample.xlsx",
+    "inputFile": "data/sample.xlsx",
     "outputPath": "output"
 }
