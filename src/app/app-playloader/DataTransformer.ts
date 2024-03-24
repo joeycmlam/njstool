@@ -26,7 +26,7 @@ export default class DataTransformer {
         const splitField = row.getCell(this.COL_FIELD)?.value?.toString()?.split(this.DELIMITER);
 
 
-        if (splitType?.length === 1) {
+        if (splitType?.length === 1) { //primitive data type
           splitField?.forEach((part: any, index: Number) => {
             if (index === splitField.length - 1) {
               target[part] = type === 'num' ? Number(value) : String(value);
@@ -35,7 +35,9 @@ export default class DataTransformer {
               target = target[part];
             }
           });
-        } else { // list
+        } 
+        
+        if (splitType?.length === 2) { // array
           splitField?.forEach((part: any, index: Number) => {
             if (index === splitField.length - 2) {
               if (!target[part]) target[part] = [];
