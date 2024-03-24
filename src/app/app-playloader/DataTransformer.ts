@@ -11,19 +11,20 @@ export default class DataTransformer {
     const jsonData: any = {};
     let recordName = '';
 
-    worksheet.eachRow((row: any, rowNumber: number) => {
-      if (rowNumber === 1) {
-        recordName = row.getCell(col)?.value?.toString() ?? '';
-      } else {
-        const value = row.getCell(col).value;
-        if (this.isEmpty(value)) {
-          return;
-        }
+    for (let rowNumber = 1; rowNumber <= worksheet.rowCount; rowNumber++) {
+      const row = worksheet.getRow(rowNumber);
+      const value = row.getCell(col).value;
 
+      if (!value) { continue; }
+
+      if (rowNumber === 1) {
+        recordName = value ?? '';
+      } else {
         let target = jsonData;
         const splitType = row.getCell(this.COL_TYPE)?.value?.toString()?.split(this.DELIMITER);
         const type = splitType[0];
         const splitField = row.getCell(this.COL_FIELD)?.value?.toString()?.split(this.DELIMITER);
+
 
         if (splitType?.length === 1) {
           splitField?.forEach((part: any, index: Number) => {
@@ -32,7 +33,6 @@ export default class DataTransformer {
             } else {
               if (!target[part]) target[part] = {};
               target = target[part];
-
             }
           });
         } else { // list
@@ -43,15 +43,8 @@ export default class DataTransformer {
             }
           });
         }
-
-      }
-    });
-
+      } 
+    } //end for-loop
     return { recordName, jsonData };
-  }
-
-  private isEmpty(value: any): boolean {
-    const rtnvalue: boolean = value === undefined || value === null || value === '';
-    return rtnvalue;
   }
 }
