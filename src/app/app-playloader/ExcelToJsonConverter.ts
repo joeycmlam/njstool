@@ -13,7 +13,7 @@ export default class ExcelToJsonConverter {
     const worksheet = workbook.worksheets[0];
     const arr: any[] = [];
 
-    for (let col = this.config.dataformat.dataStartCol; col <= worksheet.actualColumnCount; col++) {
+    for (let col = this.config.dataformat.dataStartCol; col <= this.config.dataformat.dataEndCol; col++) {
       const { recordName, jsonData } = this.dataTransformer.transform(worksheet, col);
       arr.push(jsonData);
 

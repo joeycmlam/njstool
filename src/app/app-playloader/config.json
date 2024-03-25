@@ -10,7 +10,7 @@
         "fieldCol": 1,
         "typeCol": 2,
         "dataStartCol": 3,
-        "dataEndCol": 3
+        "dataEndCol": 4
     },
     "output": {
         "outputPath": "/Users/joeylam/repo/njs/njstool/src/app/app-playloader/output"
