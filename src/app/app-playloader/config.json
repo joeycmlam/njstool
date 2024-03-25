@@ -1,4 +1,17 @@
 {
-    "inputFile": "data/sample.xlsx",
-    "outputPath": "output"
+
+    "source": {
+        "inputPath": "/Users/joeylam/repo/njs/njstool/src/app/app-playloader/data",
+        "inputFile": "sample.xlsx",
+        "sheetName": "Sheet1",
+        "dataStartRow": 2,
+        "fieldCol": 1,
+        "typeCol": 2,
+        "dataStartCol": 3,
+        "dataEndCol": 3
+    },
+    "output": {
+        "outputPath": "/Users/joeylam/repo/njs/njstool/src/app/app-playloader/output"
+    }
+    
 }

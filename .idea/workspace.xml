@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="enhance ETL job">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coverage-cucumber/cucumber-report.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage-cucumber/cucumber-report.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-playloader/test/features/playload.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-playloader/test/features/playload.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-playloader/test/features/step_definitions/playload.steps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-playloader/test/features/step_definitions/playload.steps.ts" afterDir="false" />
-    </list>
+    <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="enhance ETL job" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -434,6 +429,7 @@
       <workItem from="1703259308025" duration="31000" />
       <workItem from="1711174085730" duration="1000" />
       <workItem from="1711288920791" duration="614000" />
+      <workItem from="1711292977094" duration="162000" />
     </task>
     <task id="LOCAL-00082" summary="improvver logger">
       <created>1684152075146</created>

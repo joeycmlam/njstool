@@ -15,8 +15,8 @@ async function main() {
     const configFile: string = path.join(__dirname, 'config.json'); 
     const config = JSON.parse(fs.readFileSync(configFile, 'utf8'));
 
-    const inFile = path.join(__dirname, config.inputFile);
-    const outFilePath = path.join(__dirname, config.outputPath);
+    const inFile = path.join(config.source.inputPath, config.source.inputFile);
+    const outFilePath = config.output.outputPath;
     const excelReader = new ExcelReader(); // Fix: Pass the required arguments to the constructor
     const jsonFileWriter = new JsonFileWriter(); // Fix: Pass the required arguments to the constructor
     const dataTransformer = new DataTransformer(); // Fix: Pass the required arguments to the constructor
