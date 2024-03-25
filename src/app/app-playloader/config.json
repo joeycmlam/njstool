@@ -1,5 +1,4 @@
 {
-
     "source": {
         "inputPath": "/Users/joeylam/repo/njs/njstool/src/app/app-playloader/data",
         "inputFile": "sample.xlsx"
@@ -14,6 +13,5 @@
     },
     "output": {
         "outputPath": "/Users/joeylam/repo/njs/njstool/src/app/app-playloader/output"
-    }
-    
+    }    
 }
