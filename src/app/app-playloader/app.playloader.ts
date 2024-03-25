@@ -12,8 +12,10 @@ async function main() {
 
     logger.info('start');
     // Load configuration
-    const configFile: string = path.join(__dirname, 'config.json'); 
-    const config = JSON.parse(fs.readFileSync(configFile, 'utf8'));
+    // Get the config file path from the command line arguments
+    const configFile = process.argv[2] || 'config.json';
+    const configFileFullName = path.join(__dirname, configFile);
+    const config = JSON.parse(fs.readFileSync(configFileFullName, 'utf8'));
 
     const inFile = path.join(config.source.inputPath, config.source.inputFile);
     const outFilePath = config.output.outputPath;
