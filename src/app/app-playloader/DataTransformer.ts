@@ -5,6 +5,24 @@ export default class DataTransformer {
 
   private DELIMITER: string = '.';
 
+  private handlePrimitiveType(target: any, part: any, index: number, splitField: any[], value: any, type: string): any {
+    if (index === splitField.length - 1) {
+      target[part] = type === 'num' ? Number(value) : String(value);
+    } else {
+      if (!target[part]) target[part] = {};
+      target = target[part];
+    }
+    return target;
+  }
+  
+  private handleListType(target: any, part: any, index: number, splitField: any[], value: any, type: string): any {
+    if (index === splitField.length - 2) {
+      if (!target[part]) target[part] = [];
+      target[part].push(type === 'num' ? Number(value) : String(value));
+    }
+    return target;
+  }
+
   public transform(worksheet: any, col: number, config: any): any {
     const jsonData: any = {};
     let recordName = '';
@@ -25,21 +43,13 @@ export default class DataTransformer {
         const type = splitType[0];
         const splitField = row.getCell(COL_FIELD)?.value?.toString()?.split(this.DELIMITER);
 
-        splitField?.forEach((part: any, index: Number) => {
+        splitField?.forEach((part: any, index: number) => {
           if (splitType?.length === 1) {
-            if (index === splitField.length - 1) {
-              target[part] = type === 'num' ? Number(value) : String(value);
-            } else {
-              if (!target[part]) target[part] = {};
-              target = target[part];
-            }
+            target = this.handlePrimitiveType(target, part, index, splitField, value, type);
           }
-
+        
           if (splitType?.length === 2) {
-            if (index === splitField.length - 2) {
-              if (!target[part]) target[part] = [];
-              target[part].push(type === 'num' ? Number(value) : String(value));
-            }
+            target = this.handleListType(target, part, index, splitField, value, type);
           }
         });
 
