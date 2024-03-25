@@ -1,8 +1,7 @@
 {
-  "name": "jl-logger",
-  "version": "1.0.3",
+  "name": "njstool",
+  "version": "1.1.0",
   "description": "",
-  "main": "src/app/app-mask/logwinston.ts",
   "scripts": {
     "prestart": "rm -rf src/app/app-playloader/output/*.json",
     "start:playloader": "ts-node src/app/app-playloader/app.playloader.ts",
