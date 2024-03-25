@@ -10,11 +10,11 @@ export default class ExcelToJsonConverter {
 
   public async convert(filePath: string, outputDir: string): Promise<any> {
     const workbook = await this.excelReader.read(filePath);
-    const worksheet = workbook.worksheets[0];
+    const worksheet = workbook.getWorksheet(this.config.dataformat.sheetName);
     const arr: any[] = [];
 
     for (let col = this.config.dataformat.dataStartCol; col <= this.config.dataformat.dataEndCol; col++) {
-      const { recordName, jsonData } = this.dataTransformer.transform(worksheet, col);
+      const { recordName, jsonData } = this.dataTransformer.transform(worksheet, col, this.config.dataformat);
       arr.push(jsonData);
 
       const date = new Date();

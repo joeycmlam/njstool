@@ -2,15 +2,16 @@ import { injectable } from "inversify";
 
 @injectable()
 export default class DataTransformer {
-  private COL_FIELD: number = 1;
-  private COL_TYPE: number = 2;
+
   private DELIMITER: string = '.';
 
-  public transform(worksheet: any, col: number): any {
+  public transform(worksheet: any, col: number, config: any): any {
     const jsonData: any = {};
     let recordName = '';
+    const COL_FIELD: number = config.fieldCol;
+    const COL_TYPE: number = config.typeCol;
 
-    for (let rowNumber = 1; rowNumber <= worksheet.rowCount; rowNumber++) {
+    for (let rowNumber = config.startRow; rowNumber <= worksheet.rowCount; rowNumber++) {
       const row = worksheet.getRow(rowNumber);
       const value = row.getCell(col).value;
 
@@ -20,9 +21,9 @@ export default class DataTransformer {
         recordName = value ?? '';
       } else {
         let target = jsonData;
-        const splitType = row.getCell(this.COL_TYPE)?.value?.toString()?.split(this.DELIMITER);
+        const splitType = row.getCell(COL_TYPE)?.value?.toString()?.split(this.DELIMITER);
         const type = splitType[0];
-        const splitField = row.getCell(this.COL_FIELD)?.value?.toString()?.split(this.DELIMITER);
+        const splitField = row.getCell(COL_FIELD)?.value?.toString()?.split(this.DELIMITER);
 
         splitField?.forEach((part: any, index: Number) => {
           if (splitType?.length === 1) {

@@ -6,7 +6,7 @@
     },
     "dataformat": {
         "sheetName": "Sheet1",
-        "dataStartRow": 2,
+        "startRow": 1,
         "fieldCol": 1,
         "typeCol": 2,
         "dataStartCol": 3,
