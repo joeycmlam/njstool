@@ -20,7 +20,7 @@ async function main() {
     const excelReader = new ExcelReader(); // Fix: Pass the required arguments to the constructor
     const jsonFileWriter = new JsonFileWriter(); // Fix: Pass the required arguments to the constructor
     const dataTransformer = new DataTransformer(); // Fix: Pass the required arguments to the constructor
-    const converter = new ExcelToJsonConverter(excelReader, dataTransformer, jsonFileWriter); // Fix: Pass the required arguments to the constructor
+    const converter = new ExcelToJsonConverter(config, excelReader, dataTransformer, jsonFileWriter); // Fix: Pass the required arguments to the constructor
     const arr: any = await converter.convert(inFile, outFilePath);
     logger.info('jsonData', JSON.stringify(arr, null, 2));
     logger.info('end');
