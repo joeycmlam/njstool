@@ -2,10 +2,11 @@
   "name": "njstool",
   "version": "1.1.0",
   "description": "",
+  "bin": "dist/app/app-playloader/app.playloader.js",
   "scripts": {
     "build": "tsc",
     "prestart": "rm -rf src/app/app-playloader/output/*.json",
-    "start": "ts-node src/app/app-playloader/app.playloader.ts config.01.json",
+    "start": "ts-node src/app/app-playloader/app.playloader.ts",
     "start:ai": "ts-node src/app/app-chatbot/app.chat.ts",
     "start:fee-engine": "ts-node src/app/app-fee-engine/app.fee.engine.ts",
     "start:pdf": "ts-node src/app/app-pdf/app.pdf.ts",
@@ -27,6 +28,9 @@
     "test:cucumber": "c8 --report-dir=coverage-cucumber cucumber-js --config test/cucumber.config.js src/app/**r/test/features/*.feature",
     "merge-reports": "node merge-coverage.js && open coverage/index.html",
     "generate-cucumber-html": "node generate-cucumber-html.js "
+  },
+  "pkg": {
+    "scripts": "dist/app/app-playloader/app.playloader.js"
   },
   "compilerOptons": {
     "outDir": "./dist"

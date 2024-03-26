@@ -22,3 +22,5 @@ npm run generate-cucumber-html  ==> generate cucumber features test report in ht
 HOW TO BUILD
 
 > npm run build
+> npm install -g pkg
+> pkg -t node14-win-x64,node14-macos-x64 .
