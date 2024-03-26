@@ -13,8 +13,10 @@
       "experimentalDecorators": true,
       "emitDecoratorMetadata": true
     },
-    "include": ["./src/app/app-playloader/*.ts"],
+    "include": ["./src/**/*.ts"],
     "exclude": [
+      "src/app/app-fee-engine/",
+      "src/app/lib/dbConnection.ts",
       "node_modules"
     ]
   }

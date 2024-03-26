@@ -10,7 +10,7 @@ export default class DBConnection implements iDatabase {
 
     constructor(connectionConfig: any) {
         this.client = new Client(connectionConfig);
-        this.logger = Logger.getInstance();
+        this.logger = Logger.getLogger();
 
     }
 

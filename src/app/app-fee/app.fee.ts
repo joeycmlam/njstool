@@ -1,4 +1,4 @@
-import { Logger } from "../lib/logger";
+import Logger from "../lib/logger";
 import FeeCalculator, {enmTxnType, Transaction} from "./feeCalculator";
 import {FeeRate, RuleLoader} from "./ruleLoader";
 import TransactionLoader from "./transactionLoader";

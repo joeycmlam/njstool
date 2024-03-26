@@ -16,3 +16,9 @@ npm run test:jest       ==> run *.test.js for unit test
 npm run test:cucumber   ==> run features/*.steps.ts for feature test with line of code coverage by using nyc
 npm run merge-reports   ==> merge jest and cucumber line of code coverage
 npm run generate-cucumber-html  ==> generate cucumber features test report in html format
+
+
+---------------------------------
+HOW TO BUILD
+
+> npm run build

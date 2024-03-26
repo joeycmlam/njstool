@@ -7,7 +7,7 @@ import Logger from "../lib/logger";
 
 export default class FeedGenerator {
 
-  private logger: Logger = Logger.getInstance();
+  private logger = Logger.getLogger();
 
   constructor(private db: DBConnection, private config: FeedConfig) {}
 

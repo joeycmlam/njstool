@@ -1,5 +1,6 @@
 
 import {Workbook} from "exceljs";
+
 export default class excelHelper {
     public  static async readWorkbookContent(filePath: string, worksheetName: string): Promise<string[][]> {
         const workbook = new Workbook();
@@ -8,13 +9,15 @@ export default class excelHelper {
         const worksheet = workbook.getWorksheet(worksheetName);
         const content: string[][] = [];
 
-        worksheet.eachRow((row, rowIndex) => {
-            const rowData: string[] = [];
-            row.eachCell((cell, cellIndex) => {
-                rowData.push(cell.value?.toString() || '');
+        if (worksheet) {
+            worksheet.eachRow((row, rowIndex) => {
+                const rowData: string[] = [];
+                row.eachCell((cell, cellIndex) => {
+                    rowData.push(cell.value?.toString() || '');
+                });
+                content.push(rowData);
             });
-            content.push(rowData);
-        });
+        }
 
         return content;
     }

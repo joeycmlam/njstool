@@ -2,7 +2,6 @@
   "name": "njstool",
   "version": "1.1.0",
   "description": "",
-  "dist": "app/app-playloader/app.playloader.ts",
   "scripts": {
     "build": "tsc",
     "prestart": "rm -rf src/app/app-playloader/output/*.json",
