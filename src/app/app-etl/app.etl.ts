@@ -12,12 +12,11 @@ class EtlRunner {
     private accountConfig: FileProcessorConfig;
     private holdingConfig: FileProcessorConfig;
     private dbConfig: DatabaseConfig
-    private logger: Logger;
+    private logger = Logger.getLogger();
 
     constructor(appConfig: AppEtlConfig, dbConfig: DatabaseConfig, accountConfig: FileProcessorConfig, holdingConfig: FileProcessorConfig) {
         this.accountConfig = accountConfig;
         this.holdingConfig = holdingConfig;
-        this.logger = Logger.getInstance();
         this.dbConfig = dbConfig;
     }
 

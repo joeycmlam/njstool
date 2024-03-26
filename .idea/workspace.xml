@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="enhance ETL job" />
+    <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="enhance ETL job">
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -261,29 +263,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Cucumber.js.playload.feature">
-    <configuration name="swagger-fee-engine.yaml" type="SwaggerCodegen" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
-      <option name="allowRunningInParallel" value="false" />
-      <option name="customTemplatesPath" value="" />
-      <option name="envs">
-        <map />
-      </option>
-      <option name="generateToPath" value="$PROJECT_DIR$/gen" />
-      <option name="generationParameters">
-        <list />
-      </option>
-      <option name="generatorType" value="OPENAPI_GENERATOR_V6" />
-      <option name="jdkPath" value="$APPLICATION_HOME_DIR$/jbr/Contents/Home/bin/java" />
-      <option name="language" value="typescript-node" />
-      <option name="passParentEnvs" value="true" />
-      <option name="programParameters" />
-      <option name="projectPathOnTarget" />
-      <option name="selectedOptions">
-        <list />
-      </option>
-      <option name="specificationPath" value="$PROJECT_DIR$/src/app/app-fee-engine/swagger-fee-engine.yaml" />
-      <option name="workingDirectory" value="$PROJECT_DIR$/src/app/app-fee-engine" />
-      <method v="2" />
-    </configuration>
     <configuration name="Scenario Outline: Validate Excel to JSON conv..." type="cucumber.js" factoryName="Cucumber.js" temporary="true">
       <option name="myFilePath" value="$PROJECT_DIR$/src/app/app-playloader/test/features/playload.feature" />
       <option name="myNameFilter" value="^Validate Excel to JSON conversion$" />
@@ -311,6 +290,16 @@
           <option name="sourceFilePath" value="docker-compose.yml" />
         </settings>
       </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
       <method v="2" />
     </configuration>
     <configuration name="start:etl" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -349,17 +338,17 @@
       <item itemvalue="Cucumber.js.playload.feature" />
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       <item itemvalue="npm.test" />
+      <item itemvalue="npm.start" />
       <item itemvalue="npm.start:etl" />
       <item itemvalue="npm.start:fee-engine" />
-      <item itemvalue="OpenAPI/Swagger Code Generator.swagger-fee-engine.yaml" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start" />
         <item itemvalue="Cucumber.js.playload.feature" />
         <item itemvalue="Cucumber.js.Scenario Outline: Validate Excel to JSON conv..." />
         <item itemvalue="npm.start:etl" />
         <item itemvalue="npm.start:fee-engine" />
-        <item itemvalue="OpenAPI/Swagger Code Generator.swagger-fee-engine.yaml" />
       </list>
     </recent_temporary>
   </component>
@@ -430,6 +419,7 @@
       <workItem from="1711174085730" duration="1000" />
       <workItem from="1711288920791" duration="614000" />
       <workItem from="1711292977094" duration="162000" />
+      <workItem from="1711443593939" duration="158000" />
     </task>
     <task id="LOCAL-00082" summary="improvver logger">
       <created>1684152075146</created>

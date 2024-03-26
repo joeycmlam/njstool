@@ -1,4 +1,4 @@
-import { Logger } from '../lib/logger';
+import Logger from '../lib/logger';
 import path from 'path';
 import ExcelToJsonConverter from './ExcelToJsonConverter';
 import JsonFileWriter from './JsonFileWriter';

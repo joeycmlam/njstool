@@ -6,7 +6,7 @@ import { injectable, inject } from 'inversify';
 import 'reflect-metadata'
 
 
-export class Logger {
+export default class Logger {
   private static instance: Logger;
   private static config: { filename?: string, level?: string };
 

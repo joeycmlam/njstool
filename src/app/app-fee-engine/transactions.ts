@@ -1,7 +1,7 @@
 import { injectable } from 'inversify';
 import { createReadStream } from 'fs';
 import csv from 'csv-parser';
-import { InvestmentTransaction, enumTnxType } from './InvestmentTransaction';
+import { InvestmentTransaction } from './typeFeeEngine';
 
 @injectable()
 class TransactionReader {

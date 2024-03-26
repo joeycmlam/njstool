@@ -25,7 +25,7 @@ export class ETLProcesser {
         this.config = config;
         this.uploader = uploader;
         this.dataReader = dataReader;
-        this.logger = Logger.getInstance();
+        this.logger = Logger.getLogger();
         this.status = 0;
         this.totalRecord = 0;
     }

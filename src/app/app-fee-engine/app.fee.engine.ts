@@ -2,13 +2,14 @@ import DSCCalculator, { DSCSchedule } from "./DSCCalculator";
 import { InvestmentTransaction } from "./typeFeeEngine";
 import { enumTnxType } from "./enumFeeEngine";
 import FIFOHoldingPeriodCalculator from "./FIFOHoldingPeriodCalculator";
-import { Logger } from "../lib/logger";
+import  Logger from "../lib/logger";
 import { Container, injectable } from "inversify";
 
 @injectable()
 class app {
     private logger = Logger.getLogger();
 
+    
     constructor() {
     }
 
