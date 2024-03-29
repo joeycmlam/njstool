@@ -1,6 +1,6 @@
 {
   "name": "njstool",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "",
   "bin": "dist/app/app-playloader/app.playloader.js",
   "scripts": {
@@ -38,6 +38,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "include": ["./src/**/*.ts"],
+  "exclude": [
+    "src/app/app-fee-engine/",
+    "src/app/lib/dbConnection.ts"
+  ],
   "dependencies": {
     "@nestjs/cli": "^9.4.2",
     "@types/js-yaml": "^4.0.5",
