@@ -4,110 +4,315 @@
     "elements": [
       {
         "description": "",
-        "id": "excel-to-json-conversion;validate-excel-to-json-conversion",
-        "keyword": "Scenario Outline",
-        "line": 10,
-        "name": "Validate Excel to JSON conversion",
+        "id": "test-rest-api;test-health-check-api",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Test health check API",
         "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 374854
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 26931
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 3715894
+            }
+          },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 4,
-            "name": "I have an Excel file \"sample.01.xlsx\"",
+            "line": 5,
+            "name": "the application is running at \"http://localhost:3000\"",
             "match": {
-              "location": "src/app/app-playloader/test/features/step_definitions/playload.steps.ts:40"
+              "location": "test/test-rest/features/step_definitions/rest.steps.ts:58"
             },
             "result": {
               "status": "passed",
-              "duration": 415626
+              "duration": 297813
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 5,
-            "name": "I convert the Excel file to JSON",
+            "line": 6,
+            "name": "I make a GET request to \"/health\"",
             "match": {
-              "location": "src/app/app-playloader/test/features/step_definitions/playload.steps.ts:43"
+              "location": "test/test-rest/features/step_definitions/rest.steps.ts:61"
             },
             "result": {
               "status": "passed",
-              "duration": 38447453
+              "duration": 20018713
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 6,
-            "name": "the JSON output should match the expected JSON file \"expected.01.json\"",
+            "line": 7,
+            "name": "the response status code is \"200\"",
             "match": {
-              "location": "src/app/app-playloader/test/features/step_definitions/playload.steps.ts:53"
+              "location": "test/test-rest/features/step_definitions/rest.steps.ts:64"
             },
             "result": {
               "status": "passed",
-              "duration": 867805
+              "duration": 82382
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "the response version is \"1.0.0\"",
+            "match": {
+              "location": "test/test-rest/features/step_definitions/rest.steps.ts:67"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 53113
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 247223
             }
           }
         ],
-        "tags": [],
+        "tags": [
+          {
+            "name": "@restFeature",
+            "line": 1
+          }
+        ],
         "type": "scenario"
       },
       {
         "description": "",
-        "id": "excel-to-json-conversion;validate-excel-to-json-conversion",
-        "keyword": "Scenario Outline",
-        "line": 11,
-        "name": "Validate Excel to JSON conversion",
+        "id": "test-rest-api;test-get-json-file",
+        "keyword": "Scenario Template",
+        "line": 19,
+        "name": "Test get json file",
         "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 8621
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 6928
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 180327
+            }
+          },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 4,
-            "name": "I have an Excel file \"sample.02.xlsx\"",
+            "line": 12,
+            "name": "the application is running at \"http://localhost:3000\"",
             "match": {
-              "location": "src/app/app-playloader/test/features/step_definitions/playload.steps.ts:40"
+              "location": "test/test-rest/features/step_definitions/rest.steps.ts:58"
             },
             "result": {
               "status": "passed",
-              "duration": 38954
+              "duration": 83137
             }
           },
           {
             "arguments": [],
             "keyword": "When ",
-            "line": 5,
-            "name": "I convert the Excel file to JSON",
+            "line": 13,
+            "name": "I make a GET request to \"/files\" \"test.json\"",
             "match": {
-              "location": "src/app/app-playloader/test/features/step_definitions/playload.steps.ts:43"
+              "location": "test/test-rest/features/step_definitions/rest.steps.ts:70"
             },
             "result": {
               "status": "passed",
-              "duration": 14512540
+              "duration": 6175473
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 6,
-            "name": "the JSON output should match the expected JSON file \"expected.02.json\"",
+            "line": 14,
+            "name": "the response status code is \"200\"",
             "match": {
-              "location": "src/app/app-playloader/test/features/step_definitions/playload.steps.ts:53"
+              "location": "test/test-rest/features/step_definitions/rest.steps.ts:64"
             },
             "result": {
               "status": "passed",
-              "duration": 219328
+              "duration": 54919
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "the response body is \"test.expected.json\"",
+            "match": {
+              "location": "test/test-rest/features/step_definitions/rest.steps.ts:73"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1993941
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 121160
             }
           }
         ],
-        "tags": [],
+        "tags": [
+          {
+            "name": "@restFeature",
+            "line": 1
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "test-rest-api;test-get-json-file",
+        "keyword": "Scenario Template",
+        "line": 20,
+        "name": "Test get json file",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 8074
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 6202
+            }
+          },
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 165966
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "the application is running at \"http://localhost:3000\"",
+            "match": {
+              "location": "test/test-rest/features/step_definitions/rest.steps.ts:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 83944
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I make a GET request to \"/files\" \"test2level.json\"",
+            "match": {
+              "location": "test/test-rest/features/step_definitions/rest.steps.ts:70"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2130118
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "the response status code is \"200\"",
+            "match": {
+              "location": "test/test-rest/features/step_definitions/rest.steps.ts:64"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 47359
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "the response body is \"test2level.expected.json\"",
+            "match": {
+              "location": "test/test-rest/features/step_definitions/rest.steps.ts:73"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 800544
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 114672
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@restFeature",
+            "line": 1
+          }
+        ],
         "type": "scenario"
       }
     ],
-    "id": "excel-to-json-conversion",
-    "line": 1,
+    "id": "test-rest-api",
+    "line": 2,
     "keyword": "Feature",
-    "name": "Excel to JSON conversion",
-    "tags": [],
-    "uri": "src/app/app-playloader/test/features/playload.feature"
+    "name": "Test REST API",
+    "tags": [
+      {
+        "name": "@restFeature",
+        "line": 1
+      }
+    ],
+    "uri": "test/test-rest/features/rest.feature"
   }
 ]

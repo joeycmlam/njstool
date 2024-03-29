@@ -1,8 +1,8 @@
-import {Given, When, Then, BeforeAll, AfterAll, After, Before} from '@cucumber/cucumber';
-import axios, {AxiosResponse} from 'axios';
+import { Given, When, Then, After, Before } from '@cucumber/cucumber';
+import axios, { AxiosResponse } from 'axios';
 import * as assert from 'assert';
-import {Server} from 'http';
-import {instance} from '../../../../src/app/app-rest/app.rest';
+import { Server } from 'http';
+import { instance } from '../../../../src/app/app-rest/app.rest';
 import FileHelper from "../../../../src/app/lib/fileHelper";
 import * as path from "path";
 

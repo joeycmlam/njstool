@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="enhance ETL job">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coverage-cucumber/cucumber-report.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage-cucumber/cucumber-report.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/cucumber.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/cucumber.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test-rest/features/step_definitions/rest.steps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-rest/features/step_definitions/rest.steps.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -262,7 +264,7 @@
       <recent name="$PROJECT_DIR$/src/app/app-mask" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber.js.playload.feature">
+  <component name="RunManager" selected="npm.test:cucumber:rest">
     <configuration name="Scenario Outline: Validate Excel to JSON conv..." type="cucumber.js" factoryName="Cucumber.js" temporary="true">
       <option name="myFilePath" value="$PROJECT_DIR$/src/app/app-playloader/test/features/playload.feature" />
       <option name="myNameFilter" value="^Validate Excel to JSON conversion$" />
@@ -302,31 +304,31 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="start:etl" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start:etl" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="start:fee-engine" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start:fee-engine" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <configuration name="test" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
         <script value="test" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="test:cucumber:playload" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test:cucumber:playload" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="test:cucumber:rest" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test:cucumber:rest" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -338,17 +340,17 @@
       <item itemvalue="Cucumber.js.playload.feature" />
       <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       <item itemvalue="npm.test" />
+      <item itemvalue="npm.test:cucumber:playload" />
+      <item itemvalue="npm.test:cucumber:rest" />
       <item itemvalue="npm.start" />
-      <item itemvalue="npm.start:etl" />
-      <item itemvalue="npm.start:fee-engine" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.test:cucumber:rest" />
+        <item itemvalue="npm.test:cucumber:playload" />
         <item itemvalue="npm.start" />
         <item itemvalue="Cucumber.js.playload.feature" />
         <item itemvalue="Cucumber.js.Scenario Outline: Validate Excel to JSON conv..." />
-        <item itemvalue="npm.start:etl" />
-        <item itemvalue="npm.start:fee-engine" />
       </list>
     </recent_temporary>
   </component>
@@ -420,6 +422,7 @@
       <workItem from="1711288920791" duration="614000" />
       <workItem from="1711292977094" duration="162000" />
       <workItem from="1711443593939" duration="158000" />
+      <workItem from="1711732183464" duration="86000" />
     </task>
     <task id="LOCAL-00082" summary="improvver logger">
       <created>1684152075146</created>
@@ -841,7 +844,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/app-json/jsonHelper.ts</url>
-          <line>16</line>
+          <line>19</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
