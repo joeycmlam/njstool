@@ -42,7 +42,6 @@ When('I convert the Excel file to JSON', async function () {
 Then('the JSON output should match the expected JSON file {string}', function (expectedJsonFile:string) {
   const fileName: string = path.join(config.expected.path, expectedJsonFile);
   const expectedJson = JSON.parse(fs.readFileSync(fileName, 'utf8'));
-  console.log('actualResult', JSON.stringify(actualResult));
   assert.deepStrictEqual(actualResult.jsonData, expectedJson);
 });
 

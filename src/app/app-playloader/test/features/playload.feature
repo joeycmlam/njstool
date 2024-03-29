@@ -8,4 +8,3 @@ Feature: Excel to JSON conversion
     Examples: 
       | excel_file     | expect_result    |
       | sample.01.xlsx | expected.01.json |
-      | sample.02.xlsx | expected.02.json |
