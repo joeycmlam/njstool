@@ -19,7 +19,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 416560
+              "duration": 415626
             }
           },
           {
@@ -32,7 +32,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 39545876
+              "duration": 38447453
             }
           },
           {
@@ -45,7 +45,57 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1433047
+              "duration": 867805
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "excel-to-json-conversion;validate-excel-to-json-conversion",
+        "keyword": "Scenario Outline",
+        "line": 11,
+        "name": "Validate Excel to JSON conversion",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I have an Excel file \"sample.02.xlsx\"",
+            "match": {
+              "location": "src/app/app-playloader/test/features/step_definitions/playload.steps.ts:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 38954
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I convert the Excel file to JSON",
+            "match": {
+              "location": "src/app/app-playloader/test/features/step_definitions/playload.steps.ts:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14512540
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "the JSON output should match the expected JSON file \"expected.02.json\"",
+            "match": {
+              "location": "src/app/app-playloader/test/features/step_definitions/playload.steps.ts:53"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 219328
             }
           }
         ],
