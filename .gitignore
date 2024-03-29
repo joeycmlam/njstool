@@ -19,7 +19,6 @@ coverage-cucumber/app-chatbot/
 coverage-cucumber/app-etl/  
 coverage-cucumber/app-fee/  
 coverage-jest/
-data/
 output/
 
 src/app/*/config.ts

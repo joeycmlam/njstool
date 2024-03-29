@@ -19,7 +19,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 387341
+              "duration": 427943
             }
           },
           {
@@ -32,7 +32,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 42905361
+              "duration": 41221483
             }
           },
           {
@@ -44,8 +44,9 @@
               "location": "src/app/app-playloader/test/features/step_definitions/playload.steps.ts:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 1572921
+              "status": "failed",
+              "duration": 7913978,
+              "error_message": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n\u001b[32m+ actual\u001b[39m \u001b[31m- expected\u001b[39m \u001b[34m...\u001b[39m Lines skipped\n\n  {\n    address: {\n\u001b[34m...\u001b[39m\n      lastname: 'Doe'\n    },\n\u001b[32m+\u001b[39m   category: {\n\u001b[32m+\u001b[39m     '1': 'Technology',\n\u001b[32m+\u001b[39m     '2': 'Non-Fiction'\n\u001b[32m+\u001b[39m   },\n\u001b[32m+\u001b[39m   id: 87654321,\n\u001b[31m-\u001b[39m   category: [\n\u001b[31m-\u001b[39m     'Technology',\n\u001b[31m-\u001b[39m     'Non-Fiction'\n\u001b[31m-\u001b[39m   ],\n\u001b[31m-\u001b[39m   id: '87654321',\n    isbn: '123-456-222'\n  }\n    + expected - actual\n\n       \"author\": {\n         \"firstname\": \"Jane\"\n         \"lastname\": \"Doe\"\n       }\n    -  \"category\": {\n    -    \"1\": \"Technology\"\n    -    \"2\": \"Non-Fiction\"\n    -  }\n    -  \"id\": 87654321\n    +  \"category\": [\n    +    \"Technology\"\n    +    \"Non-Fiction\"\n    +  ]\n    +  \"id\": \"87654321\"\n       \"isbn\": \"123-456-222\"\n     }\n\n    at World.<anonymous> (/Users/joeylam/repo/njs/njstool/src/app/app-playloader/test/features/step_definitions/playload.steps.ts:57:22)"
             }
           }
         ],
@@ -69,7 +70,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 50946
+              "duration": 51867
             }
           },
           {
@@ -82,7 +83,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 18809394
+              "duration": 13171507
             }
           },
           {
@@ -94,8 +95,9 @@
               "location": "src/app/app-playloader/test/features/step_definitions/playload.steps.ts:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 320880
+              "status": "failed",
+              "duration": 1305211,
+              "error_message": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n\u001b[32m+ actual\u001b[39m \u001b[31m- expected\u001b[39m \u001b[34m...\u001b[39m Lines skipped\n\n  {\n    address: {\n\u001b[34m...\u001b[39m\n      lastname: 'Shawn'\n    },\n\u001b[32m+\u001b[39m   category: {\n\u001b[32m+\u001b[39m     '1': 'Non-Fiction'\n\u001b[32m+\u001b[39m   },\n\u001b[32m+\u001b[39m   id: 12345678,\n\u001b[31m-\u001b[39m   category: [\n\u001b[31m-\u001b[39m     'Non-Fiction'\n\u001b[31m-\u001b[39m   ],\n\u001b[31m-\u001b[39m   id: '12345678',\n    isbn: '234-456-2210',\n    issue: 'US'\n  }\n    + expected - actual\n\n       \"author\": {\n         \"firstname\": \"Peter\"\n         \"lastname\": \"Shawn\"\n       }\n    -  \"category\": {\n    -    \"1\": \"Non-Fiction\"\n    -  }\n    -  \"id\": 12345678\n    +  \"category\": [\n    +    \"Non-Fiction\"\n    +  ]\n    +  \"id\": \"12345678\"\n       \"isbn\": \"234-456-2210\"\n       \"issue\": \"US\"\n     }\n\n    at World.<anonymous> (/Users/joeylam/repo/njs/njstool/src/app/app-playloader/test/features/step_definitions/playload.steps.ts:57:22)"
             }
           }
         ],
