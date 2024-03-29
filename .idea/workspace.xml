@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="enhance ETL job">
-      <change beforePath="$PROJECT_DIR$/coverage-cucumber/cucumber-report.json" beforeDir="false" afterPath="$PROJECT_DIR$/coverage-cucumber/cucumber-report.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/cucumber.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/cucumber.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test-rest/features/step_definitions/rest.steps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/test/test-rest/features/step_definitions/rest.steps.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -423,6 +421,7 @@
       <workItem from="1711292977094" duration="162000" />
       <workItem from="1711443593939" duration="158000" />
       <workItem from="1711732183464" duration="86000" />
+      <workItem from="1711733604285" duration="179000" />
     </task>
     <task id="LOCAL-00082" summary="improvver logger">
       <created>1684152075146</created>
@@ -767,7 +766,7 @@
       <option name="project" value="LOCAL" />
       <updated>1688846655959</updated>
     </task>
-    <option name="localTasksCounter" value="132" />
+    <option name="localTasksCounter" value="133" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -802,7 +801,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="reflector to change tradeDate from string to Date" />
     <MESSAGE value="new function" />
     <MESSAGE value="add new test cases." />
     <MESSAGE value="reflector for performance." />
@@ -827,7 +825,8 @@
     <MESSAGE value="new jest by copilot" />
     <MESSAGE value="add cucumber test" />
     <MESSAGE value="enhance ETL job" />
-    <option name="LAST_COMMIT_MESSAGE" value="enhance ETL job" />
+    <MESSAGE value="change ignore file list" />
+    <option name="LAST_COMMIT_MESSAGE" value="change ignore file list" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
