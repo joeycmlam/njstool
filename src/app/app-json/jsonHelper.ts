@@ -17,7 +17,8 @@ export default class JsonHelper {
     }
 
     public async processJsonfile(fileName: string) {
-        this.inFileName = fileName;
+        const sanitizedFileName = sanitize(this.inFileName);
+        this.inFileName = sanitizedFileName;
         try {
             // Check if the file exists
             await fs.access(this.inFileName);
