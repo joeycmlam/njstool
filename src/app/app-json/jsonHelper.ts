@@ -1,6 +1,6 @@
+import { Workbook, Worksheet } from "exceljs";
 import * as fs from 'fs/promises';
-import {Workbook, Worksheet} from "exceljs";
-
+import sanitize from 'sanitize-filename';
 
 export default class JsonHelper {
 
@@ -37,7 +37,8 @@ export default class JsonHelper {
     }
 
     private async readJson(): Promise<void> {
-        const context = await fs.readFile(this.inFileName, 'utf8');
+        const sanitizedFileName = sanitize(this.inFileName);
+        const context = await fs.readFile(sanitizedFileName, 'utf8');
         this.data = await JSON.parse(context);
         console.log(`row count: [${this.data.length}]`)
     }

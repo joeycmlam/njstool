@@ -38,7 +38,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "include": ["./src/**/*.ts"],
+  "include": [
+    "./src/**/*.ts"
+  ],
   "exclude": [
     "src/app/app-fee-engine/",
     "src/app/lib/dbConnection.ts"
@@ -67,6 +69,7 @@
     "pg-promise": "^11.4.3",
     "redact-pii": "^3.4.0",
     "reflect-metadata": "^0.1.14",
+    "sanitize-filename": "^1.6.3",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.0.3",
