@@ -4,13 +4,16 @@ import {Workbook, Worksheet} from "exceljs";
 
 export default class JsonHelper {
 
-    private workbook = new Workbook();
-    private data: any[] = [];
-    private inFileName: string = '';
-    private outFileName: string = '';
+    private workbook: Workbook;
+    private data: any[];
+    private inFileName: string;
+    private outFileName: string;
 
     constructor() {
-
+        this.workbook = new Workbook();
+        this.data = [];
+        this.inFileName = '';
+        this.outFileName = '';
     }
 
     public async processJsonfile(fileName: string) {
