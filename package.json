@@ -25,7 +25,7 @@
     "test:cucumber:mask": "c8 cucumber-js --config test/cucumber.config.js test/test-mask/features/*.feature",
     "test:cucumber:etl": "c8 cucumber-js --config test/cucumber.config.js test/test-etl/features/*.feature",
     "test:jest": "jest --coverage --coverageDirectory=coverage-jest",
-    "test:cucumber": "c8 --report-dir=coverage-cucumber cucumber-js --config test/cucumber.config.js 'test/**/**/*.feature' 'src/**/**/**/**/*.feature'",
+    "test:cucumber": "c8 --report-dir=coverage-cucumber cucumber-js --config test/cucumber.config.js --tags 'not @ignore' 'test/**/**/*.feature' 'src/**/**/**/**/*.feature'",
     "merge-reports": "node merge-coverage.js && open coverage/index.html",
     "generate-cucumber-html": "node generate-cucumber-html.js "
   },

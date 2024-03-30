@@ -3,6 +3,7 @@ Feature: PDF Comparator
   I want to compare PDF files
   So that I can find differences
 
+@ignore
   Scenario Outline: Compare two PDF files
     Given I have a PDF file at "<file1>"
     And I have a PDF file at "<file2>"

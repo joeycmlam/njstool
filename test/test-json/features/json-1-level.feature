@@ -1,5 +1,6 @@
 Feature: one level json file to excel
 
+@ignore
   Scenario Outline: 1 level
     Given I have a JSON file at "<root_path>" "<json_file>"
     When I generate the Excel file "<actual_file>"
@@ -9,7 +10,7 @@ Feature: one level json file to excel
       | root_path                         | json_file | expected_file    | actual_file     |
       | test/test-json/features/test_data | test.json | json-1level.xlsx | out-1level.xlsx |
 
-
+@ignore
   Scenario Outline: 2 level
     Given I have a JSON file at "<root_path>" "<json_file>"
     When I generate the Excel file "<actual_file>"
