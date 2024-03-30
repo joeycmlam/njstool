@@ -9,7 +9,7 @@ let excelFile: string;
 let actualResult: any;
 let config = {
   "source": {
-      "inputPath": "/Users/joeylam/repo/njs/njstool/src/app/app-playloader/data",
+      "inputPath": "./../../../data",
       "inputFile": "sample.xlsx"
   },
   "dataformat": {
@@ -31,7 +31,8 @@ Given('I have an Excel file {string}', function (givenExcelFile: string) {
 
 
 When('I convert the Excel file to JSON', async function () {
-  const fileName = path.join(config.source.inputPath, excelFile);
+  const folderPath = path.join(__dirname, config.source.inputPath);
+  const fileName = path.join(folderPath, excelFile);
   const excelReader = new ExcelReader();
   const workbook = await excelReader.read(fileName);
   const worksheet = workbook.worksheets[0];
