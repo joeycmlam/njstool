@@ -9,7 +9,7 @@ let excelFile: string;
 let actualResult: any;
 let config = {
   "source": {
-      "inputPath": "./../../../data",
+      "inputPath": "../../../data",
       "inputFile": "sample.xlsx"
   },
   "dataformat": {
@@ -21,27 +21,28 @@ let config = {
       "dataEndCol": 4
   },
   "expected": {
-      "path": "/Users/joeylam/repo/njs/njstool/src/app/app-playloader/test/expected"
+      "path": "../../../test/expected"
   }    
 }
 
 Given('I have an Excel file {string}', function (givenExcelFile: string) {
-  excelFile = givenExcelFile;
+  const folderPath = path.join(__dirname, config.source.inputPath);
+  excelFile = path.join(folderPath, givenExcelFile);
 });
 
 
 When('I convert the Excel file to JSON', async function () {
-  const folderPath = path.join(__dirname, config.source.inputPath);
-  const fileName = path.join(folderPath, excelFile);
+
   const excelReader = new ExcelReader();
-  const workbook = await excelReader.read(fileName);
+  const workbook = await excelReader.read(excelFile);
   const worksheet = workbook.worksheets[0];
   const dataTransformer = new DataTransformer();
   actualResult = await dataTransformer.transform(worksheet, config.dataformat.dataStartCol, config.dataformat);
 });
 
 Then('the JSON output should match the expected JSON file {string}', function (expectedJsonFile:string) {
-  const fileName: string = path.join(config.expected.path, expectedJsonFile);
+  const outfolderPath = path.join(__dirname, config.expected.path);
+  const fileName: string = path.join(outfolderPath, expectedJsonFile);
   const expectedJson = JSON.parse(fs.readFileSync(fileName, 'utf8'));
   assert.deepStrictEqual(actualResult.jsonData, expectedJson);
 });
