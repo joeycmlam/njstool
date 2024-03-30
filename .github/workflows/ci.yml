@@ -18,11 +18,14 @@ jobs:
       run: npm ci
 
     - name: Run Jest tests
-      run: npm run test:cucumber
+      run: npm run test:jest
 
     - name: Run Cucumber tests
       run: npm run test:cucumber
 
+    - name: merge both jest and cucumber result
+      run: npm run merge-reports
+      
     - name: Generate Cucumber HTML report
       run: npm run generate-cucumber-html
 
@@ -31,6 +34,12 @@ jobs:
       with:
         name: cucumber-report
         path: coverage-cucumber/cucumber.html
+
+    - name: Upload line of coverage HTML report
+      uses: actions/upload-artifact@v2
+      with:
+        name: coverage-report
+        path: coverage/index.html
         
     - name: Publish Test Results
       uses: mikepenz/action-junit-report@v2
