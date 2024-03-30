@@ -20,6 +20,9 @@ jobs:
     - name: Run Cucumber tests
       run: npm run test:cucumber
 
+    - name: Generate Cucumber HTML report
+      run: npm run generate-cucumber-html
+      
     - name: Publish Test Results
       uses: mikepenz/action-junit-report@v2
       if: always()
