@@ -17,6 +17,9 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
+    - name: Run Jest tests
+      run: npm run test:cucumber
+
     - name: Run Cucumber tests
       run: npm run test:cucumber
 
