@@ -22,7 +22,13 @@ jobs:
 
     - name: Generate Cucumber HTML report
       run: npm run generate-cucumber-html
-      
+
+    - name: Upload Cucumber HTML report
+      uses: actions/upload-artifact@v2
+      with:
+        name: cucumber-report
+        path: coverage-cucumber/cucumber.html
+        
     - name: Publish Test Results
       uses: mikepenz/action-junit-report@v2
       if: always()
