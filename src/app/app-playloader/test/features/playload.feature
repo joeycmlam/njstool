@@ -9,3 +9,4 @@ Feature: Excel to JSON conversion
       | excel_file     | expect_result    |
       | sample.01.xlsx | expected.01.json |
       | sample.02.xlsx | expected.02.json |
+      | sample.03.xlsx | expected.03.json |
