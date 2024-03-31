@@ -21,10 +21,8 @@ jobs:
       run: npm run test
 
     - name: merge both jest and cucumber result
-      run: npm run merge-reports
+      run: npm run test:reports
       
-    - name: Generate Cucumber HTML report
-      run: npm run generate-cucumber-html
 
     - name: Upload Cucumber HTML report
       uses: actions/upload-artifact@v2
