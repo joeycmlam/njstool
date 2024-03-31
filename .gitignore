@@ -1,4 +1,5 @@
 # ignore env files
+env
 .env.local
 
 # ignore build files
