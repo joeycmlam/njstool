@@ -3,7 +3,7 @@ module.exports = {
     testEnvironment: 'node',
     collectCoverageFrom: [
         "src/app/**/*.{ts}",
-        "!src/**/**/**/**/",
+        "!src/app/**/test/features/step_definitions/*.{ts}",
         "!test/**/**/"
       ]
 };
