@@ -1,13 +1,13 @@
 import { Given, When, Then } from '@cucumber/cucumber';
-import { ETLProcesser, FileProcessorConfig } from "../../../../src/app/app-etl/etlProcesser";
-import { AppEtlConfig } from "../../../../src/app/app-etl/appEtlConfig";
-import ExcelReader from "../../../../src/app/lib/excelReader";
+import { ETLProcesser, FileProcessorConfig } from "../../../etlProcesser";
+import { AppEtlConfig } from "../../../appEtlConfig";
+import ExcelReader from "../../../../lib/excelReader";
 import assert from 'assert';
-import { ConfigHelper } from '../../../../src/app/lib/configHelper';
-import { accountConfig } from "../../../../src/app/app-etl/accountConfig";
-import { holdingConfig } from "../../../../src/app/app-etl/holdingConfig";
-import DBConnection from '../../../../src/app/lib/dbConnection';
-import DatabaseConfig from '../../../../src/app/lib/configDatabase';
+import { ConfigHelper } from '../../../../lib/configHelper';
+import { accountConfig } from "../../../accountConfig";
+import { holdingConfig } from "../../../holdingConfig";
+import DBConnection from '../../../../lib/dbConnection';
+import DatabaseConfig from '../../../../lib/configDatabase';
 
 let datProcessor: ETLProcesser;
 let actualStatus: number;
