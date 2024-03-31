@@ -2,8 +2,7 @@ import * as log4js from 'log4js';
 import path from 'path';
 import fs from 'fs';
 import yaml from 'js-yaml';
-import { injectable, inject } from 'inversify';
-import 'reflect-metadata'
+import 'reflect-metadata';
 
 
 export default class Logger {
