@@ -27,8 +27,8 @@ Given('the interface file {string} and {string}', async function (dataFile: stri
   const dbConfig = dbConfigHelper.getConfig() as DatabaseConfig;
 
   // Initialize EtlProcessor with the data file
-
-  const dataReader = new ExcelReader(dataFile);
+  const dataFullFileName = path.join(__dirname, testConfig.dataPath, dataFile);
+  const dataReader = new ExcelReader(dataFullFileName);
   const dataUploader = new DBConnection(dbConfig);
 
   let dataConfig: FileProcessorConfig;
@@ -42,7 +42,6 @@ Given('the interface file {string} and {string}', async function (dataFile: stri
     default:
       return;
   }
-
   dataConfig.fileName = path.join(__dirname, testConfig.dataPath, dataFile);
 
   datProcessor = new ETLProcesser(dataConfig, dataUploader, dataReader);
@@ -52,6 +51,7 @@ Given('the interface file {string} and {string}', async function (dataFile: stri
 When('file arrive', async function () {
   // Process the file
   try {
+   
     await datProcessor.process();
   } catch (error) {
     console.log(error);
