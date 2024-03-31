@@ -1,5 +1,5 @@
-import {iDatabase} from "../app-interface/iETL";
-import {iDataReader} from "../app-interface/iETL";
+import { iDatabase } from "../app-interface/iETL";
+import { iDataReader } from "../app-interface/iETL";
 import Logger from "../lib/logger";
 
 export interface FileProcessorConfig {
@@ -20,6 +20,7 @@ export class ETLProcesser {
     private logger;
     private status: number;
     private totalRecord: number;
+    private sourceData: any;
 
     constructor(config: FileProcessorConfig, uploader: iDatabase, dataReader: iDataReader) {
         this.config = config;
@@ -38,11 +39,11 @@ export class ETLProcesser {
         return this.totalRecord;
     }
 
-    public async process(): Promise<void> {
-        // const excelReader = new ExcelReader(this.config.fileName);
-        const data = await this.dataReader.extractData();
+    public async process(): Promise<{}> {
 
         try {
+            this.sourceData = await this.dataReader.extractData();
+            this.logger.info(`Number of Record [${this.sourceData.length}] Data extracted from [${this.config.fileName}].`);
             await this.uploader.connect();
 
             if (this.config.truncateTable) {
@@ -51,9 +52,9 @@ export class ETLProcesser {
             }
 
             if (this.config.isBulkUpload) {
-                await this.uploader.bulkUpload(data, this.config.tableName, this.config.columnNames, this.config.bulkMapper);
+                await this.uploader.bulkUpload(this.sourceData, this.config.tableName, this.config.columnNames, this.config.bulkMapper);
             } else {
-                await this.uploader.uploadData(data, this.config.query, this.config.rowMapper);
+                await this.uploader.uploadData(this.sourceData, this.config.query, this.config.rowMapper);
             }
 
             this.logger.info(`Data from [${this.config.fileName}] uploaded to PostgreSQL successfully.`)
@@ -65,7 +66,9 @@ export class ETLProcesser {
         } finally {
             await this.uploader.disconnect();
             this.status= 0;
-            this.totalRecord = data.length;
+            this.totalRecord = this.sourceData.length;
         }
+
+        return {status: this.status, totalRecord: this.totalRecord}
     }
 }
