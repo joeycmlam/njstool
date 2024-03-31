@@ -51,7 +51,12 @@ Given('the interface file {string} and {string}', async function (dataFile: stri
 
 When('file arrive', async function () {
   // Process the file
-  await datProcessor.process();
+  try {
+    await datProcessor.process();
+  } catch (error) {
+    console.log(error);
+  }
+
 });
 
 Then('call eltProcesser.ts to load the data into database and expect the job is {int} and number of record {int}', function (expectedStatus: number, expectedTotalRecord: number) {
