@@ -2,5 +2,5 @@
 version: "1.0"
 dbConfigfile: 'src/app/app-etl/config.db.yaml'
 dataFilePath:
-  accountFile: 'src/app/app-etl/test/test-data/account-data.xlsx'
-  holdingFile: 'src/app/app-etl/test/test-data/holding-data.xlsx'
+  accountFile: 'src/app/app-etl/test/data/account-data.xlsx'
+  holdingFile: 'src/app/app-etl/test/data/holding-data.xlsx'

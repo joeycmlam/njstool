@@ -22,6 +22,9 @@ export default class ExcelReader implements iDataReader{
     public async extractData(sheetIndex = 0): Promise<any[]> {
         try {
             const workbook = await this._readWorkbook();
+            if (workbook === null) {
+                throw new Error('Workbook is null');
+            }
             const sheetName = workbook.SheetNames[sheetIndex];
             const worksheet = workbook.Sheets[sheetName];
             return utils.sheet_to_json(worksheet);
