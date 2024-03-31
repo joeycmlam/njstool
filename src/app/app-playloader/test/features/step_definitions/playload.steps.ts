@@ -7,7 +7,7 @@ import ExcelReader from '../../../ExcelReader';
 
 let excelFile: string;
 let actualResult: any;
-let config = {
+let config  = {
   "source": {
       "inputPath": "../../../data",
       "inputFile": "sample.xlsx"
@@ -23,7 +23,7 @@ let config = {
   "expected": {
       "path": "../../../test/expected"
   }    
-}
+};
 
 Given('I have an Excel file {string}', function (givenExcelFile: string) {
   const folderPath = path.join(__dirname, config.source.inputPath);
