@@ -1,2 +1,2 @@
-level: "debug"
+level: "info"
 filename: log/app.etl
