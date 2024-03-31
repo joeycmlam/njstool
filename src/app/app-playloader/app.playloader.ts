@@ -5,7 +5,7 @@ import JsonFileWriter from './JsonFileWriter';
 import ExcelReader from './ExcelReader';
 import DataTransformer from './DataTransformer';
 import * as fs from 'fs';
-;
+
 
 async function main() {
     const logger = Logger.getLogger();
