@@ -9,14 +9,25 @@ export default class ExcelReader implements iDataReader{
     }
 
     private async _readWorkbook() {
-        const buffer = await readFile(this.fileFullName);
-        return read(buffer, { type: 'buffer' });
+        try {
+            const buffer = await readFile(this.fileFullName);
+            return read(buffer, { type: 'buffer' });
+        } catch {
+            console.error(`Error while reading file: ${this.fileFullName}`);
+            return null;
+        }
+        
     }
 
-    public async extractData(sheetIndex = 0) {
-        const workbook = await this._readWorkbook();
-        const sheetName = workbook.SheetNames[sheetIndex];
-        const worksheet = workbook.Sheets[sheetName];
-        return utils.sheet_to_json(worksheet);
+    public async extractData(sheetIndex = 0): Promise<any[]> {
+        try {
+            const workbook = await this._readWorkbook();
+            const sheetName = workbook.SheetNames[sheetIndex];
+            const worksheet = workbook.Sheets[sheetName];
+            return utils.sheet_to_json(worksheet);
+        } catch (error: any) {
+            console.error(`Error while processing file: ${error.message}`);
+            return [];
+        }
     }
 }

@@ -8,17 +8,19 @@ import { accountConfig } from "../../../accountConfig";
 import { holdingConfig } from "../../../holdingConfig";
 import DBConnection from '../../../../lib/dbConnection';
 import DatabaseConfig from '../../../../lib/configDatabase';
+import path from 'path';
 
 let datProcessor: ETLProcesser;
 let actualStatus: number;
 let actualTotalRecord: number;
+let testConfig = { "dataPath": 'data', "configPath": '../../../'}
 
 Given('the interface file {string} and {string}', async function (dataFile: string, tableName: string) {
-  const configFile = 'src/app/app-etl/config.etl.yaml';
-  const dataConfigFile = 'src/app/app-etl/config.db.yaml';
+  const configFile = path.join(__dirname, testConfig.configPath, 'config.etl.yaml');
+  const dataConfigFile = path.join(__dirname, testConfig.configPath, 'config.db.yaml');
   const configHelper = new ConfigHelper(configFile);
   await configHelper.load();
-  const config = configHelper.getConfig() as AppEtlConfig;
+  // const appConfig = configHelper.getConfig() as AppEtlConfig;
 
   const dbConfigHelper = new ConfigHelper(dataConfigFile);
   await dbConfigHelper.load();
@@ -41,7 +43,7 @@ Given('the interface file {string} and {string}', async function (dataFile: stri
       return;
   }
 
-  dataConfig.fileName = dataFile;
+  dataConfig.fileName = path.join(__dirname, testConfig.dataPath, dataFile);
 
   datProcessor = new ETLProcesser(dataConfig, dataUploader, dataReader);
 
