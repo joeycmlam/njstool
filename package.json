@@ -45,7 +45,8 @@
   ],
   "exclude": [
     "src/app/app-fee-engine/",
-    "src/app/lib/dbConnection.ts"
+    "src/app/lib/dbConnection.ts",
+    "src/app/*/test"
   ],
   "dependencies": {
     "@nestjs/cli": "^9.4.2",
@@ -85,6 +86,7 @@
     "@types/cucumber": "^7.0.0",
     "@types/express": "^4.17.17",
     "@types/jest": "^29.5.1",
+    "@types/lodash": "^4.17.0",
     "@types/mock-fs": "^4.13.1",
     "@types/pdf-parse": "^1.1.4",
     "@types/pg": "^8.6.6",
