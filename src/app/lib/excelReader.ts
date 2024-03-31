@@ -10,6 +10,7 @@ export default class ExcelReader implements iDataReader{
 
     private async _readWorkbook() {
         try {
+            console.log(`Reading file: ${this.fileFullName}`);
             const buffer = await readFile(this.fileFullName);
             return read(buffer, { type: 'buffer' });
         } catch {
@@ -23,7 +24,7 @@ export default class ExcelReader implements iDataReader{
         try {
             const workbook = await this._readWorkbook();
             if (workbook === null) {
-                throw new Error('Workbook is null');
+                throw new Error(`Workbook [${this.fileFullName}] is null`);
             }
             const sheetName = workbook.SheetNames[sheetIndex];
             const worksheet = workbook.Sheets[sheetName];
