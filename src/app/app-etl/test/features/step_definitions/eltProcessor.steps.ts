@@ -13,7 +13,7 @@ import path from 'path';
 let datProcessor: ETLProcesser;
 let actualStatus: number;
 let actualTotalRecord: number;
-let testConfig = { "dataPath": 'data', "configPath": '../../../'}
+let testConfig = { "dataPath": '../../data', "configPath": '../../../'}
 
 Given('the interface file {string} and {string}', async function (dataFile: string, tableName: string) {
   const configFile = path.join(__dirname, testConfig.configPath, 'config.etl.yaml');
