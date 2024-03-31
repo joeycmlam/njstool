@@ -1,6 +1,7 @@
+import * as fs from 'fs';
+import path from "path";
 import { Given, When, Then } from '@cucumber/cucumber';
 import { ETLProcesser, FileProcessorConfig } from "../../../etlProcesser";
-import { AppEtlConfig } from "../../../appEtlConfig";
 import ExcelReader from "../../../../lib/excelReader";
 import assert from 'assert';
 import { ConfigHelper } from '../../../../lib/configHelper';
@@ -8,7 +9,6 @@ import { accountConfig } from "../../../accountConfig";
 import { holdingConfig } from "../../../holdingConfig";
 import DBConnection from '../../../../lib/dbConnection';
 import DatabaseConfig from '../../../../lib/configDatabase';
-import path from 'path';
 
 let datProcessor: ETLProcesser;
 let actualStatus: number;
@@ -16,20 +16,22 @@ let actualTotalRecord: number;
 let testConfig = { "dataPath": '../../data', "configPath": '../../../'}
 
 Given('the interface file {string} and {string}', async function (dataFile: string, tableName: string) {
-  const configFile = path.join(__dirname, testConfig.configPath, 'config.etl.yaml');
-  const dataConfigFile = path.join(__dirname, testConfig.configPath, 'config.db.yaml');
-  const configHelper = new ConfigHelper(configFile);
-  await configHelper.load();
-  // const appConfig = configHelper.getConfig() as AppEtlConfig;
 
-  const dbConfigHelper = new ConfigHelper(dataConfigFile);
-  await dbConfigHelper.load();
-  const dbConfig = dbConfigHelper.getConfig() as DatabaseConfig;
+  const configFile = path.join(__dirname, '../../../config.json');
+  const config = JSON.parse(fs.readFileSync(configFile, 'utf8'));
+
+  require('dotenv').config({ path: config.envFile });
+  config.database.host = process.env.DB_HOST;
+  config.database.port = process.env.DB_PORT;
+  config.database.database = process.env.DB_NAME;
+  config.database.user = process.env.DB_USER;
+  config.database.password = process.env.DB_PASSWORD;
+
 
   // Initialize EtlProcessor with the data file
   const dataFullFileName = path.join(__dirname, testConfig.dataPath, dataFile);
   const dataReader = new ExcelReader(dataFullFileName);
-  const dataUploader = new DBConnection(dbConfig);
+  const dataUploader = new DBConnection(config.database);
 
   let dataConfig: FileProcessorConfig;
   switch (tableName) {

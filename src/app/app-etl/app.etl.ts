@@ -1,14 +1,12 @@
-import DatabaseConfig from "../lib/configDatabase";
-import { ConfigHelper } from "../lib/configHelper";
-import ExcelReader from "../lib/excelReader";
-import Logger from "../lib/logger";
-import DBConnection from "../lib/dbConnection";
-import { accountConfig } from "./accountConfig";
-import { AppEtlConfig } from "./appEtlConfig";
-import { ETLProcesser, FileProcessorConfig } from "./etlProcesser";
-import { holdingConfig } from "./holdingConfig";
 import * as fs from 'fs';
 import path from "path";
+import DatabaseConfig from "../lib/configDatabase";
+import DBConnection from "../lib/dbConnection";
+import ExcelReader from "../lib/excelReader";
+import Logger from "../lib/logger";
+import { accountConfig } from "./accountConfig";
+import { ETLProcesser, FileProcessorConfig } from "./etlProcesser";
+import { holdingConfig } from "./holdingConfig";
 
 class EtlRunner {
     private accountConfig: FileProcessorConfig;
@@ -43,20 +41,17 @@ class EtlRunner {
     }
 }
 
-(async () => {
-
-    // const configFile = 'src/app/app-etl/config.etl.yaml';
-    // const configHelper = new ConfigHelper(configFile);
-    // configHelper.load();
-    // const config = configHelper.getConfig() as AppEtlConfig;
+async function main() {
 
     const configFile = process.argv[2] || path.join(__dirname, 'config.json');
     const config = JSON.parse(fs.readFileSync(configFile, 'utf8'));
 
-    // const dbConfigHelper = new ConfigHelper(config.dbConfigfile);
-    // dbConfigHelper.load();
-    // const dbConfig = dbConfigHelper.getConfig() as DatabaseConfig;
-
+    require('dotenv').config({ path: config.envFile });
+    config.database.host = process.env.DB_HOST;
+    config.database.port = process.env.DB_PORT;
+    config.database.database = process.env.DB_NAME;
+    config.database.user = process.env.DB_USER;
+    config.database.password = process.env.DB_PASSWORD;
 
     const accConfig = accountConfig;
     accConfig.fileName = config.dataFile.accountFile;
@@ -64,20 +59,8 @@ class EtlRunner {
     const holdConfig = holdingConfig;
     holdConfig.fileName = config.dataFile.holdingFile;
 
-    require('dotenv').config({ path: config.envFile});
-
-    console.log(process.env.DB_HOST); // 'localhost'
-    console.log(process.env.DB_PORT); // '5432'
-    console.log(process.env.DB_NAME); // 'postgres'
-    console.log(process.env.DB_USER); // 'postgres'
-    console.log(process.env.DB_PASSWORD); // 'dbadmin1234'
-
-    config.database.host = process.env.DB_HOST;
-    config.database.port = process.env.DB_PORT;
-    config.database.database = process.env.DB_NAME;
-    config.database.user = process.env.DB_USER;
-    config.database.password = process.env.DB_PASSWORD;
-
     const runner = new EtlRunner(config.database, accountConfig, holdingConfig);
     await runner.run();
-})();
+};
+
+main();

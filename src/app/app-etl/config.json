@@ -1,5 +1,5 @@
 {
-    "envFile": "/Users/joeylam/repo/njs/njstool/src/app/app-etl/.env.local", 
+    "envFile": "/Users/joeylam/repo/njs/njstool/src/app/app-etl/env/.env.local", 
     "log": {
         "level": "info",
         "path": "logs",
