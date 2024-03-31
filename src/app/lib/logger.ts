@@ -41,7 +41,7 @@ export default class Logger {
 
     log4js.configure({
       appenders: {
-        fileAppender: { type: 'dateFile', filename: fileName, pattern: logFilePattern, alwaysIncludePattern: true },
+        fileAppender: { type: 'dateFile', filename: fileName, pattern: logFilePattern, alwaysIncludePattern: true, keepFileExt: true },
         console: { type: 'console' },
       },
       categories: {
