@@ -23,10 +23,10 @@ jobs:
         docker-compose exec -T app npm run test:reports
         docker-compose down
 
-    - name: Copy reports from Docker container
+    - name: Copy reports fro Docker container
       run: |
-        docker cp njstool_app_1:/Users/joeylam/repo/njs/njstool/coverage-cucumber/cucumber.html ./cucumber.html
-        docker cp njstool_app_1:/Users/joeylam/repo/njs/njstool/coverage/ ./coverage/
+        docker cp ./coverage-cucumber/cucumber.html ./cucumber.html
+        docker cp ./coverage/ ./coverage/
       
 
     - name: Upload Cucumber HTML report
