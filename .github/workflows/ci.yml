@@ -20,7 +20,7 @@ jobs:
     - name: Run automated tests
       run: |
         docker-compose up -d
-        docker-compose exec app npm test
+        docker-compose exec -T app npm run test
         docker-compose down
 
     - name: merge both jest and cucumber result
