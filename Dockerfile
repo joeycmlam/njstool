@@ -8,3 +8,5 @@ COPY database ./
 RUN npm install
 
 COPY . .
+
+CMD ["npm", "test"]
