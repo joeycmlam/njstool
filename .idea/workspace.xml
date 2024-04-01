@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="enhance ETL job">
+      <change afterPath="$PROJECT_DIR$/docker-compose.git.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -262,7 +264,7 @@
       <recent name="$PROJECT_DIR$/src/app/app-mask" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.test:cucumber:rest">
+  <component name="RunManager">
     <configuration name="Scenario Outline: Validate Excel to JSON conv..." type="cucumber.js" factoryName="Cucumber.js" temporary="true">
       <option name="myFilePath" value="$PROJECT_DIR$/src/app/app-playloader/test/features/playload.feature" />
       <option name="myNameFilter" value="^Validate Excel to JSON conversion$" />
@@ -284,10 +286,10 @@
       <option name="workingDirectory" value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml">
+    <configuration name="docker-compose.git.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml">
       <deployment type="docker-compose.yml">
         <settings>
-          <option name="sourceFilePath" value="docker-compose.yml" />
+          <option name="sourceFilePath" value="docker-compose.git.yml" />
         </settings>
       </deployment>
       <method v="2" />
@@ -336,7 +338,7 @@
       <item itemvalue="Cucumber.js.app.fee.feature" />
       <item itemvalue="Cucumber.js.Scenario Outline: Validate Excel to JSON conv..." />
       <item itemvalue="Cucumber.js.playload.feature" />
-      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.git.yml: Compose Deployment" />
       <item itemvalue="npm.test" />
       <item itemvalue="npm.test:cucumber:playload" />
       <item itemvalue="npm.test:cucumber:rest" />
@@ -422,6 +424,9 @@
       <workItem from="1711443593939" duration="158000" />
       <workItem from="1711732183464" duration="86000" />
       <workItem from="1711733604285" duration="179000" />
+      <workItem from="1711956526958" duration="51000" />
+      <workItem from="1711957926522" duration="252000" />
+      <workItem from="1711958225328" duration="450000" />
     </task>
     <task id="LOCAL-00082" summary="improvver logger">
       <created>1684152075146</created>
