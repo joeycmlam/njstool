@@ -18,7 +18,10 @@ jobs:
       run: npm ci
 
     - name: Run automated tests
-      run: npm run test
+      run: |
+        docker-compose up -d
+        docker-compose exec app npm test
+        docker-compose down
 
     - name: merge both jest and cucumber result
       run: npm run test:reports
