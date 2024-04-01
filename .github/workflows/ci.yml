@@ -20,10 +20,13 @@ jobs:
     - name: Run automated tests
       run: |
         docker-compose up -d
+        docker-compose exec -T app npm run test:reports
         docker-compose down
 
-    - name: merge both jest and cucumber result
-      run: npm run test:reports
+    - name: Copy reports from Docker container
+      run: |
+        docker cp njstool_app_1:/Users/joeylam/repo/njs/njstool/coverage-cucumber/cucumber.html ./cucumber.html
+        docker cp njstool_app_1:/Users/joeylam/repo/njs/njstool/coverage/ ./coverage/
       
 
     - name: Upload Cucumber HTML report
