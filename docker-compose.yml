@@ -1,18 +1,17 @@
 version: '3'
 services:
-  pgadmin:
-    container_name: pgadmin4_container
-    image: dpage/pgadmin3
-    restart: always
+  app:
+    build: .
+    depends_on:
+      - db
     environment:
-      PGADMIN_DEFAULT_EMAIL: joey.cm.lam@gmail.com
-      PGADMIN_DEFAULT_PASSWORD: root
-    ports:
-      - "5050:80"
+      DB_HOST: db
+      DB_PORT: 1433
+      DB_NAME: TestDB
+      DB_USER: sa
+      DB_PASSWORD: Your_password123
   db:
-    container_name: my_postgres
-    image: postgres
+    image: mcr.microsoft.com/mssql/server:2022-latest
     environment:
-      POSTGRES_DB: postgres
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password
+      SA_PASSWORD: Your_password123
+      ACCEPT_EULA: Y
