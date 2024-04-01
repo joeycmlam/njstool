@@ -18,16 +18,10 @@ jobs:
       run: npm ci
 
     - name: Run automated tests
-      run: |
-        docker-compose up -d
-        docker-compose exec -T app npm run test:reports
-        docker-compose down
+      run: npm run test
 
-    - name: Copy reports fro Docker container
-      run: |
-        docker cp ./coverage-cucumber/cucumber.html ./cucumber.html
-        docker cp ./coverage/ ./coverage/
-      
+    - name: merge test reports
+      run: npm run test:reports      
 
     - name: Upload Cucumber HTML report
       uses: actions/upload-artifact@v2
