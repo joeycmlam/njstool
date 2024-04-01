@@ -19,7 +19,7 @@ jobs:
 
     - name: Run automated tests
       run: |
-        docker-compose up -d
+        docker-compose up
         docker-compose exec -T app npm run test
         docker-compose down
 
