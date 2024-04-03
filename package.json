@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "prestart": "rm -rf src/app/app-playloader/output/*.json",
-    "start": "ts-node src/app/app-playloader/app.playloader.ts /Users/joeylam/repo/njs/njstool/src/app/app-playloader/config/config.json",
+    "start": "ts-node src/app/app-playloader/app.playloader.ts /Users/joeylam/repo/njs/njstool/src/app/app-playloader/config/config.02.json",
     "start:ai": "ts-node src/app/app-chatbot/app.chat.ts",
     "start:fee-engine": "ts-node src/app/app-fee-engine/app.fee.engine.ts",
     "start:pdf": "ts-node src/app/app-pdf/app.pdf.ts",

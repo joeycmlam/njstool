@@ -1,14 +1,14 @@
 {
     "source": {
         "inputPath": "/Users/joeylam/repo/njs/njstool/src/app/app-playloader/data",
-        "inputFile": "sample.xlsx"
+        "inputFile": "sample.04.xlsx"
     },
     "dataformat": {
         "sheetName": "Sheet1",
         "startRow": 1,
-        "fieldCol": 1,
-        "typeCol": 2,
-        "dataStartCol": 3,
+        "fieldCol": 2,
+        "typeCol": 3,
+        "dataStartCol": 4,
         "dataEndCol": 4
     },
     "output": {

@@ -18,7 +18,7 @@ export default class DataTransformer {
       } else if (type === FieldType.STRING) {
         target[part] = String(value);
       } else if (type === FieldType.BOOLEAN) {
-        target[part] = value.toLowerCase() === 'true';
+        target[part] = Boolean(value);
       }
     } else {
       if (!target[part]) target[part] = {};
