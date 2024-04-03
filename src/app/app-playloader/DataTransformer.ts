@@ -43,7 +43,8 @@ export default class DataTransformer {
 
     for (let rowNumber = config.startRow; rowNumber <= worksheet.rowCount; rowNumber++) {
       const row = worksheet.getRow(rowNumber);
-      const value = row.getCell(col).value;
+      const cell = row.getCell(col);
+      const value = cell.value instanceof Object && 'result' in cell.value ? cell.value.result : cell.value;
 
       if (!value) { continue; }
 
