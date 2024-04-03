@@ -17,5 +17,5 @@ Feature: Excel to JSON conversion
     Then the JSON output should match the expected JSON file "<expect_result>"
 
     Examples: 
-      | excel_file     | expect_result    | config_file |
+      | excel_file     | expect_result    | config_file    |
       | sample.04.xlsx | expected.01.json | config.02.json |
