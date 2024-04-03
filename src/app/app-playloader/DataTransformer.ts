@@ -1,5 +1,11 @@
 import { injectable } from "inversify";
 
+enum FieldType {
+  NUMBER = 'num',
+  STRING = 'str',
+  BOOLEAN = 'boolean',
+}
+
 @injectable()
 export default class DataTransformer {
 
@@ -7,7 +13,13 @@ export default class DataTransformer {
 
   private handlePrimitiveType(target: any, part: any, index: number, splitField: any[], value: any, type: string): any {
     if (index === splitField.length - 1) {
-      target[part] = type === 'num' ? Number(value) : String(value);
+      if (type === FieldType.NUMBER) {
+        target[part] = Number(value);
+      } else if (type === FieldType.STRING) {
+        target[part] = String(value);
+      } else if (type === FieldType.BOOLEAN) {
+        target[part] = value.toLowerCase() === 'true';
+      }
     } else {
       if (!target[part]) target[part] = {};
       target = target[part];
