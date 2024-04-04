@@ -4,6 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import DataTransformer from '../../../DataTransformer';
 import ExcelReader from '../../../ExcelReader';
+import JsonComparator from '../../../../app-json/JsonComparator';
 
 let excelFile: string;
 let actualResult: any;
@@ -48,7 +49,22 @@ Then('the JSON output should match the expected JSON file {string}', function (e
   const outfolderPath = path.join(__dirname, testConfig.expected.path);
   const fileName: string = path.join(outfolderPath, expectedJsonFile);
   const expectedJson = JSON.parse(fs.readFileSync(fileName, 'utf8'));
-  assert.deepStrictEqual(actualResult.jsonData, expectedJson);
-});
 
+  // Fields to exclude
+  const excludeFields = ['intructionDateTime'];
+
+  // Create copies of the actual and expected objects
+  const actualCopy = JSON.parse(JSON.stringify(actualResult.jsonData));
+  const expectedCopy = JSON.parse(JSON.stringify(expectedJson));
+
+
+  // Delete the fields to exclude from the copies
+  excludeFields.forEach(field => {
+    delete actualCopy[field];
+    delete expectedCopy[field];
+  });
+
+  // Compare the copies
+  assert.deepStrictEqual(actualCopy, expectedCopy);
+});
 

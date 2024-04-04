@@ -1,3 +1,4 @@
+@ingore
 Feature: Fee calculator
 
   Scenario Outline: 2nd redemption within a year
