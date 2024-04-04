@@ -54,8 +54,8 @@ Then('the JSON output should match the expected JSON file {string}', function (e
   const excludeFields = ['intructionDateTime'];
 
   // Create copies of the actual and expected objects
-  const actualCopy = JSON.parse(JSON.stringify(actualResult.jsonData));
-  const expectedCopy = JSON.parse(JSON.stringify(expectedJson));
+  const actualCopy = actualResult.jsonData;
+  const expectedCopy = expectedJson;
 
 
   // Delete the fields to exclude from the copies
@@ -66,5 +66,6 @@ Then('the JSON output should match the expected JSON file {string}', function (e
 
   // Compare the copies
   assert.deepStrictEqual(actualCopy, expectedCopy);
+  // assert.deepStrictEqual(actualResult.jsonData, expectedJson);
 });
 
