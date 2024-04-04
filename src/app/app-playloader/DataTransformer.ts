@@ -4,6 +4,8 @@ enum FieldType {
   NUMBER = 'num',
   STRING = 'str',
   BOOLEAN = 'boolean',
+  LIST = 'list',
+  OBJECT = 'obj'
 }
 
 @injectable()
@@ -11,7 +13,9 @@ export default class DataTransformer {
 
   private DELIMITER: string = '.';
 
+
   private handlePrimitiveType(target: any, part: any, index: number, splitField: any[], value: any, type: string): any {
+    
     if (index === splitField.length - 1) {
       if (type === FieldType.NUMBER) {
         target[part] = Number(value);
@@ -26,48 +30,80 @@ export default class DataTransformer {
     }
     return target;
   }
-  
-  private handleListType(target: any, part: any, index: number, splitField: any[], value: any, type: string): any {
-    if (index === splitField.length - 2) {
-      if (!target[part]) target[part] = [];
-      target[part].push(type === 'num' ? Number(value) : String(value));
+
+  private handleNested(target: any, splitField: any[], value: any): any {
+    for (let i = 0; i < splitField.length; i++) {
+      if (i === splitField.length - 1) {
+        target[splitField[i]] = value;
+      } else {
+        if (!target[splitField[i]]) target[splitField[i]] = {};
+        target = target[splitField[i]];
+      }
     }
+    return target;
+  }
+  
+  private handleListType(target: any, splitField: any[], splitType: any[], value: any): any {
+      const part = splitField[0];
+      const index = Number(splitField[1]) - 1;
+      const type = splitType[2];
+      if (!target[part]) target[part] = [];
+      target[part][index] = type === 'num' ? Number(value) : String(value);
+    
+    return target;
+  }
+
+
+  private handleListOfObjects(target: any, splitField: any[], splitType: any[], value: any): any {
+    const part = splitField[0];
+    const index = Number(splitField[1]) - 1;
+    const type = splitType[2];
+    if (!target[part]) target[part] = [];
+    if (!target[part][index]) target[part][index] = {};
+    target[part][index][splitField[2]] = type === 'num' ? Number(value) : String(value);
     return target;
   }
 
   public transform(worksheet: any, col: number, config: any): any {
     const jsonData: any = {};
     let recordName = '';
-    const COL_FIELD: number = config.fieldCol;
-    const COL_TYPE: number = config.typeCol;
 
     for (let rowNumber = config.startRow; rowNumber <= worksheet.rowCount; rowNumber++) {
       const row = worksheet.getRow(rowNumber);
       const cell = row.getCell(col);
       const value = cell.value instanceof Object && 'result' in cell.value ? cell.value.result : cell.value;
+      const type = row.getCell(config.typeCol)?.value?.toString();
+      const field = row.getCell(config.fieldCol)?.value?.toString();
+      console.log('value:', value, 'type:', type, 'field:', field );
 
       if (!value) { continue; }
 
-      if (rowNumber === 1) {
+      if (rowNumber === config.startRow) {
         recordName = value ?? '';
-      } else {
+      } else if (rowNumber > config.startRow) {
         let target = jsonData;
-        const splitType = row.getCell(COL_TYPE)?.value?.toString()?.split(this.DELIMITER);
-        const type = splitType[0];
-        const splitField = row.getCell(COL_FIELD)?.value?.toString()?.split(this.DELIMITER);
+        const splitType = type.split(this.DELIMITER);
+        const splitField = field.split(this.DELIMITER);
 
-        splitField?.forEach((part: any, index: number) => {
-          if (splitType?.length === 1) {
-            target = this.handlePrimitiveType(target, part, index, splitField, value, type);
-          }
-        
-          if (splitType?.length === 2) {
-            target = this.handleListType(target, part, index, splitField, value, type);
-          }
-        });
+        if (splitType.length === 1) {
+          target = this.handleNested(target, splitField, value);
+        }
 
-      }
+        if (type === 'list.str' || type === 'list.num') {
+          target = this.handleListType(target, splitField, splitType, value);
+        }
+
+        if (type === 'list.obj.str' || type === 'list.obj.num') {
+          target = this.handleListOfObjects(target, splitField, splitType, value);
+        }
+
+      } //end else
+
     } //end for-loop
     return { recordName, jsonData };
   }
+}
+
+function foreach(splitType: any, arg1: (type: any, index: any) => void) {
+  throw new Error("Function not implemented.");
 }
