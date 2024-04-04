@@ -32,7 +32,7 @@ Given('place {string} on {string} with {int} unit on {string} with {string}', (
     tradeType: string, fundId: string, sellUnit: number, purchaseDate: string, orderDate: string) => {
     local = new feeCustom();
     local.order.fundId = fundId;
-    local.order.txnType = stringToTxnType(tradeType);
+    local.order.txnType = stringToTxnType(tradeType) as enmTxnType | undefined | null; // Update the type to allow undefined and null values
     local.order.unit = sellUnit;
     local.order.tradeDate = new Date(orderDate);
     local.order.purchaseDate = new Date(purchaseDate);

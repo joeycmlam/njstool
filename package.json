@@ -18,7 +18,7 @@
     "start:json": "ts-node src/app/app-json/app.json.ts",
     "start:mask": "ts-node src/app/app-mask/app.mask.ts",
     "start:map": "ts-node src/app/app-map/app.map.ts",
-    "test:cucumber:playload": "c8 cucumber-js --config test/cucumber.config.js src/app/app-playloader/test/features/*.feature",
+    "test:cucumber:playloader": "c8 cucumber-js --config test/cucumber.config.js src/app/app-playloader/test/features/*.feature",
     "test:cucumber:fee": "c8 cucumber-js --config test/cucumber.config.js test/test-fee/features/*.feature",
     "test:cucumber:rest": "c8 cucumber-js --config test/cucumber.config.js test/test-rest/features/*.feature",
     "test:cucumber:json": "c8 cucumber-js --config test/cucumber.config.js test/test-json/features/*.feature",
