@@ -19,3 +19,4 @@ Feature: Excel to JSON conversion
     Examples: 
       | excel_file     | expect_result    | config_file    |
       | sample.04.xlsx | expected.04.json | config.02.json |
+      | sample.05.xlsx | expected.05.json | config.02.json |
