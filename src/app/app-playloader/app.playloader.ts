@@ -5,6 +5,7 @@ import JsonFileWriter from './JsonFileWriter';
 import ExcelReader from './ExcelReader';
 import DataTransformer from './DataTransformer';
 import * as fs from 'fs';
+import minimist from 'minimist';
 
 
 async function main() {
@@ -13,7 +14,8 @@ async function main() {
     logger.info('start');
     // Load configuration
     // Get the config file path from the command line arguments
-    const configFile = process.argv[2] || path.join(__dirname, 'config.json');
+    const args = minimist(process.argv.slice(2));
+    const configFile = args.config || path.join(__dirname, 'config.json');
     const config = JSON.parse(fs.readFileSync(configFile, 'utf8'));
 
     const inFile = path.join(config.source.inputPath, config.source.inputFile);
