@@ -71,7 +71,7 @@ export default class DataTransformer {
       const field = row.getCell(config.fieldCol)?.value?.toString();
 
         //skip the row if value is empty
-      if (value === undefined) { continue; }
+      if (value === undefined || value === null || (typeof value === 'string' && value.length === 0)) { continue; }
 
       if (rowNumber === config.startRow) {
         recordName = value ?? '';
