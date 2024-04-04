@@ -13,12 +13,23 @@ export default class DataTransformer {
 
   private DELIMITER: string = '.';
 
+  private convertType(value: any, type: string): any {
+    if (type === FieldType.NUMBER) {
+      return Number(value);
+    } else if (type === FieldType.STRING) {
+      return String(value);
+    } else if (type === FieldType.BOOLEAN) {
+      return Boolean(value);
+    } else {
+      return value;
+    }
+  }
 
   private handleNested(target: any, splitField: any[], splitType: any[], value: any): any {
     const type = splitType[0];
     for (let i = 0; i < splitField.length; i++) {
       if (i === splitField.length - 1) {
-        target[splitField[i]] = type === 'num' ? Number(value) : String(value);;
+        target[splitField[i]] = this.convertType(value, type);
       } else {
         if (!target[splitField[i]]) target[splitField[i]] = {};
         target = target[splitField[i]];
@@ -32,7 +43,7 @@ export default class DataTransformer {
       const index = Number(splitField[1]) - 1;
       const type = splitType[2];
       if (!target[part]) target[part] = [];
-      target[part][index] = type === 'num' ? Number(value) : String(value);
+      target[part][index] = this.convertType(value, type);
     
     return target;
   }
@@ -44,7 +55,7 @@ export default class DataTransformer {
     const type = splitType[2];
     if (!target[part]) target[part] = [];
     if (!target[part][index]) target[part][index] = {};
-    target[part][index][splitField[2]] = type === 'num' ? Number(value) : String(value);
+    target[part][index][splitField[2]] = this.convertType(value, type);
     return target;
   }
 
