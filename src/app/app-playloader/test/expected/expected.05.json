@@ -20,6 +20,7 @@
       }
     },
     "isCertified": true,
+    "isSigned": false,
     "intructionDateTime": "2024-04-04 17:28:34.590Z",
     "funds": [
       {
@@ -32,6 +33,5 @@
         "investmentAmt": 1000,
         "investmentcury": "USD"
       }
-    ],
-    "isSigned": false
+    ]
   }

@@ -64,6 +64,7 @@ Then('the JSON output should match the expected JSON file {string}', function (e
     delete expectedCopy[field];
   });
 
+
   // Compare the copies
   assert.deepStrictEqual(actualCopy, expectedCopy);
   // assert.deepStrictEqual(actualResult.jsonData, expectedJson);
