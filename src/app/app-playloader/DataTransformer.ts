@@ -1,5 +1,6 @@
 import { injectable } from "inversify";
 import StringeHelper from "../lib/stringHelper";
+import { IDataTransformer } from "./IDataTransformer";
 
 enum FieldType {
   NUMBER = 'num',
@@ -10,7 +11,7 @@ enum FieldType {
 }
 
 @injectable()
-export default class DataTransformer {
+export default class DataTransformer implements IDataTransformer {
 
   private DELIMITER: string = '.';
 

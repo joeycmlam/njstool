@@ -1,8 +1,9 @@
 import { injectable } from "inversify";
 import StringeHelper from "../lib/stringHelper"; 
+import { IDataTransformer } from "./IDataTransformer";
 
 @injectable()
-export default class DataTransformerv2 {
+export default class DataTransformerv2  implements IDataTransformer {
 
     private DELIMITER: string = '.';
 
