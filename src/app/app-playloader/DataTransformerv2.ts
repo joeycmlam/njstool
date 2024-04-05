@@ -41,7 +41,7 @@ export default class DataTransformerv2  implements IDataTransformer {
       
         return target;
       }
-      public transform(worksheet: any, col: number, config: any): any {
+      public async transform(worksheet: any, col: number, config: any): Promise<any> {
         const jsonData: any = {};
         let recordName = '';
     
@@ -68,5 +68,5 @@ export default class DataTransformerv2  implements IDataTransformer {
     
         } //end for-loop
         return { recordName, jsonData };
-        
+      }       
 }
