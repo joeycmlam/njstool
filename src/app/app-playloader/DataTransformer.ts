@@ -1,4 +1,5 @@
 import { injectable } from "inversify";
+import StringeHelper from "../lib/stringHelper";
 
 enum FieldType {
   NUMBER = 'num',
@@ -48,9 +49,6 @@ export default class DataTransformer {
     return target;
   }
 
-  private isEmpty(value: any): boolean {
-    return value === undefined || value === null || (typeof value === 'string' && value.length === 0);
-  }
 
   private handleListOfObjects(target: any, splitField: any[], splitType: any[], value: any): any {
     const part = splitField[0];
@@ -62,7 +60,9 @@ export default class DataTransformer {
     return target;
   }
 
-  public transform(worksheet: any, col: number, config: any): any {
+  
+
+  public async transform(worksheet: any, col: number, config: any): Promise<any> {
     const jsonData: any = {};
     let recordName = '';
 
@@ -74,7 +74,7 @@ export default class DataTransformer {
       const field = row.getCell(config.fieldCol)?.value?.toString();
 
         //skip the row if value is empty
-      if (this.isEmpty(value)) { continue; }
+      if (await StringeHelper.isEmpty(value)) { continue; }
 
       if (rowNumber === config.startRow) {
         recordName = value ?? '';
