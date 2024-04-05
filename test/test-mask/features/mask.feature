@@ -1,4 +1,4 @@
-Feature: test
+Feature: data mask
 
   Scenario: test
     When do the testing "hello world"
