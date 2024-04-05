@@ -2,11 +2,11 @@ import { injectable } from 'inversify';
 import path from 'path';
 import ExcelReader from './ExcelReader';
 import JsonFileWriter from './JsonFileWriter';
-import DataTransformer from './DataTransformer';
+import { IDataTransformer } from './IDataTransformer';
 
 @injectable()
 export default class ExcelToJsonConverter {
-  constructor(private config: any, private excelReader: ExcelReader, private dataTransformer: DataTransformer, private jsonFileWriter: JsonFileWriter) {}
+  constructor(private config: any, private excelReader: ExcelReader, private dataTransformer: IDataTransformer, private jsonFileWriter: JsonFileWriter) {}
 
   public async convert(filePath: string, outputDir: string): Promise<any> {
     const workbook = await this.excelReader.read(filePath);

@@ -3,13 +3,17 @@ import path from 'path';
 import ExcelToJsonConverter from './ExcelToJsonConverter';
 import JsonFileWriter from './JsonFileWriter';
 import ExcelReader from './ExcelReader';
-import DataTransformer from './DataTransformer';
+import { IDataTransformer } from './IDataTransformer';
 import * as fs from 'fs';
 import minimist from 'minimist';
+import { inject, injectable } from 'inversify';
+import container from './container';
 
-
+@injectable()
 class Main {
-    async run() {
+    constructor(@inject('IDataTransformer') private dataTransformer: IDataTransformer) { }
+
+    public async run() {
 
         const logger = Logger.getLogger();
 
@@ -24,8 +28,7 @@ class Main {
         const outFilePath = config.output.outputPath;
         const excelReader = new ExcelReader(); // Fix: Pass the required arguments to the constructor
         const jsonFileWriter = new JsonFileWriter(); // Fix: Pass the required arguments to the constructor
-        const dataTransformer = new DataTransformer(); // Fix: Pass the required arguments to the constructor
-        const converter = new ExcelToJsonConverter(config, excelReader, dataTransformer, jsonFileWriter); // Fix: Pass the required arguments to the constructor
+        const converter = new ExcelToJsonConverter(config, excelReader, this.dataTransformer, jsonFileWriter); // Fix: Pass the required arguments to the constructor
         const arr: any = await converter.convert(inFile, outFilePath);
         logger.info('jsonData', JSON.stringify(arr, null, 2));
         logger.info('end');
@@ -33,5 +36,5 @@ class Main {
     }
 }
 
-const main = new Main();
+const main = container.resolve(Main);
 main.run();
