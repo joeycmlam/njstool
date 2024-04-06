@@ -18,11 +18,7 @@ export default class DataTransformerv2 implements IDataTransformer {
 
     splitField.forEach((field, i) => {
       if (i === splitField.length - 1) {
-        if (isNaN(Number(field))) {
-          fieldTarget[field] = utilConverter.convertType(value, type);
-        } else {
-          fieldTarget[Number(field) - 1] = utilConverter.convertType(value, type);
-        }
+        fieldTarget[field] = utilConverter.convertType(value, type);
       } else {
         if (!fieldTarget[field]) {
           if (isNaN(Number(splitField[i + 1]))) {
