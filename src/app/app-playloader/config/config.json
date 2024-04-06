@@ -1,7 +1,7 @@
 {
     "source": {
         "inputPath": "/Users/joeylam/repo/njs/njstool/src/app/app-playloader/data",
-        "inputFile": "sample.08.xlsx"
+        "inputFile": "sample.09.xlsx"
     },
     "dataformat": {
         "sheetName": "Sheet1",
