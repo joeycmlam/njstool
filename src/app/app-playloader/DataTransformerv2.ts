@@ -1,7 +1,5 @@
 import { injectable } from "inversify";
-import StringeHelper from "../lib/stringHelper";
 import { IDataTransformer } from "./IDataTransformer";
-import { enmFieldType } from "./enmTypes";
 import { utilConverter } from "./enumConverter";
 
 @injectable()
@@ -9,11 +7,8 @@ export default class DataTransformerv2 implements IDataTransformer {
 
   private DELIMITER: string = '.';
 
-  private handledNestedField(target: any): any {
-    return target;
-  }
 
-  private handleNestedRecord(target: any, splitField: string[], type: string, value: any, index: number = 0): any {
+  private handleNestedRecord(target: any, splitField: string[], type: string, value: any): any {
     let fieldTarget: any = target; // Initialize fieldTarget to target
 
     splitField.forEach((field, i) => {
