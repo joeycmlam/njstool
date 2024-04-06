@@ -2,7 +2,7 @@ import { Given, Then, When } from '@cucumber/cucumber';
 import assert from 'assert';
 import fs from 'fs';
 import path from 'path';
-import DataTransformer from '../../../DataTransformer';
+import DataTransformer from '../../../DataTransformerv2';
 import ExcelReader from '../../../ExcelReader';
 
 let excelFile: string;
@@ -27,7 +27,7 @@ let testConfig = {
   }
 };
 
-Given('I have an Excel file {string} and {string}', function (givenExcelFile: string, configFile: string) {
+Given('v2-I have an Excel file {string} and {string}', function (givenExcelFile: string, configFile: string) {
   const folderPath = path.join(__dirname, testConfig.source.inputPath);
   excelFile = path.join(folderPath, givenExcelFile);
   const configPath = path.join(__dirname, testConfig.config.path);
@@ -35,7 +35,7 @@ Given('I have an Excel file {string} and {string}', function (givenExcelFile: st
 });
 
 
-When('I convert the Excel file to JSON', async function () {
+When('v2-I convert the Excel file to JSON', async function () {
 
   const excelReader = new ExcelReader();
   const workbook = await excelReader.read(excelFile);
@@ -44,7 +44,7 @@ When('I convert the Excel file to JSON', async function () {
   actualResult = await dataTransformer.transform(worksheet, config.dataformat.dataStartCol, config.dataformat);
 });
 
-Then('the JSON output should match the expected JSON file {string}', function (expectedJsonFile: string) {
+Then('v2-the JSON output should match the expected JSON file {string}', function (expectedJsonFile: string) {
   const outfolderPath = path.join(__dirname, testConfig.expected.path);
   const fileName: string = path.join(outfolderPath, expectedJsonFile);
   const expectedJson = JSON.parse(fs.readFileSync(fileName, 'utf8'));
