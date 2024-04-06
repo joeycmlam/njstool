@@ -34,6 +34,9 @@ class Main {
         logger.info('end');
 
     }
+
+
+    
 }
 
 const main = container.resolve(Main);
