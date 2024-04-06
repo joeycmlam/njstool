@@ -10,30 +10,27 @@ export default class DataTransformerv2 implements IDataTransformer {
 
   private handleNestedRecord(target: any, splitField: string[], type: string, value: any): any {
     let fieldTarget: any = target; // Initialize fieldTarget to target
+    const lastIndex = splitField.length - 1;
 
     splitField.forEach((field, i) => {
-      if (i === splitField.length - 1) {
+      if (i === lastIndex) {
         fieldTarget[field] = utilConverter.convertType(value, type);
       } else {
-        if (!fieldTarget[field]) {
+        let nextFieldTarget = fieldTarget[field]; // Store this in a variable to avoid repeated property access
+        if (!nextFieldTarget) {
           if (isNaN(Number(splitField[i + 1]))) {
-            fieldTarget[field] = {};
+            nextFieldTarget = {};
           } else {
-            fieldTarget[field] = [];
+            nextFieldTarget = [];
           }
+          fieldTarget[field] = nextFieldTarget;
         }
-        // Check if fieldTarget[field] is null or undefined before setting a property on it
-        if (fieldTarget[field]) {
-          fieldTarget = fieldTarget[field];
-        } else {
-          throw new Error(`Cannot set property '${field}' of null or undefined`);
-        }
+        fieldTarget = nextFieldTarget;
       }
     });
 
     return target;
   }
-
 
 
   public async transform(worksheet: any, col: number, config: any): Promise<any> {
