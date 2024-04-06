@@ -1,7 +1,7 @@
 {
     "source": {
         "inputPath": "/Users/joeylam/repo/njs/njstool/src/app/app-playloader/data",
-        "inputFile": "sample.06.xlsx"
+        "inputFile": "sample.07.xlsx"
     },
     "dataformat": {
         "sheetName": "Sheet1",
@@ -9,7 +9,7 @@
         "fieldCol": 1,
         "typeCol": 2,
         "dataStartCol": 3,
-        "dataEndCol": 4
+        "dataEndCol": 3
     },
     "output": {
         "outputPath": "/Users/joeylam/repo/njs/njstool/src/app/app-playloader/output"
