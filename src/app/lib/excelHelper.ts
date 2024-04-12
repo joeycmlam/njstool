@@ -1,8 +1,8 @@
 
-import {Workbook} from "exceljs";
+import { Workbook } from "exceljs";
 
 export default class excelHelper {
-    public  static async readWorkbookContent(filePath: string, worksheetName: string): Promise<string[][]> {
+    public static async readWorkbookContent(filePath: string, worksheetName: string): Promise<string[][]> {
         const workbook = new Workbook();
         await workbook.xlsx.readFile(filePath);
 
@@ -26,5 +26,6 @@ export default class excelHelper {
         const workbook = new Workbook();
         await workbook.xlsx.readFile(filePath);
         return workbook;
-      }
+    }
+
 }
