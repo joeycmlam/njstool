@@ -3,7 +3,7 @@ import assert from 'assert';
 import fs from 'fs';
 import path from 'path';
 import DataTransformer from '../../../DataTransformerv2';
-import ExcelReader from '../../../ExcelReader';
+import excelHelper from '../../../../lib/excelHelper';
 
 let excelFile: string;
 let actualResult: any;
@@ -37,7 +37,7 @@ Given('v2-I have an Excel file {string} and {string}', function (givenExcelFile:
 
 When('v2-I convert the Excel file to JSON', async function () {
 
-  const excelReader = new ExcelReader();
+  const excelReader = new excelHelper();
   const workbook = await excelReader.read(excelFile);
   const worksheet = workbook.worksheets[0];
   const dataTransformer = new DataTransformer();

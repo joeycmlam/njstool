@@ -21,4 +21,10 @@ export default class excelHelper {
 
         return content;
     }
+
+    public async read(filePath: string): Promise<Workbook> {
+        const workbook = new Workbook();
+        await workbook.xlsx.readFile(filePath);
+        return workbook;
+      }
 }
