@@ -31,7 +31,7 @@ type Query {
     // Define your resolver functions
     const resolvers = {
       Query: {
-        accounts: async (_parent: any, args: { account_cd?: string, account_nm?: string }) => {
+        accounts: async (_parent: any, args: any) => {
           const client = new Client(this.config.database);
 
           await client.connect();
