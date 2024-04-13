@@ -2,13 +2,10 @@
 env
 .env.local
 
-# ignore build files
-./njstool-linux
-./njstool-macos
-./njstool-win.exe
 
 # ignore all .log files
 log/
+logs/
 *.log
 cucumber-report.json
 cucumber.html
@@ -24,5 +21,3 @@ coverage/
 coverage-cucumber/
 coverage-jest/
 output/
-output.xlsx
-/coverage-cucumber/

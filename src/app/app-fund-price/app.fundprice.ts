@@ -3,6 +3,7 @@ import Logger from '../lib/logger';
 import minimist from 'minimist';
 import path from 'path';
 import fs from 'fs';
+import { FundPriceDownloader } from './FundPriceDownloader';
 
 @injectable()
 class App {
@@ -26,7 +27,8 @@ class App {
 
         this.init();
         this.logger.info('Start');
-
+        const a = new FundPriceDownloader();
+        await a.run();
         this.logger.info('End');
     }
 
