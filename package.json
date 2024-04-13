@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "housekeep": "rm -rf src/app/app-playloader/output/*.json",
-    "start:apolloserver": "ts-node src/app/app-data-service/app.dataservice.ts --config /Users/joeylam/repo/njs/njstool/src/app/app-data-service/config/config.json",
+    "start:apolloserver": "ts-node src/app/app-data-service/app.dataservice.ts --config /Users/joeylam/repo/njs/njstool/src/app/app-data-service/config/config.server.json",
     "start:apolloclient": "ts-node src/app/app-data-service/app.datacaller.ts",
     "start:playloader": "ts-node src/app/app-playloader/app.playloader.ts --config /Users/joeylam/repo/njs/njstool/src/app/app-playloader/config/config.json",
     "start:ai": "ts-node src/app/app-chatbot/app.chat.ts",
