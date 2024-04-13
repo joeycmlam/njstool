@@ -1,0 +1,14 @@
+{
+    "log": {
+        "level": "debug"
+    },
+    "envfile": "/Users/joeylam/repo/njs/njstool/env/.env.local",
+    "url": "http://localhost:4000/graphql",
+    "database": {
+        "host": "${DB_HOST}",
+        "port": "${DB_PORT}",
+        "database": "${DB_NAME}",
+        "user": "${DB_USER}",
+        "password": "${DB_PASSWORD}"
+    }
+}
