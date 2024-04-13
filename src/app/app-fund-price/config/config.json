@@ -1,0 +1,7 @@
+{
+    "logger": {
+        "level": "info",
+        "path": "/Users/joeylam/repo/njs/njstool/src/app/app-fund-price/logs",
+        "filename": "app.fundprice"
+    }
+}

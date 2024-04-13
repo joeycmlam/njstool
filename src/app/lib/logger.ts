@@ -15,7 +15,7 @@ export default class Logger {
     return log4js.getLogger();
   }
 
-  static configure(config: LoggerConfig) {
+  static configure(config: LoggerConfig) :void {
     Logger.config = config;
     Logger.setConfigure();
   }
