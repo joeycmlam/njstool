@@ -28,7 +28,7 @@
     "test:jest": "jest --coverage --coverageDirectory=coverage-jest",
     "test:cucumber": "c8 --report-dir=coverage-cucumber cucumber-js --config test/cucumber.config.js --tags 'not @ignore' 'src/app/**/test/features/*.feature' 'test/**/**/*.feature' ",
     "test:reports": "node merge-coverage.js && node generate-cucumber-html.js ",
-    "launch-coverage": "open coverage/index.html"
+    "test:coverage": "open coverage/index.html"
   },
   "pkg": {
     "scripts": "dist/app/app-playloader/app.playloader.js"
