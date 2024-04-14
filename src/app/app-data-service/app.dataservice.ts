@@ -76,15 +76,15 @@ type Query {
     });
   }
 
-  private async init(): Promise<void> {
-    // Load configuration
+  private initConfig(): void {
+        // Load configuration
     // Get the config file path from the command line arguments
     const args = minimist(process.argv.slice(2));
     const configFile = args.config || path.join(__dirname, 'config.json');
     this.config = JSON.parse(fs.readFileSync(configFile, 'utf8'));
+  }
 
-    this.url = this.config.url;
-
+  private setupDatabase(): void {
     require('dotenv').config({ path: this.config.envfile });
     this.config.database.host = process.env.DB_HOST;
     this.config.database.port = process.env.DB_PORT;
@@ -93,6 +93,13 @@ type Query {
     this.config.database.password = process.env.DB_PASSWORD;
 
     this.logger.info('Database configuration: ', this.config.database);
+  }
+
+  private async init(): Promise<void> {
+
+    this.initConfig();
+    this.url = this.config.url;
+    this.setupDatabase();
   }
 
   public async start(): Promise<void> {
