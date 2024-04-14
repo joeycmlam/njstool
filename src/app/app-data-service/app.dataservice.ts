@@ -23,7 +23,7 @@ type Account {
 }
 
 type Query {
-  accounts(account_cd: String, account_nm: String): [Account!]!
+  accounts(account_cd: String, account_nm: String, limit: Int, offSet: Int): [Account!]!
 }
 `;
 
@@ -47,6 +47,16 @@ type Query {
           if (args.account_nm) {
             params.push(`%${args.account_nm}%`);
             query += ` AND account_nm LIKE $${params.length}`;
+          }
+
+          if (args.limit) {
+            params.push(args.limit);
+            query += ` LIMIT $${params.length}`;
+          }
+
+          if (args.offSet) {
+            params.push(args.offSet);
+            query += ` OFFSET $${params.length}`;
           }
 
           const res = await client.query(query, params);
