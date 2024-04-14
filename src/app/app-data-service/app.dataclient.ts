@@ -3,7 +3,6 @@ import Logger from '../lib/logger';
 import minimist from 'minimist';
 import path from 'path';
 import fs from 'fs';
-import { promisify } from 'util';
 
 class AppClient {
   private logger = Logger.getLogger();
@@ -39,7 +38,7 @@ class AppClient {
 
 
 
-      const GET_ACCOUNTS = gql`
+    const GET_ACCOUNTS = gql`
       query GetAccounts {
         accounts (limit: $limit, offSet: $offset) {
           account_cd
@@ -48,18 +47,18 @@ class AppClient {
       }
     `;
 
-      try {
-        const { data } = await client.query({ query: GET_ACCOUNTS, variables: { limit, offset } });
-        this.logger.log(data.accounts);
-      } catch (error) {
-        this.logger.error('Error:', error);
-      }
+    try {
+      const { data } = await client.query({ query: GET_ACCOUNTS, variables: { limit, offset } });
+      this.logger.log(data.accounts);
+    } catch (error) {
+      this.logger.error('Error:', error);
+    }
 
-      offset += limit;
+    offset += limit;
 
-      this.logger.log('records:', offset);
-      // await promisify(setTimeout)(1000);
-    
+    this.logger.log('records:', offset);
+    // await promisify(setTimeout)(1000);
+
   }
 
 }
