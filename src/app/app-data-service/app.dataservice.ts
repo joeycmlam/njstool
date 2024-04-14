@@ -22,8 +22,17 @@ type Account {
   account_nm: String!
 }
 
+type Holding {
+  account_cd: String!
+  stock_cd: String!
+  exchange: String!
+  unit: Float!
+  book_cost: Float!
+}
+
 type Query {
   accounts(account_cd: String, account_nm: String, limit: Int, offSet: Int): [Account!]!
+  holdings(account_cd: String, limit: Int, offSet: Int): [Holding!]!
 }
 `;
 
@@ -66,6 +75,34 @@ type Query {
 
           return res.rows;
         },
+        holdings: async (_parent: any, args: { account_cd?: string, limit?: number, offset?: number }) => {
+          const client = new Client(this.config.database);
+    
+          await client.connect();
+    
+          let query = 'SELECT * FROM holding WHERE 1=1';
+          const params = [];
+    
+          if (args.account_cd) {
+            params.push(args.account_cd);
+            query += ` AND account_cd = $${params.length}`;
+          }
+    
+          if (args.limit) {
+            params.push(args.limit);
+            query += ` LIMIT $${params.length}`;
+          }
+    
+          if (args.offset) {
+            params.push(args.offset);
+            query += ` OFFSET $${params.length}`;
+          }
+          const res = await client.query(query, params);
+          await client.end();
+    
+          return res.rows;
+        },
+    
       },
     };
 
