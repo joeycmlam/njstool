@@ -61,6 +61,8 @@ type Query {
 
           const res = await client.query(query, params);
           await client.end();
+          
+          this.logger.info('Query result:', res.rows);
 
           return res.rows;
         },
