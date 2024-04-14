@@ -23,7 +23,7 @@ type Account {
 }
 
 type Query {
-  accounts: [Account!]!
+  accounts(account_cd: String): [Account!]!
 }
 `;
 
