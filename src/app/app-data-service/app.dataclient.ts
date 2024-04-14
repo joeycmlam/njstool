@@ -37,7 +37,7 @@ class AppClient {
     let offset = 0;
     const limit = 10;
 
-    while (true) {
+
 
       const GET_ACCOUNTS = gql`
       query GetAccounts {
@@ -59,7 +59,7 @@ class AppClient {
 
       this.logger.log('records:', offset);
       // await promisify(setTimeout)(1000);
-    }
+    
   }
 
 }
