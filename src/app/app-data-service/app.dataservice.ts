@@ -17,10 +17,6 @@ class App {
   private startServer(): void {
     // Define your schema
     const typeDefs = gql`
-type Account {
-  account_cd: String!
-  account_nm: String!
-}
 
 type Holding {
   account_cd: String!
@@ -28,6 +24,12 @@ type Holding {
   exchange: String!
   unit: Float!
   book_cost: Float!
+}
+
+type Account {
+  account_cd: String!
+  account_nm: String!
+  holdings: [Holding!]!
 }
 
 type Query {
@@ -39,6 +41,21 @@ type Query {
     // Define your resolvers
     // Define your resolver functions
     const resolvers = {
+      Account: {
+        holdings: async (parent: { account_cd: string }) => {
+          const client = new Client(this.config.database);
+    
+          await client.connect();
+    
+          const query = 'SELECT * FROM holding WHERE account_cd = $1';
+          const params = [parent.account_cd];
+    
+          const res = await client.query(query, params);
+          await client.end();
+    
+          return res.rows;
+        },
+      },
       Query: {
         accounts: async (_parent: any, args: any) => {
           const client = new Client(this.config.database);
