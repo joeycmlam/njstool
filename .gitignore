@@ -7,13 +7,11 @@ env
 log/
 logs/
 *.log
-cucumber-report.json
-cucumber.html
+
 
 # ignore the node_modules directory
 # ignore the build directory
 dist/
-output.xlsx
 node_modules/
 
 #ingore test filder
@@ -21,3 +19,7 @@ coverage/
 coverage-cucumber/
 coverage-jest/
 output/
+cucumber-report.json
+cucumber.html
+
+docker-compose.01.yml
