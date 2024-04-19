@@ -7,6 +7,7 @@ import Logger from "../lib/logger";
 import { accountConfig } from "./accountConfig";
 import { ETLProcesser, FileProcessorConfig } from "./etlProcesser";
 import { holdingConfig } from "./holdingConfig";
+import minimist from 'minimist';
 
 class EtlRunner {
     private accountConfig: FileProcessorConfig;
@@ -48,7 +49,8 @@ class App {
 
     public async run() {
 
-        const configFile = process.argv[2] || path.join(__dirname, 'config.json');
+        const args = minimist(process.argv.slice(2));
+        const configFile = args.config || path.join(__dirname, 'config.json');
         const config = JSON.parse(fs.readFileSync(configFile, 'utf8'));
 
         require('dotenv').config({ path: config.envFile });

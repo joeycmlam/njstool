@@ -15,7 +15,7 @@
     "start:feed": "ts-node src/app/app-feed/app.feed.ts",
     "start:fee-txn": "ts-node src/app/app-fee-txn/app.fee.txn.ts",
     "start:fee": "ts-node src/app/app-fee/app.fee.ts",
-    "start:etl": "ts-node src/app/app-etl/app.etl.ts",
+    "start:etl": "ts-node src/app/app-etl/app.etl.ts --config /Users/joeylam/repo/njs/njstool/src/app/app-etl/config/config.json",
     "start:rest": "ts-node src/app/app-rest/app.rest.ts",
     "start:json": "ts-node src/app/app-json/app.json.ts",
     "start:mask": "ts-node src/app/app-mask/app.mask.ts",
