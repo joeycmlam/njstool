@@ -1,0 +1,19 @@
+{
+    "envFile": "/Users/joeylam/repo/njs/njstool/src/app/app-etl/env/.env.local", 
+    "log": {
+        "level": "info",
+        "path": "logs",
+        "filename": "app.log"
+    },
+    "dataFile": {
+        "accountFile": "/Users/joeylam/repo/njs/njstool/src/app/app-etl/test/data/account-data.xlsx",
+        "holdingFile": "/Users/joeylam/repo/njs/njstool/src/app/app-etl/test/data/holding-data.xlsx"
+    },
+    "database": {
+        "host": "${DB_HOST}",
+        "port": "${DB_PORT}",
+        "database": "${DB_NAME}",
+        "user": "${DB_USER}",
+        "password": "${DB_PASSWORD}"
+    }
+}
