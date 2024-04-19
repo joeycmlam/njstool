@@ -41,26 +41,33 @@ class EtlRunner {
     }
 }
 
-async function main() {
+class App {
+    constructor() {
+    }
 
-    const configFile = process.argv[2] || path.join(__dirname, 'config.json');
-    const config = JSON.parse(fs.readFileSync(configFile, 'utf8'));
 
-    require('dotenv').config({ path: config.envFile });
-    config.database.host = process.env.DB_HOST;
-    config.database.port = process.env.DB_PORT;
-    config.database.database = process.env.DB_NAME;
-    config.database.user = process.env.DB_USER;
-    config.database.password = process.env.DB_PASSWORD;
+    public async run() {
 
-    const accConfig = accountConfig;
-    accConfig.fileName = config.dataFile.accountFile;
+        const configFile = process.argv[2] || path.join(__dirname, 'config.json');
+        const config = JSON.parse(fs.readFileSync(configFile, 'utf8'));
 
-    const holdConfig = holdingConfig;
-    holdConfig.fileName = config.dataFile.holdingFile;
+        require('dotenv').config({ path: config.envFile });
+        config.database.host = process.env.DB_HOST;
+        config.database.port = process.env.DB_PORT;
+        config.database.database = process.env.DB_NAME;
+        config.database.user = process.env.DB_USER;
+        config.database.password = process.env.DB_PASSWORD;
 
-    const runner = new EtlRunner(config.database, accountConfig, holdingConfig);
-    await runner.run();
-};
+        const accConfig = accountConfig;
+        accConfig.fileName = config.dataFile.accountFile;
 
-main();
+        const holdConfig = holdingConfig;
+        holdConfig.fileName = config.dataFile.holdingFile;
+
+        const runner = new EtlRunner(config.database, accountConfig, holdingConfig);
+        await runner.run();
+    }
+}
+
+const app = new App();
+app.run();
