@@ -2,18 +2,17 @@
 FROM mcr.microsoft.com/mssql/server:2019-latest
 
 # Set the working directory
-WORKDIR /Users/joeylam/repo/njs/njstool/database/db-script
+WORKDIR /Users/joeylam/repo/njs/njstool/database
 
 # Copy the setup script to the Docker image
-COPY setup.sql .
+COPY ./mssql-script  .
 
 # Set environment variables
-ENV SA_PASSWORD=YourStrongPassword
+ENV SA_PASSWORD=YourStrong!Password123
 ENV ACCEPT_EULA=Y
 
 # Expose port 1433
 EXPOSE 1433
 
 # Run the command on container startup
-CMD /opt/mssql-tools/bin/sqlservr & sleep 30 \
-    && /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P $SA_PASSWORD -d master -i setup.sql
+CMD /opt/mssql/bin/sqlservr
