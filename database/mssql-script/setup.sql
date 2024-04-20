@@ -11,7 +11,7 @@ CREATE SCHEMA  myschema;
 GO
 
 -- Create a new login
-CREATE LOGIN myapplogin WITH PASSWORD = 'MyAppPassword';
+CREATE LOGIN myapplogin WITH PASSWORD = 'MyAppPassword!1234';
 GO
 
 -- Create a new user for the login
