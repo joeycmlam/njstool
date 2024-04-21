@@ -1,10 +1,10 @@
 import { Client, QueryResult } from 'pg';
-import { iDatabase } from "../app-interface/iETL";
+import { iDatabase } from "../app-interface/iRDMBS";
 import pgPromise from "pg-promise";
 import Logger from './logger';
 
 
-export default class DBConnection implements iDatabase {
+export default class DBPostgresQL implements iDatabase {
     private client: Client;
     private logger;
 

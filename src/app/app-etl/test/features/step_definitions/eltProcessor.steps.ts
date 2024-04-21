@@ -7,7 +7,7 @@ import assert from 'assert';
 import { ConfigHelper } from '../../../../lib/configHelper';
 import { accountConfig } from "../../../accountConfig";
 import { holdingConfig } from "../../../holdingConfig";
-import DBConnection from '../../../../lib/dbConnection';
+import DBPostgresQL from '../../../../lib/dbPostgresQL';
 import DatabaseConfig from '../../../../lib/configDatabase';
 
 let datProcessor: ETLProcesser;
@@ -31,7 +31,7 @@ Given('the interface file {string} and {string}', async function (dataFile: stri
   // Initialize EtlProcessor with the data file
   const dataFullFileName = path.join(__dirname, testConfig.dataPath, dataFile);
   const dataReader = new ExcelReader(dataFullFileName);
-  const dataUploader = new DBConnection(config.database);
+  const dataUploader = new DBPostgresQL(config.database);
 
   let dataConfig: FileProcessorConfig;
   switch (tableName) {

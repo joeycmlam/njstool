@@ -16,7 +16,7 @@
     "include": ["./src/**/*.ts"],
     "exclude": [
       "src/app/app-fee-engine/",
-      "src/app/lib/dbConnection.ts",
+      "src/app/lib/dbPostgresQL.ts",
       "node_modules"
     ]
   }

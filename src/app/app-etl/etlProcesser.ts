@@ -1,5 +1,5 @@
-import { iDatabase } from "../app-interface/iETL";
-import { iDataReader } from "../app-interface/iETL";
+import { iDatabase } from "../app-interface/iRDMBS";
+import { iDataReader } from "../app-interface/iRDMBS";
 import Logger from "../lib/logger";
 
 export interface FileProcessorConfig {

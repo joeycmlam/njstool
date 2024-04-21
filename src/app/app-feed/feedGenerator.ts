@@ -2,14 +2,14 @@
 import  FeedConfig  from './feedConfig';
 import * as fs from 'fs';
 import * as path from 'path';
-import DBConnection from '../lib/dbConnection';
+import DBPostgresQL from '../lib/dbPostgresQL';
 import Logger from "../lib/logger";
 
 export default class FeedGenerator {
 
   private logger = Logger.getLogger();
 
-  constructor(private db: DBConnection, private config: FeedConfig) {}
+  constructor(private db: DBPostgresQL, private config: FeedConfig) {}
 
   public async extractToFile(): Promise<void> {
     const result = await this.db.query(this.config.sql);
