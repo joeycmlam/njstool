@@ -1,6 +1,6 @@
 import DatabaseConfig from "../lib/configDatabase";
 import { ConfigHelper } from "../lib/configHelper";
-import DBConnection from "../lib/dbConnection";
+import DBPostgresQL from "../lib/dbPostgresQL";
 import FeedConfig from "./feedConfig";
 import FeedGenerator from "./feedGenerator";
 
@@ -17,7 +17,7 @@ import FeedGenerator from "./feedGenerator";
     fieldDelimitor: "|"
   };
 
-  const db = new DBConnection(dbConfig);
+  const db = new DBPostgresQL(dbConfig);
 
   const generator = new FeedGenerator(db, fileFeed);
   await generator.extractToFile();

@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import path from "path";
 import DatabaseConfig from "../lib/configDatabase";
-import DBConnection from "../lib/dbConnection";
+import DBPostgresQL from "../lib/dbPostgresQL";
 import ExcelReader from "../lib/excelReader";
 import Logger from "../lib/logger";
 import { accountConfig } from "./accountConfig";
@@ -24,12 +24,12 @@ class EtlRunner {
     public async run() {
         this.logger.info('initialization')
         const accountReader = new ExcelReader(this.accountConfig.fileName);
-        const accountUploader = new DBConnection(this.dbConfig);
+        const accountUploader = new DBPostgresQL(this.dbConfig);
         const accountProcessor = new ETLProcesser(this.accountConfig, accountUploader, accountReader);
 
 
         const holdingReader = new ExcelReader(this.holdingConfig.fileName);
-        const holdingUploader = new DBConnection(this.dbConfig);
+        const holdingUploader = new DBPostgresQL(this.dbConfig);
         const holdingProcessor = new ETLProcesser(this.holdingConfig, holdingUploader, holdingReader);
 
         this.logger.info('start upload account and holding');

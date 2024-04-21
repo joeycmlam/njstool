@@ -1,6 +1,6 @@
 import {readFile} from "fs/promises";
 import { read, utils } from 'xlsx';
-import {iDataReader} from "../app-interface/iETL";
+import {iDataReader} from "../app-interface/iRDMBS";
 import Logger from "./logger";
 
 export default class ExcelReader implements iDataReader{
