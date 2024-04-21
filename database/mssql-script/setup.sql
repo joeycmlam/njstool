@@ -21,11 +21,3 @@ GO
 -- Grant permissions to the user
 GRANT SELECT, INSERT, UPDATE, DELETE ON SCHEMA::myschema TO myappuser;
 GO
-
--- Create a new table
-CREATE TABLE myschema.t1 (
-    ID INT PRIMARY KEY,
-    Name NVARCHAR(50),
-    Description NVARCHAR(255)
-);
-GO
