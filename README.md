@@ -24,13 +24,13 @@ HOW TO BUILD
 
 
 HOW TO run mssql on docker
-docker build -t my-mssql-server -f ../../docker/docker.mssql.yml .
+docker build -t my-mssql-server -f ./docker/docker.mssql.yml .
 docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=YourStrong!Password123' -p 1433:1433 -d my-mssql-server
 docker start <container_id_or_name>
 
-docker exec -it <container_id_or_name> /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P 'YourStrong!Password123' -d master -i /scripts/setup.sql
+docker exec -it <container_id_or_name> /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P 'YourStrong!Password123' -d master -i ./mssql-script/setup.sql
 
-docker exec -it 0dfcf4c95f56 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P 'YourStrong!Password123' -d myDB -i account.sql
+docker exec -it fd7df0fddd9f /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P 'YourStrong!Password123' -d master -i ./mssql-script/account.sql
 
 
 
