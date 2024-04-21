@@ -8,7 +8,9 @@ import { accountConfig } from "./accountConfig";
 import { ETLProcesser, FileProcessorConfig } from "./etlProcesser";
 import { holdingConfig } from "./holdingConfig";
 import minimist from 'minimist';
+import { injectable } from 'inversify';
 
+@injectable()
 class EtlRunner {
     private accountConfig: FileProcessorConfig;
     private holdingConfig: FileProcessorConfig;
@@ -81,6 +83,7 @@ class App {
         config.database.user = process.env.DB_USER;
         config.database.password = process.env.DB_PASSWORD;
     }
+
 
     public async run() {
         const configFile = this.parseArgs();
