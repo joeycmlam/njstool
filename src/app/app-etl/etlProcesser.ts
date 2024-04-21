@@ -1,5 +1,4 @@
-import { iDatabase } from "../app-interface/iRDMBS";
-import { iDataReader } from "../app-interface/iRDMBS";
+import { iDatabase, iDataReader } from "../app-interface/iRDMBS";
 import Logger from "../lib/logger";
 
 export interface FileProcessorConfig {
@@ -65,10 +64,10 @@ export class ETLProcesser {
             this.totalRecord = 0;
         } finally {
             await this.uploader.disconnect();
-            this.status= 0;
+            this.status = 0;
             this.totalRecord = this.sourceData.length;
         }
 
-        return {status: this.status, totalRecord: this.totalRecord}
+        return { status: this.status, totalRecord: this.totalRecord }
     }
 }
