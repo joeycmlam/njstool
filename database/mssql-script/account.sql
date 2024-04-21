@@ -1,3 +1,5 @@
+use mydb;
+
 IF EXISTS (SELECT * FROM sys.tables WHERE name = 'account' AND type = 'U')
     DROP TABLE account;
 

@@ -1,3 +1,5 @@
+use mydb;
+
 IF EXISTS (SELECT * FROM sys.tables WHERE name = 'holding' AND type = 'U')
     DROP TABLE holding;
 
