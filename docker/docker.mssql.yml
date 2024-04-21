@@ -2,10 +2,10 @@
 FROM mcr.microsoft.com/mssql/server:2019-latest
 
 # Set the working directory
-WORKDIR /Users/joeylam/repo/njs/njstool/database
+WORKDIR /Users/joeylam/repo/njs/njstool
 
 # Copy the setup script to the Docker image
-COPY ./mssql-script  .
+COPY ./database  .
 
 # Set environment variables
 ENV SA_PASSWORD=YourStrong!Password123
