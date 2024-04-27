@@ -4,8 +4,8 @@
         "path": "logs",
         "filename": "app.log"
     },
-    "path1": "/Users/joeylam/repo/njs/njstool/src/app/app-diff/data/data-1",
-    "path2": "/Users/joeylam/repo/njs/njstool/src/app/app-diff/data/data-2",
+    "path1": "/Users/joeylam/repo/njs/njstool/src/app/app-diff/test/data/data-1",
+    "path2": "/Users/joeylam/repo/njs/njstool/src/app/app-diff/test/data/data-2",
     "files": [
         "client.txt"
     ]

@@ -42,14 +42,14 @@ class App {
         this.config = this.readConfig(configFile);
         const path1 = this.config.path1;
         const path2 = this.config.path2;
-        this.config.files.forEach(file => {
+        this.config.files.forEach(async file => {
             this.logger.info(`Comparing ${file}`);
             const file1 = path.join(path1, file);
             const file2 = path.join(path2, file);
             this.logger.info(`Comparing ${file1} and ${file2}`);
             const diff = new FileComparator(file1, file2);
-            const result = diff.compare();
-            this.logger.info(result);        
+             const result =  await diff.compare();
+            this.logger.info('result: ', JSON.stringify(result, null, 2));        
         }   )    
     }
 }
