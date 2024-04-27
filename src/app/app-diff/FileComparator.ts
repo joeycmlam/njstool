@@ -14,42 +14,49 @@ export default class FileComparator {
     async compare(): Promise<iResult> {
         const result = {} as iResult;
 
-        const file1Stream = readline.createInterface({
-            input: fs.createReadStream(this.file1),
-            terminal: false
-        });
+        const file1Data = await this.readFileData(this.file1);
+        const file2Data = await this.readFileData(this.file2);
 
-        const file2Stream = readline.createInterface({
-            input: fs.createReadStream(this.file2),
-            terminal: false
-        });
-
-        let file1Lines: string[] = [];
-        for await (const line of file1Stream) {
-            file1Lines.push(line);
-        }
-
-        let file2Lines: string[] = [];
-        for await (const line of file2Stream) {
-            file2Lines.push(line);
-        }
+        file1Data.sort();
+        file2Data.sort();
 
         let matches = 0;
         let mismatches = 0;
 
-        for (let i = 0; i < Math.min(file1Lines.length, file2Lines.length); i++) {
-            if (file1Lines[i] === file2Lines[i]) {
+        for (let i = 0; i < Math.min(file1Data.length, file2Data.length); i++) {
+            if (file1Data[i] === file2Data[i]) {
                 matches++;
             } else {
                 mismatches++;
             }
         }
 
-        mismatches += Math.abs(file1Lines.length - file2Lines.length);
-
+        mismatches += Math.abs(file1Data.length - file2Data.length);
+        
         result.matches = matches;
         result.unmatches = mismatches;
-        return result;
 
+        return result;
+    }
+
+    private async readFileData(file: string): Promise<string[]> {
+        const fileStream = readline.createInterface({
+            input: fs.createReadStream(file),
+            terminal: false
+        });
+
+        let lines: string[] = [];
+        let isFirstLine = true;
+
+        for await (const line of fileStream) {
+            if (isFirstLine) {
+                isFirstLine = false;
+                continue;
+            }
+
+            lines.push(line);
+        }
+
+        return lines;
     }
 }
