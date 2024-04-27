@@ -8,9 +8,7 @@ import { iBase } from "../app-interface/iBase";
 interface iAppConfig extends iBase {
     path1: string;
     path2: string;
-    files: {
-        [key: string]: string;
-    };
+    files: string[];
 
 }
 
@@ -42,16 +40,17 @@ class App {
     public run() {
         const configFile = this.parseArgs();
         this.config = this.readConfig(configFile);
-        for (const file in this.config.files) {
-            const file1 = path.join(this.config.path1, file);
-            const file2 = path.join(this.config.path2, file);
+        const path1 = this.config.path1;
+        const path2 = this.config.path2;
+        this.config.files.forEach(file => {
+            this.logger.info(`Comparing ${file}`);
+            const file1 = path.join(path1, file);
+            const file2 = path.join(path2, file);
             this.logger.info(`Comparing ${file1} and ${file2}`);
             const diff = new FileComparator(file1, file2);
-            this.logger.info(diff);
-    
-        }
-
-        
+            const result = diff.compare();
+            this.logger.info(result);        
+        }   )    
     }
 }
 

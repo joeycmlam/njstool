@@ -1,5 +1,6 @@
 import fs from 'fs';
 import readline from 'readline';
+import iResult from './iResult';
 
 export default class FileComparator {
     private file1: string;
@@ -10,16 +11,16 @@ export default class FileComparator {
         this.file2 = file2;
     }
 
-    async compare() {
+    async compare(): Promise<iResult> {
+        const result = {} as iResult;
+
         const file1Stream = readline.createInterface({
             input: fs.createReadStream(this.file1),
-            output: process.stdout,
             terminal: false
         });
 
         const file2Stream = readline.createInterface({
             input: fs.createReadStream(this.file2),
-            output: process.stdout,
             terminal: false
         });
 
@@ -33,27 +34,22 @@ export default class FileComparator {
             file2Lines.push(line);
         }
 
-        let matchCount = 0;
-        let mismatchCount = 0;
-        let mismatchRows: [number, string, string][] = [];
+        let matches = 0;
+        let mismatches = 0;
 
         for (let i = 0; i < Math.min(file1Lines.length, file2Lines.length); i++) {
             if (file1Lines[i] === file2Lines[i]) {
-                matchCount++;
+                matches++;
             } else {
-                mismatchCount++;
-                mismatchRows.push([i, file1Lines[i], file2Lines[i]]);
+                mismatches++;
             }
         }
 
-        if (file1Lines.length !== file2Lines.length) {
-            mismatchCount += Math.abs(file1Lines.length - file2Lines.length);
-        }
+        mismatches += Math.abs(file1Lines.length - file2Lines.length);
 
-        return {
-            totalMatch: matchCount,
-            totalMismatch: mismatchCount,
-            mismatchRows: mismatchRows
-        };
+        result.matches = matches;
+        result.unmatches = mismatches;
+        return result;
+
     }
 }
