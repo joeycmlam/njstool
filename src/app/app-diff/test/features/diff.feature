@@ -10,5 +10,5 @@ Feature: FileComparator
     And the total number of mismatching rows should be <mismatches>
 
     Examples:
-      | config      | file1      | file2      | matches | mismatches |
+      | config             | file1      | file2      | matches | mismatches |
       | config/config.json | client.txt | client.txt |     100 |          0 |
