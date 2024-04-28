@@ -1,15 +1,9 @@
 import pandas as pd
-import json
 import os
 import argparse
+import configReader
 
-class ConfigReader:
-    def __init__(self, config_file):
-        self.config_file = config_file
 
-    def read_config(self):
-        with open(self.config_file, 'r') as f:
-            return json.load(f)
 
 class FileComparator:
     def __init__(self, config):
@@ -58,7 +52,7 @@ if __name__ == "__main__":
     parser.add_argument('--config', type=str, required=True, help='Path to the configuration file.')
     args = parser.parse_args()
 
-    config_reader = ConfigReader(args.config)
+    config_reader = configReader.ConfigReader(args.config)
     config = config_reader.read_config()
 
     comparator = FileComparator(config)
