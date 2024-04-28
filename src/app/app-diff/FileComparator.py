@@ -5,8 +5,9 @@ import os
 class FileComparator:
     DELIMITER = '|'
     
-    def __init__(self, config):
+    def __init__(self, config, logger):
         self.config = config
+        self.logger = logger
 
     def read_file(self, path, filename):
         """Read a file into a DataFrame, setting 'code' as the index."""
