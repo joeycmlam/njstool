@@ -1,24 +1,26 @@
 import pandas as pd
 import os
-import argparse
-import configReader
-
 
 
 class FileComparator:
+    
     def __init__(self, config):
         self.config = config
 
-    def compare(self):
+    def read_file(self, path, filename):
+        """Read a file into a DataFrame, setting 'code' as the index."""
+        DELIMITER = '|'
+        file_path = os.path.join(path, filename)
+        return pd.read_csv(file_path, delimiter='|').set_index('code')
+
+    def compare_files(self):
         summary = []
         details = []
 
         for file in self.config['files']:
-            file1 = os.path.join(self.config['path1'], file)
-            file2 = os.path.join(self.config['path2'], file)
-
-            df1 = pd.read_csv(file1, delimiter='|').set_index('code')
-            df2 = pd.read_csv(file2, delimiter='|').set_index('code')
+            
+            df1 = self.read_file(self.config['path1'], file)
+            df2 = self.read_file(self.config['path2'], file)
 
             mismatches = []
             matches = 0
@@ -47,13 +49,3 @@ class FileComparator:
             summary_df.to_excel(writer, sheet_name='Summary', index=False)
             details_df.to_excel(writer, sheet_name='Details', index=False)
 
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Compare files based on a configuration file.')
-    parser.add_argument('--config', type=str, required=True, help='Path to the configuration file.')
-    args = parser.parse_args()
-
-    config_reader = configReader.ConfigReader(args.config)
-    config = config_reader.read_config()
-
-    comparator = FileComparator(config)
-    comparator.compare()
