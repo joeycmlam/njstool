@@ -6,7 +6,7 @@ from datetime import datetime
 
 
 
-class FileComparator2:
+class FileComparator:
     def __init__(self, config):
         self.config = config
 
@@ -41,10 +41,11 @@ class FileComparator2:
             mismatches = []
             matches = 0
             matches, mismatches = self.compare_files(file1, file2)
+            total_records = len(df1.index.union(df2.index))
             
             total_records = len(df1.index.union(df2.index))
-            summary.append([file, total_records, matches, len(mismatches)])
-            details.extend([[file] + [mismatch] for mismatch in mismatches])
+            summary.append([file, total_records, len(matches.values), len(mismatches.values)])
+            # details.extend([[file] + [mismatch] for mismatch in mismatches])
 
 
         summary_df = pd.DataFrame(summary, columns=['File', 'Total Records', 'Number of Matches', 'Number of Mismatches'])
