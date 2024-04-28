@@ -4,7 +4,7 @@ code|name|gender|country|ID
 003|Alberto Flores|M|USA|1003
 004|Emma Taylor|F|UK|1004
 005|Raj Patel|M|India|1005
-006|Li Wei|F|China|1006
+006|Li X Wei|F|China|1006
 007|Marie Curie|F|France|1007
 008|Carlos Diaz|F|Spain|1008
 009|Laura Johnson|F|Germany|1009

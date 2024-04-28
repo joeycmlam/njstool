@@ -1,0 +1,15 @@
+Results for client.txt:
+
+
+Results for client.1.txt:
+4 --> name is not match
+
+Results for client.2.txt:
+
+
+Results for client.3.txt:
+3 --> is missing record in 1st file
+4 --> gender is not match
+5 --> country is not match
+6 --> name is not match
+

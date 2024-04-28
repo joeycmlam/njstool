@@ -1,7 +1,7 @@
 code|name|gender|country|ID
 001|John Doe|M|USA|1001
-004|Emma Taylor|F|UK|1004
-005|Raj Patel|M|India|1005
+004|Emma Taylor|X|UK|1004
+005|Raj Patel|M|IndiaD|1005
 006|Li Wei|F|China|1006
 010|Kim Young|M|South Korea|1010
 007|Marie Curie|F|France|1007
