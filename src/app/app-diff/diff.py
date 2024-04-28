@@ -3,10 +3,17 @@ import json
 import os
 import argparse
 
-class FileComparator:
+class ConfigReader:
     def __init__(self, config_file):
-        with open(config_file, 'r') as f:
-            self.config = json.load(f)
+        self.config_file = config_file
+
+    def read_config(self):
+        with open(self.config_file, 'r') as f:
+            return json.load(f)
+
+class FileComparator:
+    def __init__(self, config):
+        self.config = config
 
     def compare(self):
         summary = []
@@ -51,5 +58,8 @@ if __name__ == "__main__":
     parser.add_argument('--config', type=str, required=True, help='Path to the configuration file.')
     args = parser.parse_args()
 
-    comparator = FileComparator(args.config)
+    config_reader = ConfigReader(args.config)
+    config = config_reader.read_config()
+
+    comparator = FileComparator(config)
     comparator.compare()
