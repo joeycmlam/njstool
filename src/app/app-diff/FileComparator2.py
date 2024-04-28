@@ -5,8 +5,9 @@ import os
 class FileComparator:
     DELIMITER = '|'
     
-    def __init__(self, config):
+    def __init__(self, config, logger):
         self.config = config
+        self.logger = logger
 
     def read_file(self, path, filename):
         """Read a file into a DataFrame, setting 'code' as the index."""
@@ -41,7 +42,8 @@ class FileComparator:
 
             mismatches = []
             matches = 0
-
+            self.logger.info(f"Comparing file {file}")
+            
             mismatches, matches = self.compare_one_file(df1, df2)
 
             total_records = len(df1.index.union(df2.index))

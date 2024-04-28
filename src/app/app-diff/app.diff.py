@@ -9,7 +9,7 @@ class App:
     def __init__(self, config_path):
         self.config_reader = configReader.ConfigReader(config_path)
         self.config = self.config_reader.read_config()
-        self.comparator = FileComparator(self.config)
+       
 
         # Set up logging
         log_filename = f"{self.config['log']['filename']}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
@@ -18,6 +18,9 @@ class App:
                             format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
         self.logger = logging.getLogger(__name__)
 
+        self.comparator = FileComparator(self.config, self.logger)
+        
+        
     def run(self):
         self.logger.info('Starting file comparison')
         self.comparator.compare_files()
