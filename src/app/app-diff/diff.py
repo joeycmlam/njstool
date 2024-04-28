@@ -40,7 +40,8 @@ class FileComparator:
         summary_df = pd.DataFrame(summary, columns=['File', 'Total Records', 'Number of Matches', 'Number of Mismatches'])
         details_df = pd.DataFrame(details, columns=['File', 'Code', 'Mismatch', 'Value in File 1', 'Value in File 2'])
 
-        with pd.ExcelWriter('output/results.xlsx') as writer:
+        output_file = os.path.join(self.config['out']['path'], self.config['out']['filename'])
+        with pd.ExcelWriter(output_file) as writer:
             summary_df.to_excel(writer, sheet_name='Summary', index=False)
             details_df.to_excel(writer, sheet_name='Details', index=False)
 
