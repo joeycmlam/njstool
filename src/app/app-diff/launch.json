@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: diff2.py",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/diff2.py",
+            "args": ["--config", "config/config.json"],
+            "console": "integratedTerminal"
+        }
+    ]
+}
