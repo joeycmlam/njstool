@@ -1,6 +1,6 @@
 import argparse
 import configReader
-from FileComparator import FileComparator
+from FileComparator2 import FileComparator
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Compare files based on a configuration file.')
