@@ -8,29 +8,41 @@ class FileComparator:
             self.config = json.load(f)
 
     def compare(self):
-        with open('results.txt', 'w') as f:
-            for file in self.config['files']:
-                file1 = os.path.join(self.config['path1'], file)
-                file2 = os.path.join(self.config['path2'], file)
+        summary = []
+        details = []
 
-                df1 = pd.read_csv(file1, delimiter='|').set_index('code')
-                df2 = pd.read_csv(file2, delimiter='|').set_index('code')
+        for file in self.config['files']:
+            file1 = os.path.join(self.config['path1'], file)
+            file2 = os.path.join(self.config['path2'], file)
 
-                mismatches = []
+            df1 = pd.read_csv(file1, delimiter='|').set_index('code')
+            df2 = pd.read_csv(file2, delimiter='|').set_index('code')
 
-                for code in df1.index.union(df2.index):
-                    if code not in df2.index:
-                        mismatches.append(f"{code} --> is missing record in 2nd file")
-                    elif code not in df1.index:
-                        mismatches.append(f"{code} --> is missing record in 1st file")
-                    elif not df1.loc[code].equals(df2.loc[code]):
-                        for col in df1.columns:
-                            if df1.loc[code, col] != df2.loc[code, col]:
-                                mismatches.append(f"{code} --> {col} is not match, file1: {df1.loc[code, col]}, file2: {df2.loc[code, col]}")
+            mismatches = []
+            matches = 0
 
-                f.write(f"Results for {file}:\n")
-                f.write('\n'.join(mismatches))
-                f.write('\n\n')
+            for code in df1.index.union(df2.index):
+                if code not in df2.index:
+                    mismatches.append([code, "is missing record in 2nd file", None, None])
+                elif code not in df1.index:
+                    mismatches.append([code, "is missing record in 1st file", None, None])
+                elif not df1.loc[code].equals(df2.loc[code]):
+                    for col in df1.columns:
+                        if df1.loc[code, col] != df2.loc[code, col]:
+                            mismatches.append([code, f"{col} is not match", df1.loc[code, col], df2.loc[code, col]])
+                else:
+                    matches += 1
+
+            total_records = len(df1.index.union(df2.index))
+            summary.append([file, total_records, matches, len(mismatches)])
+            details.extend([[file] + mismatch for mismatch in mismatches])
+
+        summary_df = pd.DataFrame(summary, columns=['File', 'Total Records', 'Number of Matches', 'Number of Mismatches'])
+        details_df = pd.DataFrame(details, columns=['File', 'Code', 'Mismatch', 'Value in File 1', 'Value in File 2'])
+
+        with pd.ExcelWriter('output/results.xlsx') as writer:
+            summary_df.to_excel(writer, sheet_name='Summary', index=False)
+            details_df.to_excel(writer, sheet_name='Details', index=False)
 
 comparator = FileComparator('config/config.json')
 comparator.compare()

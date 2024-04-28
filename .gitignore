@@ -8,6 +8,8 @@ log/
 logs/
 *.log
 
+# ignore output files
+output/
 
 # ignore the node_modules directory
 # ignore the build directory
