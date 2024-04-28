@@ -3,15 +3,16 @@ import os
 
 
 class FileComparator:
+    DELIMITER = '|'
     
     def __init__(self, config):
         self.config = config
 
     def read_file(self, path, filename):
         """Read a file into a DataFrame, setting 'code' as the index."""
-        DELIMITER = '|'
+        
         file_path = os.path.join(path, filename)
-        return pd.read_csv(file_path, delimiter='|').set_index('code')
+        return pd.read_csv(file_path, delimiter=self.DELIMITER).set_index('code')
 
     def compare_files(self):
         summary = []
