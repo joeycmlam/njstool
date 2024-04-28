@@ -9,13 +9,13 @@ class FileComparator:
         self.config = config
         self.logger = logger
 
-    def read_file(self, path, filename):
+    def read_file(self, path: str, filename:str) -> pd.DataFrame:
         """Read a file into a DataFrame, setting 'code' as the index."""
         
         file_path = os.path.join(path, filename)
         return pd.read_csv(file_path, delimiter=self.DELIMITER).set_index('code')
 
-    def compare_one_file(self, df1, df2):
+    def compare_one_file(self, df1: pd.DataFrame, df2: pd.DataFrame) -> list:
         mismatches = []
         matches = 0
         for code in df1.index.union(df2.index):
@@ -43,7 +43,6 @@ class FileComparator:
             mismatches = []
             matches = 0
             self.logger.info(f"Comparing file {file}")
-            
             mismatches, matches = self.compare_one_file(df1, df2)
 
             total_records = len(df1.index.union(df2.index))
