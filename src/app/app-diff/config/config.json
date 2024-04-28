@@ -8,6 +8,8 @@
     "path2": "/Users/joeylam/repo/njs/njstool/src/app/app-diff/test/data/data-2",
     "files": [
         "client.txt",
-        "client.1.txt"
+        "client.1.txt",
+        "client.2.txt",
+        "client.3.txt"
     ]
 }
