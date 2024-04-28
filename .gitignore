@@ -15,6 +15,7 @@ output/
 # ignore the build directory
 dist/
 node_modules/
+__pycache__/
 
 #ingore test filder
 coverage/
