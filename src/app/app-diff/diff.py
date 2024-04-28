@@ -1,6 +1,7 @@
 import pandas as pd
 import json
 import os
+import argparse
 
 class FileComparator:
     def __init__(self, config_file):
@@ -45,5 +46,10 @@ class FileComparator:
             summary_df.to_excel(writer, sheet_name='Summary', index=False)
             details_df.to_excel(writer, sheet_name='Details', index=False)
 
-comparator = FileComparator('config/config.json')
-comparator.compare()
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='Compare files based on a configuration file.')
+    parser.add_argument('--config', type=str, required=True, help='Path to the configuration file.')
+    args = parser.parse_args()
+
+    comparator = FileComparator(args.config)
+    comparator.compare()
