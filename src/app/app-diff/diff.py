@@ -1,32 +1,36 @@
 import pandas as pd
+import json
+import os
 
 class FileComparator:
-    def __init__(self, file1, file2):
-        self.file1 = file1
-        self.file2 = file2
+    def __init__(self, config_file):
+        with open(config_file, 'r') as f:
+            self.config = json.load(f)
 
     def compare(self):
-        df1 = pd.read_csv(self.file1, delimiter='|')
-        df2 = pd.read_csv(self.file2, delimiter='|')
+        with open('results.txt', 'w') as f:
+            for file in self.config['files']:
+                file1 = os.path.join(self.config['path1'], file)
+                file2 = os.path.join(self.config['path2'], file)
 
-        df1.sort_values('code', inplace=True)
-        df2.sort_values('code', inplace=True)
+                df1 = pd.read_csv(file1, delimiter='|').set_index('code')
+                df2 = pd.read_csv(file2, delimiter='|').set_index('code')
 
-        mismatches = []
+                mismatches = []
 
-        for i in df1.index:
-            if i not in df2.index:
-                mismatches.append(f"{df1.loc[i, 'code']} --> is missing record in 2nd file")
-            elif not df1.loc[i].equals(df2.loc[i]):
-                for col in df1.columns:
-                    if df1.loc[i, col] != df2.loc[i, col]:
-                        mismatches.append(f"{df1.loc[i, 'code']} --> {col} is not match")
+                for code in df1.index.union(df2.index):
+                    if code not in df2.index:
+                        mismatches.append(f"{code} --> is missing record in 2nd file")
+                    elif code not in df1.index:
+                        mismatches.append(f"{code} --> is missing record in 1st file")
+                    elif not df1.loc[code].equals(df2.loc[code]):
+                        for col in df1.columns:
+                            if df1.loc[code, col] != df2.loc[code, col]:
+                                mismatches.append(f"{code} --> {col} is not match")
 
-        for i in df2.index:
-            if i not in df1.index:
-                mismatches.append(f"{df2.loc[i, 'code']} --> is missing record in 1st file")
+                f.write(f"Results for {file}:\n")
+                f.write('\n'.join(mismatches))
+                f.write('\n\n')
 
-        return mismatches
-
-comparator = FileComparator('/Users/joeylam/repo/njs/njstool/src/app/app-diff/test/data/data-1/client.2.txt', '/Users/joeylam/repo/njs/njstool/src/app/app-diff/test/data/data-2/client.2.txt')
-print(comparator.compare())
+comparator = FileComparator('config/config.json')
+comparator.compare()
