@@ -14,6 +14,22 @@ class FileComparator:
         file_path = os.path.join(path, filename)
         return pd.read_csv(file_path, delimiter=self.DELIMITER).set_index('code')
 
+    def compare_one_file(self, df1, df2):
+        mismatches = []
+        matches = 0
+        for code in df1.index.union(df2.index):
+            if code not in df2.index:
+                mismatches.append([code, "is missing record in 2nd file", None, None])
+            elif code not in df1.index:
+                mismatches.append([code, "is missing record in 1st file", None, None])
+            elif not df1.loc[code].equals(df2.loc[code]):
+                for col in df1.columns:
+                    if df1.loc[code, col] != df2.loc[code, col]:
+                        mismatches.append([code, f"{col} is not match", df1.loc[code, col], df2.loc[code, col]])
+            else:
+                matches += 1
+        return mismatches, matches
+    
     def compare_files(self):
         summary = []
         details = []
@@ -26,17 +42,7 @@ class FileComparator:
             mismatches = []
             matches = 0
 
-            for code in df1.index.union(df2.index):
-                if code not in df2.index:
-                    mismatches.append([code, "is missing record in 2nd file", None, None])
-                elif code not in df1.index:
-                    mismatches.append([code, "is missing record in 1st file", None, None])
-                elif not df1.loc[code].equals(df2.loc[code]):
-                    for col in df1.columns:
-                        if df1.loc[code, col] != df2.loc[code, col]:
-                            mismatches.append([code, f"{col} is not match", df1.loc[code, col], df2.loc[code, col]])
-                else:
-                    matches += 1
+            mismatches, matches = self.compare_one_file(df1, df2)
 
             total_records = len(df1.index.union(df2.index))
             summary.append([file, total_records, matches, len(mismatches)])
