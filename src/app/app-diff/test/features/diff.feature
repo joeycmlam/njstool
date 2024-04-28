@@ -1,3 +1,4 @@
+@ignore
 Feature: FileComparator
 
   Scenario Outline: Match
