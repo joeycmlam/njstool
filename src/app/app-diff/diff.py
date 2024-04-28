@@ -26,7 +26,7 @@ class FileComparator:
                     elif not df1.loc[code].equals(df2.loc[code]):
                         for col in df1.columns:
                             if df1.loc[code, col] != df2.loc[code, col]:
-                                mismatches.append(f"{code} --> {col} is not match")
+                                mismatches.append(f"{code} --> {col} is not match, file1: {df1.loc[code, col]}, file2: {df2.loc[code, col]}")
 
                 f.write(f"Results for {file}:\n")
                 f.write('\n'.join(mismatches))
