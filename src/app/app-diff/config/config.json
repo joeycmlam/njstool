@@ -15,5 +15,6 @@
         {"filename": "client.3.txt", "key": "code", "exclude": [] },
         {"filename": "fundprice.txt", "key": "fundcode", "exclude": ["pricedate"]},
         {"filename": "fundprice.1.txt", "key": "fundcode", "exclude": ["pricedate"]}
-    ]
+    ],
+    "rounding_threshold": 0.001
 }

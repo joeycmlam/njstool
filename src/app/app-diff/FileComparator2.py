@@ -9,6 +9,7 @@ class FileComparator:
     def __init__(self, config, logger):
         self.config = config
         self.logger = logger
+        self.threshold = config['rounding_threshold']
 
     def read_file(self, path: str, filename: str, key: str, exclude: List[str]) -> pd.DataFrame:
         """Read a file into a DataFrame, setting 'key' as the index."""
@@ -27,8 +28,13 @@ class FileComparator:
                 mismatches.append([code, "is missing record in 1st file", None, None])
             elif not df1.loc[code].equals(df2.loc[code]):
                 for col in df1.columns:
-                    if df1.loc[code, col] != df2.loc[code, col]:
-                        mismatches.append([code, f"{col} is not match", df1.loc[code, col], df2.loc[code, col]])
+                    val1 = df1.loc[code, col]
+                    val2 = df2.loc[code, col]
+                    if isinstance(val1, (int, float)) and isinstance(val2, (int, float)):
+                        if abs(val1 - val2) > self.threshold:
+                            mismatches.append([code, f"{col} is not match", val1, val2])
+                    elif val1 != val2:
+                        mismatches.append([code, f"{col} is not match", val1, val2])
             else:
                 matches += 1
         return mismatches, matches
