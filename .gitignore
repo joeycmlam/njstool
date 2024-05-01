@@ -16,6 +16,7 @@ output/
 dist/
 node_modules/
 __pycache__/
+*.pyc
 
 #ingore test filder
 coverage/
