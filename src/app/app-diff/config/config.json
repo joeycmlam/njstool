@@ -13,6 +13,7 @@
     "files": [
         {"filename": "client.1.txt", "key": "code" },
         {"filename": "client.3.txt", "key": "code", "exclude": [] },
-        {"filename": "fundprice.txt", "key": "fundcode", "exclude": ["pricedate"]}
+        {"filename": "fundprice.txt", "key": "fundcode", "exclude": ["pricedate"]},
+        {"filename": "fundprice.1.txt", "key": "fundcode", "exclude": ["pricedate"]}
     ]
 }
