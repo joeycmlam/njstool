@@ -13,30 +13,37 @@ class FileComparator:
 
     def read_file(self, path: str, filename: str, key: str, exclude: List[str]) -> pd.DataFrame:
         """Read a file into a DataFrame, setting 'key' as the index."""
-        self.logger.info('Reading file: %s', os.path.join(path, filename))
-        file_path = os.path.join(path, filename)
-        df = pd.read_csv(file_path, delimiter=self.DELIMITER).set_index(key)
-        return df.drop(columns=exclude, errors='ignore')
+        try:
+            self.logger.info('Reading file: %s', os.path.join(path, filename))
+            file_path = os.path.join(path, filename)
+            df = pd.read_csv(file_path, delimiter=self.DELIMITER).set_index(key)
+            return df.drop(columns=exclude, errors='ignore')
+        except Exception as e:
+            self.logger.error('Error reading file: %s', e)
+            return pd.DataFrame()
 
     def compare_one_file(self, df1: pd.DataFrame, df2: pd.DataFrame) -> list:
         mismatches = []
         matches = 0
-        for code in df1.index.union(df2.index):
-            if code not in df2.index:
-                mismatches.append([code, "is missing record in 2nd file", None, None])
-            elif code not in df1.index:
-                mismatches.append([code, "is missing record in 1st file", None, None])
-            elif not df1.loc[code].equals(df2.loc[code]):
-                for col in df1.columns:
-                    val1 = df1.loc[code, col]
-                    val2 = df2.loc[code, col]
-                    if isinstance(val1, (int, float)) and isinstance(val2, (int, float)):
-                        if abs(val1 - val2) > self.threshold:
+        try:
+            for code in df1.index.union(df2.index):
+                if code not in df2.index:
+                    mismatches.append([code, "is missing record in 2nd file", None, None])
+                elif code not in df1.index:
+                    mismatches.append([code, "is missing record in 1st file", None, None])
+                elif not df1.loc[code].equals(df2.loc[code]):
+                    for col in df1.columns:
+                        val1 = df1.loc[code, col]
+                        val2 = df2.loc[code, col]
+                        if isinstance(val1, (int, float)) and isinstance(val2, (int, float)):
+                            if abs(val1 - val2) > self.threshold:
+                                mismatches.append([code, f"{col} is not match", val1, val2])
+                        elif val1 != val2:
                             mismatches.append([code, f"{col} is not match", val1, val2])
-                    elif val1 != val2:
-                        mismatches.append([code, f"{col} is not match", val1, val2])
-            else:
-                matches += 1
+                else:
+                    matches += 1
+        except Exception as e:
+            self.logger.error('Error comparing files: %s', e)
         return mismatches, matches
     
     def compare_files(self):
