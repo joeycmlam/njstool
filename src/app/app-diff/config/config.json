@@ -12,7 +12,7 @@
     "path2": "/Users/joeylam/repo/njs/njstool/src/app/app-diff/test/data/data-2",
     "files": [
         {"filename": "client.1.txt", "key": "code" },
-        {"filename": "client.2.txt", "key": "code" },
-        {"filename": "client.3.txt", "key": "code" }
+        {"filename": "client.3.txt", "key": "code", "exclude": [] },
+        {"filename": "fundprice.txt", "key": "fundcode", "exclude": ["pricedate"]}
     ]
 }
