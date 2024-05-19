@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="enhance ETL job">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/njstool.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/njstool.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-diff/diff2.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-diff/diff2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +190,7 @@
       <recent name="$PROJECT_DIR$/src/app/app-mask" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.diff2">
+  <component name="RunManager" selected="Cucumber.js.app.fee.feature">
     <configuration name="diff2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="njstool" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -286,11 +283,9 @@
       <item itemvalue="npm.test:cucumber:playload" />
       <item itemvalue="npm.test:cucumber:rest" />
       <item itemvalue="npm.start" />
-      <item itemvalue="Python.diff2" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.diff2" />
         <item itemvalue="npm.test:cucumber:rest" />
         <item itemvalue="npm.test:cucumber:playload" />
         <item itemvalue="npm.start" />
@@ -376,6 +371,7 @@
       <workItem from="1711963089650" duration="60000" />
       <workItem from="1711963157481" duration="3000" />
       <workItem from="1714310442740" duration="173000" />
+      <workItem from="1716022961183" duration="314000" />
     </task>
     <task id="LOCAL-00082" summary="improvver logger">
       <created>1684152075146</created>
@@ -841,11 +837,6 @@
           <option name="timeStamp" value="62" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/test/test-fee/features/step_definitions/fee.steps.ts</url>
-          <line>61</line>
-          <option name="timeStamp" value="63" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/app-fee/app.fee.ts</url>
           <line>64</line>
           <option name="timeStamp" value="64" />
@@ -855,11 +846,6 @@
           <line>122</line>
           <option name="timeStamp" value="65" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/app/app-diff/diff2.py</url>
-          <line>46</line>
-          <option name="timeStamp" value="66" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -867,9 +853,6 @@
         <watch expression="data" />
       </configuration>
     </watches-manager>
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/njstool$diff2.coverage" NAME="diff2 Coverage Results" MODIFIED="1714310535388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-diff" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main.js" />
