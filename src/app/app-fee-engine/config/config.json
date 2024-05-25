@@ -1,0 +1,7 @@
+{
+  "log": {
+    "level": "info",
+    "path": "logs",
+    "filename": "app.log"
+  }
+}

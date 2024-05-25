@@ -5,12 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/app-fee-engine/CalcuatedFeeTransaction.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-fee-engine/diagram/test.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-fee-engine/orderTxnType.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-fee-engine/orderType.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-fee/test/features/app.fee.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee/test/features/app.fee.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-fee/test/test-data/A0001-01.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee/test/data/A0001-01.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-fee/test/test-data/A0001.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee/test/data/A0001.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/support/world.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/support/world.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-fee-engine/DSCCalculator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee-engine/DSCCalculator.ts.backup" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-fee-engine/FIFOHoldingPeriodCalculator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee-engine/FIFOHoldingPeriodCalculator.ts.backup" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-fee-engine/app.fee.engine.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee-engine/app.fee.engine.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-fee-engine/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee-engine/config/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-fee-engine/config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-fee-engine/enumFeeEngine.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee-engine/enumFeeEngine.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-fee-engine/transactions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee-engine/transactions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-fee-engine/typeFeeEngine.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +30,9 @@
         <option value="package.json" />
         <option value="JavaScript File" />
         <option value="tsconfig.json" />
-        <option value="UML Gantt" />
         <option value="Swagger" />
+        <option value="UML Gantt" />
+        <option value="UML Object" />
         <option value="TypeScript File" />
       </list>
     </option>
@@ -150,35 +158,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultPlantUmlFileTemplate": "UML Gantt",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ToolWindowCommit.ShowToolbar": "false",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "javascript.nodejs.core.library.configured.version": "18.20.2",
-    "javascript.nodejs.core.library.typings.version": "18.19.33",
-    "js.last.introduce.type": "CONST",
-    "last_opened_file_path": "/Users/joeylam/repo/njs/njstool/src/app/app-fee-engine",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs.cucumber.cucumber_node_package_dir": "/Users/joeylam/repo/njs/njstool/node_modules/@cucumber/cucumber",
-    "nodejs.jest.jest_package": "/Users/joeylam/repo/njs/njstool/node_modules/jest",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "/Users/joeylam/repo/njs/njstool/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Object&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ToolWindowCommit.ShowToolbar&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.20.2&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.19.33&quot;,
+    &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/joeylam/repo/njs/njstool/src/app/app-fee-engine&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs.cucumber.cucumber_node_package_dir&quot;: &quot;/Users/joeylam/repo/njs/njstool/node_modules/@cucumber/cucumber&quot;,
+    &quot;nodejs.jest.jest_package&quot;: &quot;/Users/joeylam/repo/njs/njstool/node_modules/jest&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/joeylam/repo/njs/njstool/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "TEXT"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;TEXT&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/app/app-fee-engine" />
@@ -188,11 +196,11 @@
       <recent name="$PROJECT_DIR$/test" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/app-fee-engine/config" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/app/app-fee" />
       <recent name="$PROJECT_DIR$/src/app/app-fee-engine" />
       <recent name="$PROJECT_DIR$/src/app" />
-      <recent name="$PROJECT_DIR$/test/test-fee/features" />
     </key>
   </component>
   <component name="RunManager" selected="npm.test:cucumber:fee">
@@ -371,7 +379,10 @@
       <workItem from="1714310442740" duration="173000" />
       <workItem from="1716022961183" duration="314000" />
       <workItem from="1716112745433" duration="168000" />
-      <workItem from="1716618236329" duration="3845000" />
+      <workItem from="1716618236329" duration="4638000" />
+      <workItem from="1716626162077" duration="30000" />
+      <workItem from="1716626200519" duration="4740000" />
+      <workItem from="1716646247123" duration="3586000" />
     </task>
     <task id="LOCAL-00082" summary="improvver logger">
       <created>1684152075146</created>
@@ -716,7 +727,7 @@
       <option name="project" value="LOCAL" />
       <updated>1688846655959</updated>
     </task>
-    <option name="localTasksCounter" value="135" />
+    <option name="localTasksCounter" value="136" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -751,7 +762,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="reflector for performance." />
     <MESSAGE value="rulesLoader.ts for defining the fee tiers." />
     <MESSAGE value="enhance to base on aum to calculate the fee" />
     <MESSAGE value="reflector" />
@@ -776,7 +786,8 @@
     <MESSAGE value="enhance ETL job" />
     <MESSAGE value="create app - simulator" />
     <MESSAGE value="restructure the folders" />
-    <option name="LAST_COMMIT_MESSAGE" value="restructure the folders" />
+    <MESSAGE value="fix the reflector issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix the reflector issue" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -849,7 +860,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/app/app-fee/transactionLoader.ts</url>
           <line>20</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="66" />
         </line-breakpoint>
       </breakpoints>
