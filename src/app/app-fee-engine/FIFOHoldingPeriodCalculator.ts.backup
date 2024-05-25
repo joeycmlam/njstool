@@ -1,11 +1,13 @@
-import {CalcuatedFeeTransaction, InvestmentTransaction} from "./typeFeeEngine";
-import {enumTnxType} from "./enumFeeEngine";
-
+import { enumOrdType } from "./enumFeeEngine";
+import { OrderTxnType } from "./orderTxnType";
+import { OrderType } from "./orderType";
 
 
 export default class FIFOHoldingPeriodCalculator {
-    private logger: any;
-    public constructor(private transactions: InvestmentTransaction[]) {
+    private transactions[]: OrderTxnType[];
+
+    public constructor(transactions: OrderTxnType[]) {
+        this.transactions = transactions;
     }
 
     // Calculate holding periods for each unit based on the FIFO method
@@ -17,35 +19,35 @@ export default class FIFOHoldingPeriodCalculator {
 
         const sortedTransactions = this.transactions
             .slice()
-            .sort((a, b) => a.txnDate.getTime() - b.txnDate.getTime());
+            .sort((a, b) => a.dealingDate.getTime() - b.dealingDate.getTime());
         let remainingUnits = 0;
 
         for (const transaction of sortedTransactions) {
-            if (transaction.transactionType === enumTnxType.SUBSCRIPTION) {
+            if (transaction.orderDetail.orderType === enumOrdType.SUBSCRIPTION) {
                 remainingUnits += transaction.units;
 
                 // Calculate holding period for the transaction
                 const holdingPeriod =
-                    (referenceDate.getTime() - transaction.txnDate.getTime()) /
+                    (referenceDate.getTime() - transaction.dealingDate.getTime()) /
                     (1000 * 60 * 60 * 24 * 365);
 
                 // Add transaction information to the holding period
                 holdingPeriods.push({
-                    txnDetail: transaction,
+                    orderDetail: transaction,
                     holdingPeriod,
                     soldUnits: 0,
                     deductedUnits: 0,
                 });
-            } else if (transaction.transactionType === enumTnxType.REDEMPTION) {
+            } else if (transaction.orderDetail.orderType === enumOrdType.REDEMPTION) {
                 remainingUnits -= transaction.units;
 
                 // Update soldUnits and deductedUnits in the holding periods array (FIFO)
                 while (transaction.units > 0 && holdingPeriods.length > 0) {
                     const firstHoldingPeriod = holdingPeriods[0];
-                    if (transaction.units >= firstHoldingPeriod.txnDetail.units - firstHoldingPeriod.soldUnits) {
-                        const deducted = firstHoldingPeriod.txnDetail.units - firstHoldingPeriod.soldUnits;
+                    if (transaction.units >= firstHoldingPeriod.orderDetail.orderUnitAmount - firstHoldingPeriod.soldUnits) {
+                        const deducted = firstHoldingPeriod.orderDetail.orderUnitAmount - firstHoldingPeriod.soldUnits;
                         transaction.units -= deducted;
-                        firstHoldingPeriod.soldUnits = firstHoldingPeriod.txnDetail.units;
+                        firstHoldingPeriod.soldUnits = firstHoldingPeriod.orderDetail.orderUnitAmount;
                         holdingPeriods.shift();
                     } else {
                         firstHoldingPeriod.soldUnits += transaction.units;
@@ -55,16 +57,14 @@ export default class FIFOHoldingPeriodCalculator {
             }
         }
 
-        // this.logger.debug(holdingPeriods);
-
         // Calculate holding periods for the specified number of selling units
         const sellingHoldingPeriods: CalcuatedFeeTransaction[] = [];
         while (sellingUnits > 0 && holdingPeriods.length > 0) {
             const firstHoldingPeriod = holdingPeriods[0];
-            if (sellingUnits >= firstHoldingPeriod.txnDetail.units - firstHoldingPeriod.soldUnits) {
-                const deducted = firstHoldingPeriod.txnDetail.units - firstHoldingPeriod.soldUnits;
+            if (sellingUnits >= firstHoldingPeriod.orderDetail.orderUnitAmount - firstHoldingPeriod.soldUnits) {
+                const deducted = firstHoldingPeriod.orderDetail.orderUnitAmount - firstHoldingPeriod.soldUnits;
                 sellingUnits -= deducted;
-                firstHoldingPeriod.soldUnits = firstHoldingPeriod.txnDetail.units;
+                firstHoldingPeriod.soldUnits = firstHoldingPeriod.orderDetail.orderUnitAmount;
                 firstHoldingPeriod.deductedUnits = deducted;
                 sellingHoldingPeriods.push(holdingPeriods.shift() as CalcuatedFeeTransaction);
             } else {
