@@ -1,14 +1,12 @@
 import {BeforeAll, Given, Then, When} from "@cucumber/cucumber";
-import FeeCalculator, {enmTxnType} from "../../../../src/app/app-fee/feeCalculator";
+import FeeCalculator, {enmTxnType} from "../../../feeCalculator";
 import {expect} from 'chai';
-import {feeCustom} from "../../../support/world";
+import {feeCustom} from "../../../../../test/support/world";
 import * as path from "path";
-import TransactionLoader from "../../../../src/app/app-fee/transactionLoader";
-import {FeeRate, RuleLoader} from "../../../../src/app/app-fee/ruleLoader";
+import TransactionLoader from "../../../transactionLoader";
+import {FeeRate, RuleLoader} from "../../../ruleLoader";
 
 let local: feeCustom;
-
-
 
 async function getFeeRate() {
     const feeRuleFile: string = 'src/app/app-fee/year-fee-rules.json';
@@ -32,7 +30,7 @@ Given('place {string} on {string} with {int} unit on {string} with {string}', (
     tradeType: string, fundId: string, sellUnit: number, purchaseDate: string, orderDate: string) => {
     local = new feeCustom();
     local.order.fundId = fundId;
-    local.order.txnType = stringToTxnType(tradeType) as enmTxnType | undefined | null; // Update the type to allow undefined and null values
+    local.order.txnType = stringToTxnType(tradeType) || undefined;
     local.order.unit = sellUnit;
     local.order.tradeDate = new Date(orderDate);
     local.order.purchaseDate = new Date(purchaseDate);
@@ -44,7 +42,7 @@ Given('the account {string} position file {string} and place {string} on {string
     local.dataFile = inDataFile;
     local.order.acctId = acctId;
     local.order.fundId = fundId;
-    local.order.txnType = stringToTxnType(tradeType);
+    local.order.txnType = stringToTxnType(tradeType) || undefined;
     local.order.unit = sellUnit;
     local.order.tradeDate = new Date(orderDate);
 });
@@ -54,7 +52,6 @@ When('call the fee with holdings', async function () {
 
     const txnLoader = new TransactionLoader(fileName);
     const transactions = await txnLoader.readTransactionsFromFile();
-
 
     const feeRates = await getFeeRate();
     local.feeCalculator = new FeeCalculator(feeRates);
@@ -76,4 +73,3 @@ When('call the calculator', async () => {
 Then('total fee value is {int}', (expectedFeeAmount: number) => {
     expect(local.feeAmount).to.equal(expectedFeeAmount);
 });
-
