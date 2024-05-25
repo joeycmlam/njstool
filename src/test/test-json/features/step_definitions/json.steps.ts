@@ -2,8 +2,8 @@ import {Given, When, Then} from '@cucumber/cucumber';
 import {CustomWorld} from '../../../support/world';
 import * as path from 'path';
 import * as assert from 'assert';
-import JsonHelper from "../../../../src/app/app-json/jsonHelper";
-import excelHelper from "../../../../src/app/lib/excelHelper";
+import JsonHelper from "../../../../app/app-json/jsonHelper";
+import excelHelper from "../../../../app/lib/excelHelper";
 
 const config = {
     "dataPath": "/Users/joeylam/repo/njs/njstool/test/test-json/data",

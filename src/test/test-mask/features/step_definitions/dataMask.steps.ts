@@ -1,6 +1,6 @@
 import {Before, Given, Then, When} from '@cucumber/cucumber'
 import * as assert from "assert";
-import {DataMask} from "../../../../src/app/app-mask/data-mask";
+import {DataMask} from "../../../../app/app-mask/data-mask";
 import * as fs from 'fs';
 
 

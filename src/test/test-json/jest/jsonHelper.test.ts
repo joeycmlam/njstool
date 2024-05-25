@@ -1,4 +1,4 @@
-import JsonHelper from '../../../src/app/app-json/jsonHelper';
+import JsonHelper from '../../../app/app-json/jsonHelper';
 import * as fs from 'fs/promises';
 import { Workbook } from 'exceljs';
 import * as mockFs from 'mock-fs';
