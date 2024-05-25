@@ -1,6 +1,5 @@
 Feature: Fee calculator
 
-  @ignore
   Scenario Outline: 2nd redemption within a year
     Given the account "<acctId>" position file "<in-data-file>" and place "<trade-type>" on "<fund-id>" with <sell-unit> unit on "<trade-date>"
     When call the fee with holdings
@@ -9,7 +8,7 @@ Feature: Fee calculator
     Examples:
       | in-data-file  | acctId | sell-unit | fund-id | trade-type | trade-date | fee-amt |
       | A0001-01.xlsx | A00001 | 20000     | F031    | SELL       | 2019-01-05 | 400     |
-  @ignore
+
   Scenario Outline: first redemption within a year
     Given the account "<acctId>" position file "<in-data-file>" and place "<trade-type>" on "<fund-id>" with <sell-unit> unit on "<trade-date>"
     When call the fee with holdings
@@ -18,7 +17,7 @@ Feature: Fee calculator
     Examples:
       | in-data-file | acctId | sell-unit | fund-id | trade-type | trade-date | fee-amt |
       | A0001.xlsx   | A00001 | 1000      | F031    | SELL       | 2017-10-05 | 30      |
-  @ignore
+
   Scenario Outline: first redemption
     Given the account "<acctId>" position file "<in-data-file>" and place "<trade-type>" on "<fund-id>" with <sell-unit> unit on "<trade-date>"
     When call the fee with holdings
@@ -31,7 +30,6 @@ Feature: Fee calculator
       | A0001.xlsx   | A00001 | 1000      | F031    | SELL       | 2020-10-05 | 0       |
       | A0001.xlsx   | A00001 | 1000      | F031    | SELL       | 2022-10-05 | 0       |
 
-  @ignore
   Scenario Outline: sample case with over 4 years
     Given place "<trade-type>" on "<fund-id>" with <sell-unit> unit on "<trade-date>" with "<purchase-date>"
     When call the calculator
@@ -40,7 +38,7 @@ Feature: Fee calculator
     Examples:
       | sell-unit | fund-id | trade-type | purchase-date | trade-date | fee-amt |
       | 1000      | F033    | SELL       | 2015-08-01    | 2022-10-05 | 0       |
-  @ignore
+
   Scenario Outline: sample case with over 2 years
     Given place "<trade-type>" on "<fund-id>" with <sell-unit> unit on "<trade-date>" with "<purchase-date>"
     When call the calculator
@@ -50,7 +48,6 @@ Feature: Fee calculator
       | sell-unit | fund-id | trade-type | purchase-date | trade-date | fee-amt |
       | 1000      | F033    | SELL       | 2017-08-01    | 2019-10-05 | 10      |
 
-  @ignore
   Scenario Outline: sample case with over 1 years
     Given place "<trade-type>" on "<fund-id>" with <sell-unit> unit on "<trade-date>" with "<purchase-date>"
     When call the calculator
@@ -60,7 +57,6 @@ Feature: Fee calculator
       | sell-unit | fund-id | trade-type | purchase-date | trade-date | fee-amt |
       | 1000      | F033    | SELL       | 2017-09-01    | 2018-10-05 | 20      |
 
-  @ignore
   Scenario Outline: sample case within 1 year
     Given place "<trade-type>" on "<fund-id>" with <sell-unit> unit on "<trade-date>" with "<purchase-date>"
     When call the calculator

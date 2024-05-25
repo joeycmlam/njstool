@@ -9,7 +9,7 @@ import FeeCalculator, {Transaction} from "../../app/app-fee/feeCalculator";
 // }
 
 export class feeCustom{
-    public dataPath: string = 'test/test-fee/test-data/';
+    public dataPath: string = 'src/app/app-fee/test/data/';
     public dataFile: string = '';
     public feeCalculator: FeeCalculator = new FeeCalculator();
     public transactions: Transaction[] = [];
