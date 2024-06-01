@@ -5,19 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/app-fee-engine/CalcuatedFeeTransaction.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/app-fee-engine/diagram/test.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/app-fee-engine/orderTxnType.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/app-fee-engine/orderType.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-invest-advsior/advisor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-invest-advsior/app.advisor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-invest-advsior/fetchURL.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-invest-advsior/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-invest-advsior/sourceData.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-invest-advsior/url.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-fee-engine/DSCCalculator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee-engine/DSCCalculator.ts.backup" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-fee-engine/FIFOHoldingPeriodCalculator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee-engine/FIFOHoldingPeriodCalculator.ts.backup" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-fee-engine/app.fee.engine.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee-engine/app.fee.engine.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-fee-engine/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee-engine/config/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-fee-engine/config.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-fee-engine/enumFeeEngine.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee-engine/enumFeeEngine.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-fee-engine/transactions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-fee-engine/transactions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-fee-engine/typeFeeEngine.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +28,7 @@
         <option value="UML Gantt" />
         <option value="UML Object" />
         <option value="TypeScript File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -203,7 +198,29 @@
       <recent name="$PROJECT_DIR$/src/app" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.test:cucumber:fee">
+  <component name="RunManager" selected="Python.app.advisor">
+    <configuration name="app.advisor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="njstool" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/app/app-invest-advsior" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/app/app-invest-advsior/app.advisor.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="app.fee.feature" type="cucumber.js" factoryName="Cucumber.js">
       <option name="myFilePath" value="$PROJECT_DIR$/test/test-fee/features/app.fee.feature" />
       <option name="myNameFilter" value="" />
@@ -269,16 +286,6 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="test:cucumber:fee2" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="test:cucumber:fee2" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Cucumber.js.app.fee.feature" />
       <item itemvalue="Docker.docker-compose.git.yml: Compose Deployment" />
@@ -287,15 +294,15 @@
       <item itemvalue="npm.start:fee-engine" />
       <item itemvalue="npm.test:cucumber" />
       <item itemvalue="npm.test:cucumber:fee" />
-      <item itemvalue="npm.test:cucumber:fee2" />
+      <item itemvalue="Python.app.advisor" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.app.advisor" />
+        <item itemvalue="npm.start:fee-engine" />
         <item itemvalue="npm.test:cucumber:fee" />
         <item itemvalue="npm.start:fee" />
         <item itemvalue="npm.test:cucumber" />
-        <item itemvalue="npm.test:cucumber:fee2" />
-        <item itemvalue="npm.start:fee-engine" />
       </list>
     </recent_temporary>
   </component>
@@ -382,7 +389,11 @@
       <workItem from="1716618236329" duration="4638000" />
       <workItem from="1716626162077" duration="30000" />
       <workItem from="1716626200519" duration="4740000" />
-      <workItem from="1716646247123" duration="3586000" />
+      <workItem from="1716646247123" duration="3635000" />
+      <workItem from="1717234211490" duration="764000" />
+      <workItem from="1717235478383" duration="614000" />
+      <workItem from="1717236292395" duration="60000" />
+      <workItem from="1717236419167" duration="619000" />
     </task>
     <task id="LOCAL-00082" summary="improvver logger">
       <created>1684152075146</created>
@@ -727,7 +738,7 @@
       <option name="project" value="LOCAL" />
       <updated>1688846655959</updated>
     </task>
-    <option name="localTasksCounter" value="136" />
+    <option name="localTasksCounter" value="137" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -762,7 +773,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="rulesLoader.ts for defining the fee tiers." />
     <MESSAGE value="enhance to base on aum to calculate the fee" />
     <MESSAGE value="reflector" />
     <MESSAGE value="reflector to create transactionLoader" />
@@ -787,7 +797,8 @@
     <MESSAGE value="create app - simulator" />
     <MESSAGE value="restructure the folders" />
     <MESSAGE value="fix the reflector issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix the reflector issue" />
+    <MESSAGE value="WIP - fee-engine" />
+    <option name="LAST_COMMIT_MESSAGE" value="WIP - fee-engine" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -869,6 +880,9 @@
         <watch expression="data" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/njstool$app_advisor.coverage" NAME="app.advisor Coverage Results" MODIFIED="1717236871867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-invest-advsior" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main.js" />
