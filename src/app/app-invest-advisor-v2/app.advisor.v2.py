@@ -24,12 +24,12 @@ def main(urls):
         for url in urls:
             context = url_contents[url]
             answer = get_answer_from_chatgpt(question, context)
-            print("Answer:", answer)
+            print(answer.choices[0].message.content)
+
 
 if __name__ == "__main__":
     URL_LIST = [
-        "https://www.morningstar.com",
-        "https://am.jpmorgan.com/hk/en/asset-management/adv/products/fund-explorer",
+        "https://www.morningstar.com/stocks/10-best-companies-invest-now"
         # Add other URLs as needed
     ]
     main(URL_LIST)
