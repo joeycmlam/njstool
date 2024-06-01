@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/aiAdvisor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/app.advisor.v2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/sourceData.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/aiAdvisor.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/aiAdvisor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/app.advisor.v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/app.advisor.v2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -403,14 +401,7 @@
       <workItem from="1717234211490" duration="764000" />
       <workItem from="1717235478383" duration="614000" />
       <workItem from="1717236292395" duration="60000" />
-      <workItem from="1717236419167" duration="6904000" />
-    </task>
-    <task id="LOCAL-00083" summary="run concurrrent">
-      <created>1684152559994</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1684152559994</updated>
+      <workItem from="1717236419167" duration="8353000" />
     </task>
     <task id="LOCAL-00084" summary="reflector to allow plug into different Uploader">
       <created>1684155750082</created>
@@ -748,7 +739,14 @@
       <option name="project" value="LOCAL" />
       <updated>1717237347035</updated>
     </task>
-    <option name="localTasksCounter" value="138" />
+    <task id="LOCAL-00138" summary="OpenAI sample">
+      <created>1717253986180</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1717253986180</updated>
+    </task>
+    <option name="localTasksCounter" value="139" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -783,7 +781,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="reflector" />
     <MESSAGE value="reflector to create transactionLoader" />
     <MESSAGE value="fix feature test" />
     <MESSAGE value="adjust the rate" />
@@ -808,7 +805,8 @@
     <MESSAGE value="fix the reflector issue" />
     <MESSAGE value="WIP - fee-engine" />
     <MESSAGE value="new app to read the specific website to provide the answer." />
-    <option name="LAST_COMMIT_MESSAGE" value="new app to read the specific website to provide the answer." />
+    <MESSAGE value="OpenAI sample" />
+    <option name="LAST_COMMIT_MESSAGE" value="OpenAI sample" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -883,6 +881,11 @@
           <line>20</line>
           <option name="timeStamp" value="66" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/app/app-invest-advisor-v2/aiAdvisor.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -892,7 +895,7 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/njstool$app_advisor_v2.coverage" NAME="app.advisor.v2 Coverage Results" MODIFIED="1717253917150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-invest-advisor-v2" />
+    <SUITE FILE_PATH="coverage/njstool$app_advisor_v2.coverage" NAME="app.advisor.v2 Coverage Results" MODIFIED="1717255308851" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-invest-advisor-v2" />
     <SUITE FILE_PATH="coverage/njstool$app_advisor.coverage" NAME="app.advisor Coverage Results" MODIFIED="1717237066336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-invest-advsior" />
   </component>
   <component name="editorHistoryManager">
