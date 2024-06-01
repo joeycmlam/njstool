@@ -29,7 +29,8 @@ def main(urls):
 
 if __name__ == "__main__":
     URL_LIST = [
-        "https://www.morningstar.com/stocks/10-best-companies-invest-now"
+        "https://www.manulifeim.com.hk/en/funds/fund-prices.html",
+        # "https://www.morningstar.com/stocks/10-best-companies-invest-now"
         # Add other URLs as needed
     ]
     main(URL_LIST)
