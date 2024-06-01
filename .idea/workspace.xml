@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="OpenAI sample">
-      <change afterPath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/diagram/draft.mmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/diagram/sample.drawio" afterDir="false" />
+    <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/config/config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/aiAdvisor.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/aiAdvisor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/app.advisor.v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/app.advisor.v2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/diagram/draft.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/diagram/draft.drawio" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -404,21 +405,7 @@
       <workItem from="1717236292395" duration="60000" />
       <workItem from="1717236419167" duration="9374000" />
       <workItem from="1717256810030" duration="1917000" />
-      <workItem from="1717259019481" duration="1091000" />
-    </task>
-    <task id="LOCAL-00085" summary="reflector to use dependency injection to allow plug into different reader">
-      <created>1684156480812</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1684156480812</updated>
-    </task>
-    <task id="LOCAL-00086" summary="add comment">
-      <created>1684156599403</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1684156599403</updated>
+      <workItem from="1717259019481" duration="2994000" />
     </task>
     <task id="LOCAL-00087" summary="fix the debug msg">
       <created>1684157319852</created>
@@ -749,7 +736,21 @@
       <option name="project" value="LOCAL" />
       <updated>1717255436241</updated>
     </task>
-    <option name="localTasksCounter" value="140" />
+    <task id="LOCAL-00140" summary="include the diagram">
+      <created>1717260132164</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1717260132165</updated>
+    </task>
+    <task id="LOCAL-00141" summary="rename the file">
+      <created>1717260369399</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1717260369399</updated>
+    </task>
+    <option name="localTasksCounter" value="142" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -784,8 +785,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="reflector to create transactionLoader" />
-    <MESSAGE value="fix feature test" />
     <MESSAGE value="adjust the rate" />
     <MESSAGE value="adjust default rates" />
     <MESSAGE value="revised the error message." />
@@ -809,7 +808,9 @@
     <MESSAGE value="WIP - fee-engine" />
     <MESSAGE value="new app to read the specific website to provide the answer." />
     <MESSAGE value="OpenAI sample" />
-    <option name="LAST_COMMIT_MESSAGE" value="OpenAI sample" />
+    <MESSAGE value="include the diagram" />
+    <MESSAGE value="rename the file" />
+    <option name="LAST_COMMIT_MESSAGE" value="rename the file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -886,7 +887,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/app/app-invest-advisor-v2/aiAdvisor.py</url>
-          <line>24</line>
+          <line>33</line>
           <option name="timeStamp" value="67" />
         </line-breakpoint>
       </breakpoints>
@@ -898,7 +899,7 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/njstool$app_advisor_v2.coverage" NAME="app.advisor.v2 Coverage Results" MODIFIED="1717258067917" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-invest-advisor-v2" />
+    <SUITE FILE_PATH="coverage/njstool$app_advisor_v2.coverage" NAME="app.advisor.v2 Coverage Results" MODIFIED="1717261361844" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-invest-advisor-v2" />
     <SUITE FILE_PATH="coverage/njstool$app_advisor.coverage" NAME="app.advisor Coverage Results" MODIFIED="1717237066336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-invest-advsior" />
   </component>
   <component name="editorHistoryManager">
