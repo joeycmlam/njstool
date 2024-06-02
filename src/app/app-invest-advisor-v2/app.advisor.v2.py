@@ -20,12 +20,15 @@ def main():
         else:
             url_contents[url] = "Content could not be fetched"
 
-        question = input("What is your question? ")
-        for url in urls:
-            context = url_contents[url]
-            answer = get_answer_from_chatgpt(question, context)
-            print(answer.choices[0].message.content)
+    # Concatenate all the text contents from all URLs
+    all_contents = " ".join(url_contents.values())
+
+    question = input("What is your question? ")
+    # Use all_contents as the context for the question
+    answer = get_answer_from_chatgpt(question, all_contents)
+    print(answer.choices[0].message.content)
 
 
 if __name__ == "__main__":
     main()
+

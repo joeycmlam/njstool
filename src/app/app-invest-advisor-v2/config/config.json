@@ -1,7 +1,8 @@
 {
     "env_location": "/Users/joeylam/repo/njs/njstool/env/.env.local",
     "URL_LIST": [
-        "https://www.morningstar.com/stocks/10-best-companies-invest-now"
+        "https://www.morningstar.com/stocks/10-best-companies-invest-now",
+        "https://contrarianoutlook.com"
     ]
 
 }
