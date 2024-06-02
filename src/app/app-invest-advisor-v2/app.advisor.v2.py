@@ -1,6 +1,7 @@
 import json
-from sourceData import fetch_url_content_with_subpages, extract_datasource_url
+from sourceData import fetch_url_content_with_subpages, extract_datasource_url, fetch_url_content
 from aiAdvisor import get_answer_from_chatgpt
+from advisor import get_answer_nlp
 
 def main():
     # Load JSON data from a file
@@ -13,7 +14,7 @@ def main():
     # Create a dictionary to store URL and its extracted content
     url_contents = {}
     for url in urls:
-        html_content = fetch_url_content_with_subpages(url)
+        html_content = fetch_url_content(url)
         if html_content:
             text_content = extract_datasource_url(html_content)
             url_contents[url] = text_content
@@ -28,9 +29,10 @@ def main():
         if question.lower() == 'bye':
             break
         # Use all_contents as the context for the question
-        answer = get_answer_from_chatgpt(question, all_contents)
-        print(answer.choices[0].message.content)
-
+        # answer = get_answer_from_chatgpt(question, all_contents)
+        # print(answer.choices[0].message.content)
+        answer = get_answer_nlp(question, all_contents)
+        print(f"Answer: {answer}")
 
 if __name__ == "__main__":
     main()

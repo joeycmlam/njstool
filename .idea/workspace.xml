@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="enhance it to include subpage as data source">
+    <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/advisor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/aiAdvisor.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/aiAdvisor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/app.advisor.v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/app.advisor.v2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/diagram/draft.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/diagram/draft.drawio" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/sourceData.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/sourceData.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -150,43 +151,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Object&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;ToolWindowCommit.ShowToolbar&quot;: &quot;false&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.20.2&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.19.33&quot;,
-    &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/joeylam/repo/njs/njstool/src/app/app-fee-engine&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs.cucumber.cucumber_node_package_dir&quot;: &quot;/Users/joeylam/repo/njs/njstool/node_modules/@cucumber/cucumber&quot;,
-    &quot;nodejs.jest.jest_package&quot;: &quot;/Users/joeylam/repo/njs/njstool/node_modules/jest&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/joeylam/repo/njs/njstool/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultPlantUmlFileTemplate": "UML Object",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "ToolWindowCommit.ShowToolbar": "false",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "javascript.nodejs.core.library.configured.version": "18.20.2",
+    "javascript.nodejs.core.library.typings.version": "18.19.33",
+    "js.last.introduce.type": "CONST",
+    "last_opened_file_path": "/Users/joeylam/repo/njs/njstool/src/app/app-invest-advisor-v2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs.cucumber.cucumber_node_package_dir": "/Users/joeylam/repo/njs/njstool/node_modules/@cucumber/cucumber",
+    "nodejs.jest.jest_package": "/Users/joeylam/repo/njs/njstool/node_modules/jest",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "/Users/joeylam/repo/njs/njstool/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;TEXT&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "TEXT"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/app-invest-advisor-v2" />
       <recent name="$PROJECT_DIR$/src/app/app-fee-engine" />
       <recent name="$PROJECT_DIR$/diagram" />
       <recent name="$PROJECT_DIR$/test/test-rest/features/test_data" />
       <recent name="$PROJECT_DIR$/test/test-json/features/test_data" />
-      <recent name="$PROJECT_DIR$/test" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/app/app-fee-engine/config" />
@@ -409,14 +410,7 @@
       <workItem from="1717297335110" duration="2264000" />
       <workItem from="1717299665461" duration="1934000" />
       <workItem from="1717313293579" duration="928000" />
-      <workItem from="1717321465028" duration="2460000" />
-    </task>
-    <task id="LOCAL-00091" summary="fee calculator">
-      <created>1684518459604</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1684518459605</updated>
+      <workItem from="1717321465028" duration="7596000" />
     </task>
     <task id="LOCAL-00092" summary="fix cucumber test">
       <created>1685172515057</created>
@@ -754,7 +748,14 @@
       <option name="project" value="LOCAL" />
       <updated>1717301841848</updated>
     </task>
-    <option name="localTasksCounter" value="146" />
+    <task id="LOCAL-00146" summary="update the diagram">
+      <created>1717324322788</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1717324322788</updated>
+    </task>
+    <option name="localTasksCounter" value="147" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -810,11 +811,11 @@
     <MESSAGE value="OpenAI sample" />
     <MESSAGE value="include the diagram" />
     <MESSAGE value="rename the file" />
-    <MESSAGE value="update the diagram" />
     <MESSAGE value="reflector" />
     <MESSAGE value="enhance it." />
     <MESSAGE value="enhance it to include subpage as data source" />
-    <option name="LAST_COMMIT_MESSAGE" value="enhance it to include subpage as data source" />
+    <MESSAGE value="update the diagram" />
+    <option name="LAST_COMMIT_MESSAGE" value="update the diagram" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -891,7 +892,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/app/app-invest-advisor-v2/aiAdvisor.py</url>
-          <line>33</line>
+          <line>34</line>
           <option name="timeStamp" value="67" />
         </line-breakpoint>
       </breakpoints>
@@ -903,7 +904,7 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/njstool$app_advisor_v2.coverage" NAME="app.advisor.v2 Coverage Results" MODIFIED="1717313927380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-invest-advisor-v2" />
+    <SUITE FILE_PATH="coverage/njstool$app_advisor_v2.coverage" NAME="app.advisor.v2 Coverage Results" MODIFIED="1717335162155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-invest-advisor-v2" />
     <SUITE FILE_PATH="coverage/njstool$app_advisor.coverage" NAME="app.advisor Coverage Results" MODIFIED="1717237066336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-invest-advsior" />
   </component>
   <component name="editorHistoryManager">
