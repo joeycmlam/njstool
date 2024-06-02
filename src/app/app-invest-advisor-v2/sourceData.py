@@ -21,40 +21,45 @@ def fetch_url_content(url):
         print(f"Error fetching URL: {e}")
         return None
 
-def fetch_url_content_with_subpage(url):
+def fetch_url_content_with_subpages(url):
     try:
         # Fetch the main page content
-        response = requests.get(url)
-        response.raise_for_status()
-        main_page_content = response.text
+        main_page_content = fetch_url_content(url)
 
         # Parse the main page content with BeautifulSoup
         soup = BeautifulSoup(main_page_content, 'html.parser')
 
-        # Find the sub-page link
-        subpage_link = soup.find('a')
+        # Find all the links on the page
+        links = soup.find_all('a')
 
-        # If there's no sub-page link, return the main page content
-        if subpage_link is None:
+        # If there are no links, return the main page content
+        if not links:
             return main_page_content
 
-        # Get the href attribute of the sub-page link
-        subpage_url = subpage_link.get('href')
+        # Initialize an empty list to store the content of all subpages
+        subpages_content = []
 
-        # If there's no href attribute, return the main page content
-        if subpage_url is None:
-            return main_page_content
+        # Iterate over the links
+        for link in links:
+            # Get the href attribute of the link
+            subpage_url = link.get('href')
 
-        # If the sub-page URL is a relative URL, convert it to an absolute URL
-        if not subpage_url.startswith('http'):
-            subpage_url = urljoin(url, subpage_url)
+            # If there's no href attribute, skip this link
+            if subpage_url is None:
+                continue
 
-        # Fetch the sub-page content
-        response = requests.get(subpage_url)
-        response.raise_for_status()
-        subpage_content = response.text
+            # If the sub-page URL is a relative URL, convert it to an absolute URL
+            if not subpage_url.startswith('http'):
+                subpage_url = urljoin(url, subpage_url)
 
-        return subpage_content
+            # Fetch the sub-page content
+            subpage_content = fetch_url_content(subpage_url)
+
+            # Add the sub-page content to the list
+            subpages_content.append(subpage_content)
+
+        # Return the main page content along with the content of all subpage
+        return subpages_content
 
     except requests.RequestException as e:
         print(f"Error fetching URL: {e}")

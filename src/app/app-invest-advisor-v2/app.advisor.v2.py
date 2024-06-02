@@ -1,5 +1,5 @@
 import json
-from sourceData import fetch_url_content_with_subpage, extract_datasource_url
+from sourceData import fetch_url_content_with_subpages, extract_datasource_url
 from aiAdvisor import get_answer_from_chatgpt
 
 def main():
@@ -13,7 +13,7 @@ def main():
     # Create a dictionary to store URL and its extracted content
     url_contents = {}
     for url in urls:
-        html_content = fetch_url_content_with_subpage(url)
+        html_content = fetch_url_content_with_subpages(url)
         if html_content:
             text_content = extract_datasource_url(html_content)
             url_contents[url] = text_content
