@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/njstool.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/njstool.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/app.advisor.v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/app.advisor.v2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/config/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/config/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/sourceData.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/sourceData.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -404,14 +407,8 @@
       <workItem from="1717236419167" duration="9374000" />
       <workItem from="1717256810030" duration="1917000" />
       <workItem from="1717259019481" duration="3850000" />
-      <workItem from="1717297335110" duration="1125000" />
-    </task>
-    <task id="LOCAL-00089" summary="outstanding bug">
-      <created>1684163108216</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1684163108216</updated>
+      <workItem from="1717297335110" duration="2264000" />
+      <workItem from="1717299665461" duration="1806000" />
     </task>
     <task id="LOCAL-00090" summary="fee calculator">
       <created>1684518424167</created>
@@ -749,7 +746,14 @@
       <option name="project" value="LOCAL" />
       <updated>1717262908376</updated>
     </task>
-    <option name="localTasksCounter" value="144" />
+    <task id="LOCAL-00144" summary="enhance it.">
+      <created>1717298519006</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1717298519006</updated>
+    </task>
+    <option name="localTasksCounter" value="145" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -784,7 +788,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="revised the error message." />
     <MESSAGE value="change the default" />
     <MESSAGE value="fix number of year calculation and the test scenario" />
     <MESSAGE value="new features" />
@@ -809,7 +812,8 @@
     <MESSAGE value="rename the file" />
     <MESSAGE value="update the diagram" />
     <MESSAGE value="reflector" />
-    <option name="LAST_COMMIT_MESSAGE" value="reflector" />
+    <MESSAGE value="enhance it." />
+    <option name="LAST_COMMIT_MESSAGE" value="enhance it." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -898,7 +902,7 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/njstool$app_advisor_v2.coverage" NAME="app.advisor.v2 Coverage Results" MODIFIED="1717298471164" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-invest-advisor-v2" />
+    <SUITE FILE_PATH="coverage/njstool$app_advisor_v2.coverage" NAME="app.advisor.v2 Coverage Results" MODIFIED="1717299961620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-invest-advisor-v2" />
     <SUITE FILE_PATH="coverage/njstool$app_advisor.coverage" NAME="app.advisor Coverage Results" MODIFIED="1717237066336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-invest-advsior" />
   </component>
   <component name="editorHistoryManager">
