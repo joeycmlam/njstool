@@ -31,4 +31,4 @@ def get_answer_from_chatgpt(question, context):
             {"role": "user", "content": question}
         ]
     )
-    return response
+    return response.choices[0].message.content
