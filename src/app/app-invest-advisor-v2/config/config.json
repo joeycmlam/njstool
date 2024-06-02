@@ -2,7 +2,8 @@
     "env_location": "/Users/joeylam/repo/njs/njstool/env/.env.local",
     "URL_LIST": [
         "https://www.morningstar.com/stocks/10-best-companies-invest-now",
-        "https://contrarianoutlook.com"
+        "https://contrarianoutlook.com",
+        "https://www.manulifeim.com.hk/en/funds/fund-prices.html"
     ]
 
 }

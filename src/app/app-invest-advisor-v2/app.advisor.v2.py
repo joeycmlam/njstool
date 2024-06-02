@@ -1,5 +1,5 @@
 import json
-from sourceData import fetch_url_content, extract_text_from_html
+from sourceData import fetch_url_content_with_subpage, extract_datasource_url
 from aiAdvisor import get_answer_from_chatgpt
 
 def main():
@@ -13,9 +13,9 @@ def main():
     # Create a dictionary to store URL and its extracted content
     url_contents = {}
     for url in urls:
-        html_content = fetch_url_content(url)
+        html_content = fetch_url_content_with_subpage(url)
         if html_content:
-            text_content = extract_text_from_html(html_content)
+            text_content = extract_datasource_url(html_content)
             url_contents[url] = text_content
         else:
             url_contents[url] = "Content could not be fetched"
@@ -23,12 +23,14 @@ def main():
     # Concatenate all the text contents from all URLs
     all_contents = " ".join(url_contents.values())
 
-    question = input("What is your question? ")
-    # Use all_contents as the context for the question
-    answer = get_answer_from_chatgpt(question, all_contents)
-    print(answer.choices[0].message.content)
+    while True:
+        question = input("What is your question? (Type 'bye' to exit) ")
+        if question.lower() == 'bye':
+            break
+        # Use all_contents as the context for the question
+        answer = get_answer_from_chatgpt(question, all_contents)
+        print(answer.choices[0].message.content)
 
 
 if __name__ == "__main__":
     main()
-
