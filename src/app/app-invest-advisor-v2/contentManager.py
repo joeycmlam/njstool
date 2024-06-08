@@ -1,13 +1,14 @@
 import os
 import time
 import pickle
-from sourceData import fetch_url_content_with_subpages, extract_datasource_url, fetch_url_content
+from sourceData import SourceData
 
 class URLContentManager:
     def __init__(self, urls):
         self.urls = urls
         self.filename = 'data/url_contents.pkl'
         self.url_contents = {}
+        self.source_data = SourceData()
 
     def load_or_fetch_content(self):
         if self._should_refresh_content():
@@ -27,9 +28,9 @@ class URLContentManager:
 
     def _fetch_and_store_content(self):
         for url in self.urls:
-            html_content = fetch_url_content(url)
+            html_content = self.source_data.fetch_url_content(url)
             if html_content:
-                text_content = extract_datasource_url(html_content)
+                text_content = self.source_data.extract_datasource_url(html_content)
                 self.url_contents[url] = text_content
             else:
                 self.url_contents[url] = "Content could not be fetched"
