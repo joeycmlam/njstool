@@ -12,8 +12,7 @@ class AppAdvisor:
     def __init__(self, config_path):
         # Load JSON data from a file
         with open(config_path) as f:
-            data = json.load(f)
-            self.data = data
+            self.data = json.load(f)
 
         # Extract the URL list from the JSON data
         urls = self.data['URL_LIST']
