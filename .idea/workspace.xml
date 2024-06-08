@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
+    <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="update the diagram.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/config/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/config/config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/diagram/draft.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/diagram/draft.drawio" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-invest-advsior/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-invest-advsior/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -410,14 +408,7 @@
       <workItem from="1717299665461" duration="1934000" />
       <workItem from="1717313293579" duration="928000" />
       <workItem from="1717321465028" duration="10746000" />
-      <workItem from="1717840249144" duration="9934000" />
-    </task>
-    <task id="LOCAL-00102" summary="reflector">
-      <created>1685203513727</created>
-      <option name="number" value="00102" />
-      <option name="presentableId" value="LOCAL-00102" />
-      <option name="project" value="LOCAL" />
-      <updated>1685203513727</updated>
+      <workItem from="1717840249144" duration="10624000" />
     </task>
     <task id="LOCAL-00103" summary="add new feeCal function.">
       <created>1685207948801</created>
@@ -755,7 +746,14 @@
       <option name="project" value="LOCAL" />
       <updated>1717843720944</updated>
     </task>
-    <option name="localTasksCounter" value="157" />
+    <task id="LOCAL-00157" summary="update the diagram.">
+      <created>1717867539597</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1717867539597</updated>
+    </task>
+    <option name="localTasksCounter" value="158" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -790,7 +788,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="new feature - fee engine." />
     <MESSAGE value="add enum" />
     <MESSAGE value="reivse the calcuation" />
     <MESSAGE value="add more logging" />
@@ -815,7 +812,8 @@
     <MESSAGE value="enhancement to keep local topic to improve the performance" />
     <MESSAGE value="reflector" />
     <MESSAGE value="add source and reflector soruceData file" />
-    <option name="LAST_COMMIT_MESSAGE" value="add source and reflector soruceData file" />
+    <MESSAGE value="update the diagram." />
+    <option name="LAST_COMMIT_MESSAGE" value="update the diagram." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
