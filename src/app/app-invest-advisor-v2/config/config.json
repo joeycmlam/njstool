@@ -7,6 +7,15 @@
         "https://magicianyang.blogspot.com",
         "https://www.investing.com"
     ],
+    "Api": [
+        {
+            "systemid": "xxxxx",
+            "url": "https://xxxxx.com"
+        },
+        {
+            "systemid"
+        }
+    ],
     "model": "gpt-3.5-turbo"
 
 }

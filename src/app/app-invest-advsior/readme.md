@@ -12,3 +12,5 @@ pip uninstall keras
 Install the tf-keras package:
 pip install tf-keras
 After installing tf-keras, try running your code again. The error should be resolved.
+
+pip install torch transformers datasets
