@@ -8,14 +8,6 @@ class AIAdvisor:
         self.data = data
         self.openai_api_key = key
 
-        # # Extract the location of the .env.local file from the JSON data
-        # self.env_location = self.data['env_location']
-        #
-        # # Load the .env.local file from the extracted location
-        # load_dotenv(self.env_location)
-        #
-        # # Now you can access the environment variables using os.environ.get()
-        # self.openai_api_key = os.environ.get('OPENAI_API_KEY')
 
         self.client = OpenAI(api_key=self.openai_api_key)
 
