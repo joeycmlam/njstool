@@ -5,6 +5,7 @@
         "https://contrarianoutlook.com",
         "https://www.manulifeim.com.hk/en/funds/fund-prices.html",
         "https://magicianyang.blogspot.com"
-    ]
+    ],
+    "model": "gpt-3.5-turbo"
 
 }

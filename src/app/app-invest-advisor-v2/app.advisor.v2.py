@@ -13,12 +13,13 @@ class AppAdvisor:
         # Load JSON data from a file
         with open(config_path) as f:
             data = json.load(f)
-        self.data = data
+            self.data = data
 
         # Extract the URL list from the JSON data
-        urls = data['URL_LIST']
+        urls = self.data['URL_LIST']
         # Extract the location of the .env.local file from the JSON data
         self.env_location = self.data['env_location']
+        self.model = self.data['model']
 
         # Load the .env.local file from the extracted location
         load_dotenv(self.env_location)
@@ -34,7 +35,7 @@ class AppAdvisor:
         self.all_contents = self.url_content_manager.get_all_contents()
 
         # Create an instance of AIAdvisor
-        self.ai_advisor = AIAdvisor(self.all_contents, self.openai_api_key)
+        self.ai_advisor = AIAdvisor(self.all_contents, self.openai_api_key, self.model)
 
     def run(self):
         while True:
