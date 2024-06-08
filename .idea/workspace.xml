@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/aiAdvisor.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/aiAdvisor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/app.advisor.v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/app.advisor.v2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/config/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/config/config.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -410,14 +408,7 @@
       <workItem from="1717299665461" duration="1934000" />
       <workItem from="1717313293579" duration="928000" />
       <workItem from="1717321465028" duration="10746000" />
-      <workItem from="1717840249144" duration="2552000" />
-    </task>
-    <task id="LOCAL-00098" summary="fix the synatx and run time issue">
-      <created>1685198116516</created>
-      <option name="number" value="00098" />
-      <option name="presentableId" value="LOCAL-00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1685198116516</updated>
+      <workItem from="1717840249144" duration="2673000" />
     </task>
     <task id="LOCAL-00099" summary="add more test cases">
       <created>1685198259323</created>
@@ -755,7 +746,14 @@
       <option name="project" value="LOCAL" />
       <updated>1717842151742</updated>
     </task>
-    <option name="localTasksCounter" value="153" />
+    <task id="LOCAL-00153" summary="reflector">
+      <created>1717842835313</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1717842835313</updated>
+    </task>
+    <option name="localTasksCounter" value="154" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -897,7 +895,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/app/app-invest-advisor-v2/app.advisor.v2.py</url>
-          <line>18</line>
+          <line>17</line>
           <option name="timeStamp" value="68" />
         </line-breakpoint>
       </breakpoints>
