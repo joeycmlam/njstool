@@ -1,16 +1,30 @@
 import json
 import argparse
+import os
+from dotenv import load_dotenv
+import json
+
 from contentManager import URLContentManager
-from aiAdvisor import get_answer_from_chatgpt
+from aiAdvisor import AIAdvisor
+
 
 class AppAdvisor:
     def __init__(self, config_path):
         # Load JSON data from a file
         with open(config_path) as f:
             data = json.load(f)
+        self.data = data
 
         # Extract the URL list from the JSON data
         urls = data['URL_LIST']
+        # Extract the location of the .env.local file from the JSON data
+        self.env_location = self.data['env_location']
+
+        # Load the .env.local file from the extracted location
+        load_dotenv(self.env_location)
+
+        # Now you can access the environment variables using os.environ.get()
+        self.openai_api_key = os.environ.get('OPENAI_API_KEY')
 
         # Create a URLContentManager and load or fetch content
         self.url_content_manager = URLContentManager(urls)
@@ -19,12 +33,15 @@ class AppAdvisor:
         # Concatenate all the text contents from all URLs
         self.all_contents = self.url_content_manager.get_all_contents()
 
+        # Create an instance of AIAdvisor
+        self.ai_advisor = AIAdvisor(self.all_contents, self.openai_api_key)
+
     def run(self):
         while True:
             question = input("What is your question? (Type 'bye' to exit) ")
             if question.lower() == 'bye':
                 break
-            answer = get_answer_from_chatgpt(question, self.all_contents)
+            answer = self.ai_advisor.get_answer_from_chatgpt(question, self.all_contents)
             print(f"Answer: {answer}")
 
 if __name__ == "__main__":
