@@ -1,0 +1,7 @@
+{
+  "email": {
+    "to": "joey.cm.lam@gmail.com",
+    "subject": "Test Email",
+    "body": "This is a test email."
+  }
+}
