@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="update the diagram.">
+    <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/app-email/config/test.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/diagram/draft.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-invest-advisor-v2/diagram/draft.drawio" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-email/app.email.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-email/app.email.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-pdf/app.pdf.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-pdf/app.pdf.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +26,8 @@
         <option value="Swagger" />
         <option value="UML Gantt" />
         <option value="UML Object" />
-        <option value="TypeScript File" />
         <option value="Python Script" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -160,7 +164,7 @@
     &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.20.2&quot;,
     &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.19.33&quot;,
     &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/joeylam/repo/njs/njstool/src/app/app-invest-advisor-v2&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/joeylam/repo/njs/njstool&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
@@ -194,51 +198,7 @@
       <recent name="$PROJECT_DIR$/src/app" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.app.advisor.v2">
-    <configuration name="app.advisor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="njstool" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/app/app-invest-advsior" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/app/app-invest-advsior/app.advisor.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="app.advisor.v2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="njstool" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/app/app-invest-advisor-v2" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/app/app-invest-advisor-v2/app.advisor.v2.py" />
-      <option name="PARAMETERS" value="--config config/config.json" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="npm.test:reports">
     <configuration name="app.fee.feature" type="cucumber.js" factoryName="Cucumber.js">
       <option name="myFilePath" value="$PROJECT_DIR$/test/test-fee/features/app.fee.feature" />
       <option name="myNameFilter" value="" />
@@ -264,16 +224,6 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="start:fee" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start:fee" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <configuration name="test" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -284,11 +234,41 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="test:cucumber:fee" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="test:coverage" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="test:cucumber:fee" />
+        <script value="test:coverage" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="test:cucumber:json" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test:cucumber:json" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="test:jest" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test:jest" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="test:reports" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="test:reports" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -298,19 +278,19 @@
       <item itemvalue="Cucumber.js.app.fee.feature" />
       <item itemvalue="Docker.docker-compose.git.yml: Compose Deployment" />
       <item itemvalue="npm.test" />
-      <item itemvalue="npm.start:fee" />
+      <item itemvalue="npm.test:coverage" />
+      <item itemvalue="npm.test:cucumber:json" />
+      <item itemvalue="npm.test:jest" />
+      <item itemvalue="npm.test:reports" />
       <item itemvalue="npm.start:fee-engine" />
-      <item itemvalue="npm.test:cucumber:fee" />
-      <item itemvalue="Python.app.advisor.v2" />
-      <item itemvalue="Python.app.advisor" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.app.advisor.v2" />
-        <item itemvalue="Python.app.advisor" />
+        <item itemvalue="npm.test:reports" />
+        <item itemvalue="npm.test:coverage" />
+        <item itemvalue="npm.test:jest" />
+        <item itemvalue="npm.test:cucumber:json" />
         <item itemvalue="npm.start:fee-engine" />
-        <item itemvalue="npm.test:cucumber:fee" />
-        <item itemvalue="npm.start:fee" />
       </list>
     </recent_temporary>
   </component>
@@ -408,21 +388,17 @@
       <workItem from="1717299665461" duration="1934000" />
       <workItem from="1717313293579" duration="928000" />
       <workItem from="1717321465028" duration="10746000" />
-      <workItem from="1717840249144" duration="10624000" />
-    </task>
-    <task id="LOCAL-00103" summary="add new feeCal function.">
-      <created>1685207948801</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1685207948801</updated>
-    </task>
-    <task id="LOCAL-00104" summary="fix the syntax error">
-      <created>1685209809291</created>
-      <option name="number" value="00104" />
-      <option name="presentableId" value="LOCAL-00104" />
-      <option name="project" value="LOCAL" />
-      <updated>1685209809291</updated>
+      <workItem from="1717840249144" duration="12989000" />
+      <workItem from="1722605962256" duration="5398000" />
+      <workItem from="1722614416554" duration="3978000" />
+      <workItem from="1722742417006" duration="2070000" />
+      <workItem from="1722756452203" duration="2111000" />
+      <workItem from="1722779914251" duration="1968000" />
+      <workItem from="1722819898624" duration="2284000" />
+      <workItem from="1722852918663" duration="7864000" />
+      <workItem from="1722907729640" duration="3992000" />
+      <workItem from="1725722666878" duration="3000" />
+      <workItem from="1730624800945" duration="822000" />
     </task>
     <task id="LOCAL-00105" summary="fix the reading excel function">
       <created>1685247358785</created>
@@ -753,7 +729,21 @@
       <option name="project" value="LOCAL" />
       <updated>1717867539597</updated>
     </task>
-    <option name="localTasksCounter" value="158" />
+    <task id="LOCAL-00158" summary="update the diagram.">
+      <created>1717869339941</created>
+      <option name="number" value="00158" />
+      <option name="presentableId" value="LOCAL-00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1717869339941</updated>
+    </task>
+    <task id="LOCAL-00159" summary="new functions">
+      <created>1730625383971</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1730625383972</updated>
+    </task>
+    <option name="localTasksCounter" value="160" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -788,7 +778,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add enum" />
     <MESSAGE value="reivse the calcuation" />
     <MESSAGE value="add more logging" />
     <MESSAGE value="add deducedUnits to show the pass-in deduction." />
@@ -813,7 +802,8 @@
     <MESSAGE value="reflector" />
     <MESSAGE value="add source and reflector soruceData file" />
     <MESSAGE value="update the diagram." />
-    <option name="LAST_COMMIT_MESSAGE" value="update the diagram." />
+    <MESSAGE value="new functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="new functions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -888,16 +878,6 @@
           <line>20</line>
           <option name="timeStamp" value="66" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/app/app-invest-advisor-v2/aiAdvisor.py</url>
-          <line>18</line>
-          <option name="timeStamp" value="67" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/app/app-invest-advisor-v2/app.advisor.v2.py</url>
-          <line>16</line>
-          <option name="timeStamp" value="68" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -905,10 +885,6 @@
         <watch expression="data" />
       </configuration>
     </watches-manager>
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/njstool$app_advisor_v2.coverage" NAME="app.advisor.v2 Coverage Results" MODIFIED="1717843368809" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-invest-advisor-v2" />
-    <SUITE FILE_PATH="coverage/njstool$app_advisor.coverage" NAME="app.advisor Coverage Results" MODIFIED="1717237066336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-invest-advsior" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main.js" />

@@ -6,6 +6,7 @@
   "scripts": {
     "build": "tsc",
     "housekeep": "rm -rf src/app/app-playloader/output/*.json",
+    "start:email": "ts-node src/app/app-email/app.email.ts",
     "start:diff": "ts-node src/app/app-diff/app.diff.ts --config /Users/joeylam/repo/njs/njstool/src/app/app-diff/config/config.json",
     "start:apolloserver": "ts-node src/app/app-data-service/app.dataservice.ts --config /Users/joeylam/repo/njs/njstool/src/app/app-data-service/config/config.server.json",
     "start:apolloclient": "ts-node src/app/app-data-service/app.dataclient.ts --config /Users/joeylam/repo/njs/njstool/src/app/app-data-service/config/config.client.json",
@@ -76,6 +77,7 @@
     "log4js": "^6.9.1",
     "moment": "^2.29.4",
     "mssql": "^10.0.2",
+    "nodemailer": "^6.9.16",
     "pdf-parse": "^1.1.1",
     "pg": "^8.11.5",
     "pg-promise": "^11.4.3",
@@ -101,6 +103,7 @@
     "@types/minimist": "^1.2.5",
     "@types/mock-fs": "^4.13.1",
     "@types/mssql": "^9.1.5",
+    "@types/nodemailer": "^6.4.16",
     "@types/pdf-parse": "^1.1.4",
     "@types/pg": "^8.6.6",
     "axios": "^1.4.0",
