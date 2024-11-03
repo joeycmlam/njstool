@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/app-email/config/test.json" afterDir="false" />
+    <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="update some info">
+      <change afterPath="$PROJECT_DIR$/src/app/app-email/config/credentials.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-email/app.email.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-email/app.email.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-pdf/app.pdf.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-pdf/app.pdf.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +197,7 @@
       <recent name="$PROJECT_DIR$/src/app" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.test:reports">
+  <component name="RunManager" selected="npm.start:email">
     <configuration name="app.fee.feature" type="cucumber.js" factoryName="Cucumber.js">
       <option name="myFilePath" value="$PROJECT_DIR$/test/test-fee/features/app.fee.feature" />
       <option name="myNameFilter" value="" />
@@ -214,11 +213,11 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="start:fee-engine" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="start:email" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="start:fee-engine" />
+        <script value="start:email" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -278,19 +277,19 @@
       <item itemvalue="Cucumber.js.app.fee.feature" />
       <item itemvalue="Docker.docker-compose.git.yml: Compose Deployment" />
       <item itemvalue="npm.test" />
+      <item itemvalue="npm.start:email" />
       <item itemvalue="npm.test:coverage" />
       <item itemvalue="npm.test:cucumber:json" />
       <item itemvalue="npm.test:jest" />
       <item itemvalue="npm.test:reports" />
-      <item itemvalue="npm.start:fee-engine" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.start:email" />
         <item itemvalue="npm.test:reports" />
         <item itemvalue="npm.test:coverage" />
         <item itemvalue="npm.test:jest" />
         <item itemvalue="npm.test:cucumber:json" />
-        <item itemvalue="npm.start:fee-engine" />
       </list>
     </recent_temporary>
   </component>
@@ -398,14 +397,7 @@
       <workItem from="1722852918663" duration="7864000" />
       <workItem from="1722907729640" duration="3992000" />
       <workItem from="1725722666878" duration="3000" />
-      <workItem from="1730624800945" duration="822000" />
-    </task>
-    <task id="LOCAL-00105" summary="fix the reading excel function">
-      <created>1685247358785</created>
-      <option name="number" value="00105" />
-      <option name="presentableId" value="LOCAL-00105" />
-      <option name="project" value="LOCAL" />
-      <updated>1685247358785</updated>
+      <workItem from="1730624800945" duration="3522000" />
     </task>
     <task id="LOCAL-00106" summary="reflector to change tradeDate from string to Date">
       <created>1685247671177</created>
@@ -743,7 +735,14 @@
       <option name="project" value="LOCAL" />
       <updated>1730625383972</updated>
     </task>
-    <option name="localTasksCounter" value="160" />
+    <task id="LOCAL-00160" summary="update some info">
+      <created>1730625651345</created>
+      <option name="number" value="00160" />
+      <option name="presentableId" value="LOCAL-00160" />
+      <option name="project" value="LOCAL" />
+      <updated>1730625651345</updated>
+    </task>
+    <option name="localTasksCounter" value="161" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -778,7 +777,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="reivse the calcuation" />
     <MESSAGE value="add more logging" />
     <MESSAGE value="add deducedUnits to show the pass-in deduction." />
     <MESSAGE value="code reflector to separate the type and enum to another files" />
@@ -803,7 +801,8 @@
     <MESSAGE value="add source and reflector soruceData file" />
     <MESSAGE value="update the diagram." />
     <MESSAGE value="new functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="new functions" />
+    <MESSAGE value="update some info" />
+    <option name="LAST_COMMIT_MESSAGE" value="update some info" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
