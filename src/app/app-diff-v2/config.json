@@ -4,17 +4,25 @@
   "columns": {
     "file_generated_date": {
       "start": 0,
-      "length": 8
+      "length": 8,
+      "skip": true
     },
     "file_type": {
       "start": 8,
-      "length": 12
+      "length": 12,
+      "key": true,
+      "skip": false
     },
     "counter": {
       "start": 20,
-      "length": 6
+      "length": 6,
+      "skip": false
+    },
+    "status": {
+      "start": 26,
+      "length": 6,
+      "skip": false
     }
   },
-  "skip_keys": ["file_generated_date"],
-  "output_file": "comparison_results.xlsx"
+  "output_file": "./result/comparison_results.xlsx"
 }
