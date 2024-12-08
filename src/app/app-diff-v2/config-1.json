@@ -1,0 +1,20 @@
+{
+  "file_a": "./data/file_a.txt",
+  "file_b": "./data/file_b.txt",
+  "columns": {
+    "file_generated_date": {
+      "start": 0,
+      "length": 8
+    },
+    "file_type": {
+      "start": 8,
+      "length": 12
+    },
+    "counter": {
+      "start": 20,
+      "length": 6
+    }
+  },
+  "skip_keys": ["file_generated_date"],
+  "output_file": "comparison_results.xlsx"
+}
