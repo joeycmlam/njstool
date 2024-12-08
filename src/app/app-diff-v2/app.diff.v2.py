@@ -3,6 +3,7 @@ import openpyxl
 from openpyxl.styles import Font
 import logging
 from datetime import datetime
+import os
 
 # Configure logging
 LOG_FORMAT = "%(asctime)s - %(name)s - %(levelname)s - [%(funcName)s:%(lineno)d] - %(message)s"
@@ -12,7 +13,9 @@ logger = logging.getLogger("FileComparison")
 logger.setLevel(logging.INFO)
 
 # File handler: Logs to a file
-file_handler = logging.FileHandler(f"file_comparison_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log")
+os.makedirs("./log", exist_ok=True)
+log_file_name = f"./log/file_comparison_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
+file_handler = logging.FileHandler(log_file_name)
 file_handler.setFormatter(logging.Formatter(LOG_FORMAT))
 logger.addHandler(file_handler)
 
@@ -178,7 +181,13 @@ def compare_files(config_path):
     file_b_path = config["file_b"]
     columns = config["columns"]
     skip_keys = set(config.get("skip_keys", []))
-    output_file = config.get("output_file", "comparison_results.xlsx")
+
+    # Add timestamp to the output file name
+    output_file_base = config.get("output_file", "comparison_results.xlsx")
+    output_dir = os.path.dirname(output_file_base)
+    os.makedirs(output_dir, exist_ok=True)
+    output_file_name = f"{os.path.splitext(os.path.basename(output_file_base))[0]}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.xlsx"
+    output_file = os.path.join(output_dir, output_file_name)
 
     # Parse both files
     file_a_data, file_a_records = parse_file(file_a_path, columns, skip_keys)
