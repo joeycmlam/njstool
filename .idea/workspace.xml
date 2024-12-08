@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="update some info">
-      <change afterPath="$PROJECT_DIR$/src/app/app-email/config/credentials.json" afterDir="false" />
+    <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/app-diff-v2/app.diff.v2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-diff-v2/config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-email/app.email.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-email/app.email.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,8 +24,8 @@
         <option value="Swagger" />
         <option value="UML Gantt" />
         <option value="UML Object" />
-        <option value="Python Script" />
         <option value="TypeScript File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -36,6 +35,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/app/app-email/app.email.ts" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -171,7 +173,7 @@
     &quot;nodejs.jest.jest_package&quot;: &quot;/Users/joeylam/repo/njs/njstool/node_modules/jest&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Users/joeylam/repo/njs/njstool/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -190,14 +192,58 @@
       <recent name="$PROJECT_DIR$/test/test-json/features/test_data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/app-diff-v2/result" />
       <recent name="$PROJECT_DIR$/src/app/app-fee-engine/config" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/app/app-fee" />
       <recent name="$PROJECT_DIR$/src/app/app-fee-engine" />
-      <recent name="$PROJECT_DIR$/src/app" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start:email">
+  <component name="RunManager" selected="Python.app.diff.v2">
+    <configuration name="app.diff.2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="njstool" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/app/app-diff" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/app/app-diff/app.diff.2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="app.diff.v2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="njstool" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/app/app-diff-v2" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/app/app-diff-v2/app.diff.v2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="app.fee.feature" type="cucumber.js" factoryName="Cucumber.js">
       <option name="myFilePath" value="$PROJECT_DIR$/test/test-fee/features/app.fee.feature" />
       <option name="myNameFilter" value="" />
@@ -243,26 +289,6 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="test:cucumber:json" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="test:cucumber:json" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="test:jest" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="test:jest" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <configuration name="test:reports" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -279,17 +305,17 @@
       <item itemvalue="npm.test" />
       <item itemvalue="npm.start:email" />
       <item itemvalue="npm.test:coverage" />
-      <item itemvalue="npm.test:cucumber:json" />
-      <item itemvalue="npm.test:jest" />
       <item itemvalue="npm.test:reports" />
+      <item itemvalue="Python.app.diff.2" />
+      <item itemvalue="Python.app.diff.v2" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.app.diff.v2" />
+        <item itemvalue="Python.app.diff.2" />
         <item itemvalue="npm.start:email" />
         <item itemvalue="npm.test:reports" />
         <item itemvalue="npm.test:coverage" />
-        <item itemvalue="npm.test:jest" />
-        <item itemvalue="npm.test:cucumber:json" />
       </list>
     </recent_temporary>
   </component>
@@ -397,14 +423,9 @@
       <workItem from="1722852918663" duration="7864000" />
       <workItem from="1722907729640" duration="3992000" />
       <workItem from="1725722666878" duration="3000" />
-      <workItem from="1730624800945" duration="3522000" />
-    </task>
-    <task id="LOCAL-00106" summary="reflector to change tradeDate from string to Date">
-      <created>1685247671177</created>
-      <option name="number" value="00106" />
-      <option name="presentableId" value="LOCAL-00106" />
-      <option name="project" value="LOCAL" />
-      <updated>1685247671177</updated>
+      <workItem from="1730624800945" duration="3603000" />
+      <workItem from="1730628573204" duration="335000" />
+      <workItem from="1733665212134" duration="2153000" />
     </task>
     <task id="LOCAL-00107" summary="new function">
       <created>1685261930448</created>
@@ -742,7 +763,14 @@
       <option name="project" value="LOCAL" />
       <updated>1730625651345</updated>
     </task>
-    <option name="localTasksCounter" value="161" />
+    <task id="LOCAL-00161" summary="update the code">
+      <created>1730628503541</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1730628503541</updated>
+    </task>
+    <option name="localTasksCounter" value="162" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -777,7 +805,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add more logging" />
     <MESSAGE value="add deducedUnits to show the pass-in deduction." />
     <MESSAGE value="code reflector to separate the type and enum to another files" />
     <MESSAGE value="code reflector to include txn details in DSCCalculator.ts" />
@@ -802,7 +829,8 @@
     <MESSAGE value="update the diagram." />
     <MESSAGE value="new functions" />
     <MESSAGE value="update some info" />
-    <option name="LAST_COMMIT_MESSAGE" value="update some info" />
+    <MESSAGE value="update the code" />
+    <option name="LAST_COMMIT_MESSAGE" value="update the code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -884,6 +912,10 @@
         <watch expression="data" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/njstool$app_diff_2.coverage" NAME="app.diff.2 Coverage Results" MODIFIED="1733665498003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-diff" />
+    <SUITE FILE_PATH="coverage/njstool$app_diff_v2.coverage" NAME="app.diff.v2 Coverage Results" MODIFIED="1733667274653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-diff-v2" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main.js" />

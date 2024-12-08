@@ -6,7 +6,7 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 
 const SCOPES = ['https://www.googleapis.com/auth/gmail.send'];
-const CREDENTIALS_PATH = path.join(__dirname, 'credentials.json');
+const CREDENTIALS_PATH = path.join(__dirname, 'config/credentials.json');
 const TOKEN_PATH = path.join(__dirname, 'token.json');
 
 // Load client secrets from a local file.
