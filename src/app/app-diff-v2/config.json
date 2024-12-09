@@ -24,5 +24,6 @@
       "skip": false
     }
   },
-  "output_file": "./result/comparison_results.xlsx"
+  "output_path": "./result/",
+  "output_file": "comparison_results.xlsx"
 }
