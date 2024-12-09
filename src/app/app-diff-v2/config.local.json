@@ -30,7 +30,7 @@
   },
   "log": {
     "path": "./log",
-    "file": "diffv2.log"
+    "file": "diff.log"
   }
 
 }
