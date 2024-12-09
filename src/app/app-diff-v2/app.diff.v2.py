@@ -25,19 +25,30 @@ console_handler.setFormatter(logging.Formatter(LOG_FORMAT))
 logger.addHandler(console_handler)
 
 
+def construct_composite_key(record, key_columns):
+    """
+    Construct a composite key for a record based on multiple key columns.
+
+    :param record: The parsed record (dictionary with column values).
+    :param key_columns: A list of column names to use for the composite key.
+    :return: A string representing the composite key.
+    """
+    return "-".join(str(record.get(column, "")) for column in key_columns)
+
+
 def parse_file(file_path, columns, skip_keys=None):
     """
-    Parse a file into a list of records and a dictionary keyed by the configured key column.
+    Parse a file into a list of records and a dictionary keyed by the composite key.
 
     :param file_path: Path to the file to parse.
     :param columns: Dictionary defining column positions, lengths, and flags.
-    :param skip_keys: A set of keys to skip during parsing.
+    :param skip_keys: A set of composite keys to skip during parsing.
     :return: A tuple (record_dict, records)
     """
     record_dict = {}
     records = []
     skip_keys = skip_keys or set()
-    key_column = next(col for col, props in columns.items() if props.get("key", False))
+    key_columns = [col for col, props in columns.items() if props.get("key", False)]
 
     try:
         with open(file_path, 'r') as file:
@@ -51,13 +62,14 @@ def parse_file(file_path, columns, skip_keys=None):
                     value = line[start:start + length].strip()
                     record[column_name] = value
 
-                key_value = record[key_column]
-                if key_value in skip_keys:
+                # Construct the composite key
+                composite_key = construct_composite_key(record, key_columns)
+                if composite_key in skip_keys:
                     continue
 
-                # Add to records and dictionary keyed by the key column
+                # Add to records and dictionary keyed by the composite key
                 records.append(record)
-                record_dict[key_value] = record
+                record_dict[composite_key] = record
     except FileNotFoundError:
         logger.error(f"File not found: {file_path}")
         exit(1)
@@ -80,7 +92,7 @@ def compare_records(file_a_data, file_b_data, columns):
     """
     results = []
     all_keys = set(file_a_data.keys()).union(file_b_data.keys())
-    logger.info(f"Starting comparison with {len(all_keys)} keys.")
+    logger.info(f"Starting comparison with {len(all_keys)} composite keys.")
 
     for key in all_keys:
         record_a = file_a_data.get(key, {})
@@ -134,8 +146,8 @@ def write_to_excel(results, output_file):
         sheet = workbook.active
         sheet.title = "Comparison Results"
 
-        # Add headers
-        headers = ["Row Number (File A)", "Row Number (File B)", "Key", "Column", "File A Value", "File B Value", "Status"]
+        # Add headers dynamically based on the results
+        headers = ["Row Number (File A)", "Row Number (File B)", "Composite Key", "Column", "File A Value", "File B Value", "Status"]
         for col_num, header in enumerate(headers, start=1):
             cell = sheet.cell(row=1, column=col_num, value=header)
             cell.font = Font(bold=True)
