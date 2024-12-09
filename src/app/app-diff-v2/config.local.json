@@ -1,0 +1,36 @@
+{
+  "file_a": "./data/file_a.txt",
+  "file_b": "./data/file_b.txt",
+  "columns": {
+    "file_generated_date": {
+      "start": 0,
+      "length": 8,
+      "skip": true
+    },
+    "file_type": {
+      "start": 8,
+      "length": 12,
+      "key": true,
+      "skip": false
+    },
+    "counter": {
+      "start": 20,
+      "length": 6,
+      "skip": false
+    },
+    "status": {
+      "start": 26,
+      "length": 20,
+      "skip": false
+    }
+  },
+  "output": {
+      "path": "./result",
+    "file": "comparison_results.xlsx"
+  },
+  "log": {
+    "path": "./log",
+    "file": "diffv2.log"
+  }
+
+}
