@@ -30,7 +30,9 @@
   },
   "log": {
     "path": "./log",
-    "file": "diff.log"
+    "file": "diff.log",
+    "level": "DEBUG",
+    "enable_console": false
   }
 
 }
