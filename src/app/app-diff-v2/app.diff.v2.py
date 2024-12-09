@@ -8,15 +8,22 @@ import os
 
 class Logger:
     """
-    A class to configure and manage logging.
+    A class to configure and manage logging with timestamped log file names.
     """
-    def __init__(self, log_dir="./log"):
-        self.logger = self._initialize_logger(log_dir)
+    def __init__(self, log_config):
+        log_path = log_config.get("path", "./log")
+        log_file = log_config.get("file", "diff.log")
+        self.logger = self._initialize_logger(log_path, log_file)
 
     @staticmethod
-    def _initialize_logger(log_dir):
-        os.makedirs(log_dir, exist_ok=True)
-        log_file_name = f"{log_dir}/file_comparison_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
+    def _initialize_logger(log_path, log_file):
+        os.makedirs(log_path, exist_ok=True)
+
+        # Add timestamp to the log file name
+        base_name, ext = os.path.splitext(log_file)
+        timestamped_log_file = f"{base_name}_{datetime.now().strftime('%Y%m%d_%H%M%S')}{ext}"
+        log_file_name = os.path.join(log_path, timestamped_log_file)
+
         logger = logging.getLogger("FileComparison")
         logger.setLevel(logging.INFO)
 
@@ -186,8 +193,16 @@ class ExcelWriter:
     def __init__(self, logger):
         self.logger = logger
 
-    def write_to_excel(self, results, output_file):
+    def write_to_excel(self, results, output_config):
         try:
+            output_path = output_config.get("path", "./result")
+            output_file_name = output_config.get("file", "comparison_results.xlsx")
+            os.makedirs(output_path, exist_ok=True)
+
+            # Generate full output path
+            timestamped_file_name = f"{os.path.splitext(output_file_name)[0]}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.xlsx"
+            output_file = os.path.join(output_path, timestamped_file_name)
+
             workbook = openpyxl.Workbook()
             sheet = workbook.active
             sheet.title = "Comparison Results"
@@ -199,7 +214,7 @@ class ExcelWriter:
             workbook.save(output_file)
             self.logger.info(f"Results written to {output_file}")
         except Exception as e:
-            self.logger.exception(f"Error writing to Excel file {output_file}: {e}")
+            self.logger.exception(f"Error writing to Excel file: {e}")
             raise
 
     @staticmethod
@@ -225,8 +240,9 @@ class FileComparisonApp:
     The main orchestrator for the file comparison application.
     """
     def __init__(self, config_path):
-        self.logger = Logger().get_logger()
         self.config = Config(config_path)
+        log_config = self.config.get("log", {})
+        self.logger = Logger(log_config).get_logger()
         self.parser = FileParser(self.logger)
         self.comparator = RecordComparator(self.logger)
         self.writer = ExcelWriter(self.logger)
@@ -237,11 +253,7 @@ class FileComparisonApp:
             file_b_path = self.config.get("file_b")
             columns = self.config.get("columns")
             skip_keys = set(self.config.get("skip_keys", []))
-
-            # Get output path and file name from config
-            output_path = self.config.get("output_path", "./")
-            output_file_name = self.config.get("output_file", "comparison_results.xlsx")
-            output_file = self._generate_full_output_path(output_path, output_file_name)
+            output_config = self.config.get("output", {})
 
             # Parse both files
             file_a_data, _ = self.parser.parse_file(file_a_path, columns, skip_keys)
@@ -251,16 +263,10 @@ class FileComparisonApp:
             results = self.comparator.compare_records(file_a_data, file_b_data, columns)
 
             # Write results to Excel
-            self.writer.write_to_excel(results, output_file)
+            self.writer.write_to_excel(results, output_config)
         except Exception as e:
             self.logger.error(f"An error occurred during file comparison: {e}")
             raise
-
-    @staticmethod
-    def _generate_full_output_path(output_path, output_file_name):
-        os.makedirs(output_path, exist_ok=True)
-        timestamped_file_name = f"{os.path.splitext(output_file_name)[0]}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.xlsx"
-        return os.path.join(output_path, timestamped_file_name)
 
 
 if __name__ == "__main__":
