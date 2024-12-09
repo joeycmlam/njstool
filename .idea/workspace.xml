@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-diff-v2/app.diff.v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-diff-v2/app.diff.v2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-diff-v2/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-diff-v2/config.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -424,13 +426,6 @@
       <workItem from="1730628573204" duration="335000" />
       <workItem from="1733665212134" duration="2942000" />
     </task>
-    <task id="LOCAL-00110" summary="reflector for performance.">
-      <created>1685274040590</created>
-      <option name="number" value="00110" />
-      <option name="presentableId" value="LOCAL-00110" />
-      <option name="project" value="LOCAL" />
-      <updated>1685274040590</updated>
-    </task>
     <task id="LOCAL-00111" summary="reflector">
       <created>1685282101325</created>
       <option name="number" value="00111" />
@@ -767,7 +762,14 @@
       <option name="project" value="LOCAL" />
       <updated>1733709188431</updated>
     </task>
-    <option name="localTasksCounter" value="165" />
+    <task id="LOCAL-00165" summary="oo design">
+      <created>1733709388234</created>
+      <option name="number" value="00165" />
+      <option name="presentableId" value="LOCAL-00165" />
+      <option name="project" value="LOCAL" />
+      <updated>1733709388234</updated>
+    </task>
+    <option name="localTasksCounter" value="166" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -802,7 +804,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="new jest by copilot" />
     <MESSAGE value="add cucumber test" />
     <MESSAGE value="change ignore file list" />
     <MESSAGE value="enhance ETL job" />
@@ -827,7 +828,8 @@
     <MESSAGE value="new diff" />
     <MESSAGE value="improve the filename" />
     <MESSAGE value="support composite key" />
-    <option name="LAST_COMMIT_MESSAGE" value="support composite key" />
+    <MESSAGE value="oo design" />
+    <option name="LAST_COMMIT_MESSAGE" value="oo design" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -912,7 +914,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/njstool$app_diff_2.coverage" NAME="app.diff.2 Coverage Results" MODIFIED="1733665498003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-diff" />
-    <SUITE FILE_PATH="coverage/njstool$app_diff_v2.coverage" NAME="app.diff.v2 Coverage Results" MODIFIED="1733709147927" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-diff-v2" />
+    <SUITE FILE_PATH="coverage/njstool$app_diff_v2.coverage" NAME="app.diff.v2 Coverage Results" MODIFIED="1733709505371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-diff-v2" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main.js" />
