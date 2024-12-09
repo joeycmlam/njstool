@@ -26,7 +26,10 @@
   },
   "output": {
       "path": "./result",
-    "file": "comparison_results.xlsx"
+        "file": "comparison_results.xlsx",
+        "sheet_name": "Results",
+        "headers": ["Row A", "Row B", "Key", "Column", "Value A", "Value B", "Status"],
+        "timestamped": true
   },
   "log": {
     "path": "./log",
