@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/app-diff-v2/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/app-diff-v2/excel_writer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/app-diff-v2/file_comparison.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/app-diff-v2/file_parser.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/app-diff-v2/logger.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/app-diff-v2/record_comparator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-diff-v2/config.local.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-diff-v2/app.diff.v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-diff-v2/app.diff.v2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-diff-v2/config-1.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,7 +237,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/app/app-diff-v2/app.diff.v2.py" />
-      <option name="PARAMETERS" value="" />
+      <option name="PARAMETERS" value="--config config.local.json" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -431,13 +427,6 @@
       <workItem from="1730624800945" duration="3603000" />
       <workItem from="1730628573204" duration="335000" />
       <workItem from="1733665212134" duration="2942000" />
-    </task>
-    <task id="LOCAL-00113" summary="enhance to base on aum to calculate the fee">
-      <created>1685804847360</created>
-      <option name="number" value="00113" />
-      <option name="presentableId" value="LOCAL-00113" />
-      <option name="project" value="LOCAL" />
-      <updated>1685804847360</updated>
     </task>
     <task id="LOCAL-00114" summary="reflector">
       <created>1685805502962</created>
@@ -775,7 +764,14 @@
       <option name="project" value="LOCAL" />
       <updated>1733710212103</updated>
     </task>
-    <option name="localTasksCounter" value="168" />
+    <task id="LOCAL-00168" summary="reflector">
+      <created>1733710981219</created>
+      <option name="number" value="00168" />
+      <option name="presentableId" value="LOCAL-00168" />
+      <option name="project" value="LOCAL" />
+      <updated>1733710981219</updated>
+    </task>
+    <option name="localTasksCounter" value="169" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -920,7 +916,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/njstool$app_diff_2.coverage" NAME="app.diff.2 Coverage Results" MODIFIED="1733665498003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-diff" />
-    <SUITE FILE_PATH="coverage/njstool$app_diff_v2.coverage" NAME="app.diff.v2 Coverage Results" MODIFIED="1733710038727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-diff-v2" />
+    <SUITE FILE_PATH="coverage/njstool$app_diff_v2.coverage" NAME="app.diff.v2 Coverage Results" MODIFIED="1733711139710" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-diff-v2" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main.js" />
