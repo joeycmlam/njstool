@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-diff-v2/app.diff.v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-diff-v2/app.diff.v2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-diff-v2/config.local.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-diff-v2/config.local.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-diff-v2/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-diff-v2/logger.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -427,13 +427,6 @@
       <workItem from="1730628573204" duration="335000" />
       <workItem from="1733665212134" duration="2942000" />
     </task>
-    <task id="LOCAL-00115" summary="reflector to create transactionLoader">
-      <created>1685806605981</created>
-      <option name="number" value="00115" />
-      <option name="presentableId" value="LOCAL-00115" />
-      <option name="project" value="LOCAL" />
-      <updated>1685806605981</updated>
-    </task>
     <task id="LOCAL-00116" summary="fix feature test">
       <created>1685808889187</created>
       <option name="number" value="00116" />
@@ -770,7 +763,14 @@
       <option name="project" value="LOCAL" />
       <updated>1733711290542</updated>
     </task>
-    <option name="localTasksCounter" value="170" />
+    <task id="LOCAL-00170" summary="reflector">
+      <created>1733711714340</created>
+      <option name="number" value="00170" />
+      <option name="presentableId" value="LOCAL-00170" />
+      <option name="project" value="LOCAL" />
+      <updated>1733711714340</updated>
+    </task>
+    <option name="localTasksCounter" value="171" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -828,9 +828,9 @@
     <MESSAGE value="improve the filename" />
     <MESSAGE value="support composite key" />
     <MESSAGE value="oo design" />
-    <MESSAGE value="reflector" />
     <MESSAGE value="reflector to pass the config from arguement" />
-    <option name="LAST_COMMIT_MESSAGE" value="reflector to pass the config from arguement" />
+    <MESSAGE value="reflector" />
+    <option name="LAST_COMMIT_MESSAGE" value="reflector" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -915,7 +915,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/njstool$app_diff_2.coverage" NAME="app.diff.2 Coverage Results" MODIFIED="1733665498003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-diff" />
-    <SUITE FILE_PATH="coverage/njstool$app_diff_v2.coverage" NAME="app.diff.v2 Coverage Results" MODIFIED="1733711366904" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-diff-v2" />
+    <SUITE FILE_PATH="coverage/njstool$app_diff_v2.coverage" NAME="app.diff.v2 Coverage Results" MODIFIED="1733711875487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-diff-v2" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main.js" />
