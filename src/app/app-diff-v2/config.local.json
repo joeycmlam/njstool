@@ -5,7 +5,8 @@
     "file_generated_date": {
       "start": 0,
       "length": 8,
-      "skip": true
+      "skip": false,
+      "key": true
     },
     "file_type": {
       "start": 8,
@@ -28,7 +29,7 @@
       "path": "./result",
         "file": "comparison_results.xlsx",
         "sheet_name": "Results",
-        "headers": ["Row A", "Row B", "Key", "Column", "Value A", "Value B", "Status"],
+        "headers": ["Row A", "Row B", "Key", "Column" , "Value A", "Value B",  "Status"],
         "timestamped": true
   },
   "log": {
