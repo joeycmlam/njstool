@@ -1,0 +1,4 @@
+Please help to prepare a requirement file for cursor with the info below.
+-  it is a python oo design program to compare 2 files for reconcilation process.
+- the output excel file should have 3 worksheets: recon-result, the context of source-A-file, the context of source-B-file.
+- the recon-result worksheet have the columns: key-columns, key value, file A value of the record, row id of file A, file B value of the record, row id of file B, result.  And the results has 4 possibles values - match, not match, missing in file A, missing in file B.
