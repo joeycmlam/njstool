@@ -9,8 +9,8 @@ class FileComparisonApp:
     """
     The main orchestrator for the file comparison application.
     """
-    def __init__(self, config_path):
-        self.config = Config(config_path)
+    def __init__(self, config):
+        self.config = config
         log_config = self.config.get("log", {})
         self.logger = Logger(log_config).get_logger()
         self.parser = FileParser(self.logger)
