@@ -2,6 +2,7 @@ import logging
 from logging.handlers import RotatingFileHandler
 from datetime import datetime
 import os
+import constants
 
 
 class Logger:
@@ -41,7 +42,7 @@ class Logger:
 
     @staticmethod
     def _log_format():
-        return "%(asctime)s - %(name)s - %(levelname)s - [%(funcName)s:%(lineno)d] - %(message)s"
+        return constants.DEFAULT_LOG_FORMAT
 
     def get_logger(self):
         return self.logger
