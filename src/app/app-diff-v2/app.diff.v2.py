@@ -3,6 +3,7 @@ import os
 import logging
 from config import Config
 from file_comparison import FileComparisonApp
+import constants
 
 
 def setup_logging(verbose: bool = False) -> logging.Logger:
@@ -16,15 +17,15 @@ def setup_logging(verbose: bool = False) -> logging.Logger:
     Returns:
         logging.Logger: Configured logger instance
     """
-    logger = logging.getLogger("FileDiffTool")
+    logger = logging.getLogger(constants.DEFAULT_LOGGER_NAME)
     logger.setLevel(logging.DEBUG if verbose else logging.INFO)
 
     # Create console handler with formatting
     console_handler = logging.StreamHandler()
     console_handler.setLevel(logging.DEBUG if verbose else logging.INFO)
     formatter = logging.Formatter(
-        "%(asctime)s - %(name)s - %(levelname)s - [%(funcName)s:%(lineno)d] - %(message)s",
-        datefmt="%Y-%m-%d %H:%M:%S"
+        constants.DEFAULT_LOG_FORMAT,
+        datefmt=constants.DEFAULT_DATE_FORMAT
     )
     console_handler.setFormatter(formatter)
     
@@ -45,18 +46,13 @@ def parse_arguments() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="File Comparison Tool - Compare two files and generate detailed Excel report",
         formatter_class=argparse.RawDescriptionHelpFormatter,
-        epilog="""
-Examples:
-    %(prog)s --config config.json
-    %(prog)s --config /path/to/config.json
-    %(prog)s --config ./config/my_config.json
-        """
+        epilog=constants.CLI_EXAMPLES
     )
     
     parser.add_argument(
         "--config",
         type=str,
-        default="config.json",
+        default=constants.DEFAULT_CONFIG_PATH,
         help="Path to the configuration file (default: %(default)s)"
     )
     
@@ -97,7 +93,6 @@ def main():
     args = parse_arguments()
     logger = setup_logging(verbose=args.verbose)
     
-
     try:
         logger.info(f"Starting file comparison with config: {args.config}")
         config = Config(args.config)
@@ -105,14 +100,14 @@ def main():
         # Run the application
         run_app(config, logger)
         logger.info("Application completed successfully")
-        return 0
+        return constants.EXIT_SUCCESS
         
     except FileNotFoundError as e:
         logger.error(f"Configuration error: {e}")
-        return 1
+        return constants.EXIT_FAILURE
     except Exception as e:
         logger.error(f"Application error: {e}", exc_info=True)
-        return 1
+        return constants.EXIT_FAILURE
 
 
 if __name__ == "__main__":
