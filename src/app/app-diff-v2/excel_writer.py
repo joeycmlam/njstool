@@ -20,6 +20,7 @@ class ExcelWriter:
         self.sheet_name = self.output_config.get("sheet_name", "Comparison Results")
         self.group_by = self.output_config.get("group_by", None)
         self.timestamped = self.output_config.get("timestamped", True)
+        self.workbook = None
         
         # Ensure output directory exists
         os.makedirs(self.output_path, exist_ok=True)
@@ -36,6 +37,47 @@ class ExcelWriter:
             file_name = self.output_file_name
         return os.path.join(self.output_path, file_name)
 
+    def write_source_context(self, source_context, worksheet_name):
+        """
+        Write source context to a worksheet.
+        
+        Args:
+            source_context (list): List of dictionaries containing source context data
+            worksheet_name (str): Name of the worksheet to create
+        """
+        if not self.workbook:
+            self.workbook = openpyxl.Workbook()
+
+        try:
+            # Create new worksheet
+            if worksheet_name in self.workbook.sheetnames:
+                sheet = self.workbook[worksheet_name]
+            else:
+                sheet = self.workbook.create_sheet(title=worksheet_name)
+
+            # Write headers if source_context is not empty
+            if source_context and len(source_context) > 0:
+                headers = ["Row Number"] + list(source_context[0].keys())
+                for col_num, header in enumerate(headers, start=1):
+                    cell = sheet.cell(row=1, column=col_num, value=header)
+                    cell.font = Font(bold=True)
+                    sheet.column_dimensions[cell.column_letter].width = 30
+                    cell.alignment = Alignment(horizontal="center")
+
+                # Write data
+                for row_num, context in enumerate(source_context, start=2):
+                    # Write row number
+                    sheet.cell(row=row_num, column=1, value=row_num-1)
+                    
+                    # Write context values
+                    for col_num, value in enumerate(context.values(), start=2):
+                        sheet.cell(row=row_num, column=col_num, value=value)
+
+            self.logger.info(f"Source context written to worksheet: {worksheet_name}")
+        except Exception as e:
+            self.logger.error(f"Error writing source context to worksheet {worksheet_name}: {e}")
+            raise
+
     def write_to_excel(self, results):
         try:
             if not results:
@@ -49,22 +91,23 @@ class ExcelWriter:
                 raise ValueError("Invalid results data format.")
 
             output_file = self._get_output_file_path()
-            workbook = openpyxl.Workbook()
+            if not self.workbook:
+                self.workbook = openpyxl.Workbook()
 
             # Write comparison results
             if self.group_by:
                 grouped_results = self._group_results(results, self.group_by)
                 for group, group_results in grouped_results.items():
-                    sheet = workbook.create_sheet(title=group)
+                    sheet = self.workbook.create_sheet(title=group)
                     self._write_headers(sheet, self.headers)
                     self._write_data(sheet, group_results)
             else:
-                sheet = workbook.active
+                sheet = self.workbook.active
                 sheet.title = self.sheet_name
                 self._write_headers(sheet, self.headers)
                 self._write_data(sheet, results)
 
-            workbook.save(output_file)
+            self.workbook.save(output_file)
             self.logger.info(f"Results written to {output_file}")
         except Exception as e:
             self.logger.exception(f"Error writing to Excel file: {e}")
