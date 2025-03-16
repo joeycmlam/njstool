@@ -69,33 +69,6 @@ Examples:
     return parser.parse_args()
 
 
-def validate_config_file(config_path: str) -> None:
-    """
-    Validate the existence and accessibility of the configuration file.
-
-    Args:
-        config_path: Path to the configuration file.
-    
-    Raises:
-        FileNotFoundError: If the configuration file does not exist.
-        PermissionError: If the configuration file is not readable.
-        ValueError: If the path is empty or None.
-    """
-    if not config_path:
-        raise ValueError("Configuration file path cannot be empty")
-        
-    config_path = os.path.abspath(config_path)
-    
-    if not os.path.exists(config_path):
-        raise FileNotFoundError(f"Configuration file not found: {config_path}")
-        
-    if not os.path.isfile(config_path):
-        raise FileNotFoundError(f"Path is not a file: {config_path}")
-        
-    if not os.access(config_path, os.R_OK):
-        raise PermissionError(f"Configuration file is not readable: {config_path}")
-
-
 def run_app(config: Config, logger: logging.Logger):
     """
     Initialize and run the FileComparisonApp with the specified configuration file.
@@ -128,8 +101,6 @@ def main():
     try:
         logger.info(f"Starting file comparison with config: {args.config}")
         config = Config(args.config)
-        # Validate the configuration file
-        validate_config_file(args.config)
         
         # Run the application
         run_app(config, logger)
