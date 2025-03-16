@@ -3,6 +3,7 @@ from logger import Logger
 from file_parser import FileParser
 from record_comparator import RecordComparator
 from excel_writer import ExcelWriter
+import os
 
 class FileComparisonApp:
     """
@@ -14,7 +15,11 @@ class FileComparisonApp:
         self.logger = Logger(log_config).get_logger()
         self.parser = FileParser(self.logger)
         self.comparator = RecordComparator(self.logger)
-        self.writer = ExcelWriter(self.logger)
+        
+        # Initialize ExcelWriter with output configuration
+        output_config = self.config.get("output", {})
+        output_config["columns"] = self.config.get("columns", {})
+        self.writer = ExcelWriter(self.logger, output_config)
 
     def run(self):
         try:
@@ -32,7 +37,7 @@ class FileComparisonApp:
             results = self.comparator.compare_records(file_a_data, file_b_data, columns)
 
             # Write results to Excel
-            self.writer.write_to_excel(results, output_config)
+            self.writer.write_to_excel(results)
         except Exception as e:
             self.logger.error(f"An error occurred during file comparison: {e}")
             raise
