@@ -14,8 +14,8 @@ class ExcelWriter:
         self.output_path = self.output_config.get("path", "./result")
         self.output_file_name = self.output_config.get("file", "comparison_results.xlsx")
         self.headers = self.output_config.get("headers", [
-            "Row Number (File A)", "Row Number (File B)", "Composite Key",
-            "Column", "File A Value", "File B Value", "Status"
+            "Row Number (File A)", "Row Number (File B)", "Hash Key",
+            "Human-Readable Key", "Column", "File A Value", "File B Value", "Status"
         ])
         self.sheet_name = self.output_config.get("sheet_name", "Comparison Results")
         self.group_by = self.output_config.get("group_by", None)
@@ -85,7 +85,8 @@ class ExcelWriter:
                 return
 
             # Validate results format
-            required_fields = {"row_number_a", "row_number_b", "key", "column", "file_a_value", "file_b_value", "status"}
+            required_fields = {"row_number_a", "row_number_b", "key", "composite_key", "column", 
+                             "file_a_value", "file_b_value", "status"}
             if not all(field in results[0] for field in required_fields):
                 self.logger.error("Results data is missing required fields.")
                 raise ValueError("Invalid results data format.")
@@ -118,7 +119,7 @@ class ExcelWriter:
         for col_num, header in enumerate(headers, start=1):
             cell = sheet.cell(row=1, column=col_num, value=header)
             cell.font = Font(bold=True)
-            sheet.column_dimensions[cell.column_letter].width = 20
+            sheet.column_dimensions[cell.column_letter].width = 30  # Increased width for better readability
             cell.alignment = Alignment(horizontal="center")
 
     @staticmethod
@@ -127,10 +128,11 @@ class ExcelWriter:
             sheet.cell(row=row_num, column=1, value=result["row_number_a"])
             sheet.cell(row=row_num, column=2, value=result["row_number_b"])
             sheet.cell(row=row_num, column=3, value=result["key"])
-            sheet.cell(row=row_num, column=4, value=result["column"])
-            sheet.cell(row=row_num, column=5, value=result["file_a_value"])
-            sheet.cell(row=row_num, column=6, value=result["file_b_value"])
-            sheet.cell(row=row_num, column=7, value=result["status"])
+            sheet.cell(row=row_num, column=4, value=result["composite_key"])
+            sheet.cell(row=row_num, column=5, value=result["column"])
+            sheet.cell(row=row_num, column=6, value=result["file_a_value"])
+            sheet.cell(row=row_num, column=7, value=result["file_b_value"])
+            sheet.cell(row=row_num, column=8, value=result["status"])
 
     @staticmethod
     def _group_results(results, group_by):
