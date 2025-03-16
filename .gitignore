@@ -28,3 +28,5 @@ cucumber-report.json
 cucumber.html
 
 docker-compose.01.yml
+.idea/
+*.xlsx

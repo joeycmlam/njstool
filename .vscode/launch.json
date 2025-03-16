@@ -5,12 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python Debugger: Current File with Arguments",
-            "type": "debugpy",
+            "name": "Python: Run app.diff.v2.py",
+            "type": "python",
             "request": "launch",
-            "program": "${file}",
+            "program": "/Users/joeylam/repo/njs/njstool/src/app/app-diff-v2/app.diff.v2.py",
             "console": "integratedTerminal",
-            "args": "${command:pickArgs}"
-        }
+            "args": ["--config", "config/config.json"]
+          }
     ]
+    
 }
