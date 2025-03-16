@@ -3,7 +3,7 @@ from logger import Logger
 from file_parser import FileParser
 from record_comparator import RecordComparator
 from excel_writer import ExcelWriter
-import os
+import constants
 
 class FileComparisonApp:
     """
