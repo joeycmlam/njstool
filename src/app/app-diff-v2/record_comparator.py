@@ -24,16 +24,18 @@ class RecordComparator:
 
             row_number_a = record_a.get("row_number", "N/A")
             row_number_b = record_b.get("row_number", "N/A")
+            composite_key = record_a.get("composite_key", record_b.get("composite_key", "N/A"))
 
             for column_name, props in columns.items():
                 if not props.get("skip", False):
-                    results.append(self._compare_column(record_a, record_b, key, row_number_a, row_number_b, column_name))
+                    results.append(self._compare_column(record_a, record_b, key, composite_key, 
+                                                     row_number_a, row_number_b, column_name))
 
         self.logger.info(f"Comparison completed with {len(results)} results.")
         return results
 
     @staticmethod
-    def _compare_column(record_a, record_b, key, row_number_a, row_number_b, column_name):
+    def _compare_column(record_a, record_b, key, composite_key, row_number_a, row_number_b, column_name):
         value_a = record_a.get(column_name, None)
         value_b = record_b.get(column_name, None)
 
@@ -50,6 +52,7 @@ class RecordComparator:
             "row_number_a": row_number_a,
             "row_number_b": row_number_b,
             "key": key,
+            "composite_key": composite_key,
             "column": column_name,
             "file_a_value": value_a,
             "file_b_value": value_b,
