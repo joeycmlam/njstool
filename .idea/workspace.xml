@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/app-blockchain/app.blockchain.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-diff-v2/config.local.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-diff-v2/config.local.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-diff-v2/file_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-diff-v2/file_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-diff-v2/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-diff-v2/config/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-diff-v2/config.local.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-diff-v2/config/config.local.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +38,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/app/app-diff-v2/app.diff.v2.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/app/app-diff-v2/config.local.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/app/app-diff-v2/config/config.local.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/app/app-diff-v2/excel_writer.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/app/app-diff-v2/file_comparison.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/app/app-diff-v2/file_parser.py" root0="FORCE_HIGHLIGHTING" />
@@ -161,36 +160,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Object&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;ToolWindowCommit.ShowToolbar&quot;: &quot;false&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.20.2&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.19.33&quot;,
-    &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/joeylam/repo/njs/njstool/src/app/app-diff-v2&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs.cucumber.cucumber_node_package_dir&quot;: &quot;/Users/joeylam/repo/njs/njstool/node_modules/@cucumber/cucumber&quot;,
-    &quot;nodejs.jest.jest_package&quot;: &quot;/Users/joeylam/repo/njs/njstool/node_modules/jest&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/joeylam/repo/njs/njstool/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultPlantUmlFileTemplate": "UML Object",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "ToolWindowCommit.ShowToolbar": "false",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "javascript.nodejs.core.library.configured.version": "18.20.2",
+    "javascript.nodejs.core.library.typings.version": "18.19.33",
+    "js.last.introduce.type": "CONST",
+    "last_opened_file_path": "/Users/joeylam/repo/njs/njstool",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs.cucumber.cucumber_node_package_dir": "/Users/joeylam/repo/njs/njstool/node_modules/@cucumber/cucumber",
+    "nodejs.jest.jest_package": "/Users/joeylam/repo/njs/njstool/node_modules/jest",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "Errors",
+    "ts.external.directory.path": "/Users/joeylam/repo/njs/njstool/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;TEXT&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "TEXT"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/app/app-diff-v2" />
@@ -200,14 +199,36 @@
       <recent name="$PROJECT_DIR$/test/test-rest/features/test_data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/app-diff-v2/config" />
       <recent name="$PROJECT_DIR$/src/app/app-diff-v2/result" />
       <recent name="$PROJECT_DIR$/src/app/app-fee-engine/config" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/app/app-fee" />
-      <recent name="$PROJECT_DIR$/src/app/app-fee-engine" />
     </key>
   </component>
   <component name="RunManager" selected="Python.app.diff.v2">
+    <configuration name="app.blockchain" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="njstool" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/app/app-blockchain" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/app/app-blockchain/app.blockchain.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="app.diff.2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="njstool" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -244,7 +265,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/app/app-diff-v2/app.diff.v2.py" />
-      <option name="PARAMETERS" value="--config config.local.json" />
+      <option name="PARAMETERS" value="--config config/config.local.json" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -287,16 +308,6 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="test:coverage" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="test:coverage" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <configuration name="test:reports" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -312,18 +323,18 @@
       <item itemvalue="Docker.docker-compose.git.yml: Compose Deployment" />
       <item itemvalue="npm.test" />
       <item itemvalue="npm.start:email" />
-      <item itemvalue="npm.test:coverage" />
       <item itemvalue="npm.test:reports" />
+      <item itemvalue="Python.app.blockchain" />
       <item itemvalue="Python.app.diff.2" />
       <item itemvalue="Python.app.diff.v2" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.app.diff.v2" />
+        <item itemvalue="Python.app.blockchain" />
         <item itemvalue="Python.app.diff.2" />
         <item itemvalue="npm.start:email" />
         <item itemvalue="npm.test:reports" />
-        <item itemvalue="npm.test:coverage" />
       </list>
     </recent_temporary>
   </component>
@@ -435,14 +446,11 @@
       <workItem from="1730628573204" duration="335000" />
       <workItem from="1733665212134" duration="2942000" />
       <workItem from="1733728680232" duration="611000" />
-      <workItem from="1741365024358" duration="104000" />
-    </task>
-    <task id="LOCAL-00118" summary="adjust default rates">
-      <created>1685809075400</created>
-      <option name="number" value="00118" />
-      <option name="presentableId" value="LOCAL-00118" />
-      <option name="project" value="LOCAL" />
-      <updated>1685809075400</updated>
+      <workItem from="1741365024358" duration="1197000" />
+      <workItem from="1741492529713" duration="17000" />
+      <workItem from="1742056887114" duration="210000" />
+      <workItem from="1742111527076" duration="59000" />
+      <workItem from="1742112721590" duration="642000" />
     </task>
     <task id="LOCAL-00119" summary="revised the error message.">
       <created>1685809154521</created>
@@ -780,7 +788,14 @@
       <option name="project" value="LOCAL" />
       <updated>1733712436115</updated>
     </task>
-    <option name="localTasksCounter" value="173" />
+    <task id="LOCAL-00173" summary="first blockchain">
+      <created>1741365155238</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1741365155238</updated>
+    </task>
+    <option name="localTasksCounter" value="174" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -815,7 +830,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="create app - simulator" />
     <MESSAGE value="restructure the folders" />
     <MESSAGE value="fix the reflector issue" />
     <MESSAGE value="WIP - fee-engine" />
@@ -840,7 +854,8 @@
     <MESSAGE value="reflector" />
     <MESSAGE value="reflector logger" />
     <MESSAGE value="reflector the output result" />
-    <option name="LAST_COMMIT_MESSAGE" value="reflector the output result" />
+    <MESSAGE value="first blockchain" />
+    <option name="LAST_COMMIT_MESSAGE" value="first blockchain" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -924,8 +939,9 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/njstool$app_blockchain.coverage" NAME="app.blockchain Coverage Results" MODIFIED="1742112754394" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-blockchain" />
     <SUITE FILE_PATH="coverage/njstool$app_diff_2.coverage" NAME="app.diff.2 Coverage Results" MODIFIED="1733665498003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-diff" />
-    <SUITE FILE_PATH="coverage/njstool$app_diff_v2.coverage" NAME="app.diff.v2 Coverage Results" MODIFIED="1733713202972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-diff-v2" />
+    <SUITE FILE_PATH="coverage/njstool$app_diff_v2.coverage" NAME="app.diff.v2 Coverage Results" MODIFIED="1742112840419" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-diff-v2" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main.js" />
