@@ -5,13 +5,27 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Run app.diff.v2.py",
+            "name": "App-Diff-V2",
             "type": "python",
             "request": "launch",
-            "program": "/Users/joeylam/repo/njs/njstool/src/app/app-diff-v2/app.diff.v2.py",
+            "program": "${workspaceFolder}/src/app/app-diff-v2/app.diff.v2.py",
             "console": "integratedTerminal",
-            "args": ["--config", "config/config.json"]
-          }
+            "args": ["--config", "${workspaceFolder}/src/app/app-diff-v2/config/config.json"],
+            "cwd": "${workspaceFolder}/src/app/app-diff-v2",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/src/app/app-diff-v2"
+            }
+        }
+        // You can add more configurations for other apps here:
+        // {
+        //     "name": "Another-App",
+        //     "type": "python",
+        //     "request": "launch",
+        //     "program": "${workspaceFolder}/src/app/another-app/main.py",
+        //     "cwd": "${workspaceFolder}/src/app/another-app",
+        //     "env": {
+        //         "PYTHONPATH": "${workspaceFolder}/src/app/another-app"
+        //     }
+        // }
     ]
-    
 }
