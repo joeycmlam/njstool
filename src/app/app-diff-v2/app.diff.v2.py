@@ -1,6 +1,7 @@
 import argparse
 import os
 import logging
+from config import Config
 from file_comparison import FileComparisonApp
 
 
@@ -95,7 +96,7 @@ def validate_config_file(config_path: str) -> None:
         raise PermissionError(f"Configuration file is not readable: {config_path}")
 
 
-def run_app(config_path: str, logger: logging.Logger):
+def run_app(config: Config, logger: logging.Logger):
     """
     Initialize and run the FileComparisonApp with the specified configuration file.
 
@@ -103,8 +104,8 @@ def run_app(config_path: str, logger: logging.Logger):
     :param logger: Logger instance for logging.
     """
     try:
-        logger.info(f"Starting file comparison with config: {config_path}")
-        app = FileComparisonApp(config_path)
+        # logger.info(f"Starting file comparison with config: {config_path}")
+        app = FileComparisonApp(config)
         app.run()
         logger.info("File comparison completed successfully.")
     except Exception as e:
@@ -122,13 +123,16 @@ def main():
     """
     args = parse_arguments()
     logger = setup_logging(verbose=args.verbose)
+    
 
     try:
+        logger.info(f"Starting file comparison with config: {args.config}")
+        config = Config(args.config)
         # Validate the configuration file
         validate_config_file(args.config)
         
         # Run the application
-        run_app(args.config, logger)
+        run_app(config, logger)
         logger.info("Application completed successfully")
         return 0
         
@@ -141,5 +145,9 @@ def main():
 
 
 if __name__ == "__main__":
-    exit_code = main()
-    exit(exit_code)
+    try:
+        exit_code = main()
+        exit(exit_code)
+    except Exception as e:
+        print(f"Application error: {e}")
+        exit(1)
