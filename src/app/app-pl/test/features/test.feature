@@ -1,7 +1,8 @@
 Feature: Mutual Fund Profit and Loss Calculation
 
   Scenario: Calculate realized and unrealized P/L after multiple transactions
-    Given I have the following transactions:
+    Given I am using the "MutualFundService" implementation
+    And I have the following transactions:
       | date       | type | units | price |
       | 2023-01-01 | BUY  | 100   | 10    |
       | 2023-02-01 | BUY  | 50    | 12    |
