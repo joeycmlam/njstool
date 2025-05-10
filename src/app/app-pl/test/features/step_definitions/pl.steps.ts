@@ -1,6 +1,6 @@
 import { Given, When, Then } from "@cucumber/cucumber";
 import { expect } from "chai";
-import { PLCalculatorInterface, Transaction, ProfitLoss } from "../../../PLCalculatorInterface";
+import { PLCalculatorInterface, Transaction, ProfitLoss, TransactionType } from "../../../PLCalculatorInterface";
 import {MutualFundService} from "../../../MutualFundService";
 
 let mutualFundService: PLCalculatorInterface;
@@ -17,7 +17,7 @@ Given("I am using the {string} implementation", async function (implementationNa
 Given("I have the following transactions:", function (dataTable) {
     const transactions: Transaction[] = dataTable.hashes().map((row: any) => ({
         date: new Date(row.date),
-        type: row.type as "BUY" | "SELL",
+        type: row.type as TransactionType,
         units: parseFloat(row.units),
         price: parseFloat(row.price),
     }));
