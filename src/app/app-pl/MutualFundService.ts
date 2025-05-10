@@ -1,24 +1,8 @@
 // MutualFundService.ts
-export type TransactionType = "BUY" | "SELL";
 
-export interface Transaction {
-    date: Date;
-    type: TransactionType;
-    units: number;
-    price: number;
-}
+import {PLCalculatorInterface, Transaction, Holding, ProfitLoss} from "./PLCalculatorInterface";
 
-export interface Holding {
-    units: number;
-    averageCost: number;
-}
-
-export interface ProfitLoss {
-    realizedProfitLoss: number;
-    unrealizedProfitLoss: number;
-}
-
-export class MutualFundService {
+export class MutualFundService implements PLCalculatorInterface {
     private transactions: Transaction[] = [];
     private holding: Holding = { units: 0, averageCost: 0 };
 
@@ -27,34 +11,81 @@ export class MutualFundService {
         this.updateHolding(transaction);
     }
 
+    private buyLots: { units: number; price: number }[] = [];
+
     private updateHolding(transaction: Transaction): void {
         const { type, units, price } = transaction;
 
+        if (units <= 0 || price <= 0) {
+            throw new Error("Transaction units and price must be positive.");
+        }
+
         if (type === "BUY") {
-            const totalCost = this.holding.units * this.holding.averageCost + units * price;
-            this.holding.units += units;
-            this.holding.averageCost = totalCost / this.holding.units;
+            this.buyLots.push({ units, price });
         } else if (type === "SELL") {
-            if (units > this.holding.units) {
+            if (units > this.getTotalUnits()) {
                 throw new Error("Selling more units than available in holdings.");
             }
-            this.holding.units -= units;
+
+            let remainingUnitsToSell = units;
+
+            while (remainingUnitsToSell > 0) {
+                const lot = this.buyLots[0]; // FIFO: Take from the oldest lot
+                const unitsToSell = Math.min(lot.units, remainingUnitsToSell);
+
+                this.holding.averageCost = lot.price; // Track cost of the lot being sold
+                remainingUnitsToSell -= unitsToSell;
+                lot.units -= unitsToSell;
+
+                if (lot.units === 0) {
+                    this.buyLots.shift(); // Remove the lot if fully sold
+                }
+            }
+        }
+
+        this.updateHoldingSummary();
+    }
+
+    private getTotalUnits(): number {
+        return this.buyLots.reduce((sum, lot) => sum + lot.units, 0);
+    }
+
+    private updateHoldingSummary(): void {
+        const totalUnits = this.getTotalUnits();
+        if (totalUnits === 0) {
+            this.holding = { units: 0, averageCost: 0 };
+        } else {
+            const totalCost = this.buyLots.reduce((sum, lot) => sum + lot.units * lot.price, 0);
+            this.holding = { units: totalUnits, averageCost: totalCost / totalUnits };
         }
     }
 
     calculateProfitLoss(currentMarketPrice: number): ProfitLoss {
         let realizedProfitLoss = 0;
+        let unrealizedProfitLoss = 0;
 
         for (const transaction of this.transactions) {
             if (transaction.type === "SELL") {
                 const sellUnits = transaction.units;
                 const sellPrice = transaction.price;
-                realizedProfitLoss += (sellPrice - this.holding.averageCost) * sellUnits;
+
+                let remainingUnitsToSell = sellUnits;
+
+                // Calculate realized P/L using FIFO lots
+                for (const lot of this.buyLots) {
+                    if (remainingUnitsToSell === 0) break;
+
+                    const soldUnits = Math.min(lot.units, remainingUnitsToSell);
+                    realizedProfitLoss += (sellPrice - lot.price) * soldUnits;
+                    remainingUnitsToSell -= soldUnits;
+                }
             }
         }
 
-        const unrealizedProfitLoss =
-            (currentMarketPrice - this.holding.averageCost) * this.holding.units;
+        // Calculate unrealized P/L for remaining holdings
+        for (const lot of this.buyLots) {
+            unrealizedProfitLoss += (currentMarketPrice - lot.price) * lot.units;
+        }
 
         return {
             realizedProfitLoss,

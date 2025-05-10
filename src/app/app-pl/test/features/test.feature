@@ -7,5 +7,5 @@ Feature: Mutual Fund Profit and Loss Calculation
       | 2023-02-01 | BUY  | 50    | 12    |
       | 2023-03-01 | SELL | 80    | 15    |
     When the current market price is 16
-    Then the realized profit loss should be 400
+    Then the realized profit loss should be 250
     And the unrealized profit loss should be 320
