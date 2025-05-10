@@ -1,15 +1,20 @@
 import { Given, When, Then } from "@cucumber/cucumber";
 import { expect } from "chai";
-import { MutualFundService } from "../../../MutualFundService";
-import { Transaction, ProfitLoss } from "../../../PLCalculatorInterface";
+import { PLCalculatorInterface, Transaction, ProfitLoss } from "../../../PLCalculatorInterface";
+import {MutualFundService} from "../../../MutualFundService";
 
-let mutualFundService: MutualFundService;
+let mutualFundService: PLCalculatorInterface;
 let profitLoss: ProfitLoss;
 
-Given("I have the following transactions:", function (dataTable) {
-    mutualFundService = new MutualFundService();
+Given("I am using the {string} implementation", async function (implementationName: string) {
+    if (implementationName === "MutualFundService") {
+        mutualFundService = new MutualFundService();
+    } else {
+        throw new Error(`Implementation "${implementationName}" not found.`);
+    }
+});
 
-    // Parse the data table into transactions and add them to the service
+Given("I have the following transactions:", function (dataTable) {
     const transactions: Transaction[] = dataTable.hashes().map((row: any) => ({
         date: new Date(row.date),
         type: row.type as "BUY" | "SELL",
