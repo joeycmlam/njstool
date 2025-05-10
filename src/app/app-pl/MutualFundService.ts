@@ -1,6 +1,6 @@
 // MutualFundService.ts
 
-import {PLCalculatorInterface, Transaction, Holding, ProfitLoss, TransactionType} from "./PLCalculatorInterface";
+import {Holding, PLCalculatorInterface, ProfitLoss, Transaction, TransactionType} from "./PLCalculatorInterface";
 
 export class MutualFundService implements PLCalculatorInterface {
     private transactions: Transaction[] = [];
@@ -65,7 +65,7 @@ export class MutualFundService implements PLCalculatorInterface {
         let unrealizedProfitLoss = 0;
 
         for (const transaction of this.transactions) {
-            if (transaction.type === "SELL") {
+            if (transaction.type === TransactionType.SELL) {
                 const sellUnits = transaction.units;
                 const sellPrice = transaction.price;
 
