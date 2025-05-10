@@ -18,6 +18,6 @@ export interface ProfitLoss {
 }
 
 export interface PLCalculatorInterface {
-    addTransaction(trana): void;
+    addTransaction(trxn: Transaction): void;
     calculateProfitLoss(currentMarketPrice : number): ProfitLoss;
 }
