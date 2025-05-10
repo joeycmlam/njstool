@@ -1,4 +1,7 @@
-export type TransactionType = "BUY" | "SELL";
+export enum TransactionType {
+    BUY = "BUY",
+    SELL = "SELL",
+}
 
 export interface Transaction {
     date: Date;

@@ -1,6 +1,6 @@
 // MutualFundService.ts
 
-import {PLCalculatorInterface, Transaction, Holding, ProfitLoss} from "./PLCalculatorInterface";
+import {PLCalculatorInterface, Transaction, Holding, ProfitLoss, TransactionType} from "./PLCalculatorInterface";
 
 export class MutualFundService implements PLCalculatorInterface {
     private transactions: Transaction[] = [];
@@ -20,9 +20,9 @@ export class MutualFundService implements PLCalculatorInterface {
             throw new Error("Transaction units and price must be positive.");
         }
 
-        if (type === "BUY") {
+        if (type === TransactionType.BUY) {
             this.buyLots.push({ units, price });
-        } else if (type === "SELL") {
+        } else if (type === TransactionType.SELL) {
             if (units > this.getTotalUnits()) {
                 throw new Error("Selling more units than available in holdings.");
             }
