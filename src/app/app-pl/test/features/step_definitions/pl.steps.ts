@@ -1,6 +1,7 @@
 import { Given, When, Then } from "@cucumber/cucumber";
 import { expect } from "chai";
-import { MutualFundService, Transaction, ProfitLoss } from "../../../MutualFundService";
+import { MutualFundService } from "../../../MutualFundService";
+import { Transaction, ProfitLoss } from "../../../PLCalculatorInterface";
 
 let mutualFundService: MutualFundService;
 let profitLoss: ProfitLoss;
