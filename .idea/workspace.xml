@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-pl/PLCalculatorInterface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-pl/PLCalculatorInterface.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-pl/PositionCalculator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-pl/PositionCalculator.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-pl/test/TestCase.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-pl/test/TestCase.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-pl/test/features/step_definitions/pl.steps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-pl/test/features/step_definitions/pl.steps.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-pl/test/features/test.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-pl/test/features/test.feature" afterDir="false" />
@@ -207,33 +210,18 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.test:cucumber:pl">
-    <configuration name="app.diff.v2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="njstool" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/app/app-diff-v2" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/app/app-diff-v2/app.diff.v2.py" />
-      <option name="PARAMETERS" value="--config config/config.local.json" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Scenario: Calculate realized and unre..." type="cucumber.js" factoryName="Cucumber.js" temporary="true">
+  <component name="RunManager" selected="Cucumber.js.Scenario: case 3: Calculate realized ...">
+    <configuration name="Scenario: Calculate realized and unre... (2)" type="cucumber.js" factoryName="Cucumber.js">
       <option name="myFilePath" value="$PROJECT_DIR$/src/app/app-pl/test/features/test.feature" />
       <option name="myNameFilter" value="^Calculate realized and unrealized P\/L after multiple transactions$" />
-      <option name="cucumberJsArguments" value="" />
+      <option name="cucumberJsArguments" value="--config src/test/cucumber.config.js" />
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Scenario: case 3: Calculate realized ..." type="cucumber.js" factoryName="Cucumber.js" temporary="true">
+      <option name="myFilePath" value="$PROJECT_DIR$/src/app/app-pl/test/features/test.feature" />
+      <option name="myNameFilter" value="^case 3\: Calculate realized and unrealized P\/L after multiple transactions with FIFO$" />
+      <option name="cucumberJsArguments" value="--config src/test/cucumber.config.js" />
       <option name="workingDirectory" value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
@@ -250,16 +238,6 @@
           <option name="sourceFilePath" value="docker-compose.git.yml" />
         </settings>
       </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="start:email" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start:email" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
       <method v="2" />
     </configuration>
     <configuration name="test" type="js.build_tools.npm" nameIsGenerated="true">
@@ -282,31 +260,18 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="test:reports" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="test:reports" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <list>
+      <item itemvalue="Cucumber.js.Scenario: Calculate realized and unre... (2)" />
       <item itemvalue="Cucumber.js.app.fee.feature" />
-      <item itemvalue="Cucumber.js.Scenario: Calculate realized and unre..." />
+      <item itemvalue="Cucumber.js.Scenario: case 3: Calculate realized ..." />
       <item itemvalue="Docker.docker-compose.git.yml: Compose Deployment" />
       <item itemvalue="npm.test" />
       <item itemvalue="npm.test:cucumber:pl" />
-      <item itemvalue="npm.start:email" />
-      <item itemvalue="npm.test:reports" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber.js.Scenario: case 3: Calculate realized ..." />
         <item itemvalue="npm.test:cucumber:pl" />
-        <item itemvalue="Cucumber.js.Scenario: Calculate realized and unre..." />
-        <item itemvalue="npm.start:email" />
-        <item itemvalue="npm.test:reports" />
       </list>
     </recent_temporary>
   </component>
@@ -424,7 +389,7 @@
       <workItem from="1742111527076" duration="59000" />
       <workItem from="1742112721590" duration="642000" />
       <workItem from="1746888434703" duration="10096000" />
-      <workItem from="1746930161445" duration="9413000" />
+      <workItem from="1746930161445" duration="13216000" />
     </task>
     <task id="LOCAL-00119" summary="revised the error message.">
       <created>1685809154521</created>
@@ -769,7 +734,7 @@
       <option name="project" value="LOCAL" />
       <updated>1741365155238</updated>
     </task>
-    <option name="localTasksCounter" value="190" />
+    <option name="localTasksCounter" value="191" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -804,7 +769,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="enhance it to include subpage as data source" />
     <MESSAGE value="update the diagram" />
     <MESSAGE value="enhancement to keep local topic to improve the performance" />
     <MESSAGE value="add source and reflector soruceData file" />
@@ -829,7 +793,8 @@
     <MESSAGE value="enhance test cases" />
     <MESSAGE value="rename service" />
     <MESSAGE value="reflector" />
-    <option name="LAST_COMMIT_MESSAGE" value="reflector" />
+    <MESSAGE value="improve pl.steps.ts" />
+    <option name="LAST_COMMIT_MESSAGE" value="improve pl.steps.ts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

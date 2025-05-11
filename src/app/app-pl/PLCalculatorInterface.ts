@@ -24,3 +24,12 @@ export interface PLCalculatorInterface {
     addTransaction(trxn: Transaction): void;
     calculateProfitLoss(currentMarketPrice: number): { holding: Holding; profitLoss: ProfitLoss };
 }
+
+export interface PositionCalculator {
+    calculateBookCost(buyLots: { units: number; price: number }[]): Holding;
+    calculateProfitLoss(
+        transactions: Transaction[],
+        buyLots: { units: number; price: number }[],
+        currentMarketPrice: number
+    ): ProfitLoss;
+}

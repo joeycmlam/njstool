@@ -74,8 +74,7 @@ Given('I have the transactions from the Excel file {string} and worksheet {strin
     // Resolve the full path to the Excel file
     const fullPath = path.resolve(__dirname, "../../../Test", filePath);
 
-    console.log(`Reading Excel file from: ${fullPath}`);
-    console.log(`Using worksheet: ${sheetName}`);
+    // console.log(`Reading Excel file from: ${fullPath} worksheet - ${sheetName}`);
 
     // Read the Excel file
     const fileBuffer = readFileSync(fullPath);
@@ -90,17 +89,12 @@ Given('I have the transactions from the Excel file {string} and worksheet {strin
     // Parse the sheet into JSON
     const transactionsData: any[] = XLSX.utils.sheet_to_json(sheet);
 
-    console.log(`Parsed transactions from Excel (raw):`, transactionsData);
-
     // Use the parseData function to convert raw data into Transaction objects
     const transactions = parseData(transactionsData);
-
-    console.log(`Converted transactions:`, transactions);
 
     // Add each transaction to the portfolio service
     transactions.forEach(transaction => portfolioService.addTransaction(transaction));
 
-    console.log(`All transactions have been added successfully.`);
 });
 
 When('the current market price is {float}', (price: number) => {
@@ -129,8 +123,13 @@ Then('the profit and loss should be:', (dataTable) => {
             actual = holding.bookCost;
         } else if (attribute === "marketValue") {
             actual = marketValue;
+        } else if (attribute === "unrealizedProfitLoss") {
+            actual = profitLossResult.unrealizedProfitLoss;
+            // actual = profitLossResult[attribute as keyof typeof profitLossResult];
+        } else if (attribute === "realizedProfitLoss") {
+            actual = profitLossResult.realizedProfitLoss;
         } else {
-            actual = profitLossResult[attribute as keyof typeof profitLossResult];
+            throw new Error(`undefined attribute: ${attribute}`);
         }
 
         // Log the comparison for better readability
