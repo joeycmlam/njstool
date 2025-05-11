@@ -12,7 +12,7 @@ export interface Transaction {
 
 export interface Holding {
     units: number;
-    averageCost: number;
+    bookCost: number;
 }
 
 export interface ProfitLoss {

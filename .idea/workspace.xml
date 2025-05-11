@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-pl/MutualFundService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-pl/MutualFundService.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-pl/PLCalculatorInterface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-pl/PLCalculatorInterface.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-pl/test/TestCase.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-pl/test/TestCase.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-pl/test/features/step_definitions/pl.steps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-pl/test/features/step_definitions/pl.steps.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-pl/test/features/test.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-pl/test/features/test.feature" afterDir="false" />
     </list>
@@ -438,7 +439,7 @@
       <workItem from="1742111527076" duration="59000" />
       <workItem from="1742112721590" duration="642000" />
       <workItem from="1746888434703" duration="10096000" />
-      <workItem from="1746930161445" duration="4017000" />
+      <workItem from="1746930161445" duration="4654000" />
     </task>
     <task id="LOCAL-00119" summary="revised the error message.">
       <created>1685809154521</created>
@@ -783,7 +784,7 @@
       <option name="project" value="LOCAL" />
       <updated>1741365155238</updated>
     </task>
-    <option name="localTasksCounter" value="184" />
+    <option name="localTasksCounter" value="185" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -818,7 +819,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="include the diagram" />
     <MESSAGE value="rename the file" />
     <MESSAGE value="enhance it." />
     <MESSAGE value="enhance it to include subpage as data source" />
@@ -843,7 +843,8 @@
     <MESSAGE value="reflector" />
     <MESSAGE value="reflector cucumber test" />
     <MESSAGE value="add test cases" />
-    <option name="LAST_COMMIT_MESSAGE" value="add test cases" />
+    <MESSAGE value="reflector the cucumber test" />
+    <option name="LAST_COMMIT_MESSAGE" value="reflector the cucumber test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

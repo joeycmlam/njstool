@@ -8,9 +8,11 @@ Feature: Mutual Fund Profit and Loss Calculation
     When the current market price is 13
     Then the profit and loss should be:
       | attribute            | expected |
+      | position             | 100      |
+      | bookCost             | 1000     |
+      | marketValue          | 1300     |
       | realizedProfitLoss   | 0        |
       | unrealizedProfitLoss | 300      |
-      | marketValue          | 1300     |
 
   Scenario: Calculate realized and unrealized P/L after 2 subscriptions
     Given I am using the "MutualFundService" implementation
