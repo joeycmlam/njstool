@@ -1,8 +1,8 @@
 import { Holding, PLCalculatorInterface, ProfitLoss, Transaction, TransactionType } from "./PLCalculatorInterface";
 
-export class MutualFundService implements PLCalculatorInterface {
+export class PortfolioService implements PLCalculatorInterface {
     private transactions: Transaction[] = [];
-    private holding: Holding = { units: 0, bookCost: 0 }; // Replace averageCost with bookCost
+    private holding: Holding = { units: 0, bookCost: 0 };
     private buyLots: { units: number; price: number }[] = [];
 
     addTransaction(transaction: Transaction): void {
