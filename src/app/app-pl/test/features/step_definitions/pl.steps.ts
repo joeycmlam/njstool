@@ -1,7 +1,7 @@
-import { Given, When, Then } from "@cucumber/cucumber";
-import { expect } from "chai";
-import { Holding, Transaction, TransactionType } from "../../../PLCalculatorInterface";
-import { MutualFundService } from "../../../MutualFundService";
+import {Given, When, Then} from "@cucumber/cucumber";
+import {expect} from "chai";
+import {Holding, Transaction, TransactionType} from "../../../PLCalculatorInterface";
+import {MutualFundService} from "../../../MutualFundService";
 
 let mutualFundService: MutualFundService;
 let currentMarketPrice: number;
@@ -54,7 +54,7 @@ Then('the profit and loss should be:', (dataTable) => {
         if (attribute === "position") {
             actual = holding.units;
         } else if (attribute === "bookCost") {
-            actual = holding.averageCost;
+            actual = holding.bookCost;
         } else if (attribute === "marketValue") {
             actual = marketValue;
         } else {

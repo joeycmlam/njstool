@@ -1,27 +1,24 @@
-// MutualFundService.ts
-
-import {Holding, PLCalculatorInterface, ProfitLoss, Transaction, TransactionType} from "./PLCalculatorInterface";
+import { Holding, PLCalculatorInterface, ProfitLoss, Transaction, TransactionType } from "./PLCalculatorInterface";
 
 export class MutualFundService implements PLCalculatorInterface {
     private transactions: Transaction[] = [];
-    private holding: Holding = {units: 0, averageCost: 0};
+    private holding: Holding = { units: 0, bookCost: 0 }; // Replace averageCost with bookCost
+    private buyLots: { units: number; price: number }[] = [];
 
     addTransaction(transaction: Transaction): void {
         this.transactions.push(transaction);
         this.updateHolding(transaction);
     }
 
-    private buyLots: { units: number; price: number }[] = [];
-
     private updateHolding(transaction: Transaction): void {
-        const {type, units, price} = transaction;
+        const { type, units, price } = transaction;
 
         if (units <= 0 || price <= 0) {
             throw new Error("Transaction units and price must be positive.");
         }
 
         if (type === TransactionType.BUY) {
-            this.buyLots.push({units, price});
+            this.buyLots.push({ units, price });
         } else if (type === TransactionType.SELL) {
             if (units > this.getTotalUnits()) {
                 throw new Error("Selling more units than available in holdings.");
@@ -33,7 +30,6 @@ export class MutualFundService implements PLCalculatorInterface {
                 const lot = this.buyLots[0]; // FIFO: Take from the oldest lot
                 const unitsToSell = Math.min(lot.units, remainingUnitsToSell);
 
-                this.holding.averageCost = lot.price; // Track cost of the lot being sold
                 remainingUnitsToSell -= unitsToSell;
                 lot.units -= unitsToSell;
 
@@ -53,10 +49,10 @@ export class MutualFundService implements PLCalculatorInterface {
     private updateHoldingSummary(): void {
         const totalUnits = this.getTotalUnits();
         if (totalUnits === 0) {
-            this.holding = {units: 0, averageCost: 0};
+            this.holding = { units: 0, bookCost: 0 }; // Reset bookCost to 0
         } else {
             const totalCost = this.buyLots.reduce((sum, lot) => sum + lot.units * lot.price, 0);
-            this.holding = {units: totalUnits, averageCost: totalCost / totalUnits};
+            this.holding = { units: totalUnits, bookCost: totalCost }; // Update bookCost
         }
     }
 
