@@ -22,5 +22,5 @@ export interface ProfitLoss {
 
 export interface PLCalculatorInterface {
     addTransaction(trxn: Transaction): void;
-    calculateProfitLoss(currentMarketPrice : number): ProfitLoss;
+    calculateProfitLoss(currentMarketPrice: number): { holding: Holding; profitLoss: ProfitLoss };
 }

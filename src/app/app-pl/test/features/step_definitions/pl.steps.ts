@@ -1,11 +1,15 @@
 import { Given, When, Then } from "@cucumber/cucumber";
 import { expect } from "chai";
+import { Holding, Transaction, TransactionType } from "../../../PLCalculatorInterface";
 import { MutualFundService } from "../../../MutualFundService";
-import { Transaction, TransactionType } from "../../../PLCalculatorInterface";
 
 let mutualFundService: MutualFundService;
 let currentMarketPrice: number;
 let profitLossResult: { realizedProfitLoss: number; unrealizedProfitLoss: number };
+let holding: Holding;
+let position: number;
+let bookCost: number;
+let marketValue: number;
 
 Given('I am using the {string} implementation', (implementation: string) => {
     if (implementation === "MutualFundService") {
@@ -28,7 +32,13 @@ Given('I have the following transactions:', (dataTable) => {
 
 When('the current market price is {float}', (price: number) => {
     currentMarketPrice = price;
-    profitLossResult = mutualFundService.calculateProfitLoss(currentMarketPrice);
+
+    // Destructure the returned object from calculateProfitLoss
+    const result = mutualFundService.calculateProfitLoss(currentMarketPrice);
+    holding = result.holding;
+    profitLossResult = result.profitLoss;
+    marketValue = holding.units * price;
+
 });
 
 Then('the profit and loss should be:', (dataTable) => {
@@ -38,7 +48,23 @@ Then('the profit and loss should be:', (dataTable) => {
         const attribute = row.attribute;
         const expected = parseFloat(row.expected);
 
-        // Dynamically compare the attribute in the profitLossResult
-        expect(profitLossResult[attribute as keyof typeof profitLossResult]).to.equal(expected, `Mismatch for ${attribute}`);
+        let actual: number;
+
+        // Dynamically determine the actual value based on the attribute
+        if (attribute === "position") {
+            actual = holding.units;
+        } else if (attribute === "bookCost") {
+            actual = holding.averageCost;
+        } else if (attribute === "marketValue") {
+            actual = marketValue;
+        } else {
+            actual = profitLossResult[attribute as keyof typeof profitLossResult];
+        }
+
+        // Log the comparison for better readability
+        // console.log(`Comparing ${attribute}: expected = ${expected}, actual = ${actual}`);
+
+        // Perform the comparison with a clear error message
+        expect(actual, `Mismatch for ${attribute}: expected ${expected}, but got ${actual}`).to.equal(expected);
     });
 });
