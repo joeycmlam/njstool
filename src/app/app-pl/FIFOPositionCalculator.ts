@@ -1,7 +1,6 @@
-import {Holding, PositionCalculator, ProfitLoss, Transaction, TransactionType} from "./PLCalculatorInterface";
+import { Holding, PositionCalculator, ProfitLoss, Transaction, TransactionType } from "./PLCalculatorInterface";
 
-
-export class DefaultPositionCalculator implements PositionCalculator {
+export class FIFOPositionCalculator implements PositionCalculator {
     calculateBookCost(buyLots: { units: number; price: number }[]): Holding {
         const totalUnits = buyLots.reduce((sum, lot) => sum + lot.units, 0);
         if (totalUnits === 0) {
@@ -18,40 +17,45 @@ export class DefaultPositionCalculator implements PositionCalculator {
         currentMarketPrice: number
     ): ProfitLoss {
         let realizedProfitLoss = 0;
-        let unrealizedProfitLoss = 0;
 
-        // Clone buyLots to avoid modifying the original array
-        const remainingLots = [...buyLots];
+        // Pre-check: Ensure enough units are available for all SELL transactions
+        const totalSellUnits = transactions
+            .filter((transaction) => transaction.type === TransactionType.SELL)
+            .reduce((sum, transaction) => sum + transaction.units, 0);
 
+        const totalAvailableUnits = buyLots.reduce((sum, lot) => sum + lot.units, 0);
+
+        if (totalSellUnits > totalAvailableUnits) {
+            throw new Error("Selling more units than available in holdings.");
+        }
+
+        // Process SELL transactions
         for (const transaction of transactions) {
             if (transaction.type === TransactionType.SELL) {
-                const sellUnits = transaction.units;
+                let remainingUnitsToSell = transaction.units;
                 const sellPrice = transaction.price;
 
-                let remainingUnitsToSell = sellUnits;
-
-                // Calculate realized P/L using FIFO lots
-                for (let i = 0; i < remainingLots.length && remainingUnitsToSell > 0; i++) {
-                    const lot = remainingLots[i];
+                while (remainingUnitsToSell > 0) {
+                    const lot = buyLots[0];
                     const soldUnits = Math.min(lot.units, remainingUnitsToSell);
 
+                    // Calculate realized P/L for the sold units
                     realizedProfitLoss += (sellPrice - lot.price) * soldUnits;
-                    remainingUnitsToSell -= soldUnits;
 
-                    // Update the lot to reflect the units sold
+                    remainingUnitsToSell -= soldUnits;
                     lot.units -= soldUnits;
 
-                    // Remove the lot if all units are sold
+                    // Remove fully sold lot
                     if (lot.units === 0) {
-                        remainingLots.splice(i, 1);
-                        i--; // Adjust index after removal
+                        buyLots.shift();
                     }
                 }
             }
         }
 
-        // Calculate unrealized P/L for remaining holdings
-        for (const lot of remainingLots) {
+        // Calculate unrealized P/L for remaining buyLots
+        let unrealizedProfitLoss = 0;
+        for (const lot of buyLots) {
             unrealizedProfitLoss += (currentMarketPrice - lot.price) * lot.units;
         }
 

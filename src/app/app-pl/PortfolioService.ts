@@ -1,5 +1,4 @@
-import { Holding, PLCalculatorInterface, ProfitLoss, Transaction, TransactionType } from "./PLCalculatorInterface";
-import { PositionCalculator } from "./PositionCalculator";
+import { Holding, PLCalculatorInterface, ProfitLoss, Transaction, TransactionType, PositionCalculator } from "./PLCalculatorInterface";
 
 export class PortfolioService implements PLCalculatorInterface {
     private transactions: Transaction[] = [];

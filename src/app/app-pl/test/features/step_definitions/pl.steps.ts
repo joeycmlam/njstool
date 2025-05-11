@@ -6,6 +6,8 @@ import * as XLSX from "xlsx";
 import { Holding, Transaction, TransactionType } from "../../../PLCalculatorInterface";
 import { PortfolioService } from "../../../PortfolioService";
 import { DefaultPositionCalculator } from "../../../PositionCalculator";
+import { FIFOPositionCalculator } from "../../../FIFOPositionCalculator";
+import { CapitalGainsCalculator } from "../../../CapitalGainsCalculator";
 
 let portfolioService: PortfolioService;
 let currentMarketPrice: number;
@@ -53,6 +55,12 @@ function parseData(transactionsData: any[]): Transaction[] {
 Given('I am using the {string} implementation', (implementation: string) => {
     if (implementation === "MutualFundService") {
         const positionCalculator = new DefaultPositionCalculator();
+        portfolioService = new PortfolioService(positionCalculator);
+    } if (implementation === "FIFO") {
+        const positionCalculator = new FIFOPositionCalculator();
+        portfolioService = new PortfolioService(positionCalculator);
+    } if (implementation === "CapitalGains") {
+        const positionCalculator = new CapitalGainsCalculator();
         portfolioService = new PortfolioService(positionCalculator);
     } else {
         throw new Error(`Unknown implementation: ${implementation}`);
