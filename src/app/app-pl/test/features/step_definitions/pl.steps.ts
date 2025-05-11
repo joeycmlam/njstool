@@ -1,9 +1,9 @@
 import {Given, When, Then} from "@cucumber/cucumber";
 import {expect} from "chai";
 import {Holding, Transaction, TransactionType} from "../../../PLCalculatorInterface";
-import {MutualFundService} from "../../../MutualFundService";
+import {PortfolioService} from "../../../PortfolioService";
 
-let mutualFundService: MutualFundService;
+let mutualFundService: PortfolioService;
 let currentMarketPrice: number;
 let profitLossResult: { realizedProfitLoss: number; unrealizedProfitLoss: number };
 let holding: Holding;
@@ -13,7 +13,7 @@ let marketValue: number;
 
 Given('I am using the {string} implementation', (implementation: string) => {
     if (implementation === "MutualFundService") {
-        mutualFundService = new MutualFundService();
+        mutualFundService = new PortfolioService();
     } else {
         throw new Error(`Unknown implementation: ${implementation}`);
     }
