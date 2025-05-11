@@ -23,6 +23,8 @@ Feature: Mutual Fund Profit and Loss Calculation
     When the current market price is 14
     Then the profit and loss should be:
       | attribute            | expected |
+      | position             | 150      |
+      | bookCost             | 1650     |
       | realizedProfitLoss   | 0        |
       | unrealizedProfitLoss | 450      |
       | marketValue          | 2100     |
@@ -37,6 +39,8 @@ Feature: Mutual Fund Profit and Loss Calculation
     When the current market price is 17
     Then the profit and loss should be:
       | attribute            | expected |
+      | position             | 70      |
+      | bookCost             | 850     |
       | realizedProfitLoss   | 100      |
       | unrealizedProfitLoss | 340      |
       | marketValue          | 1190     |
