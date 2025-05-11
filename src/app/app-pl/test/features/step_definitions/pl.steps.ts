@@ -109,6 +109,7 @@ When('the current market price is {float}', (price: number) => {
 
 Then('the profit and loss should be:', (dataTable) => {
     const expectedValues = dataTable.hashes();
+    const comparisonResults: { attribute: string; expected: number; actual: number; match: boolean }[] = [];
 
     expectedValues.forEach(row => {
         const attribute = row.attribute;
@@ -125,17 +126,21 @@ Then('the profit and loss should be:', (dataTable) => {
             actual = marketValue;
         } else if (attribute === "unrealizedProfitLoss") {
             actual = profitLossResult.unrealizedProfitLoss;
-            // actual = profitLossResult[attribute as keyof typeof profitLossResult];
         } else if (attribute === "realizedProfitLoss") {
             actual = profitLossResult.realizedProfitLoss;
         } else {
             throw new Error(`undefined attribute: ${attribute}`);
         }
 
-        // Log the comparison for better readability
-        console.log(`Comparing ${attribute}: expected = ${expected}, actual = ${actual}`);
+        // Add the result to the comparison results array
+        comparisonResults.push({ attribute, expected, actual, match: actual === expected });
+    });
 
-        // Perform the comparison with a clear error message
-        expect(actual, `Mismatch for ${attribute}: expected ${expected}, but got ${actual}`).to.equal(expected);
+    // Log the summary of comparison results
+    console.log("Comparison Results:", comparisonResults);
+
+    // Perform assertions for all attributes at once
+    comparisonResults.forEach(({ attribute, expected, actual, match }) => {
+        expect(match, `Mismatch for ${attribute}: expected ${expected}, but got ${actual}`).to.be.true;
     });
 });
