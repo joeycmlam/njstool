@@ -4,7 +4,7 @@ import {Holding, PLCalculatorInterface, ProfitLoss, Transaction, TransactionType
 
 export class MutualFundService implements PLCalculatorInterface {
     private transactions: Transaction[] = [];
-    private holding: Holding = { units: 0, averageCost: 0 };
+    private holding: Holding = {units: 0, averageCost: 0};
 
     addTransaction(transaction: Transaction): void {
         this.transactions.push(transaction);
@@ -14,14 +14,14 @@ export class MutualFundService implements PLCalculatorInterface {
     private buyLots: { units: number; price: number }[] = [];
 
     private updateHolding(transaction: Transaction): void {
-        const { type, units, price } = transaction;
+        const {type, units, price} = transaction;
 
         if (units <= 0 || price <= 0) {
             throw new Error("Transaction units and price must be positive.");
         }
 
         if (type === TransactionType.BUY) {
-            this.buyLots.push({ units, price });
+            this.buyLots.push({units, price});
         } else if (type === TransactionType.SELL) {
             if (units > this.getTotalUnits()) {
                 throw new Error("Selling more units than available in holdings.");
@@ -53,14 +53,14 @@ export class MutualFundService implements PLCalculatorInterface {
     private updateHoldingSummary(): void {
         const totalUnits = this.getTotalUnits();
         if (totalUnits === 0) {
-            this.holding = { units: 0, averageCost: 0 };
+            this.holding = {units: 0, averageCost: 0};
         } else {
             const totalCost = this.buyLots.reduce((sum, lot) => sum + lot.units * lot.price, 0);
-            this.holding = { units: totalUnits, averageCost: totalCost / totalUnits };
+            this.holding = {units: totalUnits, averageCost: totalCost / totalUnits};
         }
     }
 
-    calculateProfitLoss(currentMarketPrice: number): ProfitLoss {
+    calculateProfitLoss(currentMarketPrice: number): { holding: Holding; profitLoss: ProfitLoss } {
         let realizedProfitLoss = 0;
         let unrealizedProfitLoss = 0;
 
@@ -87,9 +87,14 @@ export class MutualFundService implements PLCalculatorInterface {
             unrealizedProfitLoss += (currentMarketPrice - lot.price) * lot.units;
         }
 
-        return {
+        const profitLoss: ProfitLoss = {
             realizedProfitLoss,
             unrealizedProfitLoss,
+        };
+
+        return {
+            holding: this.holding,
+            profitLoss,
         };
     }
 }
