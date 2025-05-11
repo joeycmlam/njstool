@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/app-pl/CapitalGainsCalculator.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-pl/FIFOPositionCalculator.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-pl/PortfolioService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-pl/PortfolioService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-pl/PositionCalculator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-pl/PositionCalculator.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-pl/test/features/step_definitions/pl.steps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-pl/test/features/step_definitions/pl.steps.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-pl/test/features/test.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-pl/test/features/test.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,10 +212,10 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber.js.Scenario: case 3: Calculate realized ...">
-    <configuration name="Scenario: Calculate realized and unre... (2)" type="cucumber.js" factoryName="Cucumber.js">
+  <component name="RunManager" selected="npm.test:cucumber:pl">
+    <configuration name="Scenario: case 1 - Calculate realized..." type="cucumber.js" factoryName="Cucumber.js" temporary="true">
       <option name="myFilePath" value="$PROJECT_DIR$/src/app/app-pl/test/features/test.feature" />
-      <option name="myNameFilter" value="^Calculate realized and unrealized P\/L after multiple transactions$" />
+      <option name="myNameFilter" value="^case 1 \- Calculate realized and unrealized P\/L after 1 subscription$" />
       <option name="cucumberJsArguments" value="--config src/test/cucumber.config.js" />
       <option name="workingDirectory" value="$PROJECT_DIR$" />
       <method v="2" />
@@ -216,6 +223,13 @@
     <configuration name="Scenario: case 3: Calculate realized ..." type="cucumber.js" factoryName="Cucumber.js" temporary="true">
       <option name="myFilePath" value="$PROJECT_DIR$/src/app/app-pl/test/features/test.feature" />
       <option name="myNameFilter" value="^case 3\: Calculate realized and unrealized P\/L after multiple transactions with FIFO$" />
+      <option name="cucumberJsArguments" value="--config src/test/cucumber.config.js" />
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Scenario: case 4 - Calculate realized..." type="cucumber.js" factoryName="Cucumber.js" temporary="true">
+      <option name="myFilePath" value="$PROJECT_DIR$/src/app/app-pl/test/features/test.feature" />
+      <option name="myNameFilter" value="^case 4 \- Calculate realized and unrealized P\/L after multiple buy and sell transactions$" />
       <option name="cucumberJsArguments" value="--config src/test/cucumber.config.js" />
       <option name="workingDirectory" value="$PROJECT_DIR$" />
       <method v="2" />
@@ -256,8 +270,9 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Cucumber.js.Scenario: Calculate realized and unre... (2)" />
       <item itemvalue="Cucumber.js.app.fee.feature" />
+      <item itemvalue="Cucumber.js.Scenario: case 4 - Calculate realized..." />
+      <item itemvalue="Cucumber.js.Scenario: case 1 - Calculate realized..." />
       <item itemvalue="Cucumber.js.Scenario: case 3: Calculate realized ..." />
       <item itemvalue="Docker.docker-compose.git.yml: Compose Deployment" />
       <item itemvalue="npm.test" />
@@ -265,8 +280,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber.js.Scenario: case 3: Calculate realized ..." />
         <item itemvalue="npm.test:cucumber:pl" />
+        <item itemvalue="Cucumber.js.Scenario: case 4 - Calculate realized..." />
+        <item itemvalue="Cucumber.js.Scenario: case 3: Calculate realized ..." />
+        <item itemvalue="Cucumber.js.Scenario: case 1 - Calculate realized..." />
       </list>
     </recent_temporary>
   </component>
@@ -384,7 +401,7 @@
       <workItem from="1742111527076" duration="59000" />
       <workItem from="1742112721590" duration="642000" />
       <workItem from="1746888434703" duration="10096000" />
-      <workItem from="1746930161445" duration="13597000" />
+      <workItem from="1746930161445" duration="16464000" />
     </task>
     <task id="LOCAL-00119" summary="revised the error message.">
       <created>1685809154521</created>
@@ -729,7 +746,7 @@
       <option name="project" value="LOCAL" />
       <updated>1741365155238</updated>
     </task>
-    <option name="localTasksCounter" value="192" />
+    <option name="localTasksCounter" value="193" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
