@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-pl/PLCalculatorInterface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-pl/PLCalculatorInterface.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-pl/PositionCalculator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-pl/PositionCalculator.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-pl/test/TestCase.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-pl/test/TestCase.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-pl/test/features/step_definitions/pl.steps.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-pl/test/features/step_definitions/pl.steps.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-pl/test/features/test.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-pl/test/features/test.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -389,7 +384,7 @@
       <workItem from="1742111527076" duration="59000" />
       <workItem from="1742112721590" duration="642000" />
       <workItem from="1746888434703" duration="10096000" />
-      <workItem from="1746930161445" duration="13216000" />
+      <workItem from="1746930161445" duration="13597000" />
     </task>
     <task id="LOCAL-00119" summary="revised the error message.">
       <created>1685809154521</created>
@@ -734,7 +729,7 @@
       <option name="project" value="LOCAL" />
       <updated>1741365155238</updated>
     </task>
-    <option name="localTasksCounter" value="191" />
+    <option name="localTasksCounter" value="192" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
