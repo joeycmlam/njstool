@@ -29,6 +29,18 @@ Feature: Mutual Fund Profit and Loss Calculation
       | unrealizedProfitLoss | 450      |
       | marketValue          | 2100     |
 
+  Scenario: Calculate realized and unrealized P/L after 2 subscriptions from excel
+    Given I am using the "MutualFundService" implementation
+    And I have the transactions from the Excel file "TestCase.xlsx" and worksheet "case2"
+    When the current market price is 14
+    Then the profit and loss should be:
+      | attribute            | expected |
+      | position             | 150      |
+      | bookCost             | 1650     |
+      | realizedProfitLoss   | 0        |
+      | unrealizedProfitLoss | 450      |
+      | marketValue          | 2100     |
+
   Scenario: Calculate realized and unrealized P/L after multiple transactions
     Given I am using the "MutualFundService" implementation
     And I have the following transactions:
@@ -44,3 +56,15 @@ Feature: Mutual Fund Profit and Loss Calculation
       | realizedProfitLoss   | 100      |
       | unrealizedProfitLoss | 340      |
       | marketValue          | 1190     |
+
+  Scenario: Calculate realized and unrealized P/L after multiple transactions
+    Given I am using the "MutualFundService" implementation
+    And I have the transactions from the Excel file "TestCase.xlsx" and worksheet "case4"
+    When the current market price is 9
+    Then the profit and loss should be:
+      | attribute            | expected |
+      | position             | 80       |
+      | bookCost             | 1190     |
+      | marketValue          | 720      |
+      | realizedProfitLoss   | -470     |
+      | unrealizedProfitLoss | -20      |
