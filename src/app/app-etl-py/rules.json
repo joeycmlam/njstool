@@ -1,0 +1,33 @@
+{
+  "categories": [
+    {
+      "name": "us_equity",
+      "output_file": "us_equity.csv",
+      "conditions": {
+        "country": "US",
+        "security_type": "Equity"
+      }
+    },
+    {
+      "name": "hk_bond",
+      "output_file": "hk_bond.csv",
+      "conditions": {
+        "country": "HK",
+        "security_type": "Bond"
+      }
+    },
+    {
+      "name": "jp_commodity",
+      "output_file": "jp_commodity.csv",
+      "conditions": {
+        "country": "JP",
+        "security_type": "Commodity"
+      }
+    },
+    {
+      "name": "others",
+      "output_file": "others.csv",
+      "conditions": {}
+    }
+  ]
+} 
