@@ -1,97 +1,100 @@
 import csv
 import json
-from py_rules.components import Condition, Rule
-from py_rules.engine import RuleEngine
 
-
-class CsvSplitter:
-    def __init__(self, input_file, rules_file="rules.json"):
+class CsvReader:
+    def __init__(self, input_file):
         self.input_file = input_file
-        self.rules_file = rules_file
-        self.fieldnames = []
-        self.writers = {}
-        self.files = {}
-        self.rules = self._load_rules()
 
     def read_records(self):
         with open(self.input_file, newline="") as csvfile:
             reader = csv.DictReader(csvfile)
-            self.fieldnames = reader.fieldnames
-            return list(reader)
+            return list(reader), reader.fieldnames
 
-    def _load_rules(self):
-        """Load rules from JSON file."""
-        try:
-            with open(self.rules_file, 'r') as f:
-                return json.load(f)
-        except FileNotFoundError:
-            raise FileNotFoundError(f"Rules file not found: {self.rules_file}")
-        except json.JSONDecodeError as e:
-            raise ValueError(f"Invalid JSON format in rules file: {e}")
+class RuleLoader:
+    def __init__(self, rules_file):
+        self.rules_file = rules_file
 
-    def setup_writers(self):
-        """Setup CSV writers based on rules configuration."""
+    def load_rules(self):
+        with open(self.rules_file, 'r') as f:
+            return json.load(f)
+
+class CategoryDecider:
+    def __init__(self, rules):
+        self.rules = rules
+
+    def decide(self, record):
         for category in self.rules["categories"]:
+            name = category["name"]
+            conditions = category["conditions"]
+            if name == "others":
+                continue
+            if all(record.get(field) == value for field, value in conditions.items()):
+                return name
+        return "others"
+
+class CsvWriters:
+    def __init__(self, categories, fieldnames):
+        self.files = {}
+        self.writers = {}
+        for category in categories:
             filename = category["output_file"]
             key = category["name"]
-            
             f = open(filename, "w", newline="")
             self.files[key] = f
-            writer = csv.DictWriter(f, fieldnames=self.fieldnames or [])
+            writer = csv.DictWriter(f, fieldnames=fieldnames or [])
             writer.writeheader()
             self.writers[key] = writer
 
-    def close_files(self):
+    def write(self, category, record):
+        self.writers[category].writerow(record)
+
+    def close(self):
         for f in self.files.values():
             f.close()
-
-    def determine_category(self, record):
-        """Determine which category a record belongs to based on JSON rules."""
-        engine = RuleEngine(record)  # Removed unused variable
-
-        # Check each category in order
-        for category in self.rules["categories"]:
-            category_name = category["name"]
-            conditions = category["conditions"]
-            
-            # Skip "others" category as it's the default fallback
-            if category_name == "others":
-                continue
-                
-            # Check if record matches all conditions for this category
-            matches = True
-            for field, expected_value in conditions.items():
-                if record.get(field) != expected_value:
-                    matches = False
-                    break
-            
-            if matches:
-                return category_name
-        
-        # If no specific category matches, return "others"
-        return "others"
-
-    def split(self, records):
-        for record in records:
-            category = self.determine_category(record)
-            self.writers[category].writerow(record)
-
 
 def main():
     input_file = "etf_portfolio_sample.csv"
     rules_file = "rules.json"
-    
-    splitter = CsvSplitter(input_file, rules_file)
-    records = splitter.read_records()
-    splitter.setup_writers()
-    splitter.split(records)
-    splitter.close_files()
+
+    # Single responsibility classes
+    reader = CsvReader(input_file)
+    rule_loader = RuleLoader(rules_file)
+    rules = rule_loader.load_rules()
+    records, fieldnames = reader.read_records()
+    decider = CategoryDecider(rules)
+    writers = CsvWriters(rules["categories"], fieldnames)
+
+    for record in records:
+        category = decider.decide(record)
+        writers.write(category, record)
+    writers.close()
 
     print("CSV splitting completed!")
     print("Files created based on rules configuration:")
-    for category in splitter.rules["categories"]:
+    for category in rules["categories"]:
         print(f"  - {category['output_file']}")
 
+def main():
+    input_file = "etf_portfolio_sample.csv"
+    rules_file = "rules.json"
 
+    # Single responsibility classes
+    reader = CsvReader(input_file)
+    rule_loader = RuleLoader(rules_file)
+    rules = rule_loader.load_rules()
+    records, fieldnames = reader.read_records()
+    decider = CategoryDecider(rules)
+    writers = CsvWriters(rules["categories"], fieldnames)
+
+    for record in records:
+        category = decider.decide(record)
+        writers.write(category, record)
+    writers.close()
+
+    print("CSV splitting completed!")
+    print("Files created based on rules configuration:")
+    for category in rules["categories"]:
+        print(f"  - {category['output_file']}")
+        
 if __name__ == "__main__":
     main()
