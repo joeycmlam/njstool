@@ -47,7 +47,7 @@ class CsvSplitter:
 
     def determine_category(self, record):
         """Determine which category a record belongs to based on JSON rules."""
-        engine = RuleEngine(record)
+        engine = RuleEngine(record)  # Removed unused variable
 
         # Check each category in order
         for category in self.rules["categories"]:
