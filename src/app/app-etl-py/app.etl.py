@@ -1,14 +1,17 @@
 import csv
+import json
 from py_rules.components import Condition, Rule
 from py_rules.engine import RuleEngine
 
 
 class CsvSplitter:
-    def __init__(self, input_file):
+    def __init__(self, input_file, rules_file="rules.json"):
         self.input_file = input_file
+        self.rules_file = rules_file
         self.fieldnames = []
         self.writers = {}
         self.files = {}
+        self.rules = self._load_rules()
 
     def read_records(self):
         with open(self.input_file, newline="") as csvfile:
@@ -16,18 +19,25 @@ class CsvSplitter:
             self.fieldnames = reader.fieldnames
             return list(reader)
 
-    def setup_writers(self):
-        file_configs = {
-            "us_equity.csv": "us_equity",
-            "hk_bond.csv": "hk_bond",
-            "jp_commodity.csv": "jp_commodity",
-            "others.csv": "others"
-        }
+    def _load_rules(self):
+        """Load rules from JSON file."""
+        try:
+            with open(self.rules_file, 'r') as f:
+                return json.load(f)
+        except FileNotFoundError:
+            raise FileNotFoundError(f"Rules file not found: {self.rules_file}")
+        except json.JSONDecodeError as e:
+            raise ValueError(f"Invalid JSON format in rules file: {e}")
 
-        for filename, key in file_configs.items():
+    def setup_writers(self):
+        """Setup CSV writers based on rules configuration."""
+        for category in self.rules["categories"]:
+            filename = category["output_file"]
+            key = category["name"]
+            
             f = open(filename, "w", newline="")
             self.files[key] = f
-            writer = csv.DictWriter(f, fieldnames=self.fieldnames)
+            writer = csv.DictWriter(f, fieldnames=self.fieldnames or [])
             writer.writeheader()
             self.writers[key] = writer
 
@@ -36,34 +46,30 @@ class CsvSplitter:
             f.close()
 
     def determine_category(self, record):
-        """Determine which category a record belongs to"""
+        """Determine which category a record belongs to based on JSON rules."""
         engine = RuleEngine(record)
 
-        # Create rules for each category
-        us_equity_rule = Rule('US Equity').If(
-            Condition('country', '==', 'US') &
-            Condition('security_type', '==', 'Equity')
-        )
-
-        hk_bond_rule = Rule('HK Bond').If(
-            Condition('country', '==', 'HK') &
-            Condition('security_type', '==', 'Bond')
-        )
-
-        jp_commodity_rule = Rule('JP Commodity').If(
-            Condition('country', '==', 'JP') &
-            Condition('security_type', '==', 'Commodity')
-        )
-
-        # Check rules in order
-        if engine.evaluate(us_equity_rule):
-            return "us_equity"
-        elif engine.evaluate(hk_bond_rule):
-            return "hk_bond"
-        elif engine.evaluate(jp_commodity_rule):
-            return "jp_commodity"
-        else:
-            return "others"
+        # Check each category in order
+        for category in self.rules["categories"]:
+            category_name = category["name"]
+            conditions = category["conditions"]
+            
+            # Skip "others" category as it's the default fallback
+            if category_name == "others":
+                continue
+                
+            # Check if record matches all conditions for this category
+            matches = True
+            for field, expected_value in conditions.items():
+                if record.get(field) != expected_value:
+                    matches = False
+                    break
+            
+            if matches:
+                return category_name
+        
+        # If no specific category matches, return "others"
+        return "others"
 
     def split(self, records):
         for record in records:
@@ -73,14 +79,18 @@ class CsvSplitter:
 
 def main():
     input_file = "etf_portfolio_sample.csv"
-    splitter = CsvSplitter(input_file)
+    rules_file = "rules.json"
+    
+    splitter = CsvSplitter(input_file, rules_file)
     records = splitter.read_records()
     splitter.setup_writers()
     splitter.split(records)
     splitter.close_files()
 
     print("CSV splitting completed!")
-    print("Files created: us_equity.csv, hk_bond.csv, jp_commodity.csv, others.csv")
+    print("Files created based on rules configuration:")
+    for category in splitter.rules["categories"]:
+        print(f"  - {category['output_file']}")
 
 
 if __name__ == "__main__":

@@ -1,6 +1,0 @@
-@startuml test-context
-
-System(ifunds, "iFUNDS website")
-
-
-@enduml
