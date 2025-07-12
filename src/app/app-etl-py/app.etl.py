@@ -70,7 +70,7 @@ def main():
         rules = rule_loader.load_rules()
         
         # Get input file from config
-        input_file = rules.get("input_file", "etf_portfolio_sample.csv")
+        input_file = rules.get("input_file", "")
         
         # Single responsibility classes
         reader = CsvReader(input_file)
