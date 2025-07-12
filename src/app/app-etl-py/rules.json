@@ -1,4 +1,5 @@
 {
+  "input_file": "etf_portfolio_sample.csv",
   "categories": [
     {
       "name": "us_equity",

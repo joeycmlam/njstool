@@ -1,5 +1,7 @@
 import csv
 import json
+import argparse
+import sys
 
 class CsvReader:
     def __init__(self, input_file):
@@ -52,49 +54,53 @@ class CsvWriters:
         for f in self.files.values():
             f.close()
 
-def main():
-    input_file = "etf_portfolio_sample.csv"
-    rules_file = "rules.json"
-
-    # Single responsibility classes
-    reader = CsvReader(input_file)
-    rule_loader = RuleLoader(rules_file)
-    rules = rule_loader.load_rules()
-    records, fieldnames = reader.read_records()
-    decider = CategoryDecider(rules)
-    writers = CsvWriters(rules["categories"], fieldnames)
-
-    for record in records:
-        category = decider.decide(record)
-        writers.write(category, record)
-    writers.close()
-
-    print("CSV splitting completed!")
-    print("Files created based on rules configuration:")
-    for category in rules["categories"]:
-        print(f"  - {category['output_file']}")
+def parse_arguments():
+    parser = argparse.ArgumentParser(description='Split CSV file based on rules')
+    parser.add_argument('--config', '-c', 
+                       default='rules.json',
+                       help='Configuration JSON file path (default: rules.json)')
+    return parser.parse_args()
 
 def main():
-    input_file = "etf_portfolio_sample.csv"
-    rules_file = "rules.json"
+    args = parse_arguments()
+    
+    try:
+        # Load configuration
+        rule_loader = RuleLoader(args.config)
+        rules = rule_loader.load_rules()
+        
+        # Get input file from config
+        input_file = rules.get("input_file", "etf_portfolio_sample.csv")
+        
+        # Single responsibility classes
+        reader = CsvReader(input_file)
+        records, fieldnames = reader.read_records()
+        decider = CategoryDecider(rules)
+        writers = CsvWriters(rules["categories"], fieldnames)
 
-    # Single responsibility classes
-    reader = CsvReader(input_file)
-    rule_loader = RuleLoader(rules_file)
-    rules = rule_loader.load_rules()
-    records, fieldnames = reader.read_records()
-    decider = CategoryDecider(rules)
-    writers = CsvWriters(rules["categories"], fieldnames)
+        for record in records:
+            category = decider.decide(record)
+            writers.write(category, record)
+        writers.close()
 
-    for record in records:
-        category = decider.decide(record)
-        writers.write(category, record)
-    writers.close()
-
-    print("CSV splitting completed!")
-    print("Files created based on rules configuration:")
-    for category in rules["categories"]:
-        print(f"  - {category['output_file']}")
+        print("CSV splitting completed!")
+        print(f"Input file: {input_file}")
+        print("Files created based on rules configuration:")
+        for category in rules["categories"]:
+            print(f"  - {category['output_file']}")
+            
+    except FileNotFoundError as e:
+        print(f"Error: File not found - {e}")
+        sys.exit(1)
+    except json.JSONDecodeError as e:
+        print(f"Error: Invalid JSON in config file - {e}")
+        sys.exit(1)
+    except KeyError as e:
+        print(f"Error: Missing required field in config - {e}")
+        sys.exit(1)
+    except Exception as e:
+        print(f"Error: {e}")
+        sys.exit(1)
         
 if __name__ == "__main__":
     main()
