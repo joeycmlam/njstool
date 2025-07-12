@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/diagram/context.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-etl-py/app.etl.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl-py/app.etl.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -468,14 +466,7 @@
       <workItem from="1749896706348" duration="612000" />
       <workItem from="1750000749609" duration="169000" />
       <workItem from="1752309177795" duration="4286000" />
-      <workItem from="1752328455492" duration="2651000" />
-    </task>
-    <task id="LOCAL-00121" summary="fix number of year calculation and the test scenario">
-      <created>1685811081016</created>
-      <option name="number" value="00121" />
-      <option name="presentableId" value="LOCAL-00121" />
-      <option name="project" value="LOCAL" />
-      <updated>1685811081016</updated>
+      <workItem from="1752328455492" duration="2953000" />
     </task>
     <task id="LOCAL-00122" summary="new features">
       <created>1687012893666</created>
@@ -813,7 +804,14 @@
       <option name="project" value="LOCAL" />
       <updated>1752329961675</updated>
     </task>
-    <option name="localTasksCounter" value="196" />
+    <task id="LOCAL-00196" summary="code reflector">
+      <created>1752331306744</created>
+      <option name="number" value="00196" />
+      <option name="presentableId" value="LOCAL-00196" />
+      <option name="project" value="LOCAL" />
+      <updated>1752331306744</updated>
+    </task>
+    <option name="localTasksCounter" value="197" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -848,7 +846,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update the diagram." />
     <MESSAGE value="new functions" />
     <MESSAGE value="update some info" />
     <MESSAGE value="update the code" />
@@ -873,7 +870,8 @@
     <MESSAGE value="use 3rd party lib to calculate" />
     <MESSAGE value="add jira project" />
     <MESSAGE value="rule engine" />
-    <option name="LAST_COMMIT_MESSAGE" value="rule engine" />
+    <MESSAGE value="code reflector" />
+    <option name="LAST_COMMIT_MESSAGE" value="code reflector" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -958,7 +956,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/njstool$data_generator.coverage" NAME="data.generator Coverage Results" MODIFIED="1752314419777" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-etl-py" />
-    <SUITE FILE_PATH="coverage/njstool$app_etl.coverage" NAME="app.etl Coverage Results" MODIFIED="1752331134481" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-etl-py" />
+    <SUITE FILE_PATH="coverage/njstool$app_etl.coverage" NAME="app.etl Coverage Results" MODIFIED="1752331275918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-etl-py" />
     <SUITE FILE_PATH="coverage/njstool$test.coverage" NAME="test Coverage Results" MODIFIED="1752327214882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-etl-py" />
   </component>
   <component name="editorHistoryManager">
