@@ -33,9 +33,5 @@
       "name": "others",
       "output_file": "output/others.csv"
     }
-  ],
-  "logging": {
-    "console_level": "INFO",
-    "file_level": "DEBUG"
-  }
+  ]
 } 
