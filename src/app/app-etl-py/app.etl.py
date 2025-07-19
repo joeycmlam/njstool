@@ -5,6 +5,7 @@ import sys
 from businessrulesengine import BusinessRulesEngine
 from rule_loader import RuleLoader
 from logger import ILogger, LoggerFactory
+from configloader import ConfigLoader
 
 class CsvReader:
     def __init__(self, input_file):
@@ -15,13 +16,7 @@ class CsvReader:
             reader = csv.DictReader(csvfile)
             return list(reader), reader.fieldnames
 
-class ConfigLoader:
-    def __init__(self, config_file):
-        self.config_file = config_file
 
-    def load_config(self):
-        with open(self.config_file, 'r') as f:
-            return json.load(f)
 
 class CsvWriters:
     def __init__(self, categories, fieldnames):

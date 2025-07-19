@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/app-etl-py/configloader.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-etl-py/app.etl.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl-py/app.etl.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-etl-py/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl-py/config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-etl-py/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl-py/logger.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -482,14 +481,7 @@
       <workItem from="1752309177795" duration="4286000" />
       <workItem from="1752328455492" duration="10195000" />
       <workItem from="1752856283858" duration="977000" />
-      <workItem from="1752895724492" duration="30959000" />
-    </task>
-    <task id="LOCAL-00149" summary="enhancement to keep local topic to improve the performance">
-      <created>1717337820696</created>
-      <option name="number" value="00149" />
-      <option name="presentableId" value="LOCAL-00149" />
-      <option name="project" value="LOCAL" />
-      <updated>1717337820696</updated>
+      <workItem from="1752895724492" duration="31406000" />
     </task>
     <task id="LOCAL-00150" summary="reflector">
       <created>1717840655464</created>
@@ -827,7 +819,14 @@
       <option name="project" value="LOCAL" />
       <updated>1752943768848</updated>
     </task>
-    <option name="localTasksCounter" value="218" />
+    <task id="LOCAL-00218" summary="improve logger">
+      <created>1752944852352</created>
+      <option name="number" value="00218" />
+      <option name="presentableId" value="LOCAL-00218" />
+      <option name="project" value="LOCAL" />
+      <updated>1752944852352</updated>
+    </task>
+    <option name="localTasksCounter" value="219" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
