@@ -55,7 +55,8 @@ def parse_arguments():
 
 def main():
     args = parse_arguments()
-    
+    logger.set_console_level("DEBUG")
+
     try:
         # Load configuration
         config_loader = ConfigLoader(args.config)

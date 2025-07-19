@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-etl-py/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl-py/logger.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-etl-py/app.etl.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl-py/app.etl.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-etl-py/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl-py/config.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -480,14 +481,7 @@
       <workItem from="1752309177795" duration="4286000" />
       <workItem from="1752328455492" duration="10195000" />
       <workItem from="1752856283858" duration="977000" />
-      <workItem from="1752895724492" duration="26362000" />
-    </task>
-    <task id="LOCAL-00142" summary="update the diagram">
-      <created>1717262115616</created>
-      <option name="number" value="00142" />
-      <option name="presentableId" value="LOCAL-00142" />
-      <option name="project" value="LOCAL" />
-      <updated>1717262115616</updated>
+      <workItem from="1752895724492" duration="27183000" />
     </task>
     <task id="LOCAL-00143" summary="reflector">
       <created>1717262908376</created>
@@ -825,7 +819,14 @@
       <option name="project" value="LOCAL" />
       <updated>1752938694051</updated>
     </task>
-    <option name="localTasksCounter" value="211" />
+    <task id="LOCAL-00211" summary="reflector">
+      <created>1752939727058</created>
+      <option name="number" value="00211" />
+      <option name="presentableId" value="LOCAL-00211" />
+      <option name="project" value="LOCAL" />
+      <updated>1752939727058</updated>
+    </task>
+    <option name="localTasksCounter" value="212" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -881,11 +882,11 @@
     <MESSAGE value="add a new file" />
     <MESSAGE value="automated test" />
     <MESSAGE value="automated test - pytest-bdd-ng" />
-    <MESSAGE value="reflector" />
     <MESSAGE value="fixed version" />
     <MESSAGE value="add logger" />
     <MESSAGE value="enhance the logger" />
-    <option name="LAST_COMMIT_MESSAGE" value="enhance the logger" />
+    <MESSAGE value="reflector" />
+    <option name="LAST_COMMIT_MESSAGE" value="reflector" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -962,7 +963,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/app/app-etl-py/app.etl.py</url>
-          <line>94</line>
+          <line>95</line>
           <option name="timeStamp" value="74" />
         </line-breakpoint>
       </breakpoints>
@@ -975,7 +976,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/njstool$data_generator.coverage" NAME="data.generator Coverage Results" MODIFIED="1752335193004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-etl-py" />
-    <SUITE FILE_PATH="coverage/njstool$app_etl.coverage" NAME="app.etl Coverage Results" MODIFIED="1752939663056" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-etl-py" />
+    <SUITE FILE_PATH="coverage/njstool$app_etl.coverage" NAME="app.etl Coverage Results" MODIFIED="1752939896042" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-etl-py" />
     <SUITE FILE_PATH="coverage/njstool$test_rules.coverage" NAME="test_rules Coverage Results" MODIFIED="1752930223654" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-etl-py" />
     <SUITE FILE_PATH="coverage/njstool$.coverage" NAME=" Coverage Results" MODIFIED="1752915720295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-etl-py" />
     <SUITE FILE_PATH="coverage/njstool$businessrulesengine.coverage" NAME="businessrulesengine Coverage Results" MODIFIED="1752912123747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-etl-py" />
