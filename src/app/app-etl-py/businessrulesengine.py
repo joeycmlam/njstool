@@ -1,12 +1,10 @@
-import logger
+from logger import ILogger
 from py_rules.engine import RuleEngine
 
 class BusinessRulesEngine:
-    def __init__(self, rules=None):
-        """
-        Initialize BusinessRulesEngine with user-provided rules.
-        If no rules are provided, self.rules will be an empty list.
-        """
+
+    def __init__(self, logger: ILogger, rules=None):
+        self.logger = logger
         self.rules = rules if rules is not None else []
 
     def evaluate(self, record):
@@ -16,7 +14,7 @@ class BusinessRulesEngine:
                 result = engine.evaluate(rule)
                 if result:
                     # Debug: print the result object to understand its structure
-                    logger.debug(f"Debug - Result type: {type(result)}, Result: {result}")
+                    self.logger.debug(f"Debug - Result type: {type(result)}, Result: {result}")
                     
                     # Extract the value from the result object
                     if hasattr(result, 'value'):
@@ -38,5 +36,5 @@ class BusinessRulesEngine:
                         return result_str
             return "others"
         except Exception as e:
-            logger.error(f"Error creating rule engine: {e}")
+            self.logger.error(f"Error creating rule engine: {e}")
             return "others"

@@ -1,137 +1,82 @@
 import os
 import sys
+from abc import ABC, abstractmethod
 from datetime import datetime
 
-# Global logger instance
-_logger = None
+class ILogger(ABC):
+    """Simple logging interface."""
+    
+    @abstractmethod
+    def debug(self, message: str) -> None:
+        pass
+    
+    @abstractmethod
+    def info(self, message: str) -> None:
+        pass
+    
+    @abstractmethod
+    def warning(self, message: str) -> None:
+        pass
+    
+    @abstractmethod
+    def error(self, message: str) -> None:
+        pass
+    
+    @abstractmethod
+    def success(self, message: str) -> None:
+        pass
 
-def setup_logger():
-    """Setup loguru logger with console and file output."""
-    global _logger
-    try:
-        from loguru import logger
+class LoguruLogger(ILogger):
+    """Simple loguru implementation."""
+    
+    def __init__(self, level: str = "INFO"):
+        try:
+            from loguru import logger
+            self.logger = logger
+            self.level = level
+            self._setup_logger()
+        except ImportError:
+            raise ImportError("Loguru not installed. Please run: pip install loguru")
+    
+    def _setup_logger(self):
+        """Setup basic loguru logger."""
+        self.logger.remove()
         
-        # Remove default handler
-        logger.remove()
+        # Console output
+        self.logger.add(
+            sys.stdout,
+            format="<green>{time:YYYY-MM-DD HH:mm:ss}</green> [<level>{level}</level>] <level>{message}</level>",
+            level=self.level,
+            colorize=True
+        )
         
-        # Create log directory
+        # File output
         log_dir = 'log'
         if not os.path.exists(log_dir):
             os.makedirs(log_dir)
         
-        # Console handler with colored output
-        logger.add(
-            sys.stdout,
-            format="<green>{time:YYYY-MM-DD HH:mm:ss}</green> [<level>{level}</level>] <level>{message}</level>",
-            level="INFO",
-            colorize=True
-        )
-        
-        # File handler with detailed output
-        logger.add(
+        self.logger.add(
             os.path.join(log_dir, f"app_{datetime.now().strftime('%Y%m%d')}.log"),
-            format="{time:YYYY-MM-DD HH:mm:ss} [{level}] {name}:{function}:{line} - {message}",
+            format="{time:YYYY-MM-DD HH:mm:ss} [{level}] {message}",
             level="DEBUG",
-            rotation="1 day",
-            retention="30 days"
+            rotation="1 day"
         )
-        
-        _logger = logger
-        return logger
-        
-    except ImportError:
-        print("Loguru not installed. Please run: pip install loguru")
-        sys.exit(1)
-
-def get_logger():
-    """Get the global logger instance."""
-    global _logger
-    if _logger is None:
-        setup_logger()
-    return _logger
-
-def set_console_level(level):
-    """Change the console log level."""
-    global _logger
-    if _logger is None:
-        setup_logger()
     
-    # Remove existing console handler and add new one
-    _logger.remove()
+    def debug(self, message: str) -> None:
+        self.logger.debug(message)
     
-    # Re-add file handler
-    log_dir = 'log'
-    if not os.path.exists(log_dir):
-        os.makedirs(log_dir)
+    def info(self, message: str) -> None:
+        self.logger.info(message)
     
-    _logger.add(
-        os.path.join(log_dir, f"app_{datetime.now().strftime('%Y%m%d')}.log"),
-        format="{time:YYYY-MM-DD HH:mm:ss} [{level}] {name}:{function}:{line} - {message}",
-        level="DEBUG",
-        rotation="1 day",
-        retention="30 days"
-    )
+    def warning(self, message: str) -> None:
+        self.logger.warning(message)
     
-    # Add new console handler with updated level
-    _logger.add(
-        sys.stdout,
-        format="<green>{time:YYYY-MM-DD HH:mm:ss}</green> [<level>{level}</level>] <level>{message}</level>",
-        level=level,
-        colorize=True
-    )
-
-def set_file_level(level):
-    """Change the file log level."""
-    global _logger
-    if _logger is None:
-        setup_logger()
+    def error(self, message: str) -> None:
+        self.logger.error(message)
     
-    # Remove existing handlers and re-add with new file level
-    _logger.remove()
-    
-    # Re-add console handler
-    _logger.add(
-        sys.stdout,
-        format="<green>{time:YYYY-MM-DD HH:mm:ss}</green> [<level>{level}</level>] <level>{message}</level>",
-        level="INFO",
-        colorize=True
-    )
-    
-    # Add new file handler with updated level
-    log_dir = 'log'
-    if not os.path.exists(log_dir):
-        os.makedirs(log_dir)
-    
-    _logger.add(
-        os.path.join(log_dir, f"app_{datetime.now().strftime('%Y%m%d')}.log"),
-        format="{time:YYYY-MM-DD HH:mm:ss} [{level}] {name}:{function}:{line} - {message}",
-        level=level,
-        rotation="1 day",
-        retention="30 days"
-    )
+    def success(self, message: str) -> None:
+        self.logger.success(message)
 
-def set_levels(console_level=None, file_level=None):
-    """Change both console and file log levels."""
-    if console_level is not None:
-        set_console_level(console_level)
-    if file_level is not None:
-        set_file_level(file_level)
-
-# Setup logger on import
-setup_logger()
-
-# Convenience functions
-def debug(message):
-    get_logger().debug(message)
-
-def info(message):
-    get_logger().info(message)
-
-def warning(message):
-    get_logger().warning(message)
-
-def error(message):
-    get_logger().error(message)
-
-def success(message):
-    get_logger().success(message) 
+# Simple factory function
+def create_logger(level: str = "INFO") -> ILogger:
+    return LoguruLogger(level) 
