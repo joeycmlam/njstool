@@ -93,27 +93,37 @@ def parse_arguments():
     return parser.parse_args()
 
 def main():
-    args = parse_arguments()
-
-    # Load configuration
-    config_loader = ConfigLoader(args.config)
-    config = config_loader.load_config()
-        
-    # Get log level from config
-    log_config = config.get("logger", {})
-
-    # Create logger
-    logger = LoggerFactory.create_logger(log_config.get("level", "INFO"))
-
+    """Main entry point for the ETL application."""
     try:
+        # Parse command line arguments
+        args = parse_arguments()
+        
+        # Initialize application
+        config = _load_configuration(args.config)
+        logger = _setup_logging(config)
         etl_processor = ETLProcessor(logger)
         
-        # Process ETL
+        # Execute ETL process
         etl_processor.process(config)
         
     except Exception as e:
-        logger.error(f"Failed to initialize application: {e}")
-        sys.exit(1)
+        _handle_application_error(e)
+
+def _load_configuration(config_file: str) -> dict:
+    """Load and return application configuration."""
+    config_loader = ConfigLoader(config_file)
+    return config_loader.load_config()
+
+def _setup_logging(config: dict) -> ILogger:
+    """Setup and return logger instance."""
+    log_config = config.get("logger", {})
+    log_level = log_config.get("level", "INFO")
+    return LoggerFactory.create_logger(log_level)
+
+def _handle_application_error(error: Exception) -> None:
+    """Handle application initialization errors."""
+    print(f"Application failed to start: {error}")
+    sys.exit(1)
 
 if __name__ == "__main__":
     main()
