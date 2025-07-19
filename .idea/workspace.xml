@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-etl-py/app.etl.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl-py/app.etl.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-etl-py/businessrulesengine.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl-py/businessrulesengine.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -219,7 +218,7 @@
       <recent name="$PROJECT_DIR$/src/app/app-fee-engine/config" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.businessrulesengine">
+  <component name="RunManager" selected="Python tests.Python tests in test_rules.py">
     <configuration name="business-rules-engine.feature" type="PyBehaveRunConfigurationType" factoryName="Behave" temporary="true">
       <module name="njstool" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -293,28 +292,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="data.generator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="njstool" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/app/app-etl-py" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/app/app-etl-py/data.generator.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="app.fee.feature" type="cucumber.js" factoryName="Cucumber.js">
       <option name="myFilePath" value="$PROJECT_DIR$/test/test-fee/features/app.fee.feature" />
       <option name="myNameFilter" value="" />
@@ -340,6 +317,21 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests in test_rules.py" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="njstool" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/app/app-etl-py" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/src/app/app-etl-py/test_rules.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Behave.business-rules-engine.feature" />
       <item itemvalue="Behave.business-rules-engine.feature:Categorize securities based on country and security type" />
@@ -348,15 +340,15 @@
       <item itemvalue="npm.test" />
       <item itemvalue="Python.businessrulesengine" />
       <item itemvalue="Python.app.etl" />
-      <item itemvalue="Python.data.generator" />
+      <item itemvalue="Python tests.Python tests in test_rules.py" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests in test_rules.py" />
         <item itemvalue="Python.businessrulesengine" />
         <item itemvalue="Behave.business-rules-engine.feature" />
         <item itemvalue="Behave.business-rules-engine.feature:Categorize securities based on country and security type" />
         <item itemvalue="Python.app.etl" />
-        <item itemvalue="Python.data.generator" />
       </list>
     </recent_temporary>
   </component>
@@ -482,14 +474,7 @@
       <workItem from="1752309177795" duration="4286000" />
       <workItem from="1752328455492" duration="10195000" />
       <workItem from="1752856283858" duration="977000" />
-      <workItem from="1752895724492" duration="8390000" />
-    </task>
-    <task id="LOCAL-00137" summary="new app to read the specific website to provide the answer.">
-      <created>1717237347034</created>
-      <option name="number" value="00137" />
-      <option name="presentableId" value="LOCAL-00137" />
-      <option name="project" value="LOCAL" />
-      <updated>1717237347035</updated>
+      <workItem from="1752895724492" duration="9242000" />
     </task>
     <task id="LOCAL-00138" summary="OpenAI sample">
       <created>1717253986180</created>
@@ -827,7 +812,14 @@
       <option name="project" value="LOCAL" />
       <updated>1752910564120</updated>
     </task>
-    <option name="localTasksCounter" value="206" />
+    <task id="LOCAL-00206" summary="reflector">
+      <created>1752912278301</created>
+      <option name="number" value="00206" />
+      <option name="presentableId" value="LOCAL-00206" />
+      <option name="project" value="LOCAL" />
+      <updated>1752912278301</updated>
+    </task>
+    <option name="localTasksCounter" value="207" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -876,7 +868,6 @@
     <MESSAGE value="reflector the cucumber test" />
     <MESSAGE value="enhance test cases" />
     <MESSAGE value="rename service" />
-    <MESSAGE value="reflector" />
     <MESSAGE value="improve pl.steps.ts" />
     <MESSAGE value="use 3rd party lib to calculate" />
     <MESSAGE value="add jira project" />
@@ -887,7 +878,8 @@
     <MESSAGE value="add a new file" />
     <MESSAGE value="automated test" />
     <MESSAGE value="automated test - pytest-bdd-ng" />
-    <option name="LAST_COMMIT_MESSAGE" value="automated test - pytest-bdd-ng" />
+    <MESSAGE value="reflector" />
+    <option name="LAST_COMMIT_MESSAGE" value="reflector" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -973,7 +965,8 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/njstool$data_generator.coverage" NAME="data.generator Coverage Results" MODIFIED="1752335193004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-etl-py" />
     <SUITE FILE_PATH="coverage/njstool$app_etl.coverage" NAME="app.etl Coverage Results" MODIFIED="1752895729938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-etl-py" />
-    <SUITE FILE_PATH="coverage/njstool$businessrulesengine.coverage" NAME="businessrulesengine Coverage Results" MODIFIED="1752911654058" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-etl-py" />
+    <SUITE FILE_PATH="coverage/njstool$.coverage" NAME=" Coverage Results" MODIFIED="1752913103910" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-etl-py" />
+    <SUITE FILE_PATH="coverage/njstool$businessrulesengine.coverage" NAME="businessrulesengine Coverage Results" MODIFIED="1752912123747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-etl-py" />
     <SUITE FILE_PATH="coverage/njstool$business_rules_engine_feature_Categorize_securities_based_on_country_and_security_type.coverage" NAME="business-rules-engine.feature:Categorize securities based on country and security type Coverage Results" MODIFIED="1752896211908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/njstool$test.coverage" NAME="test Coverage Results" MODIFIED="1752327214882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-etl-py" />
     <SUITE FILE_PATH="coverage/njstool$business_rules_engine_feature.coverage" NAME="business-rules-engine.feature Coverage Results" MODIFIED="1752896698918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />

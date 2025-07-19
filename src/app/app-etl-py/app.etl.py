@@ -3,6 +3,7 @@ import json
 import argparse
 import sys
 from businessrulesengine import BusinessRulesEngine
+from rule_loader import RuleLoader
 
 class CsvReader:
     def __init__(self, input_file):
@@ -13,12 +14,12 @@ class CsvReader:
             reader = csv.DictReader(csvfile)
             return list(reader), reader.fieldnames
 
-class RuleLoader:
-    def __init__(self, rules_file):
-        self.rules_file = rules_file
+class ConfigLoader:
+    def __init__(self, config_file):
+        self.config_file = config_file
 
-    def load_rules(self):
-        with open(self.rules_file, 'r') as f:
+    def load_config(self):
+        with open(self.config_file, 'r') as f:
             return json.load(f)
 
 class CsvWriters:
@@ -44,8 +45,11 @@ class CsvWriters:
 def parse_arguments():
     parser = argparse.ArgumentParser(description='Split CSV file based on rules using business rules engine')
     parser.add_argument('--config', '-c', 
+                       default='config.json',
+                       help='Configuration JSON file path (default: config.json)')
+    parser.add_argument('--rules', '-r',
                        default='rules.json',
-                       help='Configuration JSON file path (default: rules.json)')
+                       help='Rules JSON file path (default: rules.json)')
     return parser.parse_args()
 
 def main():
@@ -53,22 +57,25 @@ def main():
     
     try:
         # Load configuration
-        rule_loader = RuleLoader(args.config)
-        rules = rule_loader.load_rules()
+        config_loader = ConfigLoader(args.config)
+        config = config_loader.load_config()
+        
+        # Load business rules
+        rules = RuleLoader.load_rules_from_json(args.rules)
         
         # Get input file from config
-        input_file = rules.get("input_file", "")
+        input_file = config.get("input_file", "")
         if not input_file:
             print("Error: No input_file specified in config")
             sys.exit(1)
         
-        # Initialize business rules engine
-        rules_engine = BusinessRulesEngine()
+        # Initialize business rules engine with loaded rules
+        rules_engine = BusinessRulesEngine(rules)
         
         # Initialize CSV reader and writers
         reader = CsvReader(input_file)
         records, fieldnames = reader.read_records()
-        writers = CsvWriters(rules["categories"], fieldnames)
+        writers = CsvWriters(config["categories"], fieldnames)
 
         # Process records line by line
         processed_count = 0
@@ -88,9 +95,10 @@ def main():
 
         print(f"CSV splitting completed using business rules engine!")
         print(f"Input file: {input_file}")
+        print(f"Rules file: {args.rules}")
         print(f"Total records processed: {processed_count}")
         print("Files created based on rules configuration:")
-        for category in rules["categories"]:
+        for category in config["categories"]:
             print(f"  - {category['output_file']}")
             
     except FileNotFoundError as e:
