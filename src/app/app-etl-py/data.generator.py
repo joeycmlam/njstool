@@ -6,7 +6,7 @@ stock_codes = [f"STK{str(i).zfill(4)}" for i in range(1, 21)]
 countries = ["US", "HK", "JP", "CN", "DE"]
 security_types = ["Equity", "Bond", "Commodity", "Currency", "REIT"]
 
-with open("etf_portfolio_sample.csv", "w", newline="") as csvfile:
+with open("data/etf_portfolio_sample.csv", "w", newline="") as csvfile:
     fieldnames = [
         "portfolio_code", "stock_code", "country", "security_type",
         "unit", "average_price", "current_price", "market_value"

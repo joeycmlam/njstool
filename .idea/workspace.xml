@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="code reflector">
+    <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/app-etl-py/pytest.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-etl-py/tests/conftest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/app-etl-py/tests/test_business_rules_engine.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-etl-py/app.etl.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl-py/app.etl.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-etl-py/businessrulesengine.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl-py/businessrulesengine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-etl-py/rules.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl-py/rules.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-etl-py/data.generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl-py/data.generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-etl-py/test/features/steps/rules.steps.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,14 +215,28 @@
       <recent name="$PROJECT_DIR$/test/test-rest/features/test_data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/app-etl-py/data" />
       <recent name="$PROJECT_DIR$/src/app/app-pl/test/features" />
       <recent name="$PROJECT_DIR$/src/app/app-diff-v2/config" />
       <recent name="$PROJECT_DIR$/src/app/app-diff-v2/result" />
       <recent name="$PROJECT_DIR$/src/app/app-fee-engine/config" />
-      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Behave.business-rules-engine.feature:Categorize securities based on country and security type">
+  <component name="RunManager" selected="Behave.business-rules-engine.feature">
+    <configuration name="business-rules-engine.feature" type="PyBehaveRunConfigurationType" factoryName="Behave" temporary="true">
+      <module name="njstool" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <WHAT_TO_RUN WHAT_TO_RUN="$PROJECT_DIR$/src/app/app-etl-py/test/features/business-rules-engine.feature" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="business-rules-engine.feature:Categorize securities based on country and security type" type="PyBehaveRunConfigurationType" factoryName="Behave" temporary="true">
       <module name="njstool" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -302,28 +318,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="njstool" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/app/app-etl-py" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/app/app-etl-py/test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="app.fee.feature" type="cucumber.js" factoryName="Cucumber.js">
       <option name="myFilePath" value="$PROJECT_DIR$/test/test-fee/features/app.fee.feature" />
       <option name="myNameFilter" value="" />
@@ -350,6 +344,7 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Behave.business-rules-engine.feature" />
       <item itemvalue="Behave.business-rules-engine.feature:Categorize securities based on country and security type" />
       <item itemvalue="Cucumber.js.app.fee.feature" />
       <item itemvalue="Docker.docker-compose.git.yml: Compose Deployment" />
@@ -357,15 +352,14 @@
       <item itemvalue="Python.businessrulesengine" />
       <item itemvalue="Python.app.etl" />
       <item itemvalue="Python.data.generator" />
-      <item itemvalue="Python.test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Behave.business-rules-engine.feature" />
         <item itemvalue="Behave.business-rules-engine.feature:Categorize securities based on country and security type" />
         <item itemvalue="Python.businessrulesengine" />
         <item itemvalue="Python.app.etl" />
         <item itemvalue="Python.data.generator" />
-        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -491,14 +485,7 @@
       <workItem from="1752309177795" duration="4286000" />
       <workItem from="1752328455492" duration="10195000" />
       <workItem from="1752856283858" duration="977000" />
-      <workItem from="1752895724492" duration="392000" />
-    </task>
-    <task id="LOCAL-00129" summary="code reflector to include txn details in DSCCalculator.ts">
-      <created>1688844856713</created>
-      <option name="number" value="00129" />
-      <option name="presentableId" value="LOCAL-00129" />
-      <option name="project" value="LOCAL" />
-      <updated>1688844856713</updated>
+      <workItem from="1752895724492" duration="6919000" />
     </task>
     <task id="LOCAL-00130" summary="add cucumber test">
       <created>1688846655959</created>
@@ -836,7 +823,14 @@
       <option name="project" value="LOCAL" />
       <updated>1752372366338</updated>
     </task>
-    <option name="localTasksCounter" value="204" />
+    <task id="LOCAL-00204" summary="automated test">
+      <created>1752896231630</created>
+      <option name="number" value="00204" />
+      <option name="presentableId" value="LOCAL-00204" />
+      <option name="project" value="LOCAL" />
+      <updated>1752896231631</updated>
+    </task>
+    <option name="localTasksCounter" value="205" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -871,7 +865,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="new diff" />
     <MESSAGE value="improve the filename" />
     <MESSAGE value="support composite key" />
     <MESSAGE value="oo design" />
@@ -896,7 +889,8 @@
     <MESSAGE value="remove key" />
     <MESSAGE value="code reflector" />
     <MESSAGE value="add a new file" />
-    <option name="LAST_COMMIT_MESSAGE" value="add a new file" />
+    <MESSAGE value="automated test" />
+    <option name="LAST_COMMIT_MESSAGE" value="automated test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -983,8 +977,9 @@
     <SUITE FILE_PATH="coverage/njstool$data_generator.coverage" NAME="data.generator Coverage Results" MODIFIED="1752335193004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-etl-py" />
     <SUITE FILE_PATH="coverage/njstool$app_etl.coverage" NAME="app.etl Coverage Results" MODIFIED="1752895729938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-etl-py" />
     <SUITE FILE_PATH="coverage/njstool$businessrulesengine.coverage" NAME="businessrulesengine Coverage Results" MODIFIED="1752895750987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-etl-py" />
-    <SUITE FILE_PATH="coverage/njstool$business_rules_engine_feature_Categorize_securities_based_on_country_and_security_type.coverage" NAME="business-rules-engine.feature:Categorize securities based on country and security type Coverage Results" MODIFIED="1752895864193" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/njstool$business_rules_engine_feature_Categorize_securities_based_on_country_and_security_type.coverage" NAME="business-rules-engine.feature:Categorize securities based on country and security type Coverage Results" MODIFIED="1752896211908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/njstool$test.coverage" NAME="test Coverage Results" MODIFIED="1752327214882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-etl-py" />
+    <SUITE FILE_PATH="coverage/njstool$business_rules_engine_feature.coverage" NAME="business-rules-engine.feature Coverage Results" MODIFIED="1752896698918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main.js" />
