@@ -1,0 +1,34 @@
+{
+  "input_file": "data/etf_portfolio_sample.csv",
+  "rule_file": "rules.json",
+  "categories": [
+    {
+      "name": "onshore_equity",
+      "output_file": "output/onshore_equity.csv"
+    },
+    {
+      "name": "offshore_equity", 
+      "output_file": "output/offshore_equity.csv"
+    },
+    {
+      "name": "onshore_fixed_income",
+      "output_file": "output/onshore_fixed_income.csv"
+    },
+    {
+      "name": "offshore_fixed_income",
+      "output_file": "output/offshore_fixed_income.csv"
+    },
+    {
+      "name": "currency",
+      "output_file": "output/currency.csv"
+    },
+    {
+      "name": "commodity",
+      "output_file": "output/commodity.csv"
+    },
+    {
+      "name": "others",
+      "output_file": "output/others.csv"
+    }
+  ]
+} 

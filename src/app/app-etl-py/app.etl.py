@@ -4,6 +4,7 @@ import argparse
 import sys
 from businessrulesengine import BusinessRulesEngine
 from rule_loader import RuleLoader
+import logger
 
 class CsvReader:
     def __init__(self, input_file):
@@ -67,7 +68,7 @@ def main():
         # Get input file from config
         input_file = config.get("input_file", "")
         if not input_file:
-            print("Error: No input_file specified in config")
+            logger.info("Error: No input_file specified in config")
             sys.exit(1)
         
         # Initialize business rules engine with loaded rules
@@ -86,12 +87,12 @@ def main():
             
             # Ensure category is a string and handle potential issues
             if not isinstance(category, str):
-                print(f"Warning: Category is not a string: {category} (type: {type(category)})")
+                logger.warning(f"Warning: Category is not a string: {category} (type: {type(category)})")
                 category = str(category) if category is not None else "others"
             
             # Check if category exists in writers
             if category not in writers.writers:
-                print(f"Warning: Category '{category}' not found in config, using 'others'")
+                logger.warning(f"Warning: Category '{category}' not found in config, using 'others'")
                 category = "others"
             
             # Write record to appropriate output file
@@ -100,29 +101,29 @@ def main():
             
             # Print progress every 10 records
             if processed_count % 10 == 0:
-                print(f"Processed {processed_count} records...")
+                logger.info(f"Processed {processed_count} records...")
 
         writers.close()
 
-        print("CSV splitting completed using business rules engine!")
-        print(f"Input file: {input_file}")
-        print(f"Rules file: {args.rules}")
-        print(f"Total records processed: {processed_count}")
-        print("Files created based on rules configuration:")
+        logger.info("CSV splitting completed using business rules engine!")
+        logger.info(f"Input file: {input_file}")
+        logger.info(f"Rules file: {args.rules}")
+        logger.info(f"Total records processed: {processed_count}")
+        logger.info("Files created based on rules configuration:")
         for category in config["categories"]:
-            print(f"  - {category['output_file']}")
+            logger.info(f"  - {category['output_file']}")
             
     except FileNotFoundError as e:
-        print(f"Error: File not found - {e}")
+        logger.error(f"Error: File not found - {e}")
         sys.exit(1)
     except json.JSONDecodeError as e:
-        print(f"Error: Invalid JSON in config file - {e}")
+        logger.error(f"Error: Invalid JSON in config file - {e}")
         sys.exit(1)
     except KeyError as e:
-        print(f"Error: Missing required field in config - {e}")
+        logger.error(f"Error: Missing required field in config - {e}")
         sys.exit(1)
     except Exception as e:
-        print(f"Error: {e}{e.__traceback__}")
+        logger.error(f"Error: {e}{e.__traceback__}")
         sys.exit(1)
 
 if __name__ == "__main__":
