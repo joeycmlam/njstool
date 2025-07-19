@@ -4,7 +4,7 @@ import argparse
 import sys
 from businessrulesengine import BusinessRulesEngine
 from rule_loader import RuleLoader
-from logger import ILogger, create_logger
+from logger import ILogger, LoggerFactory
 
 class CsvReader:
     def __init__(self, input_file):
@@ -135,10 +135,10 @@ def main():
     config = config_loader.load_config()
         
     # Get log level from config
-    log_level = config.get("logger", {}).get("level", "INFO")
-        
-    # Create logger and ETL processor
-    logger = create_logger(log_level)
+    log_config = config.get("logger", {})
+
+    # Create logger
+    logger = LoggerFactory.create_logger(log_config.get("level", "INFO"))
 
     try:
         etl_processor = ETLProcessor(logger)

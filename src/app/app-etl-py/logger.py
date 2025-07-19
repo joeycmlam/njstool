@@ -93,6 +93,17 @@ class LoguruLogger(ILogger):
     def success(self, message: str) -> None:
         self.logger.bind(**self._get_caller_info()).success(message)
 
-# Simple factory function
-def create_logger(level: str = "INFO") -> ILogger:
-    return LoguruLogger(level) 
+class LoggerFactory:
+    @staticmethod
+    def create_logger(level: str = "INFO") -> ILogger:
+        return LoguruLogger(level)
+    
+    @staticmethod
+    def create_logger_with_config(config: dict) -> ILogger:
+        return LoguruLogger(config.get("level", "INFO"))
+    
+    @staticmethod
+    def create_logger_from_env() -> ILogger:
+        import os
+        level = os.getenv("LOG_LEVEL", "INFO")
+        return LoguruLogger(level) 
