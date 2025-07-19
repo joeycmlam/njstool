@@ -129,17 +129,18 @@ def parse_arguments():
 
 def main():
     args = parse_arguments()
-    
+
+    # Load configuration
+    config_loader = ConfigLoader(args.config)
+    config = config_loader.load_config()
+        
+    # Get log level from config
+    log_level = config.get("logger", {}).get("level", "INFO")
+        
+    # Create logger and ETL processor
+    logger = create_logger(log_level)
+
     try:
-        # Load configuration
-        config_loader = ConfigLoader(args.config)
-        config = config_loader.load_config()
-        
-        # Get log level from config
-        log_level = config.get("logger", {}).get("level", "INFO")
-        
-        # Create logger and ETL processor
-        logger = create_logger(log_level)
         etl_processor = ETLProcessor(logger)
         
         # Process ETL

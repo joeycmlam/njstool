@@ -33,7 +33,7 @@ class LoguruLogger(ILogger):
         try:
             from loguru import logger
             self.logger = logger
-            self.level = level
+            self.level = level.upper()
             self._setup_logger()
         except ImportError:
             raise ImportError("Loguru not installed. Please run: pip install loguru")

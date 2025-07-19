@@ -2,7 +2,7 @@
   "input_file": "data/etf_portfolio_sample.csv",
   "rule_file": "rules.json",
   "logger": {
-    "level": "DEBUG",
+    "level": "info"
   },
   "categories": [
     {
