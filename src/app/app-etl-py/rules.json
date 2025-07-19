@@ -11,14 +11,10 @@
         {
           "field": "security_type",
           "operator": "in",
-          "value": ["Equity", "ETF"]
+          "value": ["Equity", "ETF", "REIT"]
         }
       ],
-      "result": {
-        "field": "category",
-        "type": "str",
-        "value": "onshore_equity"
-      }
+      "result": "onshore_equity"
     },
     {
       "name": "Offshore Equity Rule",
@@ -31,14 +27,10 @@
         {
           "field": "security_type",
           "operator": "in",
-          "value": ["Equity", "ETF"]
+          "value": ["Equity", "ETF", "REIT"]
         }
       ],
-      "result": {
-        "field": "category",
-        "type": "str",
-        "value": "offshore_equity"
-      }
+      "result": "offshore_equity"
     },
     {
       "name": "Onshore Fixed Income Rule",
@@ -54,11 +46,7 @@
           "value": "Bond"
         }
       ],
-      "result": {
-        "field": "category",
-        "type": "str",
-        "value": "onshore_fixed_income"
-      }
+      "result": "onshore_fixed_income"
     },
     {
       "name": "Offshore Fixed Income Rule",
@@ -74,11 +62,7 @@
           "value": "Bond"
         }
       ],
-      "result": {
-        "field": "category",
-        "type": "str",
-        "value": "offshore_fixed_income"
-      }
+      "result": "offshore_fixed_income"
     },
     {
       "name": "Currency Rule",
@@ -89,11 +73,7 @@
           "value": "Currency"
         }
       ],
-      "result": {
-        "field": "category",
-        "type": "str",
-        "value": "currency"
-      }
+      "result": "currency"
     },
     {
       "name": "Commodity Rule",
@@ -104,11 +84,7 @@
           "value": "Commodity"
         }
       ],
-      "result": {
-        "field": "category",
-        "type": "str",
-        "value": "commodity"
-      }
+      "result": "commodity"
     }
   ]
 } 

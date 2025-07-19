@@ -61,7 +61,8 @@ def main():
         config = config_loader.load_config()
         
         # Load business rules
-        rules = RuleLoader.load_rules_from_json(args.rules)
+        rule_file = config.get("rule_file", "")
+        rules = RuleLoader.load_rules_from_json(rule_file)
         
         # Get input file from config
         input_file = config.get("input_file", "")
@@ -83,6 +84,16 @@ def main():
             # Get category from business rules engine
             category = rules_engine.evaluate(record)
             
+            # Ensure category is a string and handle potential issues
+            if not isinstance(category, str):
+                print(f"Warning: Category is not a string: {category} (type: {type(category)})")
+                category = str(category) if category is not None else "others"
+            
+            # Check if category exists in writers
+            if category not in writers.writers:
+                print(f"Warning: Category '{category}' not found in config, using 'others'")
+                category = "others"
+            
             # Write record to appropriate output file
             writers.write(category, record)
             processed_count += 1
@@ -93,7 +104,7 @@ def main():
 
         writers.close()
 
-        print(f"CSV splitting completed using business rules engine!")
+        print("CSV splitting completed using business rules engine!")
         print(f"Input file: {input_file}")
         print(f"Rules file: {args.rules}")
         print(f"Total records processed: {processed_count}")
@@ -111,7 +122,7 @@ def main():
         print(f"Error: Missing required field in config - {e}")
         sys.exit(1)
     except Exception as e:
-        print(f"Error: {e}")
+        print(f"Error: {e}{e.__traceback__}")
         sys.exit(1)
 
 if __name__ == "__main__":

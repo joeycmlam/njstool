@@ -15,8 +15,27 @@ class BusinessRulesEngine:
             for rule in self.rules:
                 result = engine.evaluate(rule)
                 if result:
-                    # Return the category value if present, else the result object
-                    return getattr(result, 'value', result)
+                    # Debug: print the result object to understand its structure
+                    print(f"Debug - Result type: {type(result)}, Result: {result}")
+                    
+                    # Extract the value from the result object
+                    if hasattr(result, 'value'):
+                        return result.value
+                    else:
+                        # If result is a string representation of a dict, parse it
+                        result_str = str(result)
+                        if result_str.startswith('{') and result_str.endswith('}'):
+                            # It's a dict representation, try to extract the value
+                            import ast
+                            try:
+                                result_dict = ast.literal_eval(result_str)
+                                if 'value' in result_dict:
+                                    return result_dict['value']
+                                elif 'category' in result_dict:
+                                    return result_dict['category']
+                            except:
+                                pass
+                        return result_str
             return "others"
         except Exception as e:
             print(f"Error creating rule engine: {e}")
