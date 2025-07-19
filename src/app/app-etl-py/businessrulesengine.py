@@ -1,4 +1,4 @@
-from py_rules.components import Condition, Result, Rule
+import logger
 from py_rules.engine import RuleEngine
 
 class BusinessRulesEngine:
@@ -16,7 +16,7 @@ class BusinessRulesEngine:
                 result = engine.evaluate(rule)
                 if result:
                     # Debug: print the result object to understand its structure
-                    print(f"Debug - Result type: {type(result)}, Result: {result}")
+                    logger.debug(f"Debug - Result type: {type(result)}, Result: {result}")
                     
                     # Extract the value from the result object
                     if hasattr(result, 'value'):
@@ -38,5 +38,5 @@ class BusinessRulesEngine:
                         return result_str
             return "others"
         except Exception as e:
-            print(f"Error creating rule engine: {e}")
+            logger.error(f"Error creating rule engine: {e}")
             return "others"
