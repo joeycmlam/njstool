@@ -1,6 +1,9 @@
 {
   "input_file": "data/etf_portfolio_sample.csv",
   "rule_file": "rules.json",
+  "logger": {
+    "level": "INFO"
+  },
   "categories": [
     {
       "name": "onshore_equity",

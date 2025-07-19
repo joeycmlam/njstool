@@ -55,12 +55,17 @@ def parse_arguments():
 
 def main():
     args = parse_arguments()
-    logger.set_console_level("DEBUG")
+
 
     try:
         # Load configuration
         config_loader = ConfigLoader(args.config)
         config = config_loader.load_config()
+        
+        # Setup logging from config
+        log_config = config.get("logger", {})
+        logger.set_console_level(log_config.get("level", "INFO"))
+
         
         # Load business rules
         rule_file = config.get("rule_file", "")
