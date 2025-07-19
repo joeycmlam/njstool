@@ -1,7 +1,4 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
@@ -10,22 +7,20 @@
             "request": "launch",
             "program": "${workspaceFolder}/src/app/app-diff-v2/app.diff.v2.py",
             "console": "integratedTerminal",
-            "args": ["--config", "${workspaceFolder}/src/app/app-diff-v2/config/config.json"],
+            "args": [
+                "--config",
+                "${workspaceFolder}/src/app/app-diff-v2/config/config.json"
+            ],
             "cwd": "${workspaceFolder}/src/app/app-diff-v2",
             "env": {
                 "PYTHONPATH": "${workspaceFolder}/src/app/app-diff-v2"
             }
+        },
+        {
+            "name": "Python Debugger: Python File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}"
         }
-        // You can add more configurations for other apps here:
-        // {
-        //     "name": "Another-App",
-        //     "type": "python",
-        //     "request": "launch",
-        //     "program": "${workspaceFolder}/src/app/another-app/main.py",
-        //     "cwd": "${workspaceFolder}/src/app/another-app",
-        //     "env": {
-        //         "PYTHONPATH": "${workspaceFolder}/src/app/another-app"
-        //     }
-        // }
     ]
 }
