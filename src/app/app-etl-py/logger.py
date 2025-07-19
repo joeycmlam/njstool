@@ -42,40 +42,56 @@ class LoguruLogger(ILogger):
         """Setup basic loguru logger."""
         self.logger.remove()
         
-        # Console output
+        # Console output with caller file and line info
         self.logger.add(
             sys.stdout,
-            format="<green>{time:YYYY-MM-DD HH:mm:ss}</green> [<level>{level}</level>] <level>{message}</level>",
+            format="<green>{time:YYYY-MM-DD HH:mm:ss}</green> [<level>{level}</level>] <cyan>{extra[caller_file]}:{extra[caller_line]}</cyan> - <level>{message}</level>",
             level=self.level,
             colorize=True
         )
         
-        # File output
+        # File output with detailed caller file and line info
         log_dir = 'log'
         if not os.path.exists(log_dir):
             os.makedirs(log_dir)
         
         self.logger.add(
             os.path.join(log_dir, f"app_{datetime.now().strftime('%Y%m%d')}.log"),
-            format="{time:YYYY-MM-DD HH:mm:ss} [{level}] {message}",
+            format="{time:YYYY-MM-DD HH:mm:ss} [{level}] {extra[caller_file]}:{extra[caller_line]} - {message}",
             level="DEBUG",
             rotation="1 day"
         )
     
+    def _get_caller_info(self):
+        """Get caller file and line information."""
+        import inspect
+        frame = inspect.currentframe()
+        try:
+            # Go up 2 frames: 1 for this method, 1 for the logging method
+            if frame and frame.f_back and frame.f_back.f_back:
+                caller_frame = frame.f_back.f_back
+                filename = os.path.basename(caller_frame.f_code.co_filename)
+                line_number = caller_frame.f_lineno
+                return {"caller_file": filename, "caller_line": line_number}
+        except (AttributeError, TypeError):
+            pass
+        # Fallback if we can't get caller info
+        return {"caller_file": "unknown", "caller_line": 0}
+    
     def debug(self, message: str) -> None:
-        self.logger.debug(message)
+        self.logger.bind(**self._get_caller_info()).debug(message)
     
     def info(self, message: str) -> None:
-        self.logger.info(message)
+        self.logger.bind(**self._get_caller_info()).info(message)
     
     def warning(self, message: str) -> None:
-        self.logger.warning(message)
+        self.logger.bind(**self._get_caller_info()).warning(message)
     
     def error(self, message: str) -> None:
-        self.logger.error(message)
+        self.logger.bind(**self._get_caller_info()).error(message)
     
     def success(self, message: str) -> None:
-        self.logger.success(message)
+        self.logger.bind(**self._get_caller_info()).success(message)
 
 # Simple factory function
 def create_logger(level: str = "INFO") -> ILogger:
