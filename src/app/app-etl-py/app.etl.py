@@ -2,6 +2,7 @@ import csv
 import json
 import argparse
 import sys
+from businessrulesengine import BusinessRulesEngine
 
 class CsvReader:
     def __init__(self, input_file):
@@ -19,20 +20,6 @@ class RuleLoader:
     def load_rules(self):
         with open(self.rules_file, 'r') as f:
             return json.load(f)
-
-class CategoryDecider:
-    def __init__(self, rules):
-        self.rules = rules
-
-    def decide(self, record):
-        for category in self.rules["categories"]:
-            name = category["name"]
-            conditions = category["conditions"]
-            if name == "others":
-                continue
-            if all(record.get(field) == value for field, value in conditions.items()):
-                return name
-        return "others"
 
 class CsvWriters:
     def __init__(self, categories, fieldnames):
@@ -55,7 +42,7 @@ class CsvWriters:
             f.close()
 
 def parse_arguments():
-    parser = argparse.ArgumentParser(description='Split CSV file based on rules')
+    parser = argparse.ArgumentParser(description='Split CSV file based on rules using business rules engine')
     parser.add_argument('--config', '-c', 
                        default='rules.json',
                        help='Configuration JSON file path (default: rules.json)')
@@ -71,20 +58,37 @@ def main():
         
         # Get input file from config
         input_file = rules.get("input_file", "")
+        if not input_file:
+            print("Error: No input_file specified in config")
+            sys.exit(1)
         
-        # Single responsibility classes
+        # Initialize business rules engine
+        rules_engine = BusinessRulesEngine()
+        
+        # Initialize CSV reader and writers
         reader = CsvReader(input_file)
         records, fieldnames = reader.read_records()
-        decider = CategoryDecider(rules)
         writers = CsvWriters(rules["categories"], fieldnames)
 
+        # Process records line by line
+        processed_count = 0
         for record in records:
-            category = decider.decide(record)
+            # Get category from business rules engine
+            category = rules_engine.evaluate(record)
+            
+            # Write record to appropriate output file
             writers.write(category, record)
+            processed_count += 1
+            
+            # Print progress every 10 records
+            if processed_count % 10 == 0:
+                print(f"Processed {processed_count} records...")
+
         writers.close()
 
-        print("CSV splitting completed!")
+        print(f"CSV splitting completed using business rules engine!")
         print(f"Input file: {input_file}")
+        print(f"Total records processed: {processed_count}")
         print("Files created based on rules configuration:")
         for category in rules["categories"]:
             print(f"  - {category['output_file']}")
@@ -101,6 +105,6 @@ def main():
     except Exception as e:
         print(f"Error: {e}")
         sys.exit(1)
-        
+
 if __name__ == "__main__":
     main()

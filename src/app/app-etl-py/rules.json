@@ -1,34 +1,114 @@
 {
-  "input_file": "etf_portfolio_sample.csv",
-  "categories": [
+  "rules": [
     {
-      "name": "us_equity",
-      "output_file": "us_equity.csv",
-      "conditions": {
-        "country": "US",
-        "security_type": "Equity"
+      "name": "Onshore Equity Rule",
+      "conditions": [
+        {
+          "field": "country",
+          "operator": "==",
+          "value": "HK"
+        },
+        {
+          "field": "security_type",
+          "operator": "in",
+          "value": ["Equity", "ETF"]
+        }
+      ],
+      "result": {
+        "field": "category",
+        "type": "str",
+        "value": "onshore_equity"
       }
     },
     {
-      "name": "hk_bond",
-      "output_file": "hk_bond.csv",
-      "conditions": {
-        "country": "HK",
-        "security_type": "Bond"
+      "name": "Offshore Equity Rule",
+      "conditions": [
+        {
+          "field": "country",
+          "operator": "!=",
+          "value": "HK"
+        },
+        {
+          "field": "security_type",
+          "operator": "in",
+          "value": ["Equity", "ETF"]
+        }
+      ],
+      "result": {
+        "field": "category",
+        "type": "str",
+        "value": "offshore_equity"
       }
     },
     {
-      "name": "jp_commodity",
-      "output_file": "jp_commodity.csv",
-      "conditions": {
-        "country": "JP",
-        "security_type": "Commodity"
+      "name": "Onshore Fixed Income Rule",
+      "conditions": [
+        {
+          "field": "country",
+          "operator": "==",
+          "value": "HK"
+        },
+        {
+          "field": "security_type",
+          "operator": "==",
+          "value": "Bond"
+        }
+      ],
+      "result": {
+        "field": "category",
+        "type": "str",
+        "value": "onshore_fixed_income"
       }
     },
     {
-      "name": "others",
-      "output_file": "others.csv",
-      "conditions": {}
+      "name": "Offshore Fixed Income Rule",
+      "conditions": [
+        {
+          "field": "country",
+          "operator": "!=",
+          "value": "HK"
+        },
+        {
+          "field": "security_type",
+          "operator": "==",
+          "value": "Bond"
+        }
+      ],
+      "result": {
+        "field": "category",
+        "type": "str",
+        "value": "offshore_fixed_income"
+      }
+    },
+    {
+      "name": "Currency Rule",
+      "conditions": [
+        {
+          "field": "security_type",
+          "operator": "==",
+          "value": "Currency"
+        }
+      ],
+      "result": {
+        "field": "category",
+        "type": "str",
+        "value": "currency"
+      }
+    },
+    {
+      "name": "Commodity Rule",
+      "conditions": [
+        {
+          "field": "security_type",
+          "operator": "==",
+          "value": "Commodity"
+        }
+      ],
+      "result": {
+        "field": "category",
+        "type": "str",
+        "value": "commodity"
+      }
     }
   ]
 } 
