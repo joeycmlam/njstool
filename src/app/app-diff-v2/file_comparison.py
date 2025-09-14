@@ -22,6 +22,7 @@ class FileComparisonApp:
         self.writer = ExcelWriter(self.logger, output_config)
 
     def run(self):
+        self.logger.info("Starting file comparison...")
         try:
             file_a_path = self.config.get("file_a")
             file_b_path = self.config.get("file_b")
@@ -44,3 +45,4 @@ class FileComparisonApp:
         except Exception as e:
             self.logger.error(f"An error occurred during file comparison: {e}")
             raise
+        self.logger.info("File comparison completed.")
