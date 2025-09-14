@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/app-validation/logger.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-diff-v2/file_comparison.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-diff-v2/file_comparison.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-validation/app.validate.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-validation/app.validate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-validation/validator.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-validation/data_validator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-validation/data_validator.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-validation/data_validator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -511,14 +509,7 @@
       <workItem from="1757776589170" duration="40000" />
       <workItem from="1757776640860" duration="202000" />
       <workItem from="1757835018789" duration="5206000" />
-      <workItem from="1757841173718" duration="1911000" />
-    </task>
-    <task id="LOCAL-00157" summary="update the diagram.">
-      <created>1717867539597</created>
-      <option name="number" value="00157" />
-      <option name="presentableId" value="LOCAL-00157" />
-      <option name="project" value="LOCAL" />
-      <updated>1717867539597</updated>
+      <workItem from="1757841173718" duration="2457000" />
     </task>
     <task id="LOCAL-00158" summary="update the diagram.">
       <created>1717869339941</created>
@@ -856,7 +847,14 @@
       <option name="project" value="LOCAL" />
       <updated>1757841251085</updated>
     </task>
-    <option name="localTasksCounter" value="226" />
+    <task id="LOCAL-00226" summary="fix the issue">
+      <created>1757843095550</created>
+      <option name="number" value="00226" />
+      <option name="presentableId" value="LOCAL-00226" />
+      <option name="project" value="LOCAL" />
+      <updated>1757843095550</updated>
+    </task>
+    <option name="localTasksCounter" value="227" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -891,7 +889,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix the formula" />
     <MESSAGE value="reflector cucumber test" />
     <MESSAGE value="add test cases" />
     <MESSAGE value="reflector the cucumber test" />
@@ -916,7 +913,8 @@
     <MESSAGE value="add back the arguement" />
     <MESSAGE value="update the constants" />
     <MESSAGE value="something wrong!!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="something wrong!!!!" />
+    <MESSAGE value="fix the issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix the issue" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1003,7 +1001,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/app/app-validation/app.validate.py</url>
-          <line>88</line>
+          <line>87</line>
           <option name="timeStamp" value="87" />
         </line-breakpoint>
       </breakpoints>
@@ -1015,7 +1013,7 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/njstool$app_validate.coverage" NAME="app.validate Coverage Results" MODIFIED="1757843078655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-validation" />
+    <SUITE FILE_PATH="coverage/njstool$app_validate.coverage" NAME="app.validate Coverage Results" MODIFIED="1757843622046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-validation" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main.js" />

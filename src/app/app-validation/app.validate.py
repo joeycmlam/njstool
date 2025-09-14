@@ -1,9 +1,9 @@
 import argparse
-import logging
 from config import Config
 import constants
 import os
 from data_validator import DataValidator
+import logging
 
 
 def setup_logging(verbose: bool = False) -> logging.Logger:
@@ -67,8 +67,7 @@ def parse_arguments() -> argparse.Namespace:
 
 def action(config: Config, logger: logging.Logger):
     try:
-        logger.info(f"Starting with config: {config.config_path}")
-        app = DataValidator(config)
+        app = DataValidator(config, logger)
         app.run()
 
         logger.info("File completed successfully.")
