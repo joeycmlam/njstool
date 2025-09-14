@@ -6,6 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-validation/app.validate.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-validation/app.validate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-validation/config/config.local.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-validation/config/config.local.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-validation/file_parser.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-validation/validator.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-validation/validator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +50,7 @@
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file:///Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/logging/__init__.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/app/app-diff-v2/app.diff.v2.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/app/app-diff-v2/config/config.local.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/app/app-diff-v2/excel_writer.py" root0="FORCE_HIGHLIGHTING" />
@@ -504,14 +509,7 @@
       <workItem from="1757680451631" duration="739000" />
       <workItem from="1757776589170" duration="40000" />
       <workItem from="1757776640860" duration="202000" />
-      <workItem from="1757835018789" duration="421000" />
-    </task>
-    <task id="LOCAL-00155" summary="reflector">
-      <created>1717843106028</created>
-      <option name="number" value="00155" />
-      <option name="presentableId" value="LOCAL-00155" />
-      <option name="project" value="LOCAL" />
-      <updated>1717843106028</updated>
+      <workItem from="1757835018789" duration="5206000" />
     </task>
     <task id="LOCAL-00156" summary="add source and reflector soruceData file">
       <created>1717843720944</created>
@@ -849,7 +847,14 @@
       <option name="project" value="LOCAL" />
       <updated>1757835411656</updated>
     </task>
-    <option name="localTasksCounter" value="224" />
+    <task id="LOCAL-00224" summary="update the constants">
+      <created>1757835479268</created>
+      <option name="number" value="00224" />
+      <option name="presentableId" value="LOCAL-00224" />
+      <option name="project" value="LOCAL" />
+      <updated>1757835479268</updated>
+    </task>
+    <option name="localTasksCounter" value="225" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -884,7 +889,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="unrealised and realised P/L" />
     <MESSAGE value="rename file" />
     <MESSAGE value="fix the formula" />
     <MESSAGE value="reflector cucumber test" />
@@ -909,7 +913,8 @@
     <MESSAGE value="reflector" />
     <MESSAGE value="fix the code" />
     <MESSAGE value="add back the arguement" />
-    <option name="LAST_COMMIT_MESSAGE" value="add back the arguement" />
+    <MESSAGE value="update the constants" />
+    <option name="LAST_COMMIT_MESSAGE" value="update the constants" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -984,6 +989,21 @@
           <line>20</line>
           <option name="timeStamp" value="66" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/app/app-validation/validator.py</url>
+          <line>36</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/app/app-validation/validator.py</url>
+          <line>46</line>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/app/app-validation/app.validate.py</url>
+          <line>75</line>
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -993,7 +1013,7 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/njstool$app_validate.coverage" NAME="app.validate Coverage Results" MODIFIED="1757835389924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-validation" />
+    <SUITE FILE_PATH="coverage/njstool$app_validate.coverage" NAME="app.validate Coverage Results" MODIFIED="1757841069968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-validation" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main.js" />

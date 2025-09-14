@@ -2,7 +2,7 @@ import argparse
 import logging
 from config import Config
 import constants
-
+from validator import DataValidator
 
 def setup_logging(verbose: bool = False) -> logging.Logger:
     """
@@ -71,8 +71,9 @@ def run_app(config: Config, logger: logging.Logger):
     :param logger: Logger instance for logging.
     """
     try:
-        # logger.info(f"Starting file comparison with config: {config_path}")
-
+        logger.info(f"Starting file comparison with config: {config.config_path}")
+        app = DataValidator(config, logger)
+        app.action()
         logger.info("File comparison completed successfully.")
     except Exception as e:
         logger.error(f"An error occurred during file comparison: {e}")
@@ -91,7 +92,7 @@ def main():
     logger = setup_logging(verbose=args.verbose)
     
     try:
-        logger.info(f"Starting file comparison with config: {args.config}")
+        logger.info(f"Starting with config: {args.config}")
         config = Config(args.config)
         
         # Run the application
