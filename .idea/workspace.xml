@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="reflector">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-validation/app.validate.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-validation/app.validate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-validation/validator.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-validation/validator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +219,7 @@
       <recent name="$PROJECT_DIR$/src/app/app-fee-engine/config" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber.js.app.fee.feature">
+  <component name="RunManager" selected="Python.app.validate">
     <configuration name="business-rules-engine.feature" type="PyBehaveRunConfigurationType" factoryName="Behave" temporary="true">
       <module name="njstool" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -262,6 +264,28 @@
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/app/app-etl-py/app.etl.py" />
       <option name="PARAMETERS" value="--config config.json" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="app.validate" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="njstool" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/app/app-validation" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/app/app-validation/app.validate.py" />
+      <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -345,9 +369,15 @@
       <item itemvalue="Docker.docker-compose.git.yml: Compose Deployment" />
       <item itemvalue="npm.test" />
       <item itemvalue="Python.test_rules" />
+      <item itemvalue="Python.app.validate" />
       <item itemvalue="Python.app.etl" />
       <item itemvalue="Python.businessrulesengine" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.app.validate" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -476,6 +506,7 @@
       <workItem from="1757680451631" duration="739000" />
       <workItem from="1757776589170" duration="40000" />
       <workItem from="1757776640860" duration="202000" />
+      <workItem from="1757835018789" duration="292000" />
     </task>
     <task id="LOCAL-00153" summary="reflector">
       <created>1717842835313</created>
@@ -962,6 +993,9 @@
         <watch expression="data" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/njstool$app_validate.coverage" NAME="app.validate Coverage Results" MODIFIED="1757835336403" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-validation" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main.js" />

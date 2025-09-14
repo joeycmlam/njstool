@@ -7,7 +7,7 @@ import os
 # config.py exposes: class ConfigLoader: def load(self, config_path: str) -> Dict[str, Any]
 
 from file_parser import FileParser          # adjust import name if different
-from config import ConfigLoader             # adjust import name if different
+from config import Config             # adjust import name if different
 
 
 @dataclass

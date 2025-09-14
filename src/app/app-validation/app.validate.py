@@ -1,8 +1,7 @@
 import argparse
-import os
 import logging
 from config import Config
-from validator import DataValidator
+import constants
 
 
 def setup_logging(verbose: bool = False) -> logging.Logger:
