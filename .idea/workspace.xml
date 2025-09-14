@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="reflector">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-validation/app.validate.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-validation/app.validate.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-validation/validator.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-validation/validator.py" afterDir="false" />
-    </list>
+    <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -285,7 +281,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/app/app-validation/app.validate.py" />
-      <option name="PARAMETERS" value="" />
+      <option name="PARAMETERS" value="--config config/config.local.json" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -506,14 +502,7 @@
       <workItem from="1757680451631" duration="739000" />
       <workItem from="1757776589170" duration="40000" />
       <workItem from="1757776640860" duration="202000" />
-      <workItem from="1757835018789" duration="292000" />
-    </task>
-    <task id="LOCAL-00153" summary="reflector">
-      <created>1717842835313</created>
-      <option name="number" value="00153" />
-      <option name="presentableId" value="LOCAL-00153" />
-      <option name="project" value="LOCAL" />
-      <updated>1717842835313</updated>
+      <workItem from="1757835018789" duration="337000" />
     </task>
     <task id="LOCAL-00154" summary="reflector">
       <created>1717842954863</created>
@@ -851,7 +840,14 @@
       <option name="project" value="LOCAL" />
       <updated>1752947058650</updated>
     </task>
-    <option name="localTasksCounter" value="222" />
+    <task id="LOCAL-00222" summary="fix the code">
+      <created>1757835359108</created>
+      <option name="number" value="00222" />
+      <option name="presentableId" value="LOCAL-00222" />
+      <option name="project" value="LOCAL" />
+      <updated>1757835359109</updated>
+    </task>
+    <option name="localTasksCounter" value="223" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -886,7 +882,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="reflector the output result" />
     <MESSAGE value="first blockchain" />
     <MESSAGE value="unrealised and realised P/L" />
     <MESSAGE value="rename file" />
@@ -911,7 +906,8 @@
     <MESSAGE value="enhance the logger" />
     <MESSAGE value="improve logger" />
     <MESSAGE value="reflector" />
-    <option name="LAST_COMMIT_MESSAGE" value="reflector" />
+    <MESSAGE value="fix the code" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix the code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
