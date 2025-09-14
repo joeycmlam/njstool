@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/app/app-etl-py/app.etl.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-etl-py/app.etl.py" afterDir="false" />
+    <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="reflector">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +217,7 @@
       <recent name="$PROJECT_DIR$/src/app/app-fee-engine/config" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.app.etl">
+  <component name="RunManager" selected="Cucumber.js.app.fee.feature">
     <configuration name="business-rules-engine.feature" type="PyBehaveRunConfigurationType" factoryName="Behave" temporary="true">
       <module name="njstool" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -345,17 +345,9 @@
       <item itemvalue="Docker.docker-compose.git.yml: Compose Deployment" />
       <item itemvalue="npm.test" />
       <item itemvalue="Python.test_rules" />
-      <item itemvalue="Python.businessrulesengine" />
       <item itemvalue="Python.app.etl" />
+      <item itemvalue="Python.businessrulesengine" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.app.etl" />
-        <item itemvalue="Python.businessrulesengine" />
-        <item itemvalue="Behave.business-rules-engine.feature" />
-        <item itemvalue="Behave.business-rules-engine.feature:Categorize securities based on country and security type" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -479,14 +471,11 @@
       <workItem from="1752309177795" duration="4286000" />
       <workItem from="1752328455492" duration="10195000" />
       <workItem from="1752856283858" duration="977000" />
-      <workItem from="1752895724492" duration="32192000" />
-    </task>
-    <task id="LOCAL-00152" summary="reflector">
-      <created>1717842151742</created>
-      <option name="number" value="00152" />
-      <option name="presentableId" value="LOCAL-00152" />
-      <option name="project" value="LOCAL" />
-      <updated>1717842151742</updated>
+      <workItem from="1752895724492" duration="33004000" />
+      <workItem from="1753608236954" duration="979000" />
+      <workItem from="1757680451631" duration="739000" />
+      <workItem from="1757776589170" duration="40000" />
+      <workItem from="1757776640860" duration="202000" />
     </task>
     <task id="LOCAL-00153" summary="reflector">
       <created>1717842835313</created>
@@ -824,7 +813,14 @@
       <option name="project" value="LOCAL" />
       <updated>1752945429357</updated>
     </task>
-    <option name="localTasksCounter" value="221" />
+    <task id="LOCAL-00221" summary="reflector">
+      <created>1752947058650</created>
+      <option name="number" value="00221" />
+      <option name="presentableId" value="LOCAL-00221" />
+      <option name="project" value="LOCAL" />
+      <updated>1752947058650</updated>
+    </task>
+    <option name="localTasksCounter" value="222" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -966,16 +962,6 @@
         <watch expression="data" />
       </configuration>
     </watches-manager>
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/njstool$data_generator.coverage" NAME="data.generator Coverage Results" MODIFIED="1752335193004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-etl-py" />
-    <SUITE FILE_PATH="coverage/njstool$app_etl.coverage" NAME="app.etl Coverage Results" MODIFIED="1752947047698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-etl-py" />
-    <SUITE FILE_PATH="coverage/njstool$test_rules.coverage" NAME="test_rules Coverage Results" MODIFIED="1752930223654" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-etl-py" />
-    <SUITE FILE_PATH="coverage/njstool$.coverage" NAME=" Coverage Results" MODIFIED="1752915720295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-etl-py" />
-    <SUITE FILE_PATH="coverage/njstool$businessrulesengine.coverage" NAME="businessrulesengine Coverage Results" MODIFIED="1752912123747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-etl-py" />
-    <SUITE FILE_PATH="coverage/njstool$business_rules_engine_feature_Categorize_securities_based_on_country_and_security_type.coverage" NAME="business-rules-engine.feature:Categorize securities based on country and security type Coverage Results" MODIFIED="1752896211908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/njstool$test.coverage" NAME="test Coverage Results" MODIFIED="1752327214882" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-etl-py" />
-    <SUITE FILE_PATH="coverage/njstool$business_rules_engine_feature.coverage" NAME="business-rules-engine.feature Coverage Results" MODIFIED="1752896698918" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main.js" />

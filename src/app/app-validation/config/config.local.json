@@ -1,0 +1,42 @@
+{
+  "file": "./data/sample.csv",
+  "delimiter": "|",
+  "header": true,
+  "columns": {
+    "customer_code": {
+      "length": 8,
+      "skip": true
+    },
+    "first_name": {
+      "length": 12,
+      "skip": false
+    },
+    "last_name": {
+      "length": 20,
+      "skip": false
+    },
+    "address": {
+      "length": 50,
+      "skip": false
+    },
+    "status": {
+      "start": 26,
+      "length": 20,
+      "skip": false
+    }
+  },
+  "output": {
+      "path": "./result",
+        "file": "validation.xlsx",
+        "sheet_name": "Results",
+        "headers": ["Row ID", "Column" , "Value",  "Status"],
+        "timestamped": true
+  },
+  "log": {
+    "path": "./log",
+    "file": "app.log",
+    "level": "DEBUG",
+    "enable_console": true
+  }
+
+}
