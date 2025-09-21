@@ -148,14 +148,14 @@ class ResultWriter:
         sheet_name = self.output_config.get("sheet_name", "Results")
         df.to_excel(output_path, sheet_name=sheet_name, index=False)
 
-    def _write_csv(self, results: List[Dict[str, Any]], output_path: str):
-        """Write results to CSV file."""
-        headers = self.output_config.get("headers", ["Row ID", "Column", "Value", "Status"])
-
-        with open(output_path, 'w', newline='', encoding='utf-8') as f:
-            writer = csv.DictWriter(f, fieldnames=['row_id', 'column', 'value', 'status'])
-            writer.writeheader()
-            writer.writerows(results)
+    # def _write_csv(self, results: List[Dict[str, Any]], output_path: str):
+    #     """Write results to CSV file."""
+    #     headers = self.output_config.get("headers", ["Row ID", "Column", "Value", "Status"])
+    #
+    #     with open(output_path, 'w', newline='', encoding='utf-8') as f:
+    #         writer = csv.DictWriter(f, fieldnames=['row_id', 'column', 'value', 'status'])
+    #         writer.writeheader()
+    #         writer.writerows(results)
 
 
 class DataValidator:
