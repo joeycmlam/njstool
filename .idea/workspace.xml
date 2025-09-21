@@ -511,14 +511,7 @@
       <workItem from="1757841173718" duration="3017000" />
       <workItem from="1758422978132" duration="2181000" />
       <workItem from="1758428296013" duration="8043000" />
-      <workItem from="1758459594515" duration="468000" />
-    </task>
-    <task id="LOCAL-00168" summary="reflector">
-      <created>1733710981219</created>
-      <option name="number" value="00168" />
-      <option name="presentableId" value="LOCAL-00168" />
-      <option name="project" value="LOCAL" />
-      <updated>1733710981219</updated>
+      <workItem from="1758459594515" duration="554000" />
     </task>
     <task id="LOCAL-00169" summary="reflector to pass the config from arguement">
       <created>1733711290542</created>
@@ -856,7 +849,14 @@
       <option name="project" value="LOCAL" />
       <updated>1758448556790</updated>
     </task>
-    <option name="localTasksCounter" value="237" />
+    <task id="LOCAL-00237" summary="remove unused code">
+      <created>1758460119926</created>
+      <option name="number" value="00237" />
+      <option name="presentableId" value="LOCAL-00237" />
+      <option name="project" value="LOCAL" />
+      <updated>1758460119926</updated>
+    </task>
+    <option name="localTasksCounter" value="238" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -891,7 +891,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add jira project" />
     <MESSAGE value="rule engine" />
     <MESSAGE value="ignore data file" />
     <MESSAGE value="remove key" />
@@ -916,7 +915,8 @@
     <MESSAGE value="try out 2 reference data - country, and gender" />
     <MESSAGE value="support regular expression validation" />
     <MESSAGE value="code reflector with prompt engineering" />
-    <option name="LAST_COMMIT_MESSAGE" value="code reflector with prompt engineering" />
+    <MESSAGE value="remove unused code" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove unused code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
