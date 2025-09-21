@@ -1,5 +1,6 @@
 {
   "data_file": "./data/sample.csv",
+  "gender_file": "./data/gender.csv",
   "delimiter": "|",
   "header": true,
   "columns": {
@@ -21,6 +22,10 @@
     },
     "gender": {
       "length": 1,
+      "reference": {
+        "file": "data/gender.csv",
+        "valueColumn": "code"
+      }, 
       "skip": false
     },
     "status": {
