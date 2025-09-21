@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.github/prompts/code_reflector.prompt.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/prompts/python_bdd.prompt.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-validation/config/config.local.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-validation/config/config.local.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-validation/data_validator.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-validation/data_validator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -511,14 +512,7 @@
       <workItem from="1757835018789" duration="5206000" />
       <workItem from="1757841173718" duration="3017000" />
       <workItem from="1758422978132" duration="2181000" />
-      <workItem from="1758428296013" duration="6415000" />
-    </task>
-    <task id="LOCAL-00166" summary="reflector">
-      <created>1733709677052</created>
-      <option name="number" value="00166" />
-      <option name="presentableId" value="LOCAL-00166" />
-      <option name="project" value="LOCAL" />
-      <updated>1733709677052</updated>
+      <workItem from="1758428296013" duration="7781000" />
     </task>
     <task id="LOCAL-00167" summary="reflector">
       <created>1733710212103</created>
@@ -856,7 +850,14 @@
       <option name="project" value="LOCAL" />
       <updated>1758446370254</updated>
     </task>
-    <option name="localTasksCounter" value="235" />
+    <task id="LOCAL-00235" summary="support regular expression validation">
+      <created>1758446823713</created>
+      <option name="number" value="00235" />
+      <option name="presentableId" value="LOCAL-00235" />
+      <option name="project" value="LOCAL" />
+      <updated>1758446823713</updated>
+    </task>
+    <option name="localTasksCounter" value="236" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -891,7 +892,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="improve pl.steps.ts" />
     <MESSAGE value="use 3rd party lib to calculate" />
     <MESSAGE value="add jira project" />
     <MESSAGE value="rule engine" />
@@ -916,7 +916,8 @@
     <MESSAGE value="new reference" />
     <MESSAGE value="fix the check reference data" />
     <MESSAGE value="try out 2 reference data - country, and gender" />
-    <option name="LAST_COMMIT_MESSAGE" value="try out 2 reference data - country, and gender" />
+    <MESSAGE value="support regular expression validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="support regular expression validation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -993,7 +994,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/app/app-validation/data_validator.py</url>
-          <line>210</line>
+          <line>226</line>
           <option name="timeStamp" value="85" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -1010,7 +1011,7 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/njstool$app_validate.coverage" NAME="app.validate Coverage Results" MODIFIED="1758446751725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-validation" />
+    <SUITE FILE_PATH="coverage/njstool$app_validate.coverage" NAME="app.validate Coverage Results" MODIFIED="1758446769184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-validation" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main.js" />
