@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-validation/config/config.local.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-validation/config/config.local.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-validation/copilot-prompt.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-validation/data_validator.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-validation/data_validator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -511,14 +508,7 @@
       <workItem from="1757776640860" duration="202000" />
       <workItem from="1757835018789" duration="5206000" />
       <workItem from="1757841173718" duration="3017000" />
-      <workItem from="1758422978132" duration="1917000" />
-    </task>
-    <task id="LOCAL-00160" summary="update some info">
-      <created>1730625651345</created>
-      <option name="number" value="00160" />
-      <option name="presentableId" value="LOCAL-00160" />
-      <option name="project" value="LOCAL" />
-      <updated>1730625651345</updated>
+      <workItem from="1758422978132" duration="2181000" />
     </task>
     <task id="LOCAL-00161" summary="update the code">
       <created>1730628503541</created>
@@ -856,7 +846,14 @@
       <option name="project" value="LOCAL" />
       <updated>1758423749912</updated>
     </task>
-    <option name="localTasksCounter" value="229" />
+    <task id="LOCAL-00229" summary="add the referene check">
+      <created>1758428043119</created>
+      <option name="number" value="00229" />
+      <option name="presentableId" value="LOCAL-00229" />
+      <option name="project" value="LOCAL" />
+      <updated>1758428043119</updated>
+    </task>
+    <option name="localTasksCounter" value="230" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -891,7 +888,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add test cases" />
     <MESSAGE value="reflector the cucumber test" />
     <MESSAGE value="enhance test cases" />
     <MESSAGE value="rename service" />
@@ -916,7 +912,8 @@
     <MESSAGE value="something wrong!!!!" />
     <MESSAGE value="fix the issue" />
     <MESSAGE value="fix the logging" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix the logging" />
+    <MESSAGE value="add the referene check" />
+    <option name="LAST_COMMIT_MESSAGE" value="add the referene check" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1015,7 +1012,7 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/njstool$app_validate.coverage" NAME="app.validate Coverage Results" MODIFIED="1758427502305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-validation" />
+    <SUITE FILE_PATH="coverage/njstool$app_validate.coverage" NAME="app.validate Coverage Results" MODIFIED="1758428092239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-validation" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main.js" />
