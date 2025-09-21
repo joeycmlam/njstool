@@ -5,18 +5,22 @@
   "columns": {
     "customer_code": {
       "length": 8,
+      "pattern": "^[A-Z0-9]+$",
       "skip": true
     },
     "first_name": {
       "length": 12,
+      "pattern": "^[A-Za-z\\s\\-']+$",
       "skip": false
     },
     "last_name": {
       "length": 20,
+      "pattern": "^[A-Za-z\\s\\-']+$",
       "skip": false
     },
     "gender": {
       "length": 1,
+      "pattern": "^[MFO]$",
       "reference": {
         "file": "data/gender.csv",
         "valueColumn": "gender_code"
@@ -25,6 +29,7 @@
     },
     "address": {
       "length": 50,
+      "pattern": "^[A-Za-z0-9\\s\\-,\\.#]+$",
       "skip": false
     },
     "country": {
@@ -36,17 +41,17 @@
       "skip": false
     },
     "status": {
-      "start": 26,
       "length": 20,
+      "pattern": "^[A-Za-z0-9\\s]+$",
       "skip": false
     }
   },
   "output": {
       "path": "./result",
-        "file": "validation.xlsx",
-        "sheet_name": "Results",
-        "headers": ["Row ID", "Column" , "Value",  "Status"],
-        "timestamped": true
+      "file": "validation.xlsx",
+      "sheet_name": "Results",
+      "headers": ["Row ID", "Column" , "Value",  "Status"],
+      "timestamped": true
   },
   "log": {
     "path": "./log",
@@ -54,5 +59,4 @@
     "level": "DEBUG",
     "enable_console": true
   }
-
 }
