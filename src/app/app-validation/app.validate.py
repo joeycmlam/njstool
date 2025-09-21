@@ -23,6 +23,7 @@ def setup_logging(verbose: bool = False) -> logging.Logger:
     # Create console handler with formatting
     console_handler = logging.StreamHandler()
     console_handler.setLevel(logging.DEBUG if verbose else logging.INFO)
+    console_handler.setLevel(logging.DEBUG)
     formatter = logging.Formatter(
         constants.DEFAULT_LOG_FORMAT,
         datefmt=constants.DEFAULT_DATE_FORMAT

@@ -19,6 +19,10 @@
       "length": 50,
       "skip": false
     },
+    "gender": {
+      "length": 1,
+      "skip": false
+    },
     "status": {
       "start": 26,
       "length": 20,

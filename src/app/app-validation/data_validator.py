@@ -28,10 +28,11 @@ class DataValidator:
                 for row_id, line in enumerate(f, start=2):
                     values = line.strip().split(self.delimiter)
                     if len(values) != len(header):
-                        self.logger.warning(f"Row {row_id} has {len(values)} columns, expected {len(header)}.")
-
-                    for record in values:
-                        self.logger.debug(f"Record: {record}")
+                        self.logger.warning(f"Row {row_id} has {values} columns, expected {header}.")
+                    else:
+                        self.logger.info(f"Row {row_id} has {values} columns, expected {header}.")
+                    # for record in values:
+                    #     self.logger.info(f"Record: {record}")
         except Exception as e:
             self.logger.error(f"An error occurred during validation: {e}")
             raise
