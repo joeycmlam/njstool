@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.github/prompts/code_review.prompt.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/app-validation/config/config.local.1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/prompts/app-validation.prompt.md" beforeDir="false" afterPath="$PROJECT_DIR$/.github/prompts/app-validation.prompt.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-validation/config/config.local.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-validation/config/config.local.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-validation/data_validator.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-validation/data_validator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -513,14 +511,7 @@
       <workItem from="1757835018789" duration="5206000" />
       <workItem from="1757841173718" duration="3017000" />
       <workItem from="1758422978132" duration="2181000" />
-      <workItem from="1758428296013" duration="5892000" />
-    </task>
-    <task id="LOCAL-00165" summary="oo design">
-      <created>1733709388234</created>
-      <option name="number" value="00165" />
-      <option name="presentableId" value="LOCAL-00165" />
-      <option name="project" value="LOCAL" />
-      <updated>1733709388234</updated>
+      <workItem from="1758428296013" duration="6415000" />
     </task>
     <task id="LOCAL-00166" summary="reflector">
       <created>1733709677052</created>
@@ -858,7 +849,14 @@
       <option name="project" value="LOCAL" />
       <updated>1758444796864</updated>
     </task>
-    <option name="localTasksCounter" value="234" />
+    <task id="LOCAL-00234" summary="try out 2 reference data - country, and gender">
+      <created>1758446370254</created>
+      <option name="number" value="00234" />
+      <option name="presentableId" value="LOCAL-00234" />
+      <option name="project" value="LOCAL" />
+      <updated>1758446370254</updated>
+    </task>
+    <option name="localTasksCounter" value="235" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -995,12 +993,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/app/app-validation/data_validator.py</url>
-          <line>185</line>
+          <line>210</line>
           <option name="timeStamp" value="85" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/app/app-validation/reference_validator.py</url>
-          <line>61</line>
+          <line>66</line>
           <option name="timeStamp" value="98" />
         </line-breakpoint>
       </breakpoints>
@@ -1012,7 +1010,7 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/njstool$app_validate.coverage" NAME="app.validate Coverage Results" MODIFIED="1758444867183" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-validation" />
+    <SUITE FILE_PATH="coverage/njstool$app_validate.coverage" NAME="app.validate Coverage Results" MODIFIED="1758446751725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-validation" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main.js" />

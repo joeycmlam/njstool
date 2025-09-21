@@ -5,12 +5,11 @@
   "columns": {
     "customer_code": {
       "length": 8,
-      "pattern": "^[A-Z0-9]+$",
       "skip": true
     },
     "first_name": {
       "length": 12,
-      "pattern": "^[A-Za-z\\s\\-']+$",
+      "pattern": "^[A-Za-z]+$",
       "skip": false
     },
     "last_name": {
