@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-validation/config/config.local.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-validation/config/config.local.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-validation/data_validator.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-validation/data_validator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-validation/reference_validator.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-validation/reference_validator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -509,13 +512,7 @@
       <workItem from="1757835018789" duration="5206000" />
       <workItem from="1757841173718" duration="3017000" />
       <workItem from="1758422978132" duration="2181000" />
-    </task>
-    <task id="LOCAL-00161" summary="update the code">
-      <created>1730628503541</created>
-      <option name="number" value="00161" />
-      <option name="presentableId" value="LOCAL-00161" />
-      <option name="project" value="LOCAL" />
-      <updated>1730628503541</updated>
+      <workItem from="1758428296013" duration="3101000" />
     </task>
     <task id="LOCAL-00162" summary="new diff">
       <created>1733667395015</created>
@@ -853,7 +850,14 @@
       <option name="project" value="LOCAL" />
       <updated>1758428043119</updated>
     </task>
-    <option name="localTasksCounter" value="230" />
+    <task id="LOCAL-00230" summary="new reference">
+      <created>1758439770847</created>
+      <option name="number" value="00230" />
+      <option name="presentableId" value="LOCAL-00230" />
+      <option name="project" value="LOCAL" />
+      <updated>1758439770847</updated>
+    </task>
+    <option name="localTasksCounter" value="231" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -888,7 +892,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="reflector the cucumber test" />
     <MESSAGE value="enhance test cases" />
     <MESSAGE value="rename service" />
     <MESSAGE value="improve pl.steps.ts" />
@@ -913,7 +916,8 @@
     <MESSAGE value="fix the issue" />
     <MESSAGE value="fix the logging" />
     <MESSAGE value="add the referene check" />
-    <option name="LAST_COMMIT_MESSAGE" value="add the referene check" />
+    <MESSAGE value="new reference" />
+    <option name="LAST_COMMIT_MESSAGE" value="new reference" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -990,18 +994,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/app/app-validation/data_validator.py</url>
-          <line>17</line>
-          <option name="timeStamp" value="80" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/app/app-validation/data_validator.py</url>
-          <line>171</line>
+          <line>185</line>
           <option name="timeStamp" value="85" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/app/app-validation/app.validate.py</url>
-          <line>88</line>
-          <option name="timeStamp" value="87" />
+          <url>file://$PROJECT_DIR$/src/app/app-validation/reference_validator.py</url>
+          <line>61</line>
+          <option name="timeStamp" value="98" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1012,7 +1011,7 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/njstool$app_validate.coverage" NAME="app.validate Coverage Results" MODIFIED="1758428092239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-validation" />
+    <SUITE FILE_PATH="coverage/njstool$app_validate.coverage" NAME="app.validate Coverage Results" MODIFIED="1758443348556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-validation" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main.js" />

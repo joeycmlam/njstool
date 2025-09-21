@@ -30,18 +30,32 @@ class DataValidator:
         # Create and initialize reference validator
         self.ref_validator = ReferenceValidator(logger)
         self._initialize_reference_validators()
-        
+
     def _initialize_reference_validators(self):
         """Load all reference data from configuration."""
+        # Get the main delimiter from config
+        main_delimiter = self.config.get("delimiter", ",")
+
         for field_name, field_config in self.columns.items():
             if "reference" in field_config and isinstance(field_config["reference"], dict):
                 ref_config = field_config["reference"]
                 ref_file = ref_config.get("file", "")
-                value_column = ref_config.get("valueColumn", "code")
-                
+                value_column = ref_config.get("valueColumn", "gender")
+
+                # Use reference-specific delimiter if provided, otherwise use main delimiter
+                ref_delimiter = ref_config.get("delimiter", main_delimiter)
+
                 if ref_file:
                     self.logger.info(f"Loading reference data for {field_name} from {ref_file}")
-                    self.ref_validator.load_reference_file(field_name, ref_file, value_column)
+                    success = self.ref_validator.load_reference_file(
+                        field_name,
+                        ref_file,
+                        value_column,
+                        ref_delimiter
+                    )
+                    if not success:
+                        self.logger.warning(
+                            f"Failed to load reference data for {field_name}, validation will be skipped")
     
     def _validate_field_length(self, field: str, value: str) -> bool:
         """Validate field value length against configuration."""
