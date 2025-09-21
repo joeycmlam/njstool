@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-validation/config/config.local.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-validation/config/config.local.json" afterDir="false" />
-    </list>
+    <list default="true" id="6a030fe2-ff4b-4bbe-81c7-5e4be9c7b390" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -510,14 +507,7 @@
       <workItem from="1757835018789" duration="5206000" />
       <workItem from="1757841173718" duration="3017000" />
       <workItem from="1758422978132" duration="2181000" />
-      <workItem from="1758428296013" duration="3822000" />
-    </task>
-    <task id="LOCAL-00163" summary="improve the filename">
-      <created>1733671355409</created>
-      <option name="number" value="00163" />
-      <option name="presentableId" value="LOCAL-00163" />
-      <option name="project" value="LOCAL" />
-      <updated>1733671355409</updated>
+      <workItem from="1758428296013" duration="4303000" />
     </task>
     <task id="LOCAL-00164" summary="support composite key">
       <created>1733709188431</created>
@@ -855,7 +845,14 @@
       <option name="project" value="LOCAL" />
       <updated>1758443652515</updated>
     </task>
-    <option name="localTasksCounter" value="232" />
+    <task id="LOCAL-00232" summary="try out 2 reference data - country, and gender">
+      <created>1758444213906</created>
+      <option name="number" value="00232" />
+      <option name="presentableId" value="LOCAL-00232" />
+      <option name="project" value="LOCAL" />
+      <updated>1758444213906</updated>
+    </task>
+    <option name="localTasksCounter" value="233" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -890,7 +887,6 @@
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="rename service" />
     <MESSAGE value="improve pl.steps.ts" />
     <MESSAGE value="use 3rd party lib to calculate" />
     <MESSAGE value="add jira project" />
@@ -915,7 +911,8 @@
     <MESSAGE value="add the referene check" />
     <MESSAGE value="new reference" />
     <MESSAGE value="fix the check reference data" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix the check reference data" />
+    <MESSAGE value="try out 2 reference data - country, and gender" />
+    <option name="LAST_COMMIT_MESSAGE" value="try out 2 reference data - country, and gender" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1009,7 +1006,7 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/njstool$app_validate.coverage" NAME="app.validate Coverage Results" MODIFIED="1758444132610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-validation" />
+    <SUITE FILE_PATH="coverage/njstool$app_validate.coverage" NAME="app.validate Coverage Results" MODIFIED="1758444175839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/app/app-validation" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main.js" />
