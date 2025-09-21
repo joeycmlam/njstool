@@ -15,16 +15,24 @@
       "length": 20,
       "skip": false
     },
-    "address": {
-      "length": 50,
-      "skip": false
-    },
     "gender": {
       "length": 1,
       "reference": {
         "file": "data/gender.csv",
         "valueColumn": "gender_code"
-      }, 
+      },
+      "skip": false
+    },
+    "address": {
+      "length": 50,
+      "skip": false
+    },
+    "country": {
+      "length": 3,
+      "reference": {
+        "file": "data/country.csv",
+        "valueColumn": "country_code"
+      },
       "skip": false
     },
     "status": {
